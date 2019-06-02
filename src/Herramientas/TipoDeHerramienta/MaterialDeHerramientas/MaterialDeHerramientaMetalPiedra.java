@@ -1,26 +1,35 @@
 package Herramientas.TipoDeHerramienta.MaterialDeHerramientas;
 
+import Herramientas.TipoDeHerramienta.FormaDeDesgaste.FormaDeDesgaste;
+import Herramientas.TipoDeHerramienta.FormaDeDesgaste.FormaDeDesgastePicoFino;
+
 public class MaterialDeHerramientaMetalPiedra implements MaterialDeHerramienta {
     private int durabilidad;
     private int fuerza;
+    private FormaDeDesgaste desgaste;
 
     public MaterialDeHerramientaMetalPiedra(){
         this.durabilidad = 1000;
     }
 
     @Override
-    public void setFuerzaDeHacha() {
+    public void setAtributosDeHacha() {
+        //No existe esta herramienta hacha de este material el metodo esta por el polimorfismo
         this.fuerza = 0;
+        this.desgaste = new FormaDeDesgastePicoFino();
     }
 
     @Override
-    public void setFuerzaDePico() {
+    public void setAtributosDePico() {
+        //No existe esta herramienta hacha de este material el metodo esta por el polimorfismo
         this.fuerza = 0;
+        this.desgaste = new FormaDeDesgastePicoFino();
     }
 
     @Override
-    public void setFuerzaDePicoFino() {
+    public void setAtributosDePicoFino() {
         this.fuerza = 20;
+        this.desgaste = new FormaDeDesgastePicoFino();
     }
 
     @Override
@@ -31,5 +40,11 @@ public class MaterialDeHerramientaMetalPiedra implements MaterialDeHerramienta {
     @Override
     public int durabilidad() {
         return durabilidad;
+    }
+
+    @Override
+    public boolean usarLaHerramientaEn() {
+        durabilidad = desgaste.desgastarElMaterialDeHerramienta(this);
+        return true;
     }
 }

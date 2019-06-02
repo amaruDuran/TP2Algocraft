@@ -5,8 +5,8 @@ import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramien
 public class FormaDeDesgasteLienalConPendienteDosTercios implements FormaDeDesgaste {
     @Override
     public int desgastarElMaterialDeHerramienta(MaterialDeHerramienta material) {
-        int durabilidadFinal = material.durabilidad() - material.fuerza();
-        durabilidadFinal = (durabilidadFinal * 2) / 3;
+        int durabilidadPerdida = (material.fuerza() * 2) / 3;
+        int durabilidadFinal = material.durabilidad() - durabilidadPerdida;
         return durabilidadFinal;
     }
 }

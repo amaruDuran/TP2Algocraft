@@ -7,12 +7,14 @@ public class FormaDeDesgasteAbrupta implements FormaDeDesgaste{
 
     @Override
     public int desgastarElMaterialDeHerramienta(MaterialDeHerramienta material) {
-        golpesAntesDeRomperse = golpesAntesDeRomperse - 1;
+        this.golpesAntesDeRomperse = this.golpesAntesDeRomperse - 1;
         int durabilidadFinal;
         if (golpesAntesDeRomperse > 0){
             durabilidadFinal = material.durabilidad();
         }
-        durabilidadFinal = 0;
+        else {
+            durabilidadFinal = 0;
+        }
         return durabilidadFinal;
     }
 }

@@ -10,25 +10,25 @@ public class MaterialDeHerramientaMetalTest {
     @Test
     public void materialDeHerramientaMetalDaUnaFuerzaDe10ParaHachas(){
         MaterialDeHerramienta materialDeHerramientaMetal = new MaterialDeHerramientaMetal();
-        materialDeHerramientaMetal.setFuerzaDeHacha();
+        materialDeHerramientaMetal.setAtributosDeHacha();
         assertEquals(10, materialDeHerramientaMetal.fuerza());
     }
     @Test
     public void materialDeHerramientaMetalDaUnaFuerzaDe12ParaPicos(){
         MaterialDeHerramienta materialDeHerramientaMetal = new MaterialDeHerramientaMetal();
-        materialDeHerramientaMetal.setFuerzaDePico();
+        materialDeHerramientaMetal.setAtributosDePico();
         assertEquals(12, materialDeHerramientaMetal.fuerza());
     }
     @Test
     public void materialDeHerramientaMetalDaUnaFuerzaDe0ParaPicosFinos(){
         MaterialDeHerramienta materialDeHerramientaMetal = new MaterialDeHerramientaMetal();
-        materialDeHerramientaMetal.setFuerzaDePicoFino();
+        materialDeHerramientaMetal.setAtributosDePicoFino();
         assertEquals(0, materialDeHerramientaMetal.fuerza());
     }
     @Test
     public void materialDeHerramientaMetalTieneUnaDurabilidadDe400(){
         MaterialDeHerramienta materialDeHerramientaMetal = new MaterialDeHerramientaMetal();
-        materialDeHerramientaMetal.setFuerzaDePicoFino();
+        materialDeHerramientaMetal.setAtributosDePicoFino();
         assertEquals(400, materialDeHerramientaMetal.durabilidad());
     }
 }
