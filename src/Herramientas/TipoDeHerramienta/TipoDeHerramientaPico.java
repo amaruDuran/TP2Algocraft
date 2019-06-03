@@ -20,6 +20,6 @@ public class TipoDeHerramientaPico implements TipoDeHerramienta {
     }
     @Override
     public boolean usarLaHerramientaEn(Material material) {
-        return materialDeHerramienta.usarLaHerramientaEn(/* sedebe enviar el material actualizar */);
+        return materialDeHerramienta.usarLaHerramientaEn(material);
     }
 }

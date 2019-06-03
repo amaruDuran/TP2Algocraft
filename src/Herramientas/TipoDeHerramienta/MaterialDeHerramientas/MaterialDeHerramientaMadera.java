@@ -2,6 +2,7 @@ package Herramientas.TipoDeHerramienta.MaterialDeHerramientas;
 
 import Herramientas.TipoDeHerramienta.FormaDeDesgaste.FormaDeDesgaste;
 import Herramientas.TipoDeHerramienta.FormaDeDesgaste.FormaDeDesgasteLineal;
+import Materiales.Material;
 
 public class MaterialDeHerramientaMadera implements MaterialDeHerramienta {
 
@@ -39,12 +40,12 @@ public class MaterialDeHerramientaMadera implements MaterialDeHerramienta {
 
     @Override
     public int durabilidad() {
-        return durabilidad;
+        return this.durabilidad;
     }
 
     @Override
-    public boolean usarLaHerramientaEn() {
-        durabilidad = desgaste.desgastarElMaterialDeHerramienta(this);
+    public boolean usarLaHerramientaEn(Material material) {
+        this.durabilidad = desgaste.desgastarElMaterialDeHerramienta(this);
         return true;
     }
 }

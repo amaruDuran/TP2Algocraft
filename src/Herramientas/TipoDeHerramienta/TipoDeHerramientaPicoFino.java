@@ -1,12 +1,13 @@
 package Herramientas.TipoDeHerramienta;
+import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramienta;
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMetalPiedra;
 import Materiales.Material;
 
 public class TipoDeHerramientaPicoFino implements TipoDeHerramienta {
-    private MaterialDeHerramientaMetalPiedra materialDeHerramienta;
+    private MaterialDeHerramienta materialDeHerramienta;
 
 
-    public TipoDeHerramientaPicoFino(MaterialDeHerramientaMetalPiedra material) {
+    public TipoDeHerramientaPicoFino(MaterialDeHerramienta material) {
         this.materialDeHerramienta = material;
         this.materialDeHerramienta.setAtributosDePicoFino();
     }
@@ -21,6 +22,6 @@ public class TipoDeHerramientaPicoFino implements TipoDeHerramienta {
 
     @Override
     public boolean usarLaHerramientaEn(Material material) {
-        return materialDeHerramienta.usarLaHerramientaEn(/* sedebe enviar el material actualizar */);
+        return materialDeHerramienta.usarLaHerramientaEn(material);
     }
 }
