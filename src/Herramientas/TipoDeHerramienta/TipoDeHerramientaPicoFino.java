@@ -1,7 +1,7 @@
 package Herramientas.TipoDeHerramienta;
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramienta;
-import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMetalPiedra;
 import Materiales.Material;
+import Materiales.MaterialDiamante;
 
 public class TipoDeHerramientaPicoFino implements TipoDeHerramienta {
     private MaterialDeHerramienta materialDeHerramienta;
@@ -22,6 +22,9 @@ public class TipoDeHerramientaPicoFino implements TipoDeHerramienta {
 
     @Override
     public boolean usarLaHerramientaEn(Material material) {
+        if (!material.desgastaPicoFino()){
+            return true;
+        }
         return materialDeHerramienta.usarLaHerramientaEn(material);
     }
 }

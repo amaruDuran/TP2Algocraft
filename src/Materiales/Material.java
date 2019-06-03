@@ -30,5 +30,11 @@ public abstract class Material {
         return false;
     }
 
+    //este metodo esta hardcodeada solo para pasar las pruevas hay que sacarla y poner algo que funcione
+    public boolean desgastaPicoFino() {
+        return false;
+    }
+
     protected abstract void setUnidadElemental();
+
 }

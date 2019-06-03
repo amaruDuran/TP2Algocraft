@@ -6,8 +6,7 @@ import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramien
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMadera;
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMetal;
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaPiedra;
-import Materiales.Material;
-import Materiales.MaterialMadera;
+import Materiales.*;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -60,6 +59,55 @@ public class TipoDeHerramientaHachaTest {
         }
         assertEquals(durabilidadQueDeberiaTenerAlUsarseUnaVez,hacha.durabilidad());
     }
+    //materiales que desgastan
+    @Test
+    public void laDurabilidadDeUnHachaDeMaderaSeReduceEnElMaterialMadera(){
+        MaterialDeHerramienta madera = new MaterialDeHerramientaMadera();
+        TipoDeHerramienta hacha = new TipoDeHerramientaHacha(madera);
+        Material materialMadera = new MaterialMadera();
+        int durabilidadInicial;
+        int diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez;
+        durabilidadInicial = hacha.durabilidad();
+        hacha.usarLaHerramientaEn(materialMadera);
+        diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez = durabilidadInicial - hacha.durabilidad();
+        assertNotEquals(0,diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez);
+    }
+    @Test
+    public void laDurabilidadDeUnHachaDeMaderaSeReduceEnElMaterialPiedra(){
+        MaterialDeHerramienta madera = new MaterialDeHerramientaMadera();
+        TipoDeHerramienta hacha = new TipoDeHerramientaHacha(madera);
+        Material materialPiedra = new MaterialPiedra();
+        int durabilidadInicial;
+        int diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez;
+        durabilidadInicial = hacha.durabilidad();
+        hacha.usarLaHerramientaEn(materialPiedra);
+        diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez = durabilidadInicial - hacha.durabilidad();
+        assertNotEquals(0,diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez);
+    }
+    @Test
+    public void laDurabilidadDeUnHachaDeMaderaSeReduceEnElMaterialMetal(){
+        MaterialDeHerramienta madera = new MaterialDeHerramientaMadera();
+        TipoDeHerramienta hacha = new TipoDeHerramientaHacha(madera);
+        Material materialMetal = new MaterialMetal();
+        int durabilidadInicial;
+        int diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez;
+        durabilidadInicial = hacha.durabilidad();
+        hacha.usarLaHerramientaEn(materialMetal);
+        diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez = durabilidadInicial - hacha.durabilidad();
+        assertNotEquals(0,diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez);
+    }
+    @Test
+    public void laDurabilidadDeUnHachaDeMaderaSeReduceEnElMaterialDiamante(){
+        MaterialDeHerramienta madera = new MaterialDeHerramientaMadera();
+        TipoDeHerramienta hacha = new TipoDeHerramientaHacha(madera);
+        Material materialDiamante = new MaterialDiamante();
+        int durabilidadInicial;
+        int diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez;
+        durabilidadInicial = hacha.durabilidad();
+        hacha.usarLaHerramientaEn(materialDiamante);
+        diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez = durabilidadInicial - hacha.durabilidad();
+        assertNotEquals(0,diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez);
+    }
     //hacha de piedra
     @Test
     public void laDurabilidadDeUnHachaDePiedraSeGastaReduciendoseEnFuerzaConElUso(){
@@ -84,6 +132,55 @@ public class TipoDeHerramientaHachaTest {
         }
         assertEquals(durabilidadQueDeberiaTenerAlUsarseUnaVez,hacha.durabilidad());
     }
+    //materiales que desgastan
+    @Test
+    public void laDurabilidadDeUnHachaDePiedraSeReduceEnElMaterialMadera(){
+        MaterialDeHerramienta piedra = new MaterialDeHerramientaPiedra();
+        TipoDeHerramienta hacha = new TipoDeHerramientaHacha(piedra);
+        Material materialMadera = new MaterialMadera();
+        int durabilidadInicial;
+        int diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez;
+        durabilidadInicial = hacha.durabilidad();
+        hacha.usarLaHerramientaEn(materialMadera);
+        diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez = durabilidadInicial - hacha.durabilidad();
+        assertNotEquals(0,diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez);
+    }
+    @Test
+    public void laDurabilidadDeUnHachaDePiedraSeReduceEnElMaterialPiedra(){
+        MaterialDeHerramienta piedra = new MaterialDeHerramientaPiedra();
+        TipoDeHerramienta hacha = new TipoDeHerramientaHacha(piedra);
+        Material materialPiedra = new MaterialPiedra();
+        int durabilidadInicial;
+        int diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez;
+        durabilidadInicial = hacha.durabilidad();
+        hacha.usarLaHerramientaEn(materialPiedra);
+        diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez = durabilidadInicial - hacha.durabilidad();
+        assertNotEquals(0,diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez);
+    }
+    @Test
+    public void laDurabilidadDeUnHachaDePiedraSeReduceEnElMaterialMetal(){
+        MaterialDeHerramienta piedra = new MaterialDeHerramientaPiedra();
+        TipoDeHerramienta hacha = new TipoDeHerramientaHacha(piedra);
+        Material materialMetal = new MaterialMetal();
+        int durabilidadInicial;
+        int diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez;
+        durabilidadInicial = hacha.durabilidad();
+        hacha.usarLaHerramientaEn(materialMetal);
+        diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez = durabilidadInicial - hacha.durabilidad();
+        assertNotEquals(0,diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez);
+    }
+    @Test
+    public void laDurabilidadDeUnHachaDePiedraSeReduceEnElMaterialDiamante(){
+        MaterialDeHerramienta piedra = new MaterialDeHerramientaPiedra();
+        TipoDeHerramienta hacha = new TipoDeHerramientaHacha(piedra);
+        Material materialDiamante = new MaterialDiamante();
+        int durabilidadInicial;
+        int diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez;
+        durabilidadInicial = hacha.durabilidad();
+        hacha.usarLaHerramientaEn(materialDiamante);
+        diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez = durabilidadInicial - hacha.durabilidad();
+        assertNotEquals(0,diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez);
+    }
     //hacha de metal
     @Test
     public void laDurabilidadDeUnHachaDeMetalSeGastaReduciendoseEnLaMitadDeSuFuerzaConElUso(){
@@ -107,5 +204,54 @@ public class TipoDeHerramientaHachaTest {
             hacha.usarLaHerramientaEn(material);
         }
         assertEquals(durabilidadQueDeberiaTenerAlUsarseUnaVez,hacha.durabilidad());
+    }
+    //materiales que desgastan
+    @Test
+    public void laDurabilidadDeUnHachaDeMetalSeReduceEnElMaterialMadera(){
+        MaterialDeHerramienta metal = new MaterialDeHerramientaMetal();
+        TipoDeHerramienta hacha = new TipoDeHerramientaHacha(metal);
+        Material materialMadera = new MaterialMadera();
+        int durabilidadInicial;
+        int diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez;
+        durabilidadInicial = hacha.durabilidad();
+        hacha.usarLaHerramientaEn(materialMadera);
+        diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez = durabilidadInicial - hacha.durabilidad();
+        assertNotEquals(0,diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez);
+    }
+    @Test
+    public void laDurabilidadDeUnHachaDeMetalSeReduceEnElMaterialPiedra(){
+        MaterialDeHerramienta metal = new MaterialDeHerramientaMetal();
+        TipoDeHerramienta hacha = new TipoDeHerramientaHacha(metal);
+        Material materialPiedra = new MaterialPiedra();
+        int durabilidadInicial;
+        int diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez;
+        durabilidadInicial = hacha.durabilidad();
+        hacha.usarLaHerramientaEn(materialPiedra);
+        diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez = durabilidadInicial - hacha.durabilidad();
+        assertNotEquals(0,diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez);
+    }
+    @Test
+    public void laDurabilidadDeUnHachaDeMetalSeReduceEnElMaterialMetal(){
+        MaterialDeHerramienta metal = new MaterialDeHerramientaMetal();
+        TipoDeHerramienta hacha = new TipoDeHerramientaHacha(metal);
+        Material materialMetal = new MaterialMetal();
+        int durabilidadInicial;
+        int diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez;
+        durabilidadInicial = hacha.durabilidad();
+        hacha.usarLaHerramientaEn(materialMetal);
+        diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez = durabilidadInicial - hacha.durabilidad();
+        assertNotEquals(0,diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez);
+    }
+    @Test
+    public void laDurabilidadDeUnHachaDeMetalSeReduceEnElMaterialDiamante(){
+        MaterialDeHerramienta metal = new MaterialDeHerramientaMetal();
+        TipoDeHerramienta hacha = new TipoDeHerramientaHacha(metal);
+        Material materialDiamante = new MaterialDiamante();
+        int durabilidadInicial;
+        int diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez;
+        durabilidadInicial = hacha.durabilidad();
+        hacha.usarLaHerramientaEn(materialDiamante);
+        diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez = durabilidadInicial - hacha.durabilidad();
+        assertNotEquals(0,diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez);
     }
 }

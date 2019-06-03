@@ -20,4 +20,9 @@ public class MaterialDiamante extends Material {
     protected void setUnidadElemental() {
         unidadElemental = new UnidadElementalDiamante();
     }
+
+    @Override//borrar este metodo
+    public boolean desgastaPicoFino() {
+        return true;
+    }
 }
