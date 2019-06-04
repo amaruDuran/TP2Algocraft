@@ -3,8 +3,8 @@ package Herramientas.TipoDeHerramienta;
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramienta;
 import Materiales.Material;
 
-public interface TipoDeHerramienta {
+public interface Herramienta {
     int durabilidad();
     int fuerza();
-    boolean usarLaHerramientaEn(Material material);
+    boolean usarEn(Material material);
 }

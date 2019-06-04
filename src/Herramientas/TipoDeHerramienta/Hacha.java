@@ -1,14 +1,13 @@
 package Herramientas.TipoDeHerramienta;
-
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramienta;
 import Materiales.Material;
 
-public class TipoDeHerramientaPico implements TipoDeHerramienta {
+public class TipoDeHerramientaHacha implements Herramienta {
     private MaterialDeHerramienta materialDeHerramienta;
 
-    public TipoDeHerramientaPico(MaterialDeHerramienta materialDeHerramienta) {
+    public TipoDeHerramientaHacha(MaterialDeHerramienta materialDeHerramienta){
         this.materialDeHerramienta = materialDeHerramienta;
-        this.materialDeHerramienta.setAtributosDePico();
+        this.materialDeHerramienta.setAtributosDeHacha();
     }
 
     public int durabilidad() {

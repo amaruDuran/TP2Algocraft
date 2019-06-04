@@ -1,19 +1,19 @@
 package HerramientaTest;
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramienta;
-import Herramientas.TipoDeHerramienta.TipoDeHerramienta;
-import Herramientas.TipoDeHerramienta.TipoDeHerramientaPicoFino;
+import Herramientas.TipoDeHerramienta.Herramienta;
+import Herramientas.TipoDeHerramienta.PicoFino;
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMetalPiedra;
 import Materiales.*;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class TipoDeHerramientaTipoDeHerramientaPicoFinoTest {
+public class TipoDeHerramientaHerramientaPicoFinoTest {
     //test de atributo de herramienta
     @Test
     public void seVerificaQueUnPicoDeMaderaNuevaTengaDurabilidad1000YFuerza20(){
         MaterialDeHerramienta metalPiedra = new MaterialDeHerramientaMetalPiedra();
-        TipoDeHerramienta picoFino = new TipoDeHerramientaPicoFino(metalPiedra);
+        Herramienta picoFino = new PicoFino(metalPiedra);
         assertEquals(1000,picoFino.durabilidad());
         assertEquals(20,picoFino.fuerza());
     }
@@ -21,7 +21,7 @@ public class TipoDeHerramientaTipoDeHerramientaPicoFinoTest {
     @Test
     public void laDurabilidadDeUnPicoFinoSeGastaReduciendoseEnUnaDecimaDeSuDurabilidadAnterior(){
         MaterialDeHerramienta metalPiedra = new MaterialDeHerramientaMetalPiedra();
-        TipoDeHerramienta picoFino = new TipoDeHerramientaPicoFino(metalPiedra);
+        Herramienta picoFino = new PicoFino(metalPiedra);
         Material material = new MaterialDiamante();
         int durabilidadInicial = picoFino.durabilidad();
         int durabilidadQueDeberiaTenerAlUsarseUnaVez = durabilidadInicial - (durabilidadInicial / 10);
@@ -31,7 +31,7 @@ public class TipoDeHerramientaTipoDeHerramientaPicoFinoTest {
     @Test
     public void laDurabilidadDeUnPicoFinoSeGastaReduciendoseEnUnaDecimaDeSuDurabilidadAnteriorCadaVezUsada(){
         MaterialDeHerramienta metalPiedra = new MaterialDeHerramientaMetalPiedra();
-        TipoDeHerramienta picoFino = new TipoDeHerramientaPicoFino(metalPiedra);
+        Herramienta picoFino = new PicoFino(metalPiedra);
         Material material = new MaterialDiamante();
         int durabilidadInicial = picoFino.durabilidad();
         int durabilidadQueDeberiaTenerAlUsarseUnaVez = durabilidadInicial;
@@ -46,7 +46,7 @@ public class TipoDeHerramientaTipoDeHerramientaPicoFinoTest {
     @Test
     public void laDurabilidadDeUnPicoFinoNoSeReduceEnElMaterialMadera(){
         MaterialDeHerramienta metalPiedra = new MaterialDeHerramientaMetalPiedra();
-        TipoDeHerramienta picoFino = new TipoDeHerramientaPicoFino(metalPiedra);
+        Herramienta picoFino = new PicoFino(metalPiedra);
         Material materialMadera = new MaterialMadera();
         int durabilidadInicial;
         int diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez;
@@ -58,7 +58,7 @@ public class TipoDeHerramientaTipoDeHerramientaPicoFinoTest {
     @Test
     public void laDurabilidadDeUnPicoFinoNoSeReduceEnElMaterialPiedra(){
         MaterialDeHerramienta metalPiedra = new MaterialDeHerramientaMetalPiedra();
-        TipoDeHerramienta picoFino = new TipoDeHerramientaPicoFino(metalPiedra);
+        Herramienta picoFino = new PicoFino(metalPiedra);
         Material materialPiedra = new MaterialPiedra();
         int durabilidadInicial;
         int diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez;
@@ -70,7 +70,7 @@ public class TipoDeHerramientaTipoDeHerramientaPicoFinoTest {
     @Test
     public void laDurabilidadDeUnPicoFinoNoSeReduceEnElMaterialMetal(){
         MaterialDeHerramienta metalPiedra = new MaterialDeHerramientaMetalPiedra();
-        TipoDeHerramienta picoFino = new TipoDeHerramientaPicoFino(metalPiedra);
+        Herramienta picoFino = new PicoFino(metalPiedra);
         Material materialMetal = new MaterialMetal();
         int durabilidadInicial;
         int diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez;
@@ -82,7 +82,7 @@ public class TipoDeHerramientaTipoDeHerramientaPicoFinoTest {
     @Test
     public void laDurabilidadDeUnPicoFinoSiSeReduceEnElMaterialDiamante(){
         MaterialDeHerramienta metalPiedra = new MaterialDeHerramientaMetalPiedra();
-        TipoDeHerramienta picoFino = new TipoDeHerramientaPicoFino(metalPiedra);
+        Herramienta picoFino = new PicoFino(metalPiedra);
         Material materialDiamante = new MaterialDiamante();
         int durabilidadInicial;
         int diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez;

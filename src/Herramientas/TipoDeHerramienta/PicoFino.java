@@ -1,9 +1,8 @@
 package Herramientas.TipoDeHerramienta;
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramienta;
 import Materiales.Material;
-import Materiales.MaterialDiamante;
 
-public class TipoDeHerramientaPicoFino implements TipoDeHerramienta {
+public class TipoDeHerramientaPicoFino implements Herramienta {
     private MaterialDeHerramienta materialDeHerramienta;
 
 
