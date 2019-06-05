@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ce8636a2-d624-4831-89ca-dd0fed447f15" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/TP2Algocraft.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/HerramientaTest/FormasDeDesgaste/DesgasteAbruptaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/HerramientaTest/FormasDeDesgaste/DesgasteAbruptaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/HerramientaTest/FormasDeDesgaste/DesgasteLienalConPendienteDosTerciosTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/HerramientaTest/FormasDeDesgaste/DesgasteLienalConPendienteDosTerciosTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/HerramientaTest/FormasDeDesgaste/DesgasteLienalConPendienteUnMedioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/HerramientaTest/FormasDeDesgaste/DesgasteLienalConPendienteUnMedioTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/HerramientaTest/FormasDeDesgaste/DesgasteLinealTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/HerramientaTest/FormasDeDesgaste/DesgasteLinealTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/HerramientaTest/FormasDeDesgaste/DesgastePicoFinoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/HerramientaTest/FormasDeDesgaste/DesgastePicoFinoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/HerramientaTest/HachaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/HerramientaTest/HachaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/HerramientaTest/MaterialDeHerramientaTest/MaterialDeTipoDeHerramientaMaderaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/HerramientaTest/MaterialDeHerramientaTest/MaterialDeTipoDeHerramientaMaderaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/HerramientaTest/MaterialDeHerramientaTest/MaterialDeTipoDeHerramientaMetalPiedraTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/HerramientaTest/MaterialDeHerramientaTest/MaterialDeTipoDeHerramientaMetalPiedraTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/HerramientaTest/MaterialDeHerramientaTest/MaterialDeTipoDeHerramientaMetalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/HerramientaTest/MaterialDeHerramientaTest/MaterialDeTipoDeHerramientaMetalTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/HerramientaTest/MaterialDeHerramientaTest/MaterialDeTipoDeHerramientaPiedraTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/HerramientaTest/MaterialDeHerramientaTest/MaterialDeTipoDeHerramientaPiedraTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/HerramientaTest/PicoFinoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/HerramientaTest/PicoFinoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/HerramientaTest/PicoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/HerramientaTest/PicoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Jugador/JugadorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Jugador/JugadorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/MaterialesTest/MaterialDiamanteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/MaterialesTest/MaterialDiamanteTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/MaterialesTest/MaterialMaderaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/MaterialesTest/MaterialMaderaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/MaterialesTest/MaterialMetalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/MaterialesTest/MaterialMetalTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/MaterialesTest/MaterialPiedraTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/MaterialesTest/MaterialPiedraTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Herramientas/Herramienta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Herramientas/Herramienta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/FormaDeDesgaste/Desgaste.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/FormaDeDesgaste/Desgaste.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/FormaDeDesgaste/DesgasteAbrupta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/FormaDeDesgaste/DesgasteAbrupta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/FormaDeDesgaste/DesgasteLienalConPendienteDosTercios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/FormaDeDesgaste/DesgasteLienalConPendienteDosTercios.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/FormaDeDesgaste/DesgasteLienalConPendienteUnMedio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/FormaDeDesgaste/DesgasteLienalConPendienteUnMedio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/FormaDeDesgaste/DesgasteLineal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/FormaDeDesgaste/DesgasteLineal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/FormaDeDesgaste/DesgastePicoFino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/FormaDeDesgaste/DesgastePicoFino.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/Hacha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/Hacha.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/MaterialDeHerramientas/MaterialDeHerramientaMadera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/MaterialDeHerramientas/MaterialDeHerramientaMadera.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/MaterialDeHerramientas/MaterialDeHerramientaMetal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/MaterialDeHerramientas/MaterialDeHerramientaMetal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/MaterialDeHerramientas/MaterialDeHerramientaMetalPiedra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/MaterialDeHerramientas/MaterialDeHerramientaMetalPiedra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/MaterialDeHerramientas/MaterialDeHerramientaPiedra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/MaterialDeHerramientas/MaterialDeHerramientaPiedra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/Pico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/Pico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/PicoFino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/PicoFino.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/TipoDeHerramienta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/TipoDeHerramienta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Jugador/Inventario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Jugador/Inventario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Jugador/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Jugador/Jugador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Materiales/Material.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Materiales/Material.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Materiales/MaterialDiamante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Materiales/MaterialDiamante.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Materiales/MaterialMadera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Materiales/MaterialMadera.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Materiales/MaterialMetal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Materiales/MaterialMetal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Materiales/MaterialPiedra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Materiales/MaterialPiedra.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="190" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Test/HerramientaTest/HachaTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="107">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Test/HerramientaTest/PicoFinoTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="13" column="80" lean-forward="true" selection-start-line="13" selection-start-column="80" selection-end-line="13" selection-end-column="80" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Test/Jugador/JugadorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="23" column="68" lean-forward="true" selection-start-line="23" selection-start-column="68" selection-end-line="23" selection-end-column="68" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Jugador/Inventario.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#557#558#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Materiales/MaterialDiamante.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/Hacha.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/Herramienta.java" />
+        <option value="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/Pico.java" />
+        <option value="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/PicoFino.java" />
+        <option value="$PROJECT_DIR$/Test/HerramientaTest/HachaTest.java" />
+        <option value="$PROJECT_DIR$/Test/HerramientaTest/PicoFinoTest.java" />
+        <option value="$PROJECT_DIR$/Test/HerramientaTest/PicoTest.java" />
+        <option value="$PROJECT_DIR$/src/Herramientas/Herramienta.java" />
+        <option value="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/Hacha.java" />
+        <option value="$PROJECT_DIR$/src/Materiales/Material.java" />
+        <option value="$PROJECT_DIR$/src/Jugador/Inventario.java" />
+        <option value="$PROJECT_DIR$/src/Jugador/Jugador.java" />
+        <option value="$PROJECT_DIR$/Test/Jugador/JugadorTest.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="10" />
+    <option name="y" value="20" />
+    <option name="width" value="1346" />
+    <option name="height" value="696" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="TP2Algocraft" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TP2Algocraft" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TP2Algocraft" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TP2Algocraft" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TP2Algocraft" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TP2Algocraft" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Herramientas" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TP2Algocraft" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TP2Algocraft" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Herramientas" type="462c0819:PsiDirectoryNode" />
+              <item name="TipoDeHerramienta" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TP2Algocraft" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TP2Algocraft" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Herramientas" type="462c0819:PsiDirectoryNode" />
+              <item name="TipoDeHerramienta" type="462c0819:PsiDirectoryNode" />
+              <item name="MaterialDeHerramientas" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TP2Algocraft" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TP2Algocraft" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Jugador" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TP2Algocraft" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TP2Algocraft" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Materiales" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TP2Algocraft" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TP2Algocraft" type="462c0819:PsiDirectoryNode" />
+              <item name="Test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TP2Algocraft" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TP2Algocraft" type="462c0819:PsiDirectoryNode" />
+              <item name="Test" type="462c0819:PsiDirectoryNode" />
+              <item name="HerramientaTest" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.All in TP2Algocraft">
+    <configuration name="All in TP2Algocraft" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TP2Algocraft" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HachaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TP2Algocraft" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="HerramientaTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="HerramientaTest" />
+      <option name="MAIN_CLASS_NAME" value="HerramientaTest.HachaTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JugadorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TP2Algocraft" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Jugador.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Jugador" />
+      <option name="MAIN_CLASS_NAME" value="Jugador.JugadorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JugadorTest.JugadorRecienCreadoComienzaConHachaDeMaderaEnManoYVerificoQueTengaAtributosDeHachaDeMadera" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TP2Algocraft" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Jugador.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Jugador" />
+      <option name="MAIN_CLASS_NAME" value="Jugador.JugadorTest" />
+      <option name="METHOD_NAME" value="JugadorRecienCreadoComienzaConHachaDeMaderaEnManoYVerificoQueTengaAtributosDeHachaDeMadera" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PicoFinoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TP2Algocraft" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="HerramientaTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="HerramientaTest" />
+      <option name="MAIN_CLASS_NAME" value="HerramientaTest.PicoFinoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in TP2Algocraft" />
+        <item itemvalue="JUnit.PicoFinoTest" />
+        <item itemvalue="JUnit.HachaTest" />
+        <item itemvalue="JUnit.JugadorTest.JugadorRecienCreadoComienzaConHachaDeMaderaEnManoYVerificoQueTengaAtributosDeHachaDeMadera" />
+        <item itemvalue="JUnit.JugadorTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ce8636a2-d624-4831-89ca-dd0fed447f15" name="Default Changelist" comment="" />
+      <created>1559621159198</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1559621159198</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="JugadorTest - 2019.06.04 at 21h 10m 25s.xml">
+      <configuration name="JugadorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JugadorTest_JugadorRecienCreadoComienzaConHachaDeMaderaEnManoYVerificoQueTengaAtributosDeHachaDeMadera - 2019.06.04 at 21h 18m 41s.xml">
+      <configuration name="JugadorTest.JugadorRecienCreadoComienzaConHachaDeMaderaEnManoYVerificoQueTengaAtributosDeHachaDeMadera" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JugadorTest_JugadorRecienCreadoComienzaConHachaDeMaderaEnManoYVerificoQueTengaAtributosDeHachaDeMadera - 2019.06.04 at 21h 23m 10s.xml">
+      <configuration name="JugadorTest.JugadorRecienCreadoComienzaConHachaDeMaderaEnManoYVerificoQueTengaAtributosDeHachaDeMadera" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HachaTest - 2019.06.04 at 21h 34m 23s.xml">
+      <configuration name="HachaTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HachaTest - 2019.06.04 at 21h 34m 28s.xml">
+      <configuration name="HachaTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HachaTest - 2019.06.04 at 21h 34m 33s.xml">
+      <configuration name="HachaTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HachaTest - 2019.06.04 at 21h 43m 47s.xml">
+      <configuration name="HachaTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PicoFinoTest - 2019.06.04 at 21h 44m 09s.xml">
+      <configuration name="PicoFinoTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PicoFinoTest - 2019.06.04 at 21h 53m 49s.xml">
+      <configuration name="PicoFinoTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_TP2Algocraft - 2019.06.04 at 21h 53m 56s.xml">
+      <configuration name="All in TP2Algocraft" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-2" y="-2" width="1370" height="740" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25755286" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32899022" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39739415" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32899022" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info active="true" anchor="right" id="Coverage" order="8" side_tool="true" visible="true" weight="0.32930514" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25377643" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32899022" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+    </layout-to-restore>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/TP2Algocraft$All_in_TP2Algocraft.ic" NAME="All in TP2Algocraft Coverage Results" MODIFIED="1559696034255" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/FormaDeDesgaste/DesgasteLienalConPendienteUnMedio.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/FormaDeDesgaste/DesgasteLineal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/FormaDeDesgaste/DesgastePicoFino.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/HerramientaTest/MaterialDeHerramientaTest/MaterialDeTipoDeHerramientaMaderaTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Materiales/UnidadElemental/UnidadElementalDiamante.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Materiales/UnidadElemental/UnidadElementalMetal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Materiales/UnidadElemental/UnidadElementalPiedra.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/MaterialDeHerramientas/MaterialDeHerramienta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/FormaDeDesgaste/DesgasteAbrupta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/FormaDeDesgaste/Desgaste.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/TipoDeHerramienta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/PicoFino.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/HerramientaTest/PicoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2462">
+          <caret line="271" lean-forward="true" selection-start-line="271" selection-end-line="271" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Materiales/UnidadElemental/UnidadElementalMadera.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP2Algocraft.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Materiales/MaterialMadera.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/Pico.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="22" column="27" lean-forward="true" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Materiales/MaterialMetal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/FormaDeDesgaste/DesgasteLienalConPendienteDosTercios.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/MaterialesTest/MaterialDiamanteTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/MaterialDeHerramientas/MaterialDeHerramientaMadera.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="48" column="20" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Materiales/Material.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+          <folding>
+            <element signature="e#657#658#0" expanded="true" />
+            <element signature="e#685#686#0" expanded="true" />
+            <element signature="e#752#753#0" expanded="true" />
+            <element signature="e#780#781#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/MaterialDeHerramientas/MaterialDeHerramientaMetal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="46" column="48" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/builders/JUnit4Builder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Herramientas/Herramienta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#432#433#0" expanded="true" />
+            <element signature="e#490#491#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Jugador/Jugador.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="23" column="15" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#559#560#0" expanded="true" />
+            <element signature="e#596#597#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
+            <element signature="e#852#853#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Jugador/Inventario.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#557#558#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Materiales/MaterialDiamante.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/Jugador/JugadorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="23" column="68" lean-forward="true" selection-start-line="23" selection-start-column="68" selection-end-line="23" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/Hacha.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/HerramientaTest/HachaTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/HerramientaTest/PicoFinoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="13" column="80" lean-forward="true" selection-start-line="13" selection-start-column="80" selection-end-line="13" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

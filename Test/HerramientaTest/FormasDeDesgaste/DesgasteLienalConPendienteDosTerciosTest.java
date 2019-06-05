@@ -1,14 +1,14 @@
 package HerramientaTest.FormasDeDesgaste;
 
-import Herramientas.TipoDeHerramienta.FormaDeDesgaste.FormaDeDesgaste;
-import Herramientas.TipoDeHerramienta.FormaDeDesgaste.FormaDeDesgasteLienalConPendienteDosTercios;
+import Herramientas.TipoDeHerramienta.FormaDeDesgaste.Desgaste;
+import Herramientas.TipoDeHerramienta.FormaDeDesgaste.DesgasteLienalConPendienteDosTercios;
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramienta;
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMetal;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class FormaDeDesgasteLienalConPendienteDosTerciosTest {
+public class DesgasteLienalConPendienteDosTerciosTest {
     @Test
     public void seGastaUnMaterialDeUnaHerramientaDeReduciendoSuDurabilidadEnLaCantidadDeLosDosTerciosDeSuFuerza(){
         MaterialDeHerramienta materialDeHerramienta = new MaterialDeHerramientaMetal();
@@ -16,7 +16,7 @@ public class FormaDeDesgasteLienalConPendienteDosTerciosTest {
         int durabilidadInicial = materialDeHerramienta.durabilidad();
         int fuerza = materialDeHerramienta.fuerza();
         int durabilidadQueDeveriaTenerLuegoDeGastarse = durabilidadInicial - ((fuerza * 2) / 3);
-        FormaDeDesgaste desgasteLinealConPendienteDosTercios = new FormaDeDesgasteLienalConPendienteDosTercios();
+        Desgaste desgasteLinealConPendienteDosTercios = new DesgasteLienalConPendienteDosTercios();
 
         int durabilidadFinal = desgasteLinealConPendienteDosTercios.desgastarElMaterialDeHerramienta(materialDeHerramienta);
 

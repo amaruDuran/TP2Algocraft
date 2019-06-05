@@ -2,11 +2,11 @@ package Herramientas.TipoDeHerramienta;
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramienta;
 import Materiales.Material;
 
-public class TipoDeHerramientaPicoFino implements Herramienta {
+public class PicoFino implements TipoDeHerramienta {
     private MaterialDeHerramienta materialDeHerramienta;
 
 
-    public TipoDeHerramientaPicoFino(MaterialDeHerramienta material) {
+    public PicoFino(MaterialDeHerramienta material) {
         this.materialDeHerramienta = material;
         this.materialDeHerramienta.setAtributosDePicoFino();
     }
@@ -20,7 +20,7 @@ public class TipoDeHerramientaPicoFino implements Herramienta {
     }
 
     @Override
-    public boolean usarLaHerramientaEn(Material material) {
+    public boolean usarEn(Material material) {
         if (!material.desgastaPicoFino()){
             return true;
         }

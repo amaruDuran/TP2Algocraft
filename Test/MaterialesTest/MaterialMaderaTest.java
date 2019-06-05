@@ -1,12 +1,12 @@
 package MaterialesTest;
 
+import Herramientas.TipoDeHerramienta.Hacha;
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMadera;
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMetal;
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMetalPiedra;
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaPiedra;
-import Herramientas.TipoDeHerramienta.TipoDeHerramientaHacha;
-import Herramientas.TipoDeHerramienta.TipoDeHerramientaPico;
-import Herramientas.TipoDeHerramienta.TipoDeHerramientaPicoFino;
+import Herramientas.TipoDeHerramienta.Pico;
+import Herramientas.TipoDeHerramienta.PicoFino;
 import Materiales.Material;
 import Materiales.MaterialMadera;
 import org.junit.Test;
@@ -16,7 +16,7 @@ import static org.junit.Assert.assertEquals;
 public class MaterialMaderaTest {
     @Test
     public void seIntentaRecolesctarMaderaConHachaDeMaderaYDisminuyeSuDurabilidadLaFuerzaDeLaHerramienta(){
-        TipoDeHerramientaHacha hachaDeMadera = new TipoDeHerramientaHacha(new MaterialDeHerramientaMadera());
+        Hacha hachaDeMadera = new Hacha(new MaterialDeHerramientaMadera());
         Material madera = new MaterialMadera();
         int durabilidadInicial = madera.durabilidadActualDelMaterial();
         int durabilidadQueDeberiaTenerElMaterial = (durabilidadInicial - hachaDeMadera.fuerza());
@@ -25,7 +25,7 @@ public class MaterialMaderaTest {
     }
     @Test
     public void seIntentaRecolesctarMaderaConHachaDePiedraYDisminuyeSuDurabilidadLaFuerzaDeLaHerramienta(){
-        TipoDeHerramientaHacha hachaDePiedra = new TipoDeHerramientaHacha(new MaterialDeHerramientaPiedra());
+        Hacha hachaDePiedra = new Hacha(new MaterialDeHerramientaPiedra());
         Material madera = new MaterialMadera();
         int durabilidadInicial = madera.durabilidadActualDelMaterial();
         int durabilidadQueDeberiaTenerElMaterial = (durabilidadInicial - hachaDePiedra.fuerza());
@@ -34,7 +34,7 @@ public class MaterialMaderaTest {
     }
     @Test
     public void seIntentaRecolesctarMaderaConHachaDeMetalYDisminuyeSuDurabilidadLaFuerzaDeLaHerramienta(){
-        TipoDeHerramientaHacha hachaDeMetal = new TipoDeHerramientaHacha(new MaterialDeHerramientaMetal());
+        Hacha hachaDeMetal = new Hacha(new MaterialDeHerramientaMetal());
         Material madera = new MaterialMadera();
         int durabilidadInicial = madera.durabilidadActualDelMaterial();
         int durabilidadQueDeberiaTenerElMaterial = (durabilidadInicial - hachaDeMetal.fuerza());
@@ -43,9 +43,9 @@ public class MaterialMaderaTest {
     }
     @Test
     public void seIntentaRecolesctarMaderaElProcesoFallaConTodoTipoDePicoYNoDisminuyeSuDurabilidad(){
-        TipoDeHerramientaPico picoDeMadera = new TipoDeHerramientaPico(new MaterialDeHerramientaMadera());
-        TipoDeHerramientaPico picoDePiedra = new TipoDeHerramientaPico(new MaterialDeHerramientaPiedra());
-        TipoDeHerramientaPico picoDeMetal = new TipoDeHerramientaPico(new MaterialDeHerramientaMetal());
+        Pico picoDeMadera = new Pico(new MaterialDeHerramientaMadera());
+        Pico picoDePiedra = new Pico(new MaterialDeHerramientaPiedra());
+        Pico picoDeMetal = new Pico(new MaterialDeHerramientaMetal());
         Material madera = new MaterialMadera();
         int durabilidadInicial = madera.durabilidadActualDelMaterial();
         madera.recolectadoPorPico(picoDeMadera);
@@ -55,7 +55,7 @@ public class MaterialMaderaTest {
     }
     @Test
     public void seIntentaRecolesctarMaderaConUnPicoFinoElProcesoFallaNoSeDesgastaElMaterial(){
-        TipoDeHerramientaPicoFino picoFino = new TipoDeHerramientaPicoFino(new MaterialDeHerramientaMetalPiedra());
+        PicoFino picoFino = new PicoFino(new MaterialDeHerramientaMetalPiedra());
         Material madera = new MaterialMadera();
         int durabilidadInicial = madera.durabilidadActualDelMaterial();
         madera.recolectadoPorPicoFino(picoFino);
@@ -64,7 +64,7 @@ public class MaterialMaderaTest {
     //en los cassos que funciona deben hacerlo varias veces
     @Test
     public void seIntentaRecolectarRepetidasVecesMaderaConHachaDeMaderaYDisminuyeSuDurabilidadLaFuerzaDeLaHerramientaTodasLasVeces(){
-        TipoDeHerramientaHacha hachaDeMadera = new TipoDeHerramientaHacha(new MaterialDeHerramientaMadera());
+        Hacha hachaDeMadera = new Hacha(new MaterialDeHerramientaMadera());
         Material madera = new MaterialMadera();
         int durabilidadInicial = madera.durabilidadActualDelMaterial();
         int vecesRecolectado = 3;
@@ -76,7 +76,7 @@ public class MaterialMaderaTest {
     }
     @Test
     public void seIntentaRecolectarRepetidasVecesMaderaConHachaDePiedraYDisminuyeSuDurabilidadLaFuerzaDeLaHerramientaTodasLasVeces(){
-        TipoDeHerramientaHacha hachaDePiedra = new TipoDeHerramientaHacha(new MaterialDeHerramientaPiedra());
+        Hacha hachaDePiedra = new Hacha(new MaterialDeHerramientaPiedra());
         Material madera = new MaterialMadera();
         int durabilidadInicial = madera.durabilidadActualDelMaterial();
         int vecesRecolectado = 3;
@@ -88,7 +88,7 @@ public class MaterialMaderaTest {
     }
     @Test
     public void seIntentaRecolectarRepetidasVecesMaderaConHachaDeMetalYDisminuyeSuDurabilidadLaFuerzaDeLaHerramientaTodasLasVeces(){
-        TipoDeHerramientaHacha hachaDeMetal = new TipoDeHerramientaHacha(new MaterialDeHerramientaMetal());
+        Hacha hachaDeMetal = new Hacha(new MaterialDeHerramientaMetal());
         Material madera = new MaterialMadera();
         int durabilidadInicial = madera.durabilidadActualDelMaterial();
         int vecesRecolectado = 3;

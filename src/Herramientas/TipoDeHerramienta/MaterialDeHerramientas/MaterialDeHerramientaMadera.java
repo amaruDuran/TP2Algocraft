@@ -1,14 +1,14 @@
 package Herramientas.TipoDeHerramienta.MaterialDeHerramientas;
 
-import Herramientas.TipoDeHerramienta.FormaDeDesgaste.FormaDeDesgaste;
-import Herramientas.TipoDeHerramienta.FormaDeDesgaste.FormaDeDesgasteLineal;
+import Herramientas.TipoDeHerramienta.FormaDeDesgaste.Desgaste;
+import Herramientas.TipoDeHerramienta.FormaDeDesgaste.DesgasteLineal;
 import Materiales.Material;
 
 public class MaterialDeHerramientaMadera implements MaterialDeHerramienta {
 
     private int fuerza;
     private int durabilidad;
-    private FormaDeDesgaste desgaste;
+    private Desgaste desgaste;
 
     public MaterialDeHerramientaMadera(){
         this.durabilidad = 100;
@@ -17,20 +17,20 @@ public class MaterialDeHerramientaMadera implements MaterialDeHerramienta {
     @Override
     public void setAtributosDeHacha() {
         this.fuerza = 2;
-        this.desgaste = new FormaDeDesgasteLineal();
+        this.desgaste = new DesgasteLineal();
     }
 
     @Override
     public void setAtributosDePico() {
         this.fuerza = 2;
-        this.desgaste = new FormaDeDesgasteLineal();
+        this.desgaste = new DesgasteLineal();
     }
 
     @Override
     public void setAtributosDePicoFino() {
         //No existe esta herramienta hacha de este material el metodo esta por el polimorfismo
         this.fuerza = 0;
-        this.desgaste = new FormaDeDesgasteLineal();
+        this.desgaste = new DesgasteLineal();
     }
 
     @Override

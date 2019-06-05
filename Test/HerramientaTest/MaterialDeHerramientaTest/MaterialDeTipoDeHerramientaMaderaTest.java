@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class MaterialDeHerramientaMaderaTest {
+public class MaterialDeTipoDeHerramientaMaderaTest {
     //test de fuerza
     @Test
     public void materialDeHerramientaMaderaDaUnaFuerzaDe2ParaHachas(){

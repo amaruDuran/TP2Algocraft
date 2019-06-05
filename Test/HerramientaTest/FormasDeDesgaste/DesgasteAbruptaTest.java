@@ -1,19 +1,19 @@
 package HerramientaTest.FormasDeDesgaste;
 
-import Herramientas.TipoDeHerramienta.FormaDeDesgaste.FormaDeDesgaste;
-import Herramientas.TipoDeHerramienta.FormaDeDesgaste.FormaDeDesgasteAbrupta;
+import Herramientas.TipoDeHerramienta.FormaDeDesgaste.Desgaste;
+import Herramientas.TipoDeHerramienta.FormaDeDesgaste.DesgasteAbrupta;
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramienta;
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMetal;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class FormaDeDesgasteAbruptaTest {
+public class DesgasteAbruptaTest {
     @Test
     public void seGastaUnMaterialDeHerramientaYSuDurabilidadPermaneceIntacta(){
         MaterialDeHerramienta materialDeHerramienta = new MaterialDeHerramientaMetal();
         int durabilidadInicial = materialDeHerramienta.durabilidad();
-        FormaDeDesgaste desgasteAbrupto = new FormaDeDesgasteAbrupta();
+        Desgaste desgasteAbrupto = new DesgasteAbrupta();
 
         int durabilidadFinal = desgasteAbrupto.desgastarElMaterialDeHerramienta(materialDeHerramienta);
 
@@ -23,7 +23,7 @@ public class FormaDeDesgasteAbruptaTest {
     public void seGasta9VecesUnMaterialDeHerramientaYSuDurabilidadPermaneceIntacta(){
         MaterialDeHerramienta materialDeHerramienta = new MaterialDeHerramientaMetal();
         int durabilidadInicial = materialDeHerramienta.durabilidad();
-        FormaDeDesgaste desgasteAbrupto = new FormaDeDesgasteAbrupta();
+        Desgaste desgasteAbrupto = new DesgasteAbrupta();
         int durabilidadFinal = -1;
 
         for (int i = 0; i < 9; i++){
@@ -35,7 +35,7 @@ public class FormaDeDesgasteAbruptaTest {
     @Test
     public void seGasta10VecesUnMaterialDeHerramientaYSuDurabilidadEsCero(){
         MaterialDeHerramienta materialDeHerramienta = new MaterialDeHerramientaMetal();
-        FormaDeDesgaste desgasteAbrupto = new FormaDeDesgasteAbrupta();
+        Desgaste desgasteAbrupto = new DesgasteAbrupta();
         int durabilidadFinal = -1;
         for (int i = 0; i < 10; i++){
             durabilidadFinal = desgasteAbrupto.desgastarElMaterialDeHerramienta(materialDeHerramienta);

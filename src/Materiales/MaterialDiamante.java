@@ -1,6 +1,6 @@
 package Materiales;
 
-import Herramientas.TipoDeHerramienta.TipoDeHerramientaPicoFino;
+import Herramientas.TipoDeHerramienta.PicoFino;
 import Materiales.UnidadElemental.UnidadElementalDiamante;
 
 public class MaterialDiamante extends Material {
@@ -11,7 +11,7 @@ public class MaterialDiamante extends Material {
     }
 
     @Override
-    public boolean recolectadoPorPicoFino(TipoDeHerramientaPicoFino herramienta) {
+    public boolean recolectadoPorPicoFino(PicoFino herramienta) {
         herramientaGastaMaterial(herramienta.fuerza());
         return true;
     }

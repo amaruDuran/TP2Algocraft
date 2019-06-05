@@ -2,7 +2,7 @@ package Herramientas.TipoDeHerramienta.FormaDeDesgaste;
 
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramienta;
 
-public class FormaDeDesgastePicoFino implements FormaDeDesgaste {
+public class DesgastePicoFino implements Desgaste {
 
     @Override
     public int desgastarElMaterialDeHerramienta(MaterialDeHerramienta material) {

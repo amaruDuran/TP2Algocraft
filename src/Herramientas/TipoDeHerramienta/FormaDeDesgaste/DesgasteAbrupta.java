@@ -2,7 +2,7 @@ package Herramientas.TipoDeHerramienta.FormaDeDesgaste;
 
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramienta;
 
-public class FormaDeDesgasteAbrupta implements FormaDeDesgaste{
+public class DesgasteAbrupta implements Desgaste {
     private int golpesAntesDeRomperse = 10;
 
     @Override

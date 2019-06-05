@@ -1,8 +1,6 @@
 package Materiales;
 
-import Herramientas.TipoDeHerramienta.TipoDeHerramientaHacha;
-import Herramientas.TipoDeHerramienta.TipoDeHerramientaPico;
-import Herramientas.TipoDeHerramienta.TipoDeHerramientaPicoFino;
+import Herramientas.TipoDeHerramienta.Pico;
 import Materiales.UnidadElemental.UnidadElementalPiedra;
 
 public class MaterialPiedra extends Material {
@@ -13,7 +11,7 @@ public class MaterialPiedra extends Material {
     }
 
     @Override
-    public boolean recolectadoPorPico(TipoDeHerramientaPico herramienta) {
+    public boolean recolectadoPorPico(Pico herramienta) {
         herramientaGastaMaterial(herramienta.fuerza());
         return true;
     }

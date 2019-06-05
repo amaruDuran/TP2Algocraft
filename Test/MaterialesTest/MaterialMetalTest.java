@@ -1,12 +1,12 @@
 package MaterialesTest;
 
+import Herramientas.TipoDeHerramienta.Hacha;
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMadera;
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMetal;
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMetalPiedra;
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaPiedra;
-import Herramientas.TipoDeHerramienta.TipoDeHerramientaHacha;
-import Herramientas.TipoDeHerramienta.TipoDeHerramientaPico;
-import Herramientas.TipoDeHerramienta.TipoDeHerramientaPicoFino;
+import Herramientas.TipoDeHerramienta.Pico;
+import Herramientas.TipoDeHerramienta.PicoFino;
 import Materiales.Material;
 import Materiales.MaterialMetal;
 import org.junit.Test;
@@ -16,9 +16,9 @@ import static org.junit.Assert.assertEquals;
 public class MaterialMetalTest {
     @Test
     public void seIntentaRecolesctarMetalElProcesoFallaConTodoTipoDeHachaYNoDisminuyeSuDurabilidad(){
-        TipoDeHerramientaHacha hachaDeMadera = new TipoDeHerramientaHacha(new MaterialDeHerramientaMadera());
-        TipoDeHerramientaHacha hachaDePiedra = new TipoDeHerramientaHacha(new MaterialDeHerramientaPiedra());
-        TipoDeHerramientaHacha hachaDeMetal = new TipoDeHerramientaHacha(new MaterialDeHerramientaMetal());
+        Hacha hachaDeMadera = new Hacha(new MaterialDeHerramientaMadera());
+        Hacha hachaDePiedra = new Hacha(new MaterialDeHerramientaPiedra());
+        Hacha hachaDeMetal = new Hacha(new MaterialDeHerramientaMetal());
         Material metal = new MaterialMetal();
         int durabilidadInicial = metal.durabilidadActualDelMaterial();
         metal.recolectadoPorHacha(hachaDeMadera);
@@ -28,7 +28,7 @@ public class MaterialMetalTest {
     }
     @Test
     public void seIntentaRecolesctarMetalElProcesoFallaConPicoDeMaderaNoDisminuyeSuDurabilidad(){
-        TipoDeHerramientaPico picoDeMadera = new TipoDeHerramientaPico(new MaterialDeHerramientaMadera());
+        Pico picoDeMadera = new Pico(new MaterialDeHerramientaMadera());
         Material metal = new MaterialMetal();
         int durabilidadInicial = metal.durabilidadActualDelMaterial();
         metal.recolectadoPorPico(picoDeMadera);
@@ -36,7 +36,7 @@ public class MaterialMetalTest {
     }
     @Test
     public void seIntentaRecolesctarMetalElProcesoConPicoDePiedraYDisminuyeSuDurabilidadEnLaFuerzaDeLaHerramienta(){
-        TipoDeHerramientaPico picoDePiedra = new TipoDeHerramientaPico(new MaterialDeHerramientaPiedra());
+        Pico picoDePiedra = new Pico(new MaterialDeHerramientaPiedra());
         Material metal = new MaterialMetal();
         int durabilidadInicial = metal.durabilidadActualDelMaterial();
         int durabilidadQueDeberiaTenerElMaterial = (durabilidadInicial - picoDePiedra.fuerza());
@@ -45,7 +45,7 @@ public class MaterialMetalTest {
     }
     @Test
     public void seIntentaRecolesctarMetalElProcesoCoPicoDeMetalDisminuyeSuDurabilidadEnLaFuerzaDeLaHerramienta(){
-        TipoDeHerramientaPico picoDeMetal = new TipoDeHerramientaPico(new MaterialDeHerramientaMetal());
+        Pico picoDeMetal = new Pico(new MaterialDeHerramientaMetal());
         Material metal = new MaterialMetal();
         int durabilidadInicial = metal.durabilidadActualDelMaterial();
         int durabilidadQueDeberiaTenerElMaterial = (durabilidadInicial - picoDeMetal.fuerza());
@@ -54,7 +54,7 @@ public class MaterialMetalTest {
     }
     @Test//supuesto el pico fino no recolecta metal
     public void seIntentaRecolesctarMetalConUnPicoFinoElProcesoFallaNoSeDesgastaElMaterial(){
-        TipoDeHerramientaPicoFino picoFino = new TipoDeHerramientaPicoFino(new MaterialDeHerramientaMetalPiedra());
+        PicoFino picoFino = new PicoFino(new MaterialDeHerramientaMetalPiedra());
         Material metal = new MaterialMetal();
         int durabilidadInicial = metal.durabilidadActualDelMaterial();
         metal.recolectadoPorPicoFino(picoFino);
@@ -63,7 +63,7 @@ public class MaterialMetalTest {
     //en los cassos que funciona deben hacerlo varias veces
     @Test
     public void seIntentaRecolesctarRepetidasVecesMetalElProcesoConPicoDePiedraYDisminuyeSuDurabilidadEnLaFuerzaDeLaHerramientaTodasLasVeces(){
-        TipoDeHerramientaPico picoDePiedra = new TipoDeHerramientaPico(new MaterialDeHerramientaPiedra());
+        Pico picoDePiedra = new Pico(new MaterialDeHerramientaPiedra());
         Material metal = new MaterialMetal();
         int durabilidadInicial = metal.durabilidadActualDelMaterial();
         int vecesRecolectado = 8;
@@ -75,7 +75,7 @@ public class MaterialMetalTest {
     }
     @Test
     public void seIntentaRecolesctarRepetidasVecesMetalElProcesoCoPicoDeMetalDisminuyeSuDurabilidadEnLaFuerzaDeLaHerramientaTodasLasVeces(){
-        TipoDeHerramientaPico picoDeMetal = new TipoDeHerramientaPico(new MaterialDeHerramientaMetal());
+        Pico picoDeMetal = new Pico(new MaterialDeHerramientaMetal());
         Material metal = new MaterialMetal();
         int durabilidadInicial = metal.durabilidadActualDelMaterial();
         int vecesRecolectado = 3;

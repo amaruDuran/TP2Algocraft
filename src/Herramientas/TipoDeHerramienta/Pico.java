@@ -3,10 +3,10 @@ package Herramientas.TipoDeHerramienta;
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramienta;
 import Materiales.Material;
 
-public class TipoDeHerramientaPico implements Herramienta {
+public class Pico implements TipoDeHerramienta {
     private MaterialDeHerramienta materialDeHerramienta;
 
-    public TipoDeHerramientaPico(MaterialDeHerramienta materialDeHerramienta) {
+    public Pico(MaterialDeHerramienta materialDeHerramienta) {
         this.materialDeHerramienta = materialDeHerramienta;
         this.materialDeHerramienta.setAtributosDePico();
     }
@@ -19,7 +19,7 @@ public class TipoDeHerramientaPico implements Herramienta {
         return this.materialDeHerramienta.fuerza();
     }
     @Override
-    public boolean usarLaHerramientaEn(Material material) {
+    public boolean usarEn(Material material) {
         return materialDeHerramienta.usarLaHerramientaEn(material);
     }
 }

@@ -2,10 +2,10 @@ package Herramientas.TipoDeHerramienta;
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramienta;
 import Materiales.Material;
 
-public class TipoDeHerramientaHacha implements Herramienta {
+public class Hacha implements TipoDeHerramienta {
     private MaterialDeHerramienta materialDeHerramienta;
 
-    public TipoDeHerramientaHacha(MaterialDeHerramienta materialDeHerramienta){
+    public Hacha(MaterialDeHerramienta materialDeHerramienta){
         this.materialDeHerramienta = materialDeHerramienta;
         this.materialDeHerramienta.setAtributosDeHacha();
     }
@@ -17,8 +17,10 @@ public class TipoDeHerramientaHacha implements Herramienta {
     public int fuerza() {
         return this.materialDeHerramienta.fuerza();
     }
+
     @Override
-    public boolean usarLaHerramientaEn(Material material) {
+    public boolean usarEn(Material material) {
+        material.recolectadoPorHacha(this);
         return materialDeHerramienta.usarLaHerramientaEn(material);
     }
 }

@@ -1,12 +1,12 @@
 package MaterialesTest;
 
+import Herramientas.TipoDeHerramienta.Hacha;
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMadera;
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMetal;
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMetalPiedra;
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaPiedra;
-import Herramientas.TipoDeHerramienta.TipoDeHerramientaHacha;
-import Herramientas.TipoDeHerramienta.TipoDeHerramientaPico;
-import Herramientas.TipoDeHerramienta.TipoDeHerramientaPicoFino;
+import Herramientas.TipoDeHerramienta.Pico;
+import Herramientas.TipoDeHerramienta.PicoFino;
 import Materiales.Material;
 import Materiales.MaterialDiamante;
 import org.junit.Test;
@@ -16,9 +16,9 @@ import static org.junit.Assert.assertEquals;
 public class MaterialDiamanteTest {
     @Test
     public void seIntentaRecolesctarDiamanteElProcesoFallaConTodoTipoDeHachaYNoDisminuyeSuDurabilidad(){
-        TipoDeHerramientaHacha hachaDeMadera = new TipoDeHerramientaHacha(new MaterialDeHerramientaMadera());
-        TipoDeHerramientaHacha hachaDePiedra = new TipoDeHerramientaHacha(new MaterialDeHerramientaPiedra());
-        TipoDeHerramientaHacha hachaDeMetal = new TipoDeHerramientaHacha(new MaterialDeHerramientaMetal());
+        Hacha hachaDeMadera = new Hacha(new MaterialDeHerramientaMadera());
+        Hacha hachaDePiedra = new Hacha(new MaterialDeHerramientaPiedra());
+        Hacha hachaDeMetal = new Hacha(new MaterialDeHerramientaMetal());
         Material diamante = new MaterialDiamante();
         int durabilidadInicial = diamante.durabilidadActualDelMaterial();
         diamante.recolectadoPorHacha(hachaDeMadera);
@@ -28,9 +28,9 @@ public class MaterialDiamanteTest {
     }
     @Test
     public void seIntentaRecolesctarDiamanteElProcesoFallaConTodoTipoDePicoYNoDisminuyeSuDurabilidad(){
-        TipoDeHerramientaPico picoDeMadera = new TipoDeHerramientaPico(new MaterialDeHerramientaMadera());
-        TipoDeHerramientaPico picoDePiedra = new TipoDeHerramientaPico(new MaterialDeHerramientaPiedra());
-        TipoDeHerramientaPico picoDeMetal = new TipoDeHerramientaPico(new MaterialDeHerramientaMetal());
+        Pico picoDeMadera = new Pico(new MaterialDeHerramientaMadera());
+        Pico picoDePiedra = new Pico(new MaterialDeHerramientaPiedra());
+        Pico picoDeMetal = new Pico(new MaterialDeHerramientaMetal());
         Material diamante = new MaterialDiamante();
         int durabilidadInicial = diamante.durabilidadActualDelMaterial();
         diamante.recolectadoPorPico(picoDeMadera);
@@ -40,7 +40,7 @@ public class MaterialDiamanteTest {
     }
     @Test
     public void seIntentaRecolesctarDiamanteConUnPicoFinoElCualDesgastaElMaterial(){
-        TipoDeHerramientaPicoFino picoFino = new TipoDeHerramientaPicoFino(new MaterialDeHerramientaMetalPiedra());
+        PicoFino picoFino = new PicoFino(new MaterialDeHerramientaMetalPiedra());
         Material diamante = new MaterialDiamante();
         int durabilidadInicial = diamante.durabilidadActualDelMaterial();
         diamante.recolectadoPorPicoFino(picoFino);
@@ -50,7 +50,7 @@ public class MaterialDiamanteTest {
     //en los cassos que funciona deben hacerlo varias veces
     @Test
     public void seIntentaRecolesctarRepetidasVecesDiamanteConUnPicoFinoElCualDesgastaElMaterialTodasLasVeces(){
-        TipoDeHerramientaPicoFino picoFino = new TipoDeHerramientaPicoFino(new MaterialDeHerramientaMetalPiedra());
+        PicoFino picoFino = new PicoFino(new MaterialDeHerramientaMetalPiedra());
         Material diamante = new MaterialDiamante();
         int durabilidadInicial = diamante.durabilidadActualDelMaterial();
         int vecesRecolectado = 3;

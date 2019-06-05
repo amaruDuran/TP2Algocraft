@@ -1,9 +1,8 @@
 package Materiales;
 
-import Herramientas.TipoDeHerramienta.TipoDeHerramienta;
-import Herramientas.TipoDeHerramienta.TipoDeHerramientaHacha;
-import Herramientas.TipoDeHerramienta.TipoDeHerramientaPico;
-import Herramientas.TipoDeHerramienta.TipoDeHerramientaPicoFino;
+import Herramientas.TipoDeHerramienta.Hacha;
+import Herramientas.TipoDeHerramienta.Pico;
+import Herramientas.TipoDeHerramienta.PicoFino;
 import Materiales.UnidadElemental.UnidadElemental;
 
 public abstract class Material {
@@ -18,15 +17,15 @@ public abstract class Material {
         return durabilidad;
     }
 
-    public boolean recolectadoPorHacha(TipoDeHerramientaHacha herramienta) {
+    public boolean recolectadoPorHacha(Hacha herramienta) {
         return false;
     }
 
-    public boolean recolectadoPorPico(TipoDeHerramientaPico herramienta) {
+    public boolean recolectadoPorPico(Pico herramienta) {
         return false;
     }
 
-    public boolean recolectadoPorPicoFino(TipoDeHerramientaPicoFino herramienta) {
+    public boolean recolectadoPorPicoFino(PicoFino herramienta) {
         return false;
     }
 

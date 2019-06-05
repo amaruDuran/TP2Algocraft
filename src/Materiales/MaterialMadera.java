@@ -1,8 +1,6 @@
 package Materiales;
 
-import Herramientas.TipoDeHerramienta.TipoDeHerramientaHacha;
-import Herramientas.TipoDeHerramienta.TipoDeHerramientaPico;
-import Herramientas.TipoDeHerramienta.TipoDeHerramientaPicoFino;
+import Herramientas.TipoDeHerramienta.Hacha;
 import Materiales.UnidadElemental.UnidadElementalMadera;
 
 public class MaterialMadera extends Material {
@@ -13,7 +11,7 @@ public class MaterialMadera extends Material {
     }
 
     @Override
-    public boolean recolectadoPorHacha(TipoDeHerramientaHacha herramienta) {
+    public boolean recolectadoPorHacha(Hacha herramienta) {
         herramientaGastaMaterial(herramienta.fuerza());
         return true;
     }

@@ -2,7 +2,7 @@ package Herramientas.TipoDeHerramienta.FormaDeDesgaste;
 
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramienta;
 
-public class FormaDeDesgasteLineal implements FormaDeDesgaste {
+public class DesgasteLineal implements Desgaste {
     @Override
     public int desgastarElMaterialDeHerramienta(MaterialDeHerramienta material) {
         int durabilidadFinal = material.durabilidad() - material.fuerza();

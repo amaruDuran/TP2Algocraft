@@ -1,14 +1,14 @@
 package Herramientas.TipoDeHerramienta.MaterialDeHerramientas;
 
-import Herramientas.TipoDeHerramienta.FormaDeDesgaste.FormaDeDesgaste;
-import Herramientas.TipoDeHerramienta.FormaDeDesgaste.FormaDeDesgasteLienalConPendienteDosTercios;
-import Herramientas.TipoDeHerramienta.FormaDeDesgaste.FormaDeDesgasteLineal;
+import Herramientas.TipoDeHerramienta.FormaDeDesgaste.Desgaste;
+import Herramientas.TipoDeHerramienta.FormaDeDesgaste.DesgasteLienalConPendienteDosTercios;
+import Herramientas.TipoDeHerramienta.FormaDeDesgaste.DesgasteLineal;
 import Materiales.Material;
 
 public class MaterialDeHerramientaPiedra implements MaterialDeHerramienta {
     private int durabilidad;
     private int fuerza;
-    private FormaDeDesgaste desgaste;
+    private Desgaste desgaste;
 
     public MaterialDeHerramientaPiedra(){
         this.durabilidad = 200;
@@ -17,13 +17,13 @@ public class MaterialDeHerramientaPiedra implements MaterialDeHerramienta {
     @Override
     public void setAtributosDeHacha(){
         this.fuerza = 5;
-        this.desgaste = new FormaDeDesgasteLineal();
+        this.desgaste = new DesgasteLineal();
     }
 
     @Override
     public void setAtributosDePico(){
         this.fuerza = 4;
-        this.desgaste = new FormaDeDesgasteLienalConPendienteDosTercios();
+        this.desgaste = new DesgasteLienalConPendienteDosTercios();
     }
 
     @Override
