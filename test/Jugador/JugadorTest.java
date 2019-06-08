@@ -1,6 +1,5 @@
 package Jugador;
 
-import HerramientaTest.MaterialDeHerramientaTest.MaterialDeTipoDeHerramientaMaderaTest;
 import Herramientas.TipoDeHerramienta.Hacha;
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMadera;
 import Herramientas.TipoDeHerramienta.TipoDeHerramienta;

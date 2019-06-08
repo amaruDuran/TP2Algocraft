@@ -21,9 +21,9 @@ public class MaterialMetalTest {
         Hacha hachaDeMetal = new Hacha(new MaterialDeHerramientaMetal());
         Material metal = new MaterialMetal();
         int durabilidadInicial = metal.durabilidadActualDelMaterial();
-        metal.recolectadoPorHacha(hachaDeMadera);
-        metal.recolectadoPorHacha(hachaDePiedra);
-        metal.recolectadoPorHacha(hachaDeMetal);
+        metal.recolectadoPor(hachaDeMadera);
+        metal.recolectadoPor(hachaDePiedra);
+        metal.recolectadoPor(hachaDeMetal);
         assertEquals(durabilidadInicial, metal.durabilidadActualDelMaterial());
     }
     @Test
@@ -31,7 +31,7 @@ public class MaterialMetalTest {
         Pico picoDeMadera = new Pico(new MaterialDeHerramientaMadera());
         Material metal = new MaterialMetal();
         int durabilidadInicial = metal.durabilidadActualDelMaterial();
-        metal.recolectadoPorPico(picoDeMadera);
+        metal.recolectadoPor(picoDeMadera);
         assertEquals(durabilidadInicial, metal.durabilidadActualDelMaterial());
     }
     @Test
@@ -40,7 +40,7 @@ public class MaterialMetalTest {
         Material metal = new MaterialMetal();
         int durabilidadInicial = metal.durabilidadActualDelMaterial();
         int durabilidadQueDeberiaTenerElMaterial = (durabilidadInicial - picoDePiedra.fuerza());
-        metal.recolectadoPorPico(picoDePiedra);
+        metal.recolectadoPor(picoDePiedra);
         assertEquals(durabilidadQueDeberiaTenerElMaterial, metal.durabilidadActualDelMaterial());
     }
     @Test
@@ -49,7 +49,7 @@ public class MaterialMetalTest {
         Material metal = new MaterialMetal();
         int durabilidadInicial = metal.durabilidadActualDelMaterial();
         int durabilidadQueDeberiaTenerElMaterial = (durabilidadInicial - picoDeMetal.fuerza());
-        metal.recolectadoPorPico(picoDeMetal);
+        metal.recolectadoPor(picoDeMetal);
         assertEquals(durabilidadQueDeberiaTenerElMaterial, metal.durabilidadActualDelMaterial());
     }
     @Test//supuesto el pico fino no recolecta metal
@@ -57,7 +57,7 @@ public class MaterialMetalTest {
         PicoFino picoFino = new PicoFino(new MaterialDeHerramientaMetalPiedra());
         Material metal = new MaterialMetal();
         int durabilidadInicial = metal.durabilidadActualDelMaterial();
-        metal.recolectadoPorPicoFino(picoFino);
+        metal.recolectadoPor(picoFino);
         assertEquals(durabilidadInicial , metal.durabilidadActualDelMaterial());
     }
     //en los cassos que funciona deben hacerlo varias veces
@@ -69,7 +69,7 @@ public class MaterialMetalTest {
         int vecesRecolectado = 8;
         int durabilidadQueDeberiaTenerElMaterial = (durabilidadInicial - (picoDePiedra.fuerza() * vecesRecolectado));
         for (int i = 0; i < vecesRecolectado; i++){
-            metal.recolectadoPorPico(picoDePiedra);
+            metal.recolectadoPor(picoDePiedra);
         }
         assertEquals(durabilidadQueDeberiaTenerElMaterial, metal.durabilidadActualDelMaterial());
     }
@@ -81,7 +81,7 @@ public class MaterialMetalTest {
         int vecesRecolectado = 3;
         int durabilidadQueDeberiaTenerElMaterial = (durabilidadInicial - (picoDeMetal.fuerza() * vecesRecolectado));
         for (int i = 0; i < vecesRecolectado; i++){
-            metal.recolectadoPorPico(picoDeMetal);
+            metal.recolectadoPor(picoDeMetal);
         }
         assertEquals(durabilidadQueDeberiaTenerElMaterial, metal.durabilidadActualDelMaterial());
     }

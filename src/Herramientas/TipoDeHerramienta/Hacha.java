@@ -20,7 +20,7 @@ public class Hacha implements TipoDeHerramienta {
 
     @Override
     public boolean usarEn(Material material) {
-        material.recolectadoPorHacha(this);
+        material.recolectadoPor(this);
         return materialDeHerramienta.usarLaHerramientaEn(material);
     }
 }

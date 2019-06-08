@@ -11,7 +11,7 @@ public class MaterialMadera extends Material {
     }
 
     @Override
-    public boolean recolectadoPorHacha(Hacha herramienta) {
+    public boolean recolectadoPor(Hacha herramienta) {
         herramientaGastaMaterial(herramienta.fuerza());
         return true;
     }

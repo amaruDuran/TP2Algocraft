@@ -11,7 +11,7 @@ public class MaterialMetal extends Material {
     }
 
     @Override
-    public boolean recolectadoPorPico(Pico herramienta) {
+    public boolean recolectadoPor(Pico herramienta) {
         if (herramienta.fuerza() < 4){
             /*si es mayor a 4 es un pico de metal si es 4 es de piedra...
             * buscar otra forma de impedir que pico de madera extraiga metal*/

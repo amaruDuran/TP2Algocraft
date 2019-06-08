@@ -17,15 +17,15 @@ public abstract class Material {
         return durabilidad;
     }
 
-    public boolean recolectadoPorHacha(Hacha herramienta) {
+    public boolean recolectadoPor(Hacha herramienta) {
         return false;
     }
 
-    public boolean recolectadoPorPico(Pico herramienta) {
+    public boolean recolectadoPor(Pico herramienta) {
         return false;
     }
 
-    public boolean recolectadoPorPicoFino(PicoFino herramienta) {
+    public boolean recolectadoPor(PicoFino herramienta) {
         return false;
     }
 

@@ -21,9 +21,9 @@ public class MaterialPiedraTest {
         Hacha hachaDeMetal = new Hacha(new MaterialDeHerramientaMetal());
         Material Piedra = new MaterialPiedra();
         int durabilidadInicial = Piedra.durabilidadActualDelMaterial();
-        Piedra.recolectadoPorHacha(hachaDeMadera);
-        Piedra.recolectadoPorHacha(hachaDePiedra);
-        Piedra.recolectadoPorHacha(hachaDeMetal);
+        Piedra.recolectadoPor(hachaDeMadera);
+        Piedra.recolectadoPor(hachaDePiedra);
+        Piedra.recolectadoPor(hachaDeMetal);
         assertEquals(durabilidadInicial, Piedra.durabilidadActualDelMaterial());
     }
     @Test
@@ -32,7 +32,7 @@ public class MaterialPiedraTest {
         Material Piedra = new MaterialPiedra();
         int durabilidadInicial = Piedra.durabilidadActualDelMaterial();
         int durabilidadQueDeberiaTenerElMaterial = (durabilidadInicial - picoDeMadera.fuerza());
-        Piedra.recolectadoPorPico(picoDeMadera);
+        Piedra.recolectadoPor(picoDeMadera);
         assertEquals(durabilidadQueDeberiaTenerElMaterial, Piedra.durabilidadActualDelMaterial());
     }
     @Test
@@ -41,7 +41,7 @@ public class MaterialPiedraTest {
         Material Piedra = new MaterialPiedra();
         int durabilidadInicial = Piedra.durabilidadActualDelMaterial();
         int durabilidadQueDeberiaTenerElMaterial = (durabilidadInicial - picoDePiedra.fuerza());
-        Piedra.recolectadoPorPico(picoDePiedra);
+        Piedra.recolectadoPor(picoDePiedra);
         assertEquals(durabilidadQueDeberiaTenerElMaterial, Piedra.durabilidadActualDelMaterial());
     }
     @Test
@@ -50,7 +50,7 @@ public class MaterialPiedraTest {
         Material Piedra = new MaterialPiedra();
         int durabilidadInicial = Piedra.durabilidadActualDelMaterial();
         int durabilidadQueDeberiaTenerElMaterial = (durabilidadInicial - picoDeMetal.fuerza());
-        Piedra.recolectadoPorPico(picoDeMetal);
+        Piedra.recolectadoPor(picoDeMetal);
         assertEquals(durabilidadQueDeberiaTenerElMaterial, Piedra.durabilidadActualDelMaterial());
     }
     @Test//supuesto el pico fino no recolecta metal
@@ -58,22 +58,10 @@ public class MaterialPiedraTest {
         PicoFino picoFino = new PicoFino(new MaterialDeHerramientaMetalPiedra());
         Material Piedra = new MaterialPiedra();
         int durabilidadInicial = Piedra.durabilidadActualDelMaterial();
-        Piedra.recolectadoPorPicoFino(picoFino);
+        Piedra.recolectadoPor(picoFino);
         assertEquals(durabilidadInicial , Piedra.durabilidadActualDelMaterial());
     }
     //en los cassos que funciona deben hacerlo varias veces
-   /* @Test
-    public void seIntentaRecolectarRepetidasVecesMaderaConHachaDeMaderaYDisminuyeSuDurabilidadLaFuerzaDeLaHerramientaTodasLasVeces(){
-        Hacha hachaDeMadera = new Hacha(new MaterialDeHerramientaMadera());
-        Material madera = new MaterialMadera();
-        int durabilidadInicial = madera.durabilidadActualDelMaterial();
-        int vecesRecolectado = 3;
-        int durabilidadQueDeberiaTenerElMaterial = (durabilidadInicial - (hachaDeMadera.fuerza() * vecesRecolectado));
-        for (int i = 0; i < vecesRecolectado; i++){
-            madera.recolectadoPorHacha(hachaDeMadera);
-        }
-        assertEquals(durabilidadQueDeberiaTenerElMaterial, madera.durabilidadActualDelMaterial());
-    }*/
     @Test
     public void seIntentaRecolectarPiedraRepetidasVecesElProcesoConPicoDeMaderaYDisminuyeSuDurabilidadEnLaFuerzaDeLaHerramientaTodasLasVeces(){
         Pico picoDeMadera = new Pico(new MaterialDeHerramientaMadera());
@@ -82,7 +70,7 @@ public class MaterialPiedraTest {
         int vecesRecolectado = 3;
         int durabilidadQueDeberiaTenerElMaterial = (durabilidadInicial - (picoDeMadera.fuerza() * vecesRecolectado));
         for (int i = 0; i < vecesRecolectado; i++){
-            Piedra.recolectadoPorPico(picoDeMadera);
+            Piedra.recolectadoPor(picoDeMadera);
         }
         assertEquals(durabilidadQueDeberiaTenerElMaterial, Piedra.durabilidadActualDelMaterial());
     }
@@ -94,7 +82,7 @@ public class MaterialPiedraTest {
         int vecesRecolectado = 3;
         int durabilidadQueDeberiaTenerElMaterial = (durabilidadInicial - (picoDePiedra.fuerza() * vecesRecolectado));
         for (int i = 0; i < vecesRecolectado; i++){
-            Piedra.recolectadoPorPico(picoDePiedra);
+            Piedra.recolectadoPor(picoDePiedra);
         }
         assertEquals(durabilidadQueDeberiaTenerElMaterial, Piedra.durabilidadActualDelMaterial());
     }
@@ -106,7 +94,7 @@ public class MaterialPiedraTest {
         int vecesRecolectado = 3;
         int durabilidadQueDeberiaTenerElMaterial = (durabilidadInicial - (picoDeMetal.fuerza() * vecesRecolectado));
         for (int i = 0; i < vecesRecolectado; i++){
-            Piedra.recolectadoPorPico(picoDeMetal);
+            Piedra.recolectadoPor(picoDeMetal);
         }
         assertEquals(durabilidadQueDeberiaTenerElMaterial, Piedra.durabilidadActualDelMaterial());
     }

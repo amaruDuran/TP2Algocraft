@@ -11,7 +11,7 @@ public class MaterialPiedra extends Material {
     }
 
     @Override
-    public boolean recolectadoPorPico(Pico herramienta) {
+    public boolean recolectadoPor(Pico herramienta) {
         herramientaGastaMaterial(herramienta.fuerza());
         return true;
     }

@@ -1,9 +1,9 @@
 package Herramientas.TipoDeHerramienta;
 
-import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramienta;
+import Jugador.ObjeosDelInventario;
 import Materiales.Material;
 
-public interface TipoDeHerramienta {
+public interface TipoDeHerramienta extends ObjeosDelInventario {
     int durabilidad();
     int fuerza();
     boolean usarEn(Material material);

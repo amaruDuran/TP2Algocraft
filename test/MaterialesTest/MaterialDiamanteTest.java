@@ -21,9 +21,9 @@ public class MaterialDiamanteTest {
         Hacha hachaDeMetal = new Hacha(new MaterialDeHerramientaMetal());
         Material diamante = new MaterialDiamante();
         int durabilidadInicial = diamante.durabilidadActualDelMaterial();
-        diamante.recolectadoPorHacha(hachaDeMadera);
-        diamante.recolectadoPorHacha(hachaDePiedra);
-        diamante.recolectadoPorHacha(hachaDeMetal);
+        diamante.recolectadoPor(hachaDeMadera);
+        diamante.recolectadoPor(hachaDePiedra);
+        diamante.recolectadoPor(hachaDeMetal);
         assertEquals(durabilidadInicial, diamante.durabilidadActualDelMaterial());
     }
     @Test
@@ -33,9 +33,9 @@ public class MaterialDiamanteTest {
         Pico picoDeMetal = new Pico(new MaterialDeHerramientaMetal());
         Material diamante = new MaterialDiamante();
         int durabilidadInicial = diamante.durabilidadActualDelMaterial();
-        diamante.recolectadoPorPico(picoDeMadera);
-        diamante.recolectadoPorPico(picoDePiedra);
-        diamante.recolectadoPorPico(picoDeMetal);
+        diamante.recolectadoPor(picoDeMadera);
+        diamante.recolectadoPor(picoDePiedra);
+        diamante.recolectadoPor(picoDeMetal);
         assertEquals(durabilidadInicial, diamante.durabilidadActualDelMaterial());
     }
     @Test
@@ -43,7 +43,7 @@ public class MaterialDiamanteTest {
         PicoFino picoFino = new PicoFino(new MaterialDeHerramientaMetalPiedra());
         Material diamante = new MaterialDiamante();
         int durabilidadInicial = diamante.durabilidadActualDelMaterial();
-        diamante.recolectadoPorPicoFino(picoFino);
+        diamante.recolectadoPor(picoFino);
         int durabilidadQueDeberiaTenerElMaterial = (durabilidadInicial - picoFino.fuerza());
         assertEquals(durabilidadQueDeberiaTenerElMaterial , diamante.durabilidadActualDelMaterial());
     }
@@ -56,7 +56,7 @@ public class MaterialDiamanteTest {
         int vecesRecolectado = 3;
         int durabilidadQueDeberiaTenerElMaterial = (durabilidadInicial - (picoFino.fuerza() * vecesRecolectado));
         for (int i = 0; i < vecesRecolectado; i++){
-            diamante.recolectadoPorPicoFino(picoFino);
+            diamante.recolectadoPor(picoFino);
         }
         assertEquals(durabilidadQueDeberiaTenerElMaterial , diamante.durabilidadActualDelMaterial());
     }

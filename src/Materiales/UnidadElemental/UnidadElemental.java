@@ -1,4 +1,6 @@
 package Materiales.UnidadElemental;
 
-public interface UnidadElemental {
+import Jugador.ObjeosDelInventario;
+
+public interface UnidadElemental extends ObjeosDelInventario {
 }

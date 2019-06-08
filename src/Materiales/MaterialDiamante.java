@@ -11,7 +11,7 @@ public class MaterialDiamante extends Material {
     }
 
     @Override
-    public boolean recolectadoPorPicoFino(PicoFino herramienta) {
+    public boolean recolectadoPor(PicoFino herramienta) {
         herramientaGastaMaterial(herramienta.fuerza());
         return true;
     }
