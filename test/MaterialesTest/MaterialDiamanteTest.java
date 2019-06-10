@@ -21,9 +21,11 @@ public class MaterialDiamanteTest {
         Hacha hachaDeMetal = new Hacha(new MaterialDeHerramientaMetal());
         Material diamante = new MaterialDiamante();
         int durabilidadInicial = diamante.durabilidadActualDelMaterial();
+
         diamante.recolectadoPor(hachaDeMadera);
         diamante.recolectadoPor(hachaDePiedra);
         diamante.recolectadoPor(hachaDeMetal);
+
         assertEquals(durabilidadInicial, diamante.durabilidadActualDelMaterial());
     }
     @Test
@@ -33,9 +35,11 @@ public class MaterialDiamanteTest {
         Pico picoDeMetal = new Pico(new MaterialDeHerramientaMetal());
         Material diamante = new MaterialDiamante();
         int durabilidadInicial = diamante.durabilidadActualDelMaterial();
+
         diamante.recolectadoPor(picoDeMadera);
         diamante.recolectadoPor(picoDePiedra);
         diamante.recolectadoPor(picoDeMetal);
+
         assertEquals(durabilidadInicial, diamante.durabilidadActualDelMaterial());
     }
     @Test
@@ -43,8 +47,10 @@ public class MaterialDiamanteTest {
         PicoFino picoFino = new PicoFino(new MaterialDeHerramientaMetalPiedra());
         Material diamante = new MaterialDiamante();
         int durabilidadInicial = diamante.durabilidadActualDelMaterial();
-        diamante.recolectadoPor(picoFino);
         int durabilidadQueDeberiaTenerElMaterial = (durabilidadInicial - picoFino.fuerza());
+
+        diamante.recolectadoPor(picoFino);
+
         assertEquals(durabilidadQueDeberiaTenerElMaterial , diamante.durabilidadActualDelMaterial());
     }
     //en los cassos que funciona deben hacerlo varias veces
@@ -55,9 +61,11 @@ public class MaterialDiamanteTest {
         int durabilidadInicial = diamante.durabilidadActualDelMaterial();
         int vecesRecolectado = 3;
         int durabilidadQueDeberiaTenerElMaterial = (durabilidadInicial - (picoFino.fuerza() * vecesRecolectado));
+
         for (int i = 0; i < vecesRecolectado; i++){
             diamante.recolectadoPor(picoFino);
         }
+
         assertEquals(durabilidadQueDeberiaTenerElMaterial , diamante.durabilidadActualDelMaterial());
     }
 }

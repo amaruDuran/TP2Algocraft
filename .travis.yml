@@ -13,4 +13,7 @@ notifications:
   email:
     recipients:
       - gabigbell@hotmail.com
+      - amaruduran@gmail.com
+      - violetaperezandrade@hotmail.com
+      - gerardromeroatencio@gmail.com
     on_failure: always

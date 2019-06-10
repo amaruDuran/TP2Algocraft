@@ -31,7 +31,7 @@ public class InventarioTest {
         assertEquals(1,cant);
     }
     @Test
-    public void seCreaUnInventarioYSeAgreganVariasHerramientas(){
+    public void seCreaUnInventarioYSeAgreganVariasHerramientasDistintas(){
         Inventario inventario = new Inventario();
         TipoDeHerramienta hachaMadera = new Hacha(new MaterialDeHerramientaMadera());
         TipoDeHerramienta hachaMetal = new Hacha(new MaterialDeHerramientaMetal());
@@ -40,6 +40,7 @@ public class InventarioTest {
         TipoDeHerramienta picoMetal = new Pico(new MaterialDeHerramientaMetal());
         TipoDeHerramienta picoPiedra = new Pico(new MaterialDeHerramientaPiedra());
         TipoDeHerramienta picoFino = new PicoFino(new MaterialDeHerramientaMetalPiedra());
+
         inventario.agregarObjetosAlInventario(hachaMadera);
         inventario.agregarObjetosAlInventario(hachaMetal);
         inventario.agregarObjetosAlInventario(hachaPiedra);
@@ -48,41 +49,42 @@ public class InventarioTest {
         inventario.agregarObjetosAlInventario(picoPiedra);
         inventario.agregarObjetosAlInventario(picoFino);
         int cant = inventario.cantidadDeElementos();
+
         assertEquals(7,cant);
     }
     @Test
     public void seCreaUnInventarioYSeAgregaUnElemento(){
         Inventario inventario = new Inventario();
         UnidadElemental metal = new UnidadElementalMetal();
+
         inventario.agregarObjetosAlInventario(metal);
         int cant = inventario.cantidadDeElementos();
+
         assertEquals(1,cant);
     }
     @Test
-    public void seCreaUnInventarioYSeAgreganMuchosElementos(){
+    public void seCreaUnInventarioYSeAgreganMuchosElementosDistintos(){
         Inventario inventario = new Inventario();
         UnidadElemental madera = new UnidadElementalMadera();
         UnidadElemental metal = new UnidadElementalMetal();
         UnidadElemental piedra = new UnidadElementalPiedra();
         UnidadElemental diamante = new UnidadElementalDiamante();
+
         inventario.agregarObjetosAlInventario(metal);
         inventario.agregarObjetosAlInventario(madera);
         inventario.agregarObjetosAlInventario(piedra);
         inventario.agregarObjetosAlInventario(diamante);
         int cant = inventario.cantidadDeElementos();
+
         assertEquals(4,cant);
     }
     @Test
-    public void seCreaUnInventarioYSeAgreganMuchosElementosYMuchasHerramientas(){
+    public void seCreaUnInventarioYSeAgreganMuchosElementosYMuchasHerramientasDistintas(){
         Inventario inventario = new Inventario();
         UnidadElemental madera = new UnidadElementalMadera();
         UnidadElemental metal = new UnidadElementalMetal();
         UnidadElemental piedra = new UnidadElementalPiedra();
         UnidadElemental diamante = new UnidadElementalDiamante();
-        inventario.agregarObjetosAlInventario(metal);
-        inventario.agregarObjetosAlInventario(madera);
-        inventario.agregarObjetosAlInventario(piedra);
-        inventario.agregarObjetosAlInventario(diamante);
         TipoDeHerramienta hachaMadera = new Hacha(new MaterialDeHerramientaMadera());
         TipoDeHerramienta hachaMetal = new Hacha(new MaterialDeHerramientaMetal());
         TipoDeHerramienta hachaPiedra = new Hacha(new MaterialDeHerramientaPiedra());
@@ -90,6 +92,13 @@ public class InventarioTest {
         TipoDeHerramienta picoMetal = new Pico(new MaterialDeHerramientaMetal());
         TipoDeHerramienta picoPiedra = new Pico(new MaterialDeHerramientaPiedra());
         TipoDeHerramienta picoFino = new PicoFino(new MaterialDeHerramientaMetalPiedra());
+
+
+        inventario.agregarObjetosAlInventario(metal);
+        inventario.agregarObjetosAlInventario(madera);
+        inventario.agregarObjetosAlInventario(piedra);
+        inventario.agregarObjetosAlInventario(diamante);
+
         inventario.agregarObjetosAlInventario(hachaMadera);
         inventario.agregarObjetosAlInventario(hachaMetal);
         inventario.agregarObjetosAlInventario(hachaPiedra);
@@ -98,10 +107,12 @@ public class InventarioTest {
         inventario.agregarObjetosAlInventario(picoPiedra);
         inventario.agregarObjetosAlInventario(picoFino);
         int cant = inventario.cantidadDeElementos();
+
+
         assertEquals(11,cant);
     }
     @Test
-    public void seCreaUnInventarioYSeAgreganMuchosElementosYMuchasHerramientasPeroAlIntentarAgregarlasPorSegundaVesNoSeAgregan(){
+    public void seCreaUnInventarioYSeAgreganMuchosElementosYMuchasHerramientasPeroAlIntentarAgregarlasPorSegundaVezNoSeAgregan(){
         Inventario inventario = new Inventario();
         UnidadElemental madera1 = new UnidadElementalMadera();
         UnidadElemental metal1 = new UnidadElementalMetal();
@@ -114,6 +125,7 @@ public class InventarioTest {
         TipoDeHerramienta picoMetal1 = new Pico(new MaterialDeHerramientaMetal());
         TipoDeHerramienta picoPiedra1 = new Pico(new MaterialDeHerramientaPiedra());
         TipoDeHerramienta picoFino1 = new PicoFino(new MaterialDeHerramientaMetalPiedra());
+
         inventario.agregarObjetosAlInventario(metal1);
         inventario.agregarObjetosAlInventario(madera1);
         inventario.agregarObjetosAlInventario(piedra1);
@@ -137,6 +149,7 @@ public class InventarioTest {
         inventario.agregarObjetosAlInventario(picoPiedra1);
         inventario.agregarObjetosAlInventario(picoFino1);
         int cant = inventario.cantidadDeElementos();
+
         assertEquals(11,cant);
     }
     @Test
@@ -153,6 +166,7 @@ public class InventarioTest {
         TipoDeHerramienta picoMetal1 = new Pico(new MaterialDeHerramientaMetal());
         TipoDeHerramienta picoPiedra1 = new Pico(new MaterialDeHerramientaPiedra());
         TipoDeHerramienta picoFino1 = new PicoFino(new MaterialDeHerramientaMetalPiedra());
+
         UnidadElemental madera2 = new UnidadElementalMadera();
         UnidadElemental metal2 = new UnidadElementalMetal();
         UnidadElemental piedra2 = new UnidadElementalPiedra();
@@ -164,6 +178,8 @@ public class InventarioTest {
         TipoDeHerramienta picoMetal2 = new Pico(new MaterialDeHerramientaMetal());
         TipoDeHerramienta picoPiedra2 = new Pico(new MaterialDeHerramientaPiedra());
         TipoDeHerramienta picoFino2 = new PicoFino(new MaterialDeHerramientaMetalPiedra());
+
+
         inventario.agregarObjetosAlInventario(metal1);
         inventario.agregarObjetosAlInventario(madera1);
         inventario.agregarObjetosAlInventario(piedra1);
@@ -187,6 +203,8 @@ public class InventarioTest {
         inventario.agregarObjetosAlInventario(picoPiedra2);
         inventario.agregarObjetosAlInventario(picoFino2);
         int cant = inventario.cantidadDeElementos();
+
+
         assertEquals(22,cant);
     }
     //test de quitar elementos
@@ -304,8 +322,8 @@ public class InventarioTest {
         ObjeosDelInventario objeto7 = inventario.quitarObjetoDelInventario(0);
         ObjeosDelInventario objeto9 = inventario.quitarObjetoDelInventario(0);
         ObjeosDelInventario objeto10 = inventario.quitarObjetoDelInventario(0);
-
         int cant = inventario.cantidadDeElementos();
+
         assertEquals(0,cant);
         assertEquals(madera,objeto1);
         assertEquals(metal,objeto2);
@@ -499,6 +517,7 @@ public class InventarioTest {
         TipoDeHerramienta picoMetal3 = new Pico(new MaterialDeHerramientaMetal());
         TipoDeHerramienta picoPiedra3 = new Pico(new MaterialDeHerramientaPiedra());
         TipoDeHerramienta picoFino3 = new PicoFino(new MaterialDeHerramientaMetalPiedra());
+
         inventario.agregarObjetosAlInventario(madera);
         inventario.agregarObjetosAlInventario(metal);
         inventario.agregarObjetosAlInventario(piedra);
@@ -537,6 +556,7 @@ public class InventarioTest {
         inventario.agregarObjetosAlInventario(picoPiedra3);
         inventario.agregarObjetosAlInventario(picoFino3);
         int cant = inventario.cantidadDeElementos();
+
         assertEquals(30,cant);
     }
 }
