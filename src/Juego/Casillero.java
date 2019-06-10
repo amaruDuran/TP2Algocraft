@@ -25,5 +25,7 @@ public class Casillero{
     }
 
     public void asignar(Jugador jugador) {
+        this.ocupado = false;
     }
+
 }
