@@ -13,7 +13,7 @@ public class Herramienta {
     public Herramienta (TipoDeHerramienta tipoDeHerramienta){
         this.tipoDeHerramienta = tipoDeHerramienta;
     }
-/*
+
     public Herramienta crearHacha(MaterialDeHerramienta materialDeHerramienta){
         TipoDeHerramienta hacha = new Hacha(materialDeHerramienta);
         return new Herramienta(hacha);
@@ -27,5 +27,5 @@ public class Herramienta {
     public Herramienta crearPicoFino(MaterialDeHerramienta materialDeHerramienta){
         TipoDeHerramienta picoFino = new PicoFino(materialDeHerramienta);
         return new Herramienta(picoFino);
-    }*/
+    }
 }
