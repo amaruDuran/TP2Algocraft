@@ -8,6 +8,7 @@ import Materiales.UnidadElemental.UnidadElemental;
 public abstract class Material {
     protected int durabilidad;
     protected UnidadElemental unidadElemental;
+    protected String identificador;
 
     protected void herramientaGastaMaterial(int fuerza){
         durabilidad = durabilidad - fuerza;
@@ -35,5 +36,9 @@ public abstract class Material {
     }
 
     protected abstract void setUnidadElemental();
+
+    public String indentificador() {
+        return identificador;
+    }
 
 }

@@ -8,6 +8,7 @@ public class MaterialDiamante extends Material {
     public MaterialDiamante(){
         durabilidad = 100;
         this.setUnidadElemental();
+        this.identificador = "D";
     }
 
     @Override

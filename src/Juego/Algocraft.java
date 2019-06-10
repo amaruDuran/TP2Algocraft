@@ -4,11 +4,11 @@ import Materiales.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Juego {
+public class Algocraft {
     private Mapa mapa;
     private List<Material> materiales = new ArrayList<>();
 
-    public Juego() {
+    public Algocraft() {
         this.cargarMateriales();
         this.mapa = new Mapa(this.materiales);
     }

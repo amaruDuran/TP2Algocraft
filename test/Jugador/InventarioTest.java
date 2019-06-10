@@ -281,6 +281,7 @@ public class InventarioTest {
         TipoDeHerramienta picoMetal = new Pico(new MaterialDeHerramientaMetal());
         TipoDeHerramienta picoPiedra = new Pico(new MaterialDeHerramientaPiedra());
         TipoDeHerramienta picoFino = new PicoFino(new MaterialDeHerramientaMetalPiedra());
+
         inventario.agregarObjetosAlInventario(madera);
         inventario.agregarObjetosAlInventario(metal);
         inventario.agregarObjetosAlInventario(piedra);

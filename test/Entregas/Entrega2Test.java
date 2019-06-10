@@ -13,6 +13,6 @@ public class Entrega2Test {
     //Se verifica que no se puede ocupar un casillero ocupado.
     //Se verifica que un casillero puede ser ocupado por un material o personaje.
 
-    //Juego:
+    //Algocraft:
     //Se verifica que se inicia el juego con el terreno inicializado (materiales distribuidos en el mapa), el jugador inicializado.
 }
