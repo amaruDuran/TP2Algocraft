@@ -62,7 +62,6 @@ public class MapaTest {
         Casillero[][] tablero = mapa.indicar();
         Casillero casillero = tablero[1][9];
         assertEquals(casillero.estaOcupado(),false);
-        casillero.asignar(new Jugador());
     }
 
 
