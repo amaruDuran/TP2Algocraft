@@ -11,6 +11,11 @@ import static org.junit.Assert.assertNull;
 
 public class CeldaDeConstruccionTest {
     @Test
+    public void seCreaUnaCeldaNuevaEstaVacia(){
+        CeldaDeConstruccion celdaDeConstruccion = new CeldaDeConstruccion();
+        assertEquals(true,celdaDeConstruccion.estaVacia());
+    }
+    @Test
     public void seCreaUnaCeldaVaciaConSuElementoNulo(){
         CeldaDeConstruccion celdaDeConstruccion = new CeldaDeConstruccion();
         assertNull(celdaDeConstruccion.verElemento());
@@ -21,6 +26,13 @@ public class CeldaDeConstruccionTest {
         UnidadElemental elemento = new UnidadElementalMadera();
         celdaDeConstruccion.agregarElemento(elemento);
         assertEquals(elemento, celdaDeConstruccion.verElemento());
+    }
+    @Test
+    public void seCreaUnaCeldaYSeLeAsignaUnElementoYaNoEstaVacia(){
+        CeldaDeConstruccion celdaDeConstruccion = new CeldaDeConstruccion();
+        UnidadElemental elemento = new UnidadElementalMadera();
+        celdaDeConstruccion.agregarElemento(elemento);
+        assertEquals(false, celdaDeConstruccion.estaVacia());
     }
     @Test
     public void seCreaUnaCeldaSeLeAsignaUnElementoYSeLoQuitaDeVolviendoloAlInventarioQuedandoseSinElemento(){

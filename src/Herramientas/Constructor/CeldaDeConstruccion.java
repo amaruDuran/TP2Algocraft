@@ -14,6 +14,10 @@ public class CeldaDeConstruccion {
         return elemento;
     }
 
+    public boolean estaVacia(){
+        return (elemento == null);
+    }
+
     public void agregarElemento(UnidadElemental unidadElemental){
         elemento = unidadElemental;
     }
