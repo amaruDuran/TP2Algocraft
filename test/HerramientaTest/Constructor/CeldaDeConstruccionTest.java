@@ -18,14 +18,17 @@ public class CeldaDeConstruccionTest {
     @Test
     public void seCreaUnaCeldaVaciaConSuElementoNulo(){
         CeldaDeConstruccion celdaDeConstruccion = new CeldaDeConstruccion();
+
         assertNull(celdaDeConstruccion.verElemento());
     }
     @Test
-    public void seCreaUnaCeldaYSeLeAsignaUnElemento(){
+    public void seCreaUnaCeldaYSeLeAgregaUnElemento(){
         CeldaDeConstruccion celdaDeConstruccion = new CeldaDeConstruccion();
-        UnidadElemental elemento = new UnidadElementalMadera();
-        celdaDeConstruccion.agregarElemento(elemento);
-        assertEquals(elemento, celdaDeConstruccion.verElemento());
+        UnidadElemental madera = new UnidadElementalMadera();
+
+        celdaDeConstruccion.agregarElemento(madera);
+
+        assertEquals(madera, celdaDeConstruccion.verElemento());
     }
     @Test
     public void seCreaUnaCeldaYSeLeAsignaUnElementoYaNoEstaVacia(){
@@ -39,8 +42,10 @@ public class CeldaDeConstruccionTest {
         CeldaDeConstruccion celdaDeConstruccion = new CeldaDeConstruccion();
         Inventario inventario = new Inventario();
         UnidadElemental elemento = new UnidadElementalMadera();
+
         celdaDeConstruccion.agregarElemento(elemento);
         celdaDeConstruccion.quitarElemento(inventario);
+
         assertNull(celdaDeConstruccion.verElemento());
         assertEquals(1, inventario.cantidadDeElementos());
 

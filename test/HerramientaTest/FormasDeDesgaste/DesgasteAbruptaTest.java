@@ -11,11 +11,11 @@ import static org.junit.Assert.assertEquals;
 public class DesgasteAbruptaTest {
     @Test
     public void seGastaUnMaterialDeHerramientaYSuDurabilidadPermaneceIntacta(){
-        MaterialDeHerramienta materialDeHerramienta = new MaterialDeHerramientaMetal();
-        int durabilidadInicial = materialDeHerramienta.durabilidad();
+        MaterialDeHerramienta metal = new MaterialDeHerramientaMetal();
+        int durabilidadInicial = metal.durabilidad();
         Desgaste desgasteAbrupto = new DesgasteAbrupta();
 
-        int durabilidadFinal = desgasteAbrupto.desgastarElMaterialDeHerramienta(materialDeHerramienta);
+        int durabilidadFinal = desgasteAbrupto.desgastarElMaterialDeHerramienta(metal);
 
         assertEquals(durabilidadInicial, durabilidadFinal);
     }
@@ -37,6 +37,7 @@ public class DesgasteAbruptaTest {
         MaterialDeHerramienta materialDeHerramienta = new MaterialDeHerramientaMetal();
         Desgaste desgasteAbrupto = new DesgasteAbrupta();
         int durabilidadFinal = -1;
+
         for (int i = 0; i < 10; i++){
             durabilidadFinal = desgasteAbrupto.desgastarElMaterialDeHerramienta(materialDeHerramienta);
         }
