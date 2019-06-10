@@ -2,48 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce8636a2-d624-4831-89ca-dd0fed447f15" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/TP2Algocraft.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/HerramientaTest/FormasDeDesgaste/DesgasteAbruptaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/HerramientaTest/FormasDeDesgaste/DesgasteAbruptaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/HerramientaTest/FormasDeDesgaste/DesgasteLienalConPendienteDosTerciosTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/HerramientaTest/FormasDeDesgaste/DesgasteLienalConPendienteDosTerciosTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/HerramientaTest/FormasDeDesgaste/DesgasteLienalConPendienteUnMedioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/HerramientaTest/FormasDeDesgaste/DesgasteLienalConPendienteUnMedioTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/HerramientaTest/FormasDeDesgaste/DesgasteLinealTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/HerramientaTest/FormasDeDesgaste/DesgasteLinealTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/HerramientaTest/FormasDeDesgaste/DesgastePicoFinoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/HerramientaTest/FormasDeDesgaste/DesgastePicoFinoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/HerramientaTest/HachaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/HerramientaTest/HachaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/HerramientaTest/MaterialDeHerramientaTest/MaterialDeTipoDeHerramientaMaderaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/HerramientaTest/MaterialDeHerramientaTest/MaterialDeTipoDeHerramientaMaderaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/HerramientaTest/MaterialDeHerramientaTest/MaterialDeTipoDeHerramientaMetalPiedraTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/HerramientaTest/MaterialDeHerramientaTest/MaterialDeTipoDeHerramientaMetalPiedraTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/HerramientaTest/MaterialDeHerramientaTest/MaterialDeTipoDeHerramientaMetalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/HerramientaTest/MaterialDeHerramientaTest/MaterialDeTipoDeHerramientaMetalTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/HerramientaTest/MaterialDeHerramientaTest/MaterialDeTipoDeHerramientaPiedraTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/HerramientaTest/MaterialDeHerramientaTest/MaterialDeTipoDeHerramientaPiedraTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/HerramientaTest/PicoFinoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/HerramientaTest/PicoFinoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/HerramientaTest/PicoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/HerramientaTest/PicoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Jugador/JugadorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Jugador/JugadorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/MaterialesTest/MaterialDiamanteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/MaterialesTest/MaterialDiamanteTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/MaterialesTest/MaterialMaderaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/MaterialesTest/MaterialMaderaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/MaterialesTest/MaterialMetalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/MaterialesTest/MaterialMetalTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/MaterialesTest/MaterialPiedraTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/MaterialesTest/MaterialPiedraTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Herramientas/Herramienta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Herramientas/Herramienta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/FormaDeDesgaste/Desgaste.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/FormaDeDesgaste/Desgaste.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/FormaDeDesgaste/DesgasteAbrupta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/FormaDeDesgaste/DesgasteAbrupta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/FormaDeDesgaste/DesgasteLienalConPendienteDosTercios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/FormaDeDesgaste/DesgasteLienalConPendienteDosTercios.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/FormaDeDesgaste/DesgasteLienalConPendienteUnMedio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/FormaDeDesgaste/DesgasteLienalConPendienteUnMedio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/FormaDeDesgaste/DesgasteLineal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/FormaDeDesgaste/DesgasteLineal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/FormaDeDesgaste/DesgastePicoFino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/FormaDeDesgaste/DesgastePicoFino.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/Hacha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/Hacha.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/MaterialDeHerramientas/MaterialDeHerramientaMadera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/MaterialDeHerramientas/MaterialDeHerramientaMadera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/MaterialDeHerramientas/MaterialDeHerramientaMetal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/MaterialDeHerramientas/MaterialDeHerramientaMetal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/MaterialDeHerramientas/MaterialDeHerramientaMetalPiedra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/MaterialDeHerramientas/MaterialDeHerramientaMetalPiedra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/MaterialDeHerramientas/MaterialDeHerramientaPiedra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/MaterialDeHerramientas/MaterialDeHerramientaPiedra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/Pico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/Pico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/PicoFino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/PicoFino.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/TipoDeHerramienta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/TipoDeHerramienta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Jugador/Inventario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Jugador/Inventario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Jugador/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Jugador/Jugador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Materiales/Material.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Materiales/Material.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Materiales/MaterialDiamante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Materiales/MaterialDiamante.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Materiales/MaterialMadera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Materiales/MaterialMadera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Materiales/MaterialMetal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Materiales/MaterialMetal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Materiales/MaterialPiedra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Materiales/MaterialPiedra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP2Algocraft.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TP2Algocraft.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ivy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ivy.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TP2Algocraft/META-INF/TP2Algocraft.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/TP2Algocraft/META-INF/TP2Algocraft.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/HerramientaTest/Constructor/CeldaDeConstruccionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/HerramientaTest/Constructor/CeldaDeConstruccionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/HerramientaTest/FormasDeDesgaste/DesgasteAbruptaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/HerramientaTest/FormasDeDesgaste/DesgasteAbruptaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Jugador/InventarioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Jugador/InventarioTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Jugador/JugadorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Jugador/JugadorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/MaterialesTest/MaterialDiamanteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/MaterialesTest/MaterialDiamanteTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/MaterialesTest/MaterialMaderaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/MaterialesTest/MaterialMaderaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/MaterialesTest/MaterialMetalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/MaterialesTest/MaterialMetalTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/MaterialesTest/MaterialPiedraTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/MaterialesTest/MaterialPiedraTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,31 +33,55 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Test/HerramientaTest/HachaTest.java">
+        <entry file="file://$PROJECT_DIR$/test/HerramientaTest/FormasDeDesgaste/DesgasteAbruptaTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="241">
+              <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/MaterialDeHerramientas/MaterialDeHerramientaPiedra.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-299">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/HerramientaTest/FormasDeDesgaste/DesgasteLienalConPendienteDosTerciosTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/HerramientaTest/FormasDeDesgaste/DesgasteLienalConPendienteUnMedioTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/HerramientaTest/FormasDeDesgaste/DesgasteLinealTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Test/HerramientaTest/PicoFinoTest.java">
+        <entry file="file://$PROJECT_DIR$/test/Entregas/Entrega1Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="13" column="80" lean-forward="true" selection-start-line="13" selection-start-column="80" selection-end-line="13" selection-end-column="80" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Test/Jugador/JugadorTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="23" column="68" lean-forward="true" selection-start-line="23" selection-start-column="68" selection-end-line="23" selection-end-column="68" />
+            <state relative-caret-position="1260">
+              <caret line="70" selection-start-line="70" selection-end-line="70" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -94,32 +90,37 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Jugador/Inventario.java">
+        <entry file="file://$PROJECT_DIR$/test/HerramientaTest/FormasDeDesgaste/DesgastePicoFinoTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#557#558#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="36">
+              <caret line="8" column="44" lean-forward="true" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Materiales/MaterialDiamante.java">
+        <entry file="file://$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/Pico.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+            <state relative-caret-position="72">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/Hacha.java">
+        <entry file="file://$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/MaterialDeHerramientas/MaterialDeHerramientaMetal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+            <state relative-caret-position="-317">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/MaterialDeHerramientas/MaterialDeHerramientaMetalPiedra.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -147,14 +148,24 @@
         <option value="$PROJECT_DIR$/Test/HerramientaTest/PicoTest.java" />
         <option value="$PROJECT_DIR$/src/Herramientas/Herramienta.java" />
         <option value="$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/Hacha.java" />
-        <option value="$PROJECT_DIR$/src/Materiales/Material.java" />
         <option value="$PROJECT_DIR$/src/Jugador/Inventario.java" />
         <option value="$PROJECT_DIR$/src/Jugador/Jugador.java" />
         <option value="$PROJECT_DIR$/Test/Jugador/JugadorTest.java" />
+        <option value="$PROJECT_DIR$/src/Herramientas/Constructor/CeldaDeConstruccion.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/Learning" />
+        <option value="$PROJECT_DIR$/src/Materiales/Material.java" />
+        <option value="$PROJECT_DIR$/test/Jugador/InventarioTest.java" />
+        <option value="$PROJECT_DIR$/test/MaterialesTest/MaterialPiedraTest.java" />
+        <option value="$PROJECT_DIR$/test/MaterialesTest/MaterialMetalTest.java" />
+        <option value="$PROJECT_DIR$/test/MaterialesTest/MaterialMaderaTest.java" />
+        <option value="$PROJECT_DIR$/test/MaterialesTest/MaterialDiamanteTest.java" />
+        <option value="$PROJECT_DIR$/test/Jugador/JugadorTest.java" />
+        <option value="$PROJECT_DIR$/test/HerramientaTest/Constructor/CeldaDeConstruccionTest.java" />
+        <option value="$PROJECT_DIR$/test/HerramientaTest/FormasDeDesgaste/DesgasteAbruptaTest.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1346" />
@@ -165,68 +176,24 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="TP2Algocraft" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TP2Algocraft" type="462c0819:PsiDirectoryNode" />
+              <item name="TP2Algocraft-Master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TP2Algocraft-Master" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="TP2Algocraft" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TP2Algocraft" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TP2Algocraft" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TP2Algocraft" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Herramientas" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TP2Algocraft" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TP2Algocraft" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Herramientas" type="462c0819:PsiDirectoryNode" />
-              <item name="TipoDeHerramienta" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TP2Algocraft" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TP2Algocraft" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Herramientas" type="462c0819:PsiDirectoryNode" />
-              <item name="TipoDeHerramienta" type="462c0819:PsiDirectoryNode" />
-              <item name="MaterialDeHerramientas" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TP2Algocraft" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TP2Algocraft" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Jugador" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TP2Algocraft" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TP2Algocraft" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Materiales" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TP2Algocraft" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TP2Algocraft" type="462c0819:PsiDirectoryNode" />
-              <item name="Test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TP2Algocraft" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TP2Algocraft" type="462c0819:PsiDirectoryNode" />
-              <item name="Test" type="462c0819:PsiDirectoryNode" />
-              <item name="HerramientaTest" type="462c0819:PsiDirectoryNode" />
+              <item name="TP2Algocraft-Master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TP2Algocraft-Master" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -260,63 +227,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HachaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CeldaDeConstruccionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TP2Algocraft" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="HerramientaTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="HerramientaTest" />
-      <option name="MAIN_CLASS_NAME" value="HerramientaTest.HachaTest" />
+      <option name="PACKAGE_NAME" value="HerramientaTest.Constructor" />
+      <option name="MAIN_CLASS_NAME" value="HerramientaTest.Constructor.CeldaDeConstruccionTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JugadorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HerramientaTest.Constructor in TP2Algocraft" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TP2Algocraft" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Jugador.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <option name="PACKAGE_NAME" value="HerramientaTest.Constructor" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Jugador in TP2Algocraft" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TP2Algocraft" />
       <option name="PACKAGE_NAME" value="Jugador" />
-      <option name="MAIN_CLASS_NAME" value="Jugador.JugadorTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JugadorTest.JugadorRecienCreadoComienzaConHachaDeMaderaEnManoYVerificoQueTengaAtributosDeHachaDeMadera" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MaterialesTest in TP2Algocraft" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TP2Algocraft" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Jugador.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Jugador" />
-      <option name="MAIN_CLASS_NAME" value="Jugador.JugadorTest" />
-      <option name="METHOD_NAME" value="JugadorRecienCreadoComienzaConHachaDeMaderaEnManoYVerificoQueTengaAtributosDeHachaDeMadera" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PicoFinoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TP2Algocraft" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="HerramientaTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="HerramientaTest" />
-      <option name="MAIN_CLASS_NAME" value="HerramientaTest.PicoFinoTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="MaterialesTest" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -324,10 +263,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in TP2Algocraft" />
-        <item itemvalue="JUnit.PicoFinoTest" />
-        <item itemvalue="JUnit.HachaTest" />
-        <item itemvalue="JUnit.JugadorTest.JugadorRecienCreadoComienzaConHachaDeMaderaEnManoYVerificoQueTengaAtributosDeHachaDeMadera" />
-        <item itemvalue="JUnit.JugadorTest" />
+        <item itemvalue="JUnit.MaterialesTest in TP2Algocraft" />
+        <item itemvalue="JUnit.Jugador in TP2Algocraft" />
+        <item itemvalue="JUnit.CeldaDeConstruccionTest" />
+        <item itemvalue="JUnit.HerramientaTest.Constructor in TP2Algocraft" />
       </list>
     </recent_temporary>
   </component>
@@ -345,50 +284,51 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="JugadorTest - 2019.06.04 at 21h 10m 25s.xml">
-      <configuration name="JugadorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JugadorTest_JugadorRecienCreadoComienzaConHachaDeMaderaEnManoYVerificoQueTengaAtributosDeHachaDeMadera - 2019.06.04 at 21h 18m 41s.xml">
-      <configuration name="JugadorTest.JugadorRecienCreadoComienzaConHachaDeMaderaEnManoYVerificoQueTengaAtributosDeHachaDeMadera" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JugadorTest_JugadorRecienCreadoComienzaConHachaDeMaderaEnManoYVerificoQueTengaAtributosDeHachaDeMadera - 2019.06.04 at 21h 23m 10s.xml">
-      <configuration name="JugadorTest.JugadorRecienCreadoComienzaConHachaDeMaderaEnManoYVerificoQueTengaAtributosDeHachaDeMadera" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HachaTest - 2019.06.04 at 21h 34m 23s.xml">
-      <configuration name="HachaTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HachaTest - 2019.06.04 at 21h 34m 28s.xml">
-      <configuration name="HachaTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HachaTest - 2019.06.04 at 21h 34m 33s.xml">
-      <configuration name="HachaTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HachaTest - 2019.06.04 at 21h 43m 47s.xml">
-      <configuration name="HachaTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PicoFinoTest - 2019.06.04 at 21h 44m 09s.xml">
-      <configuration name="PicoFinoTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PicoFinoTest - 2019.06.04 at 21h 53m 49s.xml">
-      <configuration name="PicoFinoTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_TP2Algocraft - 2019.06.04 at 21h 53m 56s.xml">
+    <history-entry file="All_in_TP2Algocraft - 2019.06.07 at 10h 42m 45s.xml">
       <configuration name="All in TP2Algocraft" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_TP2Algocraft - 2019.06.09 at 16h 35m 22s.xml">
+      <configuration name="All in TP2Algocraft" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CeldaDeConstruccionTest - 2019.06.09 at 16h 49m 26s.xml">
+      <configuration name="CeldaDeConstruccionTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_TP2Algocraft - 2019.06.09 at 19h 24m 06s.xml">
+      <configuration name="All in TP2Algocraft" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InventarioTest - 2019.06.09 at 20h 56m 32s.xml">
+      <configuration name="InventarioTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MaterialesTest_in_TP2Algocraft - 2019.06.09 at 21h 11m 00s.xml">
+      <configuration name="MaterialesTest in TP2Algocraft" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Jugador_in_TP2Algocraft - 2019.06.09 at 21h 12m 19s.xml">
+      <configuration name="Jugador in TP2Algocraft" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CeldaDeConstruccionTest - 2019.06.09 at 21h 17m 45s.xml">
+      <configuration name="CeldaDeConstruccionTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Jugador_in_TP2Algocraft - 2019.06.09 at 21h 18m 04s.xml">
+      <configuration name="Jugador in TP2Algocraft" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MaterialesTest_in_TP2Algocraft - 2019.06.09 at 21h 18m 08s.xml">
+      <configuration name="MaterialesTest in TP2Algocraft" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="-2" width="1370" height="740" extended-state="6" />
+    <frame x="0" y="24" width="1440" height="876" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25755286" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26862463" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Learn" order="7" weight="0.3295129" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32899022" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3277849" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3277849" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39739415" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -396,7 +336,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32899022" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3277849" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -436,173 +376,8 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout-to-restore>
   </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/TP2Algocraft$All_in_TP2Algocraft.ic" NAME="All in TP2Algocraft Coverage Results" MODIFIED="1559696034255" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/FormaDeDesgaste/DesgasteLienalConPendienteUnMedio.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/FormaDeDesgaste/DesgasteLineal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/FormaDeDesgaste/DesgastePicoFino.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/HerramientaTest/MaterialDeHerramientaTest/MaterialDeTipoDeHerramientaMaderaTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Materiales/UnidadElemental/UnidadElementalDiamante.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Materiales/UnidadElemental/UnidadElementalMetal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Materiales/UnidadElemental/UnidadElementalPiedra.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/MaterialDeHerramientas/MaterialDeHerramienta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/FormaDeDesgaste/DesgasteAbrupta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/FormaDeDesgaste/Desgaste.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/TipoDeHerramienta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/PicoFino.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/HerramientaTest/PicoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2462">
-          <caret line="271" lean-forward="true" selection-start-line="271" selection-end-line="271" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Materiales/UnidadElemental/UnidadElementalMadera.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TP2Algocraft.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Materiales/MaterialMadera.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/Pico.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="22" column="27" lean-forward="true" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Materiales/MaterialMetal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/FormaDeDesgaste/DesgasteLienalConPendienteDosTercios.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/MaterialesTest/MaterialDiamanteTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/MaterialDeHerramientas/MaterialDeHerramientaMadera.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="48" column="20" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Materiales/Material.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-          <folding>
-            <element signature="e#657#658#0" expanded="true" />
-            <element signature="e#685#686#0" expanded="true" />
-            <element signature="e#752#753#0" expanded="true" />
-            <element signature="e#780#781#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/MaterialDeHerramientas/MaterialDeHerramientaMetal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="46" column="48" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/MaterialesTest/MaterialDiamanteTest.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/builders/JUnit4Builder.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -610,89 +385,434 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Herramientas/Herramienta.java">
+    <entry file="file://$PROJECT_DIR$/Test/Jugador/JugadorTest.java" />
+    <entry file="file://$PROJECT_DIR$/Test/HerramientaTest/HachaTest.java" />
+    <entry file="file://$PROJECT_DIR$/Test/HerramientaTest/PicoFinoTest.java" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/Learning">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="162">
+          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/HerramientaTest/HachaTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
           <folding>
-            <element signature="e#432#433#0" expanded="true" />
-            <element signature="e#490#491#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Algo3craft.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-i386/jre/lib/rt.jar!/java/util/List.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Jugador/ObjeosDelInventario.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Jugador/Jugador.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="23" column="15" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#559#560#0" expanded="true" />
-            <element signature="e#596#597#0" expanded="true" />
-            <element signature="e#810#811#0" expanded="true" />
-            <element signature="e#852#853#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="72">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Jugador/Inventario.java">
+    <entry file="file://$PROJECT_DIR$/test/Entregas/Entrega2Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="36">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Herramientas/Constructor/TableroDeConstruccion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="36" lean-forward="true" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Materiales/UnidadElemental/UnidadElementalDiamante.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Materiales/UnidadElemental/UnidadElementalPiedra.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Materiales/UnidadElemental/UnidadElementalMetal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Materiales/UnidadElemental/UnidadElementalMadera.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Materiales/MaterialMetal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Materiales/Material.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#557#558#0" expanded="true" />
+            <element signature="e#377#378#0" expanded="true" />
+            <element signature="e#427#428#0" expanded="true" />
+            <element signature="e#475#476#0" expanded="true" />
+            <element signature="e#509#510#0" expanded="true" />
+            <element signature="e#565#566#0" expanded="true" />
+            <element signature="e#593#594#0" expanded="true" />
+            <element signature="e#648#649#0" expanded="true" />
+            <element signature="e#676#677#0" expanded="true" />
+            <element signature="e#735#736#0" expanded="true" />
+            <element signature="e#763#764#0" expanded="true" />
+            <element signature="e#909#910#0" expanded="true" />
+            <element signature="e#937#938#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Materiales/MaterialDiamante.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+        <state relative-caret-position="72">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/Jugador/JugadorTest.java">
+    <entry file="file://$PROJECT_DIR$/src/Materiales/MaterialMadera.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="23" column="68" lean-forward="true" selection-start-line="23" selection-start-column="68" selection-end-line="23" selection-end-column="68" />
+        <state relative-caret-position="72">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Materiales/MaterialPiedra.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Materiales/UnidadElemental/UnidadElemental.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Jugador/Inventario.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="20" column="11" lean-forward="true" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/MaterialesTest/MaterialPiedraTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="104" column="8" lean-forward="true" selection-start-line="104" selection-start-column="8" selection-end-line="104" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/MaterialesTest/MaterialMetalTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1584">
+          <caret line="99" column="8" selection-start-line="99" selection-start-column="8" selection-end-line="99" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/MaterialesTest/MaterialMaderaTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1854">
+          <caret line="114" column="8" selection-start-line="114" selection-start-column="8" selection-end-line="114" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/MaterialesTest/MaterialDiamanteTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="68" column="8" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Jugador/InventarioTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="552" column="60" lean-forward="true" selection-start-line="552" selection-start-column="60" selection-end-line="552" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Jugador/JugadorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Herramientas/Constructor/CeldaDeConstruccion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#220#221#0" expanded="true" />
+            <element signature="e#251#252#0" expanded="true" />
+            <element signature="e#294#295#0" expanded="true" />
+            <element signature="e#325#326#0" expanded="true" />
+            <element signature="e#392#393#0" expanded="true" />
+            <element signature="e#434#435#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/HerramientaTest/Constructor/TableroDeConstruccionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/HerramientaTest/Constructor/CeldaDeConstruccionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Herramientas/Herramienta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/Hacha.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+        <state relative-caret-position="234">
+          <caret line="17" column="20" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/HerramientaTest/HachaTest.java">
+    <entry file="file://$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/MaterialDeHerramientas/MaterialDeHerramienta.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="72">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/MaterialDeHerramientas/MaterialDeHerramientaMadera.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-281">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/FormaDeDesgaste/Desgaste.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/FormaDeDesgaste/DesgasteAbrupta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/FormaDeDesgaste/DesgasteLienalConPendienteDosTercios.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/MaterialDeHerramientas/MaterialDeHerramientaMetal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-317">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/Pico.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/MaterialDeHerramientas/MaterialDeHerramientaMetalPiedra.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Herramientas/TipoDeHerramienta/MaterialDeHerramientas/MaterialDeHerramientaPiedra.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-299">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/HerramientaTest/FormasDeDesgaste/DesgasteAbruptaTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/HerramientaTest/FormasDeDesgaste/DesgastePicoFinoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="8" column="44" lean-forward="true" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/HerramientaTest/FormasDeDesgaste/DesgasteLinealTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/HerramientaTest/FormasDeDesgaste/DesgasteLienalConPendienteUnMedioTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/HerramientaTest/FormasDeDesgaste/DesgasteLienalConPendienteDosTerciosTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Entregas/Entrega1Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/HerramientaTest/PicoFinoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="13" column="80" lean-forward="true" selection-start-line="13" selection-start-column="80" selection-end-line="13" selection-end-column="80" />
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>TP2Algocraft</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
           <splitter-proportions>
             <option name="proportions">
               <list>
