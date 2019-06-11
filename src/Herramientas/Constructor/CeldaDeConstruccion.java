@@ -17,7 +17,8 @@ public class CeldaDeConstruccion {
     public boolean estaVacia(){
         return (elemento == null);
     }
-
+    //el tablero se encarga de verificar que no este vacia 
+    //el tablero al agregar un elemento pisa el anterior
     public void agregarElemento(UnidadElemental unidadElemental){
         elemento = unidadElemental;
     }
