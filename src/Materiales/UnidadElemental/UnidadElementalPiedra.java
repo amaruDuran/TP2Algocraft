@@ -16,4 +16,8 @@ public class UnidadElementalPiedra extends UnidadElemental {
         MaterialDeHerramientaPiedra piedra = new MaterialDeHerramientaPiedra();
         return piedra;
     }
+
+    public String generarNombre(){
+        return "PIEDRA";
+    }
 }
