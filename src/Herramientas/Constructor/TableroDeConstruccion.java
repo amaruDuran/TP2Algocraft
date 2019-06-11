@@ -65,7 +65,7 @@ public class TableroDeConstruccion {
     }
 
     public TipoDeHerramienta construir(){
-        TipoDeHerramienta herramienta = construccion.construir(this);
+        TipoDeHerramienta herramienta = construccion.construir(listaDeCeldas);
         return herramienta;
     }
 

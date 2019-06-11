@@ -19,4 +19,5 @@ public abstract class UnidadElemental implements ObjeosDelInventario {
     public MaterialDeHerramienta materialDeConstruccion(MaterialDeHerramientaMetalPiedra metalPiedra){
         return metalPiedra;
     }
+    public abstract String generarNombre();
 }

@@ -15,4 +15,7 @@ public class UnidadElementalMetal extends UnidadElemental {
         MaterialDeHerramienta metal = new MaterialDeHerramientaMetal();
         return metal;
     }
+    public String generarNombre(){
+        return "METAL";
+    }
 }

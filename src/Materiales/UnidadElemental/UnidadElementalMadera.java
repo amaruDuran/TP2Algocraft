@@ -9,4 +9,7 @@ public class UnidadElementalMadera extends UnidadElemental {
         MaterialDeHerramientaMadera madera = new MaterialDeHerramientaMadera();
         return madera;
     }
+    public String generarNombre(){
+        return "MADERA";
+    }
 }
