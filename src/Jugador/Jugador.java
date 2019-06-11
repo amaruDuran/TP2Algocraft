@@ -4,12 +4,16 @@ import Herramientas.TipoDeHerramienta.Hacha;
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramienta;
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMadera;
 import Herramientas.TipoDeHerramienta.TipoDeHerramienta;
+import Juego.Casillero;
+import Juego.Mapa;
 import Juego.ObjetoDelTablero;
 
 public class Jugador implements ObjetoDelTablero {
     private TipoDeHerramienta herramientaEnMano;
     private Inventario inventario;
     private String identificador;
+    private Mapa mapa;
+    private Casillero casilleroActual;
     //private TableroDeConstruccion constructor;
 
     public Jugador(){
@@ -31,5 +35,12 @@ public class Jugador implements ObjetoDelTablero {
     @Override
     public String indentificador() {
         return this.identificador;
+    }
+
+
+    public void iniciar(Mapa mapa) {
+        this.mapa= mapa;
+        this.casilleroActual = mapa.obtenerCasillero(1,1);
+        this.casilleroActual.asignar(this);
     }
 }

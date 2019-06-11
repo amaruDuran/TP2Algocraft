@@ -70,6 +70,7 @@ public class MapaTest {
 
         pudeOcupar = casillero.asignar(new Jugador());
         assertEquals(pudeOcupar,false);
+        assertEquals(casillero.identificador(),"JUGADOR");
     }
 
     @Test
@@ -85,6 +86,58 @@ public class MapaTest {
         assertEquals(casillero.estaOcupado(),false);
 
         boolean pudeOcupar = casillero.asignar(new MaterialMadera());
+        assertEquals(pudeOcupar,true);
+        assertEquals(casillero.identificador(),"M");
+    }
+
+    @Test
+    public void SeVerificaQueSePuedaOcuparUnCasilleroPorUnMaterialDeMetal(){
+        List<Material> materiales = new ArrayList<>();
+        materiales.add(new MaterialMadera());
+        materiales.add(new MaterialPiedra());
+        materiales.add(new MaterialMetal());
+        materiales.add(new MaterialMetal());
+
+        Mapa mapa = new Mapa(materiales,10,10);
+        Casillero casillero = mapa.obtenerCasillero(1,9);
+        assertEquals(casillero.estaOcupado(),false);
+
+        boolean pudeOcupar = casillero.asignar(new MaterialMetal());
+        assertEquals(pudeOcupar,true);
+        assertEquals(casillero.identificador(),"MET");
+    }
+
+    @Test
+    public void SeVerificaQueSePuedeOcuparUnCasilleroConUnMaterialDePiedra(){
+        List<Material> materiales = new ArrayList<>();
+        materiales.add(new MaterialMadera());
+        materiales.add(new MaterialPiedra());
+        materiales.add(new MaterialMetal());
+        materiales.add(new MaterialMetal());
+
+        Mapa mapa = new Mapa(materiales,10,10);
+        Casillero casillero = mapa.obtenerCasillero(1,9);
+        assertEquals(casillero.estaOcupado(),false);
+
+        boolean pudeOcupar = casillero.asignar(new MaterialPiedra());
+        assertEquals(pudeOcupar,true);
+    }
+
+    @Test
+    public void SeVerificaQueSePuedeOcuparUnCasilleroConUnMaterialDeDiamante(){
+        List<Material> materiales = new ArrayList<>();
+        materiales.add(new MaterialMadera());
+        materiales.add(new MaterialPiedra());
+        materiales.add(new MaterialMetal());
+        materiales.add(new MaterialMetal());
+
+        Mapa mapa = new Mapa(materiales,10,10);
+
+        Casillero casillero = mapa.obtenerCasillero(1,9);
+        assertEquals(casillero.estaOcupado(),false);
+
+        boolean pudeOcupar = casillero.asignar(new MaterialDiamante());
+        assertEquals(pudeOcupar,true);
     }
 
 

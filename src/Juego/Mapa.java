@@ -31,11 +31,11 @@ public class Mapa {
         Casillero casillero;
         int aleatorio = (int) (Math.random() * 4);
         if ((aleatorio != 4) && (this.cantDeMateriales < 30)){
-            casillero = new Casillero(materiales.get(aleatorio));
+            casillero = new Casillero(materiales.get(aleatorio),fil,col);
             this.cantDeMateriales++;
         }
         else {
-            casillero = new Casillero();
+            casillero = new Casillero(fil,col);
         }
 
         this.mapa[fil][col] = casillero;
@@ -53,7 +53,7 @@ public class Mapa {
         return this.cantDeMateriales;
     }
 
-    public boolean existeMaterialEnMapa(int i, int j) {
+    public boolean estaOcupado(int i, int j) {
         Casillero casillero = this.mapa[i][j];
         return casillero.estaOcupado();
     }
@@ -62,4 +62,6 @@ public class Mapa {
         Casillero casillero = this.mapa[i][j];
         return casillero;
     }
+
+
 }

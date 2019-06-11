@@ -5,17 +5,24 @@ import Materiales.Material;
 public class Casillero{
     private  boolean ocupado;
     private ObjetoDelTablero objeto;
+    private int posicionI;
+    private int posicionJ;
 
-    public Casillero(){
+    public Casillero(int i,int j){
         this.ocupado = false;
+        this.posicionI = i;
+        this.posicionJ = j;
     }
 
-    public Casillero(Material material){
+    public Casillero(Material material,int i,int j){
         this.ocupado = true;
+        this.posicionI = i;
+        this.posicionJ = j;
     }
 
-    public String indicador(){
-        return this.indicador();
+    public String identificador(){
+        String identificador = this.objeto.indentificador();
+        return identificador;
     }
 
     public boolean estaOcupado(){
@@ -26,10 +33,18 @@ public class Casillero{
         if (this.ocupado == false){
             this.objeto = objeto;
             this.ocupado = true;
-            return true;
+            return this.ocupado;
         }
         return false;
 
+    }
+
+    public int posicionI(){
+        return this.posicionI;
+    }
+
+    public int posicionJ(){
+        return this.posicionJ;
     }
 
 }
