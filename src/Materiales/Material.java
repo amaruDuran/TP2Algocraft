@@ -3,9 +3,10 @@ package Materiales;
 import Herramientas.TipoDeHerramienta.Hacha;
 import Herramientas.TipoDeHerramienta.Pico;
 import Herramientas.TipoDeHerramienta.PicoFino;
+import Juego.ObjetoDelTablero;
 import Materiales.UnidadElemental.UnidadElemental;
 
-public abstract class Material {
+public abstract class Material implements ObjetoDelTablero {
     protected int durabilidad;
     protected UnidadElemental unidadElemental;
     protected String identificador;

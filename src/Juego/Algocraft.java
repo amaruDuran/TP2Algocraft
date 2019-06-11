@@ -10,7 +10,7 @@ public class Algocraft {
 
     public Algocraft() {
         this.cargarMateriales();
-        this.mapa = new Mapa(this.materiales);
+        this.mapa = new Mapa(this.materiales,10,10);
     }
 
     private void cargarMateriales() {

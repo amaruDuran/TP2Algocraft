@@ -1,11 +1,10 @@
 package Juego;
 
-import Jugador.Jugador;
 import Materiales.Material;
 
 public class Casillero{
     private  boolean ocupado;
-    private Material objeto;
+    private ObjetoDelTablero objeto;
 
     public Casillero(){
         this.ocupado = false;
@@ -13,19 +12,24 @@ public class Casillero{
 
     public Casillero(Material material){
         this.ocupado = true;
-        this.objeto = material;
     }
 
     public String indicador(){
-        return this.objeto.indentificador();
+        return this.indicador();
     }
 
     public boolean estaOcupado(){
         return this.ocupado;
     }
 
-    public void asignar(Jugador jugador) {
-        this.ocupado = false;
+    public boolean asignar(ObjetoDelTablero objeto) {
+        if (this.ocupado == false){
+            this.objeto = objeto;
+            this.ocupado = true;
+            return true;
+        }
+        return false;
+
     }
 
 }

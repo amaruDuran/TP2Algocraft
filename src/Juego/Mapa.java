@@ -10,9 +10,9 @@ public class Mapa {
     private Casillero[][] mapa;
     private int cantDeMateriales;
 
-    public Mapa(List<Material> materiales){
-        this.filas = 10;
-        this.columnas = 10;
+    public Mapa(List<Material> materiales,int filas , int columnas){
+        this.filas = filas;
+        this.columnas = columnas;
         this.cantDeMateriales = 0;
         this.inicializacion(materiales);
     }
@@ -30,7 +30,7 @@ public class Mapa {
     private void eleccion(int fil , int col, List<Material> materiales) {
         Casillero casillero;
         int aleatorio = (int) (Math.random() * 4);
-        if ((aleatorio != 5) && (this.cantDeMateriales < 30)){
+        if ((aleatorio != 4) && (this.cantDeMateriales < 30)){
             casillero = new Casillero(materiales.get(aleatorio));
             this.cantDeMateriales++;
         }
@@ -53,19 +53,13 @@ public class Mapa {
         return this.cantDeMateriales;
     }
 
-    public boolean existeMaterialEnMapa() {
-        for (int i = 0; i<this.columnas; i++){
-            for (int j = 0; j<this.filas; j++){
-                Casillero casillero = this.mapa[i][j];
-                if(casillero.estaOcupado()){
-                    return true;
-                }
-            }
-        }
-        return false;
+    public boolean existeMaterialEnMapa(int i, int j) {
+        Casillero casillero = this.mapa[i][j];
+        return casillero.estaOcupado();
     }
 
-    public Casillero[][] indicar() {
-        return this.mapa;
+    public Casillero obtenerCasillero(int i ,int j) {
+        Casillero casillero = this.mapa[i][j];
+        return casillero;
     }
 }
