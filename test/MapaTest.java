@@ -87,7 +87,7 @@ public class MapaTest {
 
         boolean pudeOcupar = casillero.asignar(new MaterialMadera());
         assertEquals(pudeOcupar,true);
-        assertEquals(casillero.identificador(),"M");
+        assertEquals(casillero.identificador(),"MA");
     }
 
     @Test

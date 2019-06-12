@@ -1,7 +1,6 @@
 package Herramientas.Constructor;
 
 import Herramientas.Constructor.Patron.PatronDeConstruccion;
-import Herramientas.Constructor.Patron.PatronHacha;
 import Herramientas.TipoDeHerramienta.TipoDeHerramienta;
 import Jugador.Inventario;
 import Materiales.UnidadElemental.UnidadElemental;
@@ -10,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TableroDeConstruccion {
-    private List<CeldaDeConstruccion> listaDeCeldas;
+    private List<CeldaDeConstruccion> celdas;
     private PatronDeConstruccion construccion;
     private int cantidadDeFilas;
     private int cantidadDeColumnas;
@@ -21,13 +20,13 @@ public class TableroDeConstruccion {
     //(31)(32)(33)Fila3
     //en la lista [(11)(12)(13)(21)(22)(23)(31)(32)(33)]
     public TableroDeConstruccion(){
-        listaDeCeldas = new ArrayList<CeldaDeConstruccion>();
+        celdas = new ArrayList<CeldaDeConstruccion>();
         cantidadDeFilas = 3;
         cantidadDeColumnas = 3;
         int cantidadDeCeldas = cantidadDeFilas * cantidadDeColumnas;
         for (int i = 0; i < cantidadDeCeldas; i++){
             CeldaDeConstruccion celda = new CeldaDeConstruccion();
-            listaDeCeldas.add(celda);
+            celdas.add(celda);
         }
         construccion = new PatronDeConstruccion();
     }
@@ -39,9 +38,18 @@ public class TableroDeConstruccion {
         return posicion;
     }
 
-    public CeldaDeConstruccion verCelda(int fila, int columna){
+    public UnidadElemental obtenerElementoDe(int fila, int columna){
+        UnidadElemental unidadElem = this.verCelda(fila, columna).verElemento();
+        return unidadElem;
+    }
+
+    public boolean posicionEstaVacia(int fila, int columna){
+        return this.verCelda(fila,columna).estaVacia();
+    }
+
+    private CeldaDeConstruccion verCelda(int fila, int columna){
         int posicion = this.posicionDeLaCelda(fila,columna);
-        CeldaDeConstruccion celda = listaDeCeldas.get(posicion);
+        CeldaDeConstruccion celda = celdas.get(posicion);
         return celda;
     }
 
@@ -55,6 +63,7 @@ public class TableroDeConstruccion {
         return true;
     }
 
+    //util para la interfaz de usuario.
     public boolean quitarElementoEnCelda(int fila, int columna, Inventario inventario){
         CeldaDeConstruccion celdaAQuitar = this.verCelda(fila,columna);
         if(celdaAQuitar.estaVacia()){
@@ -64,8 +73,9 @@ public class TableroDeConstruccion {
         return true;
     }
 
+    //idem interfaz de usuario.
     public TipoDeHerramienta construir(){
-        TipoDeHerramienta herramienta = construccion.construir(listaDeCeldas);
+        TipoDeHerramienta herramienta = construccion.construir(celdas);
         return herramienta;
     }
 
