@@ -1,44 +1,49 @@
 package Juego;
-
-import Materiales.Material;
-
-import java.util.List;
+import Materiales.MaterialDiamante;
+import Materiales.MaterialMadera;
+import Materiales.MaterialMetal;
+import Materiales.MaterialPiedra;
 
 public class Mapa {
     private int filas;
     private int columnas;
     private Casillero[][] mapa;
-    private int cantDeMateriales;
 
-    public Mapa(List<Material> materiales,int filas , int columnas){
+    public Mapa(int filas , int columnas){
         this.filas = filas;
         this.columnas = columnas;
-        this.cantDeMateriales = 0;
-        this.inicializacion(materiales);
+        this.inicializacionDeCasilleros();
+        this.inicializacionDeMaterialesEnElMapa();
     }
 
-    private void inicializacion(List<Material> materiales) {
+    private void inicializacionDeMaterialesEnElMapa() {
+        this.mapa[2][1].asignar(new MaterialMetal());
+        this.mapa[2][2].asignar(new MaterialMetal());
+        this.mapa[3][1].asignar(new MaterialMetal());
+        this.mapa[3][2].asignar(new MaterialMetal());
+
+        this.mapa[2][5].asignar(new MaterialDiamante());
+        this.mapa[2][6].asignar(new MaterialDiamante());
+        this.mapa[3][5].asignar(new MaterialDiamante());
+        this.mapa[3][6].asignar(new MaterialDiamante());
+
+        this.mapa[5][1].asignar(new MaterialMadera());
+        this.mapa[5][2].asignar(new MaterialMadera());
+        this.mapa[5][3].asignar(new MaterialMadera());
+        this.mapa[5][4].asignar(new MaterialMadera());
+
+        this.mapa[8][7].asignar(new MaterialPiedra());
+        this.mapa[8][8].asignar(new MaterialPiedra());
+    }
+
+    private void inicializacionDeCasilleros() {
         this.mapa = new Casillero[this.filas][this.columnas];
-        for (int col = 0; col<this.columnas; col++){
-            for (int fil = 0; fil<this.filas; fil++){
-                eleccion(fil,col,materiales);
+        for (int fil = 0; fil<this.filas; fil++){
+            for (int col = 0; col<this.columnas; col++){
+                Casillero casillero = new Casillero();
+                this.mapa[fil][col] = casillero;
             }
         }
-    }
-
-    //ELIGE SI UN CASILLERO SE CREA VACIO O CON ALGUN MATERIAL ALEATORIO
-    private void eleccion(int fil , int col, List<Material> materiales) {
-        Casillero casillero;
-        int aleatorio = (int) (Math.random() * 4);
-        if ((aleatorio != 4) && (this.cantDeMateriales < 30)){
-            casillero = new Casillero(materiales.get(aleatorio),fil,col);
-            this.cantDeMateriales++;
-        }
-        else {
-            casillero = new Casillero(fil,col);
-        }
-
-        this.mapa[fil][col] = casillero;
     }
 
     public int cantidadDeFilas() {
@@ -49,9 +54,6 @@ public class Mapa {
         return this.columnas;
     }
 
-    public int cantidadDeMateriales() {
-        return this.cantDeMateriales;
-    }
 
     public boolean estaOcupado(int i, int j) {
         Casillero casillero = this.mapa[i][j];

@@ -1,22 +1,21 @@
 package Juego;
 
-import Materiales.*;
-import java.util.ArrayList;
-import java.util.List;
+import Jugador.Jugador;
 
 public class Algocraft {
     private Mapa mapa;
-    private List<Material> materiales = new ArrayList<>();
+    private  Jugador jugador;
 
     public Algocraft() {
-        this.cargarMateriales();
-        this.mapa = new Mapa(this.materiales,10,10);
+        this.mapa = new Mapa(13,13);
+        this.jugador = new Jugador();
     }
 
-    private void cargarMateriales() {
-        this.materiales.add(new MaterialMadera());
-        this.materiales.add(new MaterialPiedra());
-        this.materiales.add(new MaterialMetal());
-        this.materiales.add(new MaterialMetal());
+    public Mapa obtenerMapaDelJuego(){
+        return this.mapa;
+    }
+
+    public void iniciar() {
+        jugador.iniciar(mapa);
     }
 }
