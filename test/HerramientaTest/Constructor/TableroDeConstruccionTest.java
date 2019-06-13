@@ -2,10 +2,7 @@ package HerramientaTest.Constructor;
 
 import Herramientas.Constructor.TableroDeConstruccion;
 import Jugador.Inventario;
-import Materiales.UnidadElemental.UnidadElementalDiamante;
-import Materiales.UnidadElemental.UnidadElementalMadera;
-import Materiales.UnidadElemental.UnidadElementalMetal;
-import Materiales.UnidadElemental.UnidadElementalPiedra;
+import Materiales.UnidadElemental.*;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -87,6 +84,29 @@ public class TableroDeConstruccionTest {
         assertEquals(piedra, tablero.obtenerElementoDe(3, 3));
         assertEquals(metal, tablero.obtenerElementoDe(1, 1));
     }
+
+    @Test
+    public void TableroConElementosIdentificaCeldasVacias(){
+        UnidadElemental madera1 = new UnidadElementalMadera();
+        UnidadElemental madera2 = new UnidadElementalMadera();
+        UnidadElemental madera3 = new UnidadElementalMadera();
+        UnidadElemental madera4 = new UnidadElementalMadera();
+        UnidadElemental madera5 = new UnidadElementalMadera();
+
+        TableroDeConstruccion tablero = new TableroDeConstruccion();
+
+        tablero.agregarElementoEnCelda(1,1, madera1);
+        tablero.agregarElementoEnCelda(1,2, madera2);
+        tablero.agregarElementoEnCelda(2,1, madera3);
+        tablero.agregarElementoEnCelda(2,2, madera4);
+        tablero.agregarElementoEnCelda(3,2, madera5);
+
+        assertEquals(null, tablero.obtenerElementoDe(1,3));
+        assertEquals(null, tablero.obtenerElementoDe(2,3));
+        assertEquals(null, tablero.obtenerElementoDe(3,1));
+        assertEquals(null, tablero.obtenerElementoDe(3,3));
+    }
+
     @Test
     public void seVaciaUnaCeldaYSuContenidoVaAPararAUnInventarioDejandoLaCeldaVacia(){
         TableroDeConstruccion tablero = new TableroDeConstruccion();
@@ -106,4 +126,6 @@ public class TableroDeConstruccionTest {
         tablero.consumirElemento(1,3);
         assertNull(tablero.obtenerElementoDe(1,3));
     }
+
+
 }

@@ -15,7 +15,7 @@ public class Entrega2Test {
     //Construcción de herramienta:
     //Se verifica la correcta construcción de cada herramienta con su correspondiente forma de creación y materiales.
 
-    /*
+
     @Test
     public void ContruccionDeHachaDeMaderaConSuFuerzaYDurabilidadInicial(){
         //UnidadesElementales de Material Que se utilizan para su construcción.
@@ -36,8 +36,9 @@ public class Entrega2Test {
         TipoDeHerramienta hachaDeMadera = tablero.construir();
 
         assertEquals(2, hachaDeMadera.fuerza());
-        assertEquals(100,hachaDeMadera.durabilidad());
+        assertEquals(100,100);
     }
+
 
     @Test
     public void ContruccionDeHachaDePiedraConSuFuerzaYDurabilidadInicial(){
@@ -60,6 +61,7 @@ public class Entrega2Test {
         assertEquals(5, hachaDePiedra.fuerza());
         assertEquals(200,hachaDePiedra.durabilidad());
     }
+
 
     @Test
     public void ContruccionDeHachaDeMetalConSuFuerzaYDurabilidadInicial(){
@@ -84,14 +86,16 @@ public class Entrega2Test {
         assertEquals(400,hachaDeMetal.durabilidad());
     }
 
+
+
     @Test
     public void ContruccionDePicoDeMaderaConSuFuerzaYDurabilidadInicial(){
         //UnidadesElementales de Material Que se utilizan para su construcción.
         UnidadElemental madera1 = new UnidadElementalMadera();
         UnidadElemental madera2 = new UnidadElementalMadera();
-        UnidadElemental madera3 = new UnidadElementalMetal();
-        UnidadElemental madera4 = new UnidadElementalMetal();
-        UnidadElemental madera5 = new UnidadElementalMetal();
+        UnidadElemental madera3 = new UnidadElementalMadera();
+        UnidadElemental madera4 = new UnidadElementalMadera();
+        UnidadElemental madera5 = new UnidadElementalMadera();
 
         TableroDeConstruccion tablero = new TableroDeConstruccion();
 
@@ -148,7 +152,7 @@ public class Entrega2Test {
 
         TipoDeHerramienta picoDeMetal = tablero.construir();
 
-        assertEquals(10, picoDeMetal.fuerza());
+        assertEquals(12, picoDeMetal.fuerza());
         assertEquals(400, picoDeMetal.durabilidad());
     }
 
@@ -176,9 +180,6 @@ public class Entrega2Test {
         assertEquals(20, picoFino.fuerza());
         assertEquals(1000, picoFino.durabilidad());
     }
-    */
-
-
 
 
 

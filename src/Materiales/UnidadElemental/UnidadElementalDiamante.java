@@ -15,7 +15,9 @@ public class UnidadElementalDiamante  extends UnidadElemental {
     public MaterialDeHerramienta materialDeConstruccion(MaterialDeHerramientaMetalPiedra metalPiedra){
         return null;
     }
-    public String generarNombre(){
+
+    @Override
+    public String nombre() {
         return "DIAMANTE";
     }
 }

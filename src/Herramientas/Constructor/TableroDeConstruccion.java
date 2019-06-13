@@ -1,16 +1,20 @@
 package Herramientas.Constructor;
 
-import Herramientas.Constructor.Patron.PatronDeConstruccion;
+import Herramientas.Constructor.Patron.PatronHacha;
+import Herramientas.Constructor.Patron.PatronPico;
+import Herramientas.Constructor.Patron.PatronPicoFino;
 import Herramientas.TipoDeHerramienta.TipoDeHerramienta;
 import Jugador.Inventario;
 import Materiales.UnidadElemental.UnidadElemental;
+import Materiales.UnidadElemental.UnidadElementalVacia;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class TableroDeConstruccion {
-    private List<CeldaDeConstruccion> celdas;
-    private PatronDeConstruccion construccion;
+    private ArrayList<CeldaDeConstruccion> celdas;
+    private PatronHacha patronesHacha;
+    private PatronPico patronesPico;
+    private PatronPicoFino patronPicoFino;
     private int cantidadDeFilas;
     private int cantidadDeColumnas;
     //orden de celdas en cuadro
@@ -24,11 +28,22 @@ public class TableroDeConstruccion {
         cantidadDeFilas = 3;
         cantidadDeColumnas = 3;
         int cantidadDeCeldas = cantidadDeFilas * cantidadDeColumnas;
-        for (int i = 0; i < cantidadDeCeldas; i++){
+        for (int i = 0; i < cantidadDeCeldas; i++) {
             CeldaDeConstruccion celda = new CeldaDeConstruccion();
             celdas.add(celda);
         }
-        construccion = new PatronDeConstruccion();
+        patronesHacha = new PatronHacha(this);
+        patronesPico = new PatronPico(this);
+        patronPicoFino = new PatronPicoFino(this);
+    }
+
+    //Luego se borra.
+    public void imprimirTablero(){
+        completarCeldasVacias();
+        ArrayList<CeldaDeConstruccion> celdass = this.reordenarCeldas();
+        for (int i = 0; i < celdass.size(); i++) {
+            System.out.println("Posicion: "+ i + ": " + celdass.get(i).verElemento());
+        }
     }
 
     private int posicionDeLaCelda(int fila, int columna){
@@ -37,6 +52,52 @@ public class TableroDeConstruccion {
         int posicion = (numeroDeFila * 3) + numeroDeColumna;
         return posicion;
     }
+
+    private void completarCeldasVacias(){
+        for (int i = 0; i < celdas.size(); i++) {
+            if ( (celdas.get(i).verElemento() == null) ){
+                UnidadElemental ue = new UnidadElementalVacia();
+                celdas.get(i).agregarElemento(ue);
+            }
+        }
+    }
+
+    private ArrayList<CeldaDeConstruccion> reordenarCeldas(){
+        ArrayList<CeldaDeConstruccion> celdasOrdenadas= new ArrayList<>();
+        for (int i = 1; i < cantidadDeColumnas + 1; i++) {
+            for (int j = 1; j < cantidadDeFilas + 1; j++) {
+                CeldaDeConstruccion celda = new CeldaDeConstruccion();
+                UnidadElemental ue = this.obtenerElementoDe(i, j);
+                celda.agregarElemento(ue);
+                celdasOrdenadas.add(celda);
+            }
+        }
+        return celdasOrdenadas;
+    }
+
+    public ArrayList<String> parsearPatron(){
+        ArrayList<String> patron = new ArrayList<>();
+        this.completarCeldasVacias();
+        ArrayList<CeldaDeConstruccion> patronOrdenado = this.reordenarCeldas();
+        for (int i = 0; i < celdas.size(); i++) {
+            CeldaDeConstruccion celdaAct = patronOrdenado.get(i);
+            String nombreUnidadElemental = celdaAct.verElemento().nombre();
+            patron.add(nombreUnidadElemental);
+        }
+        return patron;
+    }
+
+    /*
+
+    public int cantidadFilas(){
+        return cantidadDeFilas;
+    }
+
+    public int cantidadDeColumnas(){
+        return cantidadDeColumnas;
+    }
+
+     */
 
     public UnidadElemental obtenerElementoDe(int fila, int columna){
         UnidadElemental unidadElem = this.verCelda(fila, columna).verElemento();
@@ -75,9 +136,21 @@ public class TableroDeConstruccion {
 
     //idem interfaz de usuario.
     public TipoDeHerramienta construir(){
-        TipoDeHerramienta herramienta = construccion.construir(celdas);
-        return herramienta;
+        if(patronesPico.esPatronPico()){
+            TipoDeHerramienta herramienta = patronesPico.construirPico();
+            return herramienta;
+        }
+        else if(patronesHacha.esPatronHacha()){
+            TipoDeHerramienta herramienta = patronesHacha.construirHacha();
+            return herramienta;
+        }
+        else if(patronPicoFino.esPatronPicoFino()){
+            TipoDeHerramienta herramienta = patronPicoFino.construirPicoFino();
+            return herramienta;
+        }
+        return null;
     }
+
 
     public void consumirElemento(int fila, int columna){
         CeldaDeConstruccion celdaAConsumir = this.verCelda(fila,columna);
