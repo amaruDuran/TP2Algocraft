@@ -20,6 +20,7 @@ public class Pico implements TipoDeHerramienta {
     }
     @Override
     public boolean usarEn(Material material) {
+        material.recolectadoPor(this);
         return materialDeHerramienta.usarLaHerramientaEn(material);
     }
 }
