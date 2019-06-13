@@ -4,16 +4,14 @@ import Herramientas.TipoDeHerramienta.Hacha;
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramienta;
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMadera;
 import Herramientas.TipoDeHerramienta.TipoDeHerramienta;
-import Juego.Casillero;
-import Juego.Mapa;
-import Juego.ObjetoDelTablero;
+import Juego.*;
 
 public class Jugador implements ObjetoDelTablero {
     private TipoDeHerramienta herramientaEnMano;
     private Inventario inventario;
     private String identificador;
     private Mapa mapa;
-    private Casillero casilleroActual;
+    private Movimiento movimiento;
     //private TableroDeConstruccion constructor;
 
     public Jugador(){
@@ -21,6 +19,7 @@ public class Jugador implements ObjetoDelTablero {
         MaterialDeHerramienta madera = new MaterialDeHerramientaMadera();
         this.herramientaEnMano = new Hacha(madera);
         this.identificador = "JUGADOR";
+        this.movimiento = new Movimiento();
         //this.constructor = new TableroDeConstruccion();
     }
 
@@ -39,8 +38,24 @@ public class Jugador implements ObjetoDelTablero {
 
 
     public void iniciar(Mapa mapa) {
-        this.mapa= mapa;
-        this.casilleroActual = mapa.obtenerCasillero(1,1);
-        this.casilleroActual.asignar(this);
+        this.mapa = mapa;
+        this.movimiento.iniciar(mapa,this);
+    }
+
+    public void moverALaDerecha() {
+         this.movimiento.moverALaDerecha(this.mapa,this);
+
+    }
+
+    public void moverParaAbajo(){
+        this.movimiento.moverParaAbajo(this.mapa,this);
+    }
+
+    public void moverParaAriba() {
+        this.movimiento.moverParaArriba(this.mapa,this);
+    }
+
+    public void moverALaIzquierda() {
+        this.movimiento.moverALaIzquierda(this.mapa,this);
     }
 }

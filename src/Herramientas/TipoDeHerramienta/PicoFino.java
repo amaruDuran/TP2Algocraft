@@ -21,6 +21,7 @@ public class PicoFino implements TipoDeHerramienta {
 
     @Override
     public boolean usarEn(Material material) {
+        material.recolectadoPor(this);
         if (!material.desgastaPicoFino()){
             return true;
         }
