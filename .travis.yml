@@ -7,7 +7,7 @@ before_install:
   - cd /usr/share/java/
   - ls
   - cd
-  - export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/bin/"
+  - export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/"
 jdk:
   - openjdk8
 
