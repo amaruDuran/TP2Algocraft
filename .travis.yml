@@ -4,10 +4,7 @@ before_install:
   - export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/"
   - sudo apt-get install junit4
   - export CLASSPATH="/usr/share/java/junit4.jar"
-  - cd /usr/share/java/
-  - ls
-  - cd
-  - export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/"
+  - whereis ant
 jdk:
   - openjdk8
 
