@@ -1,10 +1,12 @@
 language: java
 before_install:
   - sudo apt-get install ant
+  - sudo apt-get install ant-optional
   - export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/"
   - sudo apt-get install junit4
-  - export CLASSPATH="/usr/share/java/junit4.jar"
   - whereis ant
+  - export ANT_HOME="/usr/share/ant/lib"
+  - export CLASSPATH="/usr/share/java/junit4.jar"
 jdk:
   - openjdk8
 
