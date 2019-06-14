@@ -2,12 +2,14 @@ language: java
 before_install:
   - sudo apt-get install ant
   - export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/"
-  - export CLASSPATH=/usr/share/java/junit4.jar
+  - export CLASSPATH="/usr/share/java/junit4.jar"
   - whereis java
+  - cd /usr/share/java/
+  - ls
 jdk:
   - openjdk8
 
-install: ant
+install: ant -lib /usr/share/ant/lib
 
 script:
   - ant integracion-continua
