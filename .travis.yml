@@ -1,7 +1,9 @@
 language: java
 before_install:
   - sudo apt-get install ant
-
+  - export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/"
+  - export CLASSPATH=/usr/share/java/junit4.jar
+  - whereis java
 jdk:
   - openjdk8
 
@@ -15,8 +17,5 @@ after_success:
 notifications:
   email:
     recipients:
-      - gabigbell@hotmail.com
       - amaruduran@gmail.com
-      - violetaperezandrade@hotmail.com
-      - gerardromeroatencio@gmail.com
     on_failure: always
