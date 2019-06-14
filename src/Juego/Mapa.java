@@ -4,12 +4,16 @@ import Materiales.MaterialMadera;
 import Materiales.MaterialMetal;
 import Materiales.MaterialPiedra;
 
+import java.awt.*;
+import java.util.HashMap;
+
 public class Mapa {
     private int filas;
     private int columnas;
-    private Casillero[][] mapa;
+    private HashMap<Point, Casillero> mapa;
 
     public Mapa(int filas , int columnas){
+        this.mapa = new HashMap<Point, Casillero>();
         this.filas = filas;
         this.columnas = columnas;
         this.inicializacionDeCasilleros();
@@ -17,33 +21,34 @@ public class Mapa {
     }
 
     private void inicializacionDeMaterialesEnElMapa() {
-        this.mapa[2][1].asignar(new MaterialMetal());
-        this.mapa[2][2].asignar(new MaterialMetal());
-        this.mapa[3][1].asignar(new MaterialMetal());
-        this.mapa[3][2].asignar(new MaterialMetal());
+        this.mapa.get(new Point(2,1)).asignar(new MaterialMetal());
+        this.mapa.get(new Point(2,2)).asignar(new MaterialMetal());
+        this.mapa.get(new Point(3,1)).asignar(new MaterialMetal());
+        this.mapa.get(new Point(3,2)).asignar(new MaterialMetal());
 
-        this.mapa[2][5].asignar(new MaterialDiamante());
-        this.mapa[2][6].asignar(new MaterialDiamante());
-        this.mapa[3][5].asignar(new MaterialDiamante());
-        this.mapa[3][6].asignar(new MaterialDiamante());
+        this.mapa.get(new Point(2,5)).asignar(new MaterialDiamante());
+        this.mapa.get(new Point(2,6)).asignar(new MaterialDiamante());
+        this.mapa.get(new Point(3,5)).asignar(new MaterialDiamante());
+        this.mapa.get(new Point(3,6)).asignar(new MaterialDiamante());
 
-        this.mapa[5][1].asignar(new MaterialMadera());
-        this.mapa[5][2].asignar(new MaterialMadera());
-        this.mapa[5][3].asignar(new MaterialMadera());
-        this.mapa[5][4].asignar(new MaterialMadera());
+        this.mapa.get(new Point(5,1)).asignar(new MaterialMadera());
+        this.mapa.get(new Point(5,2)).asignar(new MaterialMadera());
+        this.mapa.get(new Point(5,3)).asignar(new MaterialMadera());
+        this.mapa.get(new Point(5,4)).asignar(new MaterialMadera());
 
-        this.mapa[8][7].asignar(new MaterialPiedra());
-        this.mapa[8][8].asignar(new MaterialPiedra());
+        this.mapa.get(new Point(8,7)).asignar(new MaterialPiedra());
+        this.mapa.get(new Point(8,8)).asignar(new MaterialPiedra());
     }
 
     private void inicializacionDeCasilleros() {
-        this.mapa = new Casillero[this.filas][this.columnas];
-        for (int fil = 0; fil<this.filas; fil++){
-            for (int col = 0; col<this.columnas; col++){
+        for (int fila = 0; fila < this.filas; fila++){
+            for (int columna = 0; columna < this.columnas; columna++){
                 Casillero casillero = new Casillero();
-                this.mapa[fil][col] = casillero;
+                Point ubicacion = new Point(fila,columna);
+                this.mapa.put(ubicacion,casillero);
             }
         }
+
     }
 
     public int cantidadDeFilas() {
@@ -56,12 +61,14 @@ public class Mapa {
 
 
     public boolean estaOcupado(int i, int j) {
-        Casillero casillero = this.mapa[i][j];
+        Point ubicacion = new Point(i,j);
+        Casillero casillero = this.mapa.get(ubicacion);
         return casillero.estaOcupado();
     }
 
     public Casillero obtenerCasillero(int i ,int j) {
-        Casillero casillero = this.mapa[i][j];
+        Point ubicacion = new Point(i,j);
+        Casillero casillero = this.mapa.get(ubicacion);
         return casillero;
     }
 

@@ -1,34 +1,33 @@
 package Juego;
 
 public class Casillero{
-    private  boolean ocupado;
     private ObjetoDelTablero objeto;
 
     public Casillero(){
-        this.ocupado = false;
+        this.objeto = null;
     }
 
     public String identificador(){
+        if (!this.estaOcupado()){
+            return "";
+        }
         String identificador = this.objeto.indentificador();
         return identificador;
     }
 
     public boolean estaOcupado(){
-        return this.ocupado;
+        return (this.objeto != null);
     }
 
-    public boolean asignar(ObjetoDelTablero objeto) {
-        boolean devolver = false;
-        if (this.ocupado == false){
-            this.objeto = objeto;
-            this.ocupado = true;
-            devolver = true;
+    public boolean asignar(ObjetoDelTablero objetoAAgragar) {
+        if (this.estaOcupado()){
+            return false;
         }
-        return devolver;
+        this.objeto = objetoAAgragar;
+        return true;
     }
 
     public void eliminar(){
-        this.ocupado = false;
         this.objeto = null;
     }
 

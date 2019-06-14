@@ -44,7 +44,6 @@ public class Jugador implements ObjetoDelTablero {
 
     public void moverALaDerecha() {
          this.movimiento.moverALaDerecha(this.mapa,this);
-
     }
 
     public void moverParaAbajo(){
