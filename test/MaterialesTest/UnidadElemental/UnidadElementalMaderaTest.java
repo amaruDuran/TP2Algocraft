@@ -31,6 +31,7 @@ public class UnidadElementalMaderaTest {
         MaterialDeHerramienta materialDeHerramienta = unidadElementalMadera.materialDeConstruccion(piedra);
         assertEquals(200, materialDeHerramienta.durabilidad());
     }
+
     @Test
     public void seLePideALaUnidadDeMaderaElMaterialDeHerramientaQueSeConsigueAlConstruirConElConjuntoDeEllaYOtroMaterialMetalDaMetalConDurabilidad400(){
         UnidadElemental unidadElementalMadera = new UnidadElementalMadera();
@@ -38,6 +39,7 @@ public class UnidadElementalMaderaTest {
         MaterialDeHerramienta materialDeHerramienta = unidadElementalMadera.materialDeConstruccion(metal);
         assertEquals(400, materialDeHerramienta.durabilidad());
     }
+
     @Test
     public void seLePideALaUnidadDeMaderaElMaterialDeHerramientaQueSeConsigueAlConstruirConElConjuntoDeEllaYOtroMaterialMetalPiedraDaMetalPiedraConDurabilidad1000(){
         UnidadElemental unidadElementalMadera = new UnidadElementalMadera();

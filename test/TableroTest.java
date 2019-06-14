@@ -7,7 +7,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class TableroTest {/*
+/*public class TableroTest {
     @Test
     public void TablerRecienCreadoTiene144Celdas(){
         Tablero tablero = new Tablero();
@@ -125,5 +125,8 @@ public class TableroTest {/*
         String identificador = tablero.obtener(8,12).identificador();
 
         assertEquals("D",identificador);
-    }*/
+    }
+
 }
+
+ */
