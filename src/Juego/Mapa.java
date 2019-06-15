@@ -11,8 +11,13 @@ public class Mapa {
     private int filas;
     private int columnas;
     private HashMap<Point, Casillero> mapa;
+    private int limiteMinDeFilasDeTablero = 8;//por la inicializacion de materiales
+    private int limiteMinDeColumnasDeTablero = 8;
 
     public Mapa(int filas , int columnas){
+        if (filas < limiteMinDeFilasDeTablero || columnas < limiteMinDeColumnasDeTablero){
+            throw (new ErrorDeCreacionDelMapaTamanioInvalido());
+        }
         this.mapa = new HashMap<Point, Casillero>();
         this.filas = filas;
         this.columnas = columnas;
@@ -59,18 +64,23 @@ public class Mapa {
         return this.columnas;
     }
 
-
-    public boolean estaOcupado(int i, int j) {
-        Point ubicacion = new Point(i,j);
+    public boolean estaOcupado(Point ubicacion) {
+        if(!this.existeUbicacion(ubicacion)){
+            return true;
+        }
         Casillero casillero = this.mapa.get(ubicacion);
         return casillero.estaOcupado();
     }
 
-    public Casillero obtenerCasillero(int i ,int j) {
-        Point ubicacion = new Point(i,j);
+    public Casillero obtenerCasillero(Point ubicacion) {
+        if(!this.existeUbicacion(ubicacion)){
+            return null;
+        }
         Casillero casillero = this.mapa.get(ubicacion);
         return casillero;
     }
 
-
+    public boolean existeUbicacion(Point ubicacion){
+        return mapa.containsKey(ubicacion);
+    }
 }

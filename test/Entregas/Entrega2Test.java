@@ -19,6 +19,8 @@ import Materiales.UnidadElemental.UnidadElementalMetal;
 import Materiales.UnidadElemental.UnidadElementalPiedra;
 import org.junit.Test;
 
+import java.awt.*;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 
@@ -225,7 +227,7 @@ public class Entrega2Test {
         Jugador jugador = new Jugador();
 
         jugador.iniciar(mapa);
-        String jugadorSeEncuentraEnELPrimerCasillero = mapa.obtenerCasillero(0,0).identificador();
+        String jugadorSeEncuentraEnELPrimerCasillero = mapa.obtenerCasillero(new Point(0,0)).identificador();
 
         assertEquals("JUGADOR", jugadorSeEncuentraEnELPrimerCasillero);
     }
@@ -239,7 +241,7 @@ public class Entrega2Test {
         jugador.moverALaDerecha();
         jugador.moverALaDerecha();
 
-        String identificador = mapa.obtenerCasillero(0,2).identificador();
+        String identificador = mapa.obtenerCasillero(new Point(0,2)).identificador();
         assertEquals("JUGADOR", identificador);
     }
 
@@ -250,7 +252,7 @@ public class Entrega2Test {
 
         jugador.iniciar(mapa); // El jugador Comienza En La Posicion [0,0]
         jugador.moverALaDerecha();
-        assertFalse(mapa.obtenerCasillero(0,0).estaOcupado());
+        assertFalse(mapa.obtenerCasillero(new Point(0,0)).estaOcupado());
     }
 
     @Test
@@ -267,58 +269,58 @@ public class Entrega2Test {
         //LLEGE AL BORDE DEL MAPA
         jugador.moverALaDerecha(); //INTENTO MOVERME UNA VEZ MAS
 
-        String identificador = mapa.obtenerCasillero(0,tope).identificador();
+        String identificador = mapa.obtenerCasillero(new Point(0,tope)).identificador();
         assertEquals("JUGADOR",identificador);
     }
 
     @Test
-    public void SeVerficaQueElJugadorSePuedaMoverHaciaAbajo(){
+    public void SeVerficaQueElJugadorSePuedaMoverHaciaArriba(){
         Mapa mapa = new Mapa(12,12);
         Jugador jugador = new Jugador();
 
         jugador.iniciar(mapa); // El jugador Comienza En La Posicion [0,0]
-        jugador.moverParaAbajo();
-        jugador.moverParaAbajo();
+        jugador.moverParaArriba();
+        jugador.moverParaArriba();
 
-        String identificador = mapa.obtenerCasillero(2,0).identificador();
+        String identificador = mapa.obtenerCasillero(new Point(2,0)).identificador();
         assertEquals("JUGADOR", identificador);
     }
 
     @Test
-    public void SeVerificaQueUnaVezElJugadorEsteElTopeDelTableroYaNoSePuedaMoverParaAbajo(){
+    public void SeVerificaQueUnaVezElJugadorEsteElTopeDelTableroYaNoSePuedaMoverParaArriba(){
         int tope = 12;
         Mapa mapa = new Mapa(tope+1,12);
         Jugador jugador = new Jugador();
         jugador.iniciar(mapa);
 
         for(int i= 0; i< tope; i++){
-            jugador.moverParaAbajo();
+            jugador.moverParaArriba();
         }
         //LLEGE AL BORDE DEL MAPA
-        jugador.moverParaAbajo(); //INTENTO MOVERME UNA VEZ MAS
-        jugador.moverParaAbajo();
-        jugador.moverParaAbajo();
+        jugador.moverParaArriba(); //INTENTO MOVERME UNA VEZ MAS
+        jugador.moverParaArriba();
+        jugador.moverParaArriba();
 
-        String identificador = mapa.obtenerCasillero(tope,0).identificador();
+        String identificador = mapa.obtenerCasillero(new Point(tope,0)).identificador();
         assertEquals("JUGADOR",identificador);
     }
 
     @Test
-    public void SeVerificaQueElJugadorSePuedaMoverParaArribaSiEsPosible(){
+    public void SeVerificaQueElJugadorSePuedaMoverParaAbajoSiEsPosible(){
         Mapa mapa = new Mapa(13,13);
         Jugador jugador = new Jugador();
         jugador.iniciar(mapa);
 
-        jugador.moverParaAriba(); //Como estoy en el Tope no me puedo mover
-        String identificador = mapa.obtenerCasillero(0,0).identificador();
+        jugador.moverParaAbajo(); //Como estoy en el Tope no me puedo mover
+        String identificador = mapa.obtenerCasillero(new Point(0,0)).identificador();
         assertEquals("JUGADOR",identificador); //Sigo donde comence
 
-        jugador.moverParaAbajo();
-        jugador.moverParaAbajo();
-        jugador.moverParaAbajo();
+        jugador.moverParaArriba();
+        jugador.moverParaArriba();
+        jugador.moverParaArriba();
 
-        jugador.moverParaAriba();
-        identificador = mapa.obtenerCasillero(2,0).identificador();
+        jugador.moverParaAbajo();
+        identificador = mapa.obtenerCasillero(new Point(2,0)).identificador();
         assertEquals("JUGADOR",identificador);
     }
 
@@ -335,7 +337,7 @@ public class Entrega2Test {
         jugador.moverALaIzquierda();
         jugador.moverALaIzquierda();  //Me muevo 3 veces hacia la Izquierda
         jugador.moverALaIzquierda();
-        String identificador = mapa.obtenerCasillero(0, 0).identificador();
+        String identificador = mapa.obtenerCasillero(new Point(0,0)).identificador();
         assertEquals("JUGADOR", identificador); //Volvi Donde comenze
     }
 
@@ -356,7 +358,7 @@ public class Entrega2Test {
     @Test
     public void SeVerificaQueSePuedaOcuparUnLugarVacioEnElMapa(){
         Mapa mapa = new Mapa(10,10);
-        Casillero casillero =mapa.obtenerCasillero(4,9);
+        Casillero casillero =mapa.obtenerCasillero(new Point(4,9));
         boolean noEstaOcupado = casillero.estaOcupado();
 
         assertEquals(noEstaOcupado,false);
@@ -368,7 +370,7 @@ public class Entrega2Test {
     public void SeVerificaQueNoSePuedaAgregarUnCasilleroLleno(){
 
         Mapa mapa = new Mapa(10,10);
-        Casillero casillero = mapa.obtenerCasillero(1,9);
+        Casillero casillero = mapa.obtenerCasillero(new Point(1,9));
 
         boolean puedoAgregar = casillero.asignar(new Jugador());
         assertEquals(puedoAgregar,true);
@@ -382,7 +384,7 @@ public class Entrega2Test {
     public void SeVerificaQueSePuedaAgregarUnCasilleroPorUnMaterialDeMadera() {
 
         Mapa mapa = new Mapa(10, 10);
-        Casillero casillero = mapa.obtenerCasillero(1, 9);
+        Casillero casillero = mapa.obtenerCasillero(new Point(1,9));
         assertEquals(casillero.estaOcupado(), false);
 
         boolean agrege = casillero.asignar(new MaterialMadera());
@@ -392,7 +394,7 @@ public class Entrega2Test {
     public void SeVerificaQueAlAgregarUnMaterialMaderaPuedoObtenerSusAtributos(){
         Mapa mapa = new Mapa(10,10);
 
-        Casillero casillero = mapa.obtenerCasillero(1,9);
+        Casillero casillero = mapa.obtenerCasillero(new Point(1,9));
         assertEquals(casillero.estaOcupado(),false);
 
         casillero.asignar(new MaterialMadera());
@@ -402,7 +404,7 @@ public class Entrega2Test {
     @Test
     public void SeVerificaQueSePuedaAgregarCasilleroPorUnMaterialDeMetal(){
         Mapa mapa = new Mapa(10,10);
-        Casillero casillero = mapa.obtenerCasillero(1,9);
+        Casillero casillero = mapa.obtenerCasillero(new Point(1,9));
         assertEquals(casillero.estaOcupado(),false);
 
         boolean agrege = casillero.asignar(new MaterialMetal());
@@ -413,7 +415,7 @@ public class Entrega2Test {
     public void SeVerificaQueAlAgregarUnMaterialMetalPuedaObtenerSusAtributos(){
         Mapa mapa = new Mapa(10,10);
 
-        Casillero casillero = mapa.obtenerCasillero(5,9);
+        Casillero casillero = mapa.obtenerCasillero(new Point(1,9));
         assertEquals(casillero.estaOcupado(),false);
 
         casillero.asignar(new MaterialMetal());
@@ -423,7 +425,7 @@ public class Entrega2Test {
     @Test
     public void SeVerificaQueSePuedeAgregarUnCasilleroConUnMaterialDePiedra(){
         Mapa mapa = new Mapa(10,10);
-        Casillero casillero = mapa.obtenerCasillero(1,9);
+        Casillero casillero = mapa.obtenerCasillero(new Point(1,9));
         assertEquals(casillero.estaOcupado(),false);
 
         boolean agrege = casillero.asignar(new MaterialPiedra());
@@ -434,7 +436,7 @@ public class Entrega2Test {
     public void SeVerificaQueAlAgregarUnMaterialPiedraYPuedaObtenerSusAtributos(){
         Mapa mapa = new Mapa(10,10);
 
-        Casillero casillero = mapa.obtenerCasillero(1,9);
+        Casillero casillero = mapa.obtenerCasillero(new Point(1,9));
         assertEquals(casillero.estaOcupado(),false);
 
         casillero.asignar(new MaterialPiedra());
@@ -445,7 +447,7 @@ public class Entrega2Test {
     public void SeVerificaQueSePuedeAgregarUnCasilleroConUnMaterialDeDiamante(){
         Mapa mapa = new Mapa(10,10);
 
-        Casillero casillero = mapa.obtenerCasillero(1,9);
+        Casillero casillero = mapa.obtenerCasillero(new Point(1,9));
         assertEquals(casillero.estaOcupado(),false);
 
         boolean agrege = casillero.asignar(new MaterialDiamante());
@@ -456,7 +458,7 @@ public class Entrega2Test {
     public void SeVerificaQueAlAgregarUnMaterialDediamantePuedaObtenerSusAtributos(){
         Mapa mapa = new Mapa(10,10);
 
-        Casillero casillero = mapa.obtenerCasillero(1,9);
+        Casillero casillero = mapa.obtenerCasillero(new Point(1,9));
         assertEquals(casillero.estaOcupado(),false);
 
         casillero.asignar(new MaterialDiamante());
@@ -471,7 +473,7 @@ public class Entrega2Test {
         Algocraft juego = new Algocraft();
         juego.iniciar();
         Mapa mapaDeMiJuego = juego.obtenerMapaDelJuego();
-        String identidicador = mapaDeMiJuego.obtenerCasillero(0,0).identificador();
+        String identidicador = mapaDeMiJuego.obtenerCasillero(new Point(0,0)).identificador();
         assertEquals("JUGADOR",identidicador);
     }
 
@@ -481,10 +483,10 @@ public class Entrega2Test {
         juego.iniciar();
         Mapa mapaDeMiJuego = juego.obtenerMapaDelJuego();
 
-        String identidicador = mapaDeMiJuego.obtenerCasillero(2,1).identificador();
+        String identidicador = mapaDeMiJuego.obtenerCasillero(new Point(2,1)).identificador();
         assertEquals("MET",identidicador);
 
-        identidicador = mapaDeMiJuego.obtenerCasillero(3,2).identificador();
+        identidicador = mapaDeMiJuego.obtenerCasillero(new Point(3,2)).identificador();
         assertEquals("MET",identidicador);
     }
 
@@ -494,10 +496,10 @@ public class Entrega2Test {
         juego.iniciar();
         Mapa mapaDeMiJuego = juego.obtenerMapaDelJuego();
 
-        String identidicador = mapaDeMiJuego.obtenerCasillero(5,1).identificador();
+        String identidicador = mapaDeMiJuego.obtenerCasillero(new Point(5,1)).identificador();
         assertEquals("MA",identidicador);
 
-        identidicador = mapaDeMiJuego.obtenerCasillero(5,4).identificador();
+        identidicador = mapaDeMiJuego.obtenerCasillero(new Point(5,4)).identificador();
         assertEquals("MA",identidicador);
     }
 
@@ -507,10 +509,10 @@ public class Entrega2Test {
         juego.iniciar();
         Mapa mapaDeMiJuego = juego.obtenerMapaDelJuego();
 
-        String identidicador = mapaDeMiJuego.obtenerCasillero(8,7).identificador();
+        String identidicador = mapaDeMiJuego.obtenerCasillero(new Point(8,7)).identificador();
         assertEquals("P",identidicador);
 
-        identidicador = mapaDeMiJuego.obtenerCasillero(8,8).identificador();
+        identidicador = mapaDeMiJuego.obtenerCasillero(new Point(8,8)).identificador();
         assertEquals("P",identidicador);
     }
 
@@ -520,10 +522,10 @@ public class Entrega2Test {
         juego.iniciar();
         Mapa mapaDeMiJuego = juego.obtenerMapaDelJuego();
 
-        String identidicador = mapaDeMiJuego.obtenerCasillero(2,5).identificador();
+        String identidicador = mapaDeMiJuego.obtenerCasillero(new Point(2,5)).identificador();
         assertEquals("D",identidicador);
 
-        identidicador = mapaDeMiJuego.obtenerCasillero(3,6).identificador();
+        identidicador = mapaDeMiJuego.obtenerCasillero(new Point(3,6)).identificador();
         assertEquals("D",identidicador);
     }
 

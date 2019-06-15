@@ -268,4 +268,55 @@ public class PicoTest {
         pico.usarEn(materialDiamante);
         assertEquals(0,pico.durabilidad());
     }
+    //desgaste de materiales
+    @Test
+    public void laDurabilidadDeUnMaterialPiedraSeReducaConUnPicoDeMetal(){
+        MaterialDeHerramienta metal = new MaterialDeHerramientaMetal();
+        TipoDeHerramienta pico = new Pico(metal);
+        Material materialPiedra = new MaterialPiedra();
+        int durabilidadInicial;
+        durabilidadInicial = materialPiedra.durabilidadActualDelMaterial();
+        pico.usarEn(materialPiedra);
+        assertNotEquals(durabilidadInicial,materialPiedra.durabilidadActualDelMaterial());
+    }
+    @Test
+    public void laDurabilidadDeUnMaterialPiedraSeReducaConUnPicoDePiedra(){
+        MaterialDeHerramienta piedra = new MaterialDeHerramientaPiedra();
+        TipoDeHerramienta pico = new Pico(piedra);
+        Material materialPiedra = new MaterialPiedra();
+        int durabilidadInicial;
+        durabilidadInicial = materialPiedra.durabilidadActualDelMaterial();
+        pico.usarEn(materialPiedra);
+        assertNotEquals(durabilidadInicial,materialPiedra.durabilidadActualDelMaterial());
+    }
+    @Test
+    public void laDurabilidadDeUnMaterialPiedraSeReducaConUnPicoDeMadera(){
+        MaterialDeHerramienta madera = new MaterialDeHerramientaMadera();
+        TipoDeHerramienta pico = new Pico(madera);
+        Material materialPiedra = new MaterialPiedra();
+        int durabilidadInicial;
+        durabilidadInicial = materialPiedra.durabilidadActualDelMaterial();
+        pico.usarEn(materialPiedra);
+        assertNotEquals(durabilidadInicial,materialPiedra.durabilidadActualDelMaterial());
+    }
+    @Test
+    public void laDurabilidadDeUnMaterialMetalSeReducaConUnPicoDeMetal(){
+        MaterialDeHerramienta metal = new MaterialDeHerramientaMetal();
+        TipoDeHerramienta pico = new Pico(metal);
+        Material materialMetal = new MaterialMetal();
+        int durabilidadInicial;
+        durabilidadInicial = materialMetal.durabilidadActualDelMaterial();
+        pico.usarEn(materialMetal);
+        assertNotEquals(durabilidadInicial,materialMetal.durabilidadActualDelMaterial());
+    }
+    @Test
+    public void laDurabilidadDeUnMaterialMetalSeReducaConUnPicoDePiedra(){
+        MaterialDeHerramienta piedra = new MaterialDeHerramientaPiedra();
+        TipoDeHerramienta pico = new Pico(piedra);
+        Material materialMetal = new MaterialMetal();
+        int durabilidadInicial;
+        durabilidadInicial = materialMetal.durabilidadActualDelMaterial();
+        pico.usarEn(materialMetal);
+        assertNotEquals(durabilidadInicial,materialMetal.durabilidadActualDelMaterial());
+    }
 }

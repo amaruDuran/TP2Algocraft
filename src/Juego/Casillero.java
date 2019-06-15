@@ -27,7 +27,7 @@ public class Casillero{
         return true;
     }
 
-    public void eliminar(){
+    public void vaciarCasillero(){
         this.objeto = null;
     }
 

@@ -254,4 +254,35 @@ public class HachaTest {
         diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez = durabilidadInicial - hacha.durabilidad();
         assertNotEquals(0,diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez);
     }
+    //desgaste de materiales
+    @Test
+    public void laDurabilidadDeUnMaterialMaderaSeReducaConUnHachaDeMetal(){
+        MaterialDeHerramienta metal = new MaterialDeHerramientaMetal();
+        TipoDeHerramienta hacha = new Hacha(metal);
+        Material materialMadera = new MaterialMadera();
+        int durabilidadInicial;
+        durabilidadInicial = materialMadera.durabilidadActualDelMaterial();
+        hacha.usarEn(materialMadera);
+        assertNotEquals(durabilidadInicial,materialMadera.durabilidadActualDelMaterial());
+    }
+    @Test
+    public void laDurabilidadDeUnMaterialMaderaSeReducaConUnHachaDePiedra(){
+        MaterialDeHerramienta piedra = new MaterialDeHerramientaPiedra();
+        TipoDeHerramienta hacha = new Hacha(piedra);
+        Material materialMadera = new MaterialMadera();
+        int durabilidadInicial;
+        durabilidadInicial = materialMadera.durabilidadActualDelMaterial();
+        hacha.usarEn(materialMadera);
+        assertNotEquals(durabilidadInicial,materialMadera.durabilidadActualDelMaterial());
+    }
+    @Test
+    public void laDurabilidadDeUnMaterialMaderaSeReducaConUnHachaDeMadera(){
+        MaterialDeHerramienta madera = new MaterialDeHerramientaMadera();
+        TipoDeHerramienta hacha = new Hacha(madera);
+        Material materialMadera = new MaterialMadera();
+        int durabilidadInicial;
+        durabilidadInicial = materialMadera.durabilidadActualDelMaterial();
+        hacha.usarEn(materialMadera);
+        assertNotEquals(durabilidadInicial,materialMadera.durabilidadActualDelMaterial());
+    }
 }

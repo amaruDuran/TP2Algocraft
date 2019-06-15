@@ -43,18 +43,18 @@ public class Jugador implements ObjetoDelTablero {
     }
 
     public void moverALaDerecha() {
-         this.movimiento.moverALaDerecha(this.mapa,this);
+         this.movimiento.moverHaciaLaDerecha(this.mapa,this);
     }
 
     public void moverParaAbajo(){
-        this.movimiento.moverParaAbajo(this.mapa,this);
+        this.movimiento.moverHaciaAbajo(this.mapa,this);
     }
 
-    public void moverParaAriba() {
-        this.movimiento.moverParaArriba(this.mapa,this);
+    public void moverParaArriba() {
+        this.movimiento.moverHaciaArriba(this.mapa,this);
     }
 
     public void moverALaIzquierda() {
-        this.movimiento.moverALaIzquierda(this.mapa,this);
+        this.movimiento.moverHaciaLaIzquierda(this.mapa,this);
     }
 }

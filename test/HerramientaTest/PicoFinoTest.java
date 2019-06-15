@@ -91,4 +91,15 @@ public class PicoFinoTest {
         diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez = durabilidadInicial - picoFino.durabilidad();
         assertNotEquals(0,diferenciaDeDurabilidadQueDeberiaTenerAlUsarseUnaVez);
     }
+    //desgaste de materiales
+    @Test
+    public void laDurabilidadDeUnMaterialDiamanteSeReducaConUnPicoFino(){
+        MaterialDeHerramienta metalPiedra = new MaterialDeHerramientaMetalPiedra();
+        TipoDeHerramienta picoFino = new PicoFino(metalPiedra);
+        Material materialDiamante = new MaterialDiamante();
+        int durabilidadInicial;
+        durabilidadInicial = materialDiamante.durabilidadActualDelMaterial();
+        picoFino.usarEn(materialDiamante);
+        assertNotEquals(durabilidadInicial,materialDiamante.durabilidadActualDelMaterial());
+    }
 }

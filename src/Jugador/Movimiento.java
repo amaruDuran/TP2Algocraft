@@ -4,57 +4,68 @@ package Jugador;
 import Juego.Casillero;
 import Juego.Mapa;
 
+import java.awt.*;
+
 public class Movimiento {
     private Casillero ubicacion;
-    private  int posicion1;
-    private int posicion2;
+    private int posicionVertical;
+    private int posicionHorizontal;
 
     public Movimiento() {
         this.ubicacion = null;
-        this.posicion1= 0;
-        this.posicion2 = 0;
+        this.posicionVertical = 0;
+        this.posicionHorizontal = 0;
     }
 
     public void iniciar(Mapa mapa, Jugador  jugador) {
-        this.ubicacion =  mapa.obtenerCasillero(0,0);
+        Point ubicacionInicial = new Point(posicionVertical, posicionHorizontal);
+        this.ubicacion =  mapa.obtenerCasillero(ubicacionInicial);
         this.ubicacion.asignar(jugador);
     }
 
-    public void moverALaDerecha(Mapa mapa, Jugador jugador) {
-        if ((this.posicion2 < (mapa.cantidadDeColumnas() - 1)) &&
-                !(mapa.obtenerCasillero(1, posicion2 + 1).estaOcupado())) {
-            this.ubicacion.eliminar();
-            this.ubicacion = mapa.obtenerCasillero(posicion1, posicion2 + 1);
-            this.ubicacion.asignar(jugador);
-            this.posicion2++;
-        }
+    private void mover(Mapa mapa, Jugador jugador, Point unicacionAMoverse){
+        this.ubicacion.vaciarCasillero();
+        this.ubicacion = mapa.obtenerCasillero(unicacionAMoverse);
+        this.ubicacion.asignar(jugador);
     }
 
-    public void moverParaAbajo(Mapa mapa, Jugador jugador) {
-        if (this.posicion1 < (mapa.cantidadDeFilas()-1) && !(mapa.obtenerCasillero(posicion1+1,posicion2).estaOcupado())){
-            this.ubicacion.eliminar();
-            this.ubicacion = mapa.obtenerCasillero(posicion1+1, posicion2);
-            this.ubicacion.asignar(jugador);
-            this.posicion1++;
-        }
+    private boolean seCumplenLasCondicionesParaPoderMoverse(Mapa mapa,Point unicacionAMoverse){
+        return (mapa.existeUbicacion(unicacionAMoverse) && !mapa.estaOcupado(unicacionAMoverse));
     }
 
-    public void moverParaArriba(Mapa mapa, Jugador jugador) {
-        if(this.posicion1>0 && !(mapa.obtenerCasillero(posicion1-1,posicion2).estaOcupado())){
-            this.ubicacion.eliminar();
-            this.ubicacion = mapa.obtenerCasillero(posicion1-1, posicion2);
-            this.ubicacion.asignar(jugador);
-            this.posicion1--;
+    public void moverHaciaLaDerecha(Mapa mapa, Jugador jugador) {
+        Point unicacionAMoverse = new Point(posicionVertical, posicionHorizontal + 1);
+        if (!this.seCumplenLasCondicionesParaPoderMoverse(mapa,unicacionAMoverse)){
+            return;
         }
+        this.mover(mapa,jugador,unicacionAMoverse);
+        this.posicionHorizontal++;
     }
 
-    public void moverALaIzquierda(Mapa mapa, Jugador jugador) {
-        if(this.posicion2>0 && !(mapa.obtenerCasillero(posicion1,posicion2-1).estaOcupado()))
-        {
-            this.ubicacion.eliminar();
-            this.ubicacion = mapa.obtenerCasillero(posicion1, posicion2-1);
-            this.ubicacion.asignar(jugador);
-            this.posicion2--;
+    public void moverHaciaAbajo(Mapa mapa, Jugador jugador) {
+        Point unicacionAMoverse = new Point(posicionVertical - 1, posicionHorizontal);
+        if (!this.seCumplenLasCondicionesParaPoderMoverse(mapa,unicacionAMoverse)){
+            return;
         }
+        this.mover(mapa,jugador,unicacionAMoverse);
+        this.posicionVertical--;
+    }
+
+    public void moverHaciaArriba(Mapa mapa, Jugador jugador) {
+        Point unicacionAMoverse = new Point(posicionVertical + 1, posicionHorizontal);
+        if (!this.seCumplenLasCondicionesParaPoderMoverse(mapa,unicacionAMoverse)){
+            return;
+        }
+        this.mover(mapa,jugador,unicacionAMoverse);
+        this.posicionVertical++;
+    }
+
+    public void moverHaciaLaIzquierda(Mapa mapa, Jugador jugador) {
+        Point unicacionAMoverse = new Point(posicionVertical, posicionHorizontal - 1);
+        if (!this.seCumplenLasCondicionesParaPoderMoverse(mapa,unicacionAMoverse)){
+            return;
+        }
+        this.mover(mapa,jugador,unicacionAMoverse);
+        this.posicionHorizontal--;
     }
 }
