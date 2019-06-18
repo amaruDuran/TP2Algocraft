@@ -8,66 +8,44 @@ import Herramientas.TipoDeHerramienta.TipoDeHerramienta;
 
 import java.util.ArrayList;
 
-public class PatronPicoFino {
+public class PatronPicoFino extends PatronMaterialTipoHerramienta{
 
-    private ArrayList<ArrayList<String>> patronesPicoFino;
-    private TableroDeConstruccion tableroConstructor;
-
-    private String materialMadera = "MADERA";
-    private String materialPiedra = "PIEDRA";
-    private String materialMetal = "METAL";
-    private String materialVacio = "VACIO";
-
-    //Se podría Separar en sus clases Correspondientes de manera polimorfica ó
+    //Se podría Separar en sus clases Correspondientes de manera polimorfica (Ya Realizado)ó
     // aplicando el patrón de diseño "Strategy" para la construccion.
     private ArrayList<String> cargarPatronPicoFino(){
         ArrayList<String> patronPicoFino = new ArrayList<>();
-        patronPicoFino.add("METAL");
-        patronPicoFino.add("METAL");
-        patronPicoFino.add("METAL");
-        patronPicoFino.add("PIEDRA");
-        patronPicoFino.add("MADERA");
-        patronPicoFino.add("VACIO");
-        patronPicoFino.add("VACIO");
-        patronPicoFino.add("MADERA");
-        patronPicoFino.add("VACIO");
+        patronPicoFino.add(materialMetal);
+        patronPicoFino.add(materialMetal);
+        patronPicoFino.add(materialMetal);
+        patronPicoFino.add(materialPiedra);
+        patronPicoFino.add(materialMadera);
+        patronPicoFino.add(materialVacio);
+        patronPicoFino.add(materialVacio);
+        patronPicoFino.add(materialMadera);
+        patronPicoFino.add(materialVacio);
 
         return patronPicoFino;
     }
 
-    private boolean _esPatronPicoFino(TableroDeConstruccion tablero){
-        ArrayList<String> patronPicoFino = patronesPicoFino.get(0);
+    public PatronPicoFino(){
+        patronConstructorActual = cargarPatronPicoFino();
+    }
+
+    @Override
+    public boolean esPatronValido(TableroDeConstruccion tablero) {
         ArrayList<String> patronDeTablero = tablero.parsearPatron();
-        for (int i = 0; i < patronPicoFino.size(); i++) {
-            if (!(patronPicoFino.get(i).equalsIgnoreCase(patronDeTablero.get(i)))) {
+        for (int i = 0; i < patronConstructorActual.size(); i++) {
+            if (!(patronConstructorActual.get(i).equalsIgnoreCase(patronDeTablero.get(i)))) {
                 return false;
             }
         }
         return true;
     }
 
-    public boolean esPatronPicoFino(){
-        return _esPatronPicoFino(tableroConstructor);
-    }
-
-    public TipoDeHerramienta construirPicoFino(){
+    @Override
+    public TipoDeHerramienta construir() {
         MaterialDeHerramienta metalPiedra = new MaterialDeHerramientaMetalPiedra();
         TipoDeHerramienta picoFino = new PicoFino(metalPiedra);
         return picoFino;
     }
-
-    private void cargarPatronesPicoFino(){
-        ArrayList<String> patronPicoFino = cargarPatronPicoFino();
-
-        patronesPicoFino = new ArrayList<>();
-
-        patronesPicoFino.add(patronPicoFino);
-
-    }
-
-    public PatronPicoFino(TableroDeConstruccion tablero){
-        cargarPatronesPicoFino();
-        tableroConstructor = tablero;
-    }
-
 }

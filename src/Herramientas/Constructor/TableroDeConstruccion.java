@@ -1,8 +1,6 @@
 package Herramientas.Constructor;
 
-import Herramientas.Constructor.Patron.PatronHacha;
-import Herramientas.Constructor.Patron.PatronPico;
-import Herramientas.Constructor.Patron.PatronPicoFino;
+import Herramientas.Constructor.Patron.*;
 import Herramientas.TipoDeHerramienta.TipoDeHerramienta;
 import Jugador.Inventario;
 import Materiales.UnidadElemental.UnidadElemental;
@@ -12,9 +10,7 @@ import java.util.ArrayList;
 
 public class TableroDeConstruccion {
     private ArrayList<CeldaDeConstruccion> celdas;
-    private PatronHacha patronesHacha;
-    private PatronPico patronesPico;
-    private PatronPicoFino patronPicoFino;
+    private PatronTipoHerramienta patronesDisponibles;
     private int cantidadDeFilas;
     private int cantidadDeColumnas;
     //orden de celdas en cuadro
@@ -32,18 +28,7 @@ public class TableroDeConstruccion {
             CeldaDeConstruccion celda = new CeldaDeConstruccion();
             celdas.add(celda);
         }
-        patronesHacha = new PatronHacha(this);
-        patronesPico = new PatronPico(this);
-        patronPicoFino = new PatronPicoFino(this);
-    }
-
-    //Luego se borra.
-    public void imprimirTablero(){
-        completarCeldasVacias();
-        ArrayList<CeldaDeConstruccion> celdass = this.reordenarCeldas();
-        for (int i = 0; i < celdass.size(); i++) {
-            System.out.println("Posicion: "+ i + ": " + celdass.get(i).verElemento());
-        }
+        patronesDisponibles = new PatronTipoHerramienta();
     }
 
     private int posicionDeLaCelda(int fila, int columna){
@@ -87,7 +72,7 @@ public class TableroDeConstruccion {
         return patron;
     }
 
-    /*
+    /* De Posible Utilidad en Interdfaaz de usuario.
 
     public int cantidadFilas(){
         return cantidadDeFilas;
@@ -136,19 +121,7 @@ public class TableroDeConstruccion {
 
     //idem interfaz de usuario.
     public TipoDeHerramienta construir(){
-        if(patronesPico.esPatronPico()){
-            TipoDeHerramienta herramienta = patronesPico.construirPico();
-            return herramienta;
-        }
-        else if(patronesHacha.esPatronHacha()){
-            TipoDeHerramienta herramienta = patronesHacha.construirHacha();
-            return herramienta;
-        }
-        else if(patronPicoFino.esPatronPicoFino()){
-            TipoDeHerramienta herramienta = patronPicoFino.construirPicoFino();
-            return herramienta;
-        }
-        return null;
+        return patronesDisponibles.construir(this);
     }
 
 

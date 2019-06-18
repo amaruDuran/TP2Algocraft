@@ -49,7 +49,7 @@ public class Entrega2Test {
         TipoDeHerramienta hachaDeMadera = tablero.construir();
 
         assertEquals(2, hachaDeMadera.fuerza());
-        assertEquals(100,100);
+        assertEquals(100, hachaDeMadera.durabilidad());
     }
 
 
@@ -71,8 +71,9 @@ public class Entrega2Test {
 
         TipoDeHerramienta hachaDePiedra = tablero.construir();
 
-        assertEquals(5, hachaDePiedra.fuerza());
         assertEquals(200,hachaDePiedra.durabilidad());
+        assertEquals(5, hachaDePiedra.fuerza());
+
     }
 
 
@@ -95,10 +96,10 @@ public class Entrega2Test {
 
         TipoDeHerramienta hachaDeMetal = tablero.construir();
 
-        assertEquals(10, hachaDeMetal.fuerza());
         assertEquals(400,hachaDeMetal.durabilidad());
-    }
+        assertEquals(10, hachaDeMetal.fuerza());
 
+    }
 
 
     @Test
