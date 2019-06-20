@@ -18,7 +18,7 @@ public class UnidadElementalPiedra extends UnidadElemental {
     }
 
     @Override
-    public String nombre() {
+    public String nombreDeElemento() {
         return "PIEDRA";
     }
 }

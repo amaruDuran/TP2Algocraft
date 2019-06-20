@@ -16,8 +16,9 @@ public class UnidadElementalMetal extends UnidadElemental {
         return metal;
     }
 
+
     @Override
-    public String nombre() {
+    public String nombreDeElemento() {
         return "METAL";
     }
 }

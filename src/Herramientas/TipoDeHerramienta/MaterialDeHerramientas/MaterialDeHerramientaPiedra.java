@@ -47,4 +47,9 @@ public class MaterialDeHerramientaPiedra implements MaterialDeHerramienta {
         durabilidad = desgaste.desgastarElMaterialDeHerramienta(this);
         return true;
     }
+
+    @Override
+    public String nombreDeMaterialDeHerramienta() {
+        return "DIAMANTE";
+    }
 }

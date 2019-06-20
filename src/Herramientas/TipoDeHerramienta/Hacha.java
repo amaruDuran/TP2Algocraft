@@ -23,4 +23,9 @@ public class Hacha implements TipoDeHerramienta {
         material.recolectadoPor(this);
         return materialDeHerramienta.usarLaHerramientaEn(material);
     }
+
+    @Override
+    public String nombreDeElemento() {
+        return "HACHA DE " + materialDeHerramienta.nombreDeMaterialDeHerramienta();
+    }
 }

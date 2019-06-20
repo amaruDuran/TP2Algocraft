@@ -66,7 +66,7 @@ public class TableroDeConstruccion {
         ArrayList<CeldaDeConstruccion> patronOrdenado = this.reordenarCeldas();
         for (int i = 0; i < celdas.size(); i++) {
             CeldaDeConstruccion celdaAct = patronOrdenado.get(i);
-            String nombreUnidadElemental = celdaAct.verElemento().nombre();
+            String nombreUnidadElemental = celdaAct.verElemento().nombreDeElemento();
             patron.add(nombreUnidadElemental);
         }
         return patron;

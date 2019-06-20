@@ -48,4 +48,9 @@ public class MaterialDeHerramientaMetal implements MaterialDeHerramienta {
         durabilidad = desgaste.desgastarElMaterialDeHerramienta(this);
         return true;
     }
+
+    @Override
+    public String nombreDeMaterialDeHerramienta() {
+        return "METAL";
+    }
 }

@@ -27,4 +27,9 @@ public class PicoFino implements TipoDeHerramienta {
         }
         return materialDeHerramienta.usarLaHerramientaEn(material);
     }
+
+    @Override
+    public String nombreDeElemento() {
+        return "PICOFINO" + materialDeHerramienta.nombreDeMaterialDeHerramienta();
+    }
 }

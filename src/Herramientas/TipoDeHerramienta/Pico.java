@@ -23,4 +23,9 @@ public class Pico implements TipoDeHerramienta {
         material.recolectadoPor(this);
         return materialDeHerramienta.usarLaHerramientaEn(material);
     }
+
+    @Override
+    public String nombreDeElemento() {
+        return "PICO DE " + materialDeHerramienta.nombreDeMaterialDeHerramienta();
+    }
 }
