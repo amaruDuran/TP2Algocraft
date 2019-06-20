@@ -34,11 +34,11 @@ public class Casillero{
         return Objects.hash(objeto);
     }
 
-    public boolean asignar(ObjetoDelTablero objetoAAgragar) {
+    public boolean asignar(ObjetoDelTablero objetoAAgregar) {
         if (this.estaOcupado()){
             return false;
         }
-        this.objeto = objetoAAgragar;
+        this.objeto = objetoAAgregar;
         return true;
     }
 

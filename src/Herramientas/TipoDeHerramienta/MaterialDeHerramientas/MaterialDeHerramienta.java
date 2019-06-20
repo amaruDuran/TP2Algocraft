@@ -9,4 +9,6 @@ public interface MaterialDeHerramienta {
     public int fuerza();
     public int durabilidad();
     public boolean usarLaHerramientaEn(Material material);
+
+    String nombreDeMaterialDeHerramienta();
 }

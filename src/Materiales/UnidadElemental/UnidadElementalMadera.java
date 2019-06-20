@@ -8,9 +8,8 @@ public class UnidadElementalMadera extends UnidadElemental {
         MaterialDeHerramientaMadera madera = new MaterialDeHerramientaMadera();
         return madera;
     }
-
     @Override
-    public String nombre() {
+    public String nombreDeElemento() {
         return "MADERA";
     }
 }

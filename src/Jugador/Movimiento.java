@@ -29,8 +29,8 @@ public class Movimiento {
         this.ubicacion.asignar(jugador);
     }
 
-    private boolean seCumplenLasCondicionesParaPoderMoverse(Mapa mapa,Point unicacionAMoverse){
-        return (mapa.existeUbicacion(unicacionAMoverse) && !mapa.estaOcupado(unicacionAMoverse));
+    private boolean seCumplenLasCondicionesParaPoderMoverse(Mapa mapa,Point ubicacionAMoverse){
+        return (mapa.existeUbicacion(ubicacionAMoverse) && !mapa.estaOcupado(ubicacionAMoverse ));
     }
 
     public void moverHaciaLaDerecha(Mapa mapa, Jugador jugador) {

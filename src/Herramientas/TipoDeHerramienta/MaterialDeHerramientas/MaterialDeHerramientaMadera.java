@@ -48,4 +48,9 @@ public class MaterialDeHerramientaMadera implements MaterialDeHerramienta {
         this.durabilidad = desgaste.desgastarElMaterialDeHerramienta(this);
         return true;
     }
+
+    @Override
+    public String nombreDeMaterialDeHerramienta() {
+        return "MADERA";
+    }
 }
