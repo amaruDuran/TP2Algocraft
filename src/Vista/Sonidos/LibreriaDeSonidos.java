@@ -10,6 +10,6 @@ public class LibreriaDeSonidos {
     private final String carpetaSonidos = "src/vista/sonidos/";//se le agrega final para que NO se pueda modificar
 
     public LibreriaDeSonidos(){
-        this.caminar = new MediaPlayer(new Media(new File(carpetaSonidos + "caminar.mp3").toURI().toString()));
+        //this.caminar = new MediaPlayer(new Media(new File("Vista/Sonidos/caminar.mp3").toURI().toString()));
     }
 }

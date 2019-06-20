@@ -3,6 +3,7 @@ package Vista;
 import Vista.Imagenes.LibreriaDeImagenes;
 import Vista.Sonidos.LibreriaDeSonidos;
 import javafx.application.Application;
+import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCombination;
 import javafx.stage.Stage;
