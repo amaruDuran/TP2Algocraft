@@ -3,7 +3,9 @@ package Jugador;
 import Herramientas.TipoDeHerramienta.Hacha;
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMadera;
 import Herramientas.TipoDeHerramienta.TipoDeHerramienta;
+import Juego.Casillero;
 import Juego.Mapa;
+import Juego.ObjetoDelTablero;
 import org.junit.Test;
 
 import java.awt.*;
@@ -32,17 +34,27 @@ public class JugadorTest {
     }
 
 
-
-
     @Test
     public void SeVerificaQueEljugadorComienzaEnElPrimerCasilleroDelMapa(){
         Mapa mapa = new Mapa(12,12);
         Jugador jugador = new Jugador();
 
         jugador.iniciar(mapa);
-        String jugadorSeEncuentraEnELPrimerCasillero = mapa.obtenerCasillero(new Point(0,0)).identificador();
+        ObjetoDelTablero objeto = mapa.obtenerCasillero(new Point(0,0)).getObjeto();
 
-        assertEquals("JUGADOR", jugadorSeEncuentraEnELPrimerCasillero);
+        assertEquals(objeto.equals(new Jugador()),true);
+    }
+
+    @Test
+    public void SeVerificaQueElJugadorSePuedaMoverParaAbajo(){
+        Mapa mapa = new Mapa(13,13);
+        Jugador jugador = new Jugador();
+        jugador.iniciar(mapa);
+
+        jugador.moverParaAbajo();
+        jugador.moverParaAbajo();
+        ObjetoDelTablero objetoDelCasillero = mapa.obtenerCasillero(new Point(2,0)).getObjeto();
+        assertTrue(objetoDelCasillero.equals(new Jugador()));
     }
 
     @Test
@@ -54,76 +66,22 @@ public class JugadorTest {
         jugador.moverALaDerecha();
         jugador.moverALaDerecha();
 
-        String identificador = mapa.obtenerCasillero(new Point(0,2)).identificador();
-        assertEquals("JUGADOR", identificador);
+        ObjetoDelTablero objetoEnCasillero = mapa.obtenerCasillero(new Point(0,2)).getObjeto();
+        assertTrue(objetoEnCasillero.equals(new Jugador()));
     }
 
     @Test
-    public void SeVerificaQueCuandoelJugadorSeMuevaALaDerechaElCasilleroQueDejoSeEncuentreDisponibleParaSerOcupado(){
+    public void SeVerificaQueCuandoelJugadorSeMuevaSeEncuentreEnElCasilleroDeSuUltimaPosicion(){
         Mapa mapa = new Mapa(12,12);
         Jugador jugador = new Jugador();
 
         jugador.iniciar(mapa); // El jugador Comienza En La Posicion [0,0]
         jugador.moverALaDerecha();
-        assertFalse(mapa.obtenerCasillero(new Point(0,0)).estaOcupado());
-    }
-
-    @Test
-    public void SeVerificaQueUnaVezElJugadorEsteEnElTopeDelTableroYaNoSePuedaMoverMasALaDerecha(){
-        int tope = 12;
-        Mapa mapa = new Mapa(12,13);
-        Jugador jugador = new Jugador();
-
-        jugador.iniciar(mapa); // El jugador Comienza En La Posicion [0,0]
-
-        for (int i=0; i<=tope; i++){
-            jugador.moverALaDerecha();;
-        }
-        //LLEGE AL BORDE DEL MAPA
-        jugador.moverALaDerecha(); //INTENTO MOVERME UNA VEZ MAS
-
-        String identificador = mapa.obtenerCasillero(new Point(0,tope)).identificador();
-        assertEquals("JUGADOR",identificador);
-    }
-
-    @Test
-    public void SeVerficaQueElJugadorSePuedaMoverHaciaArriba(){
-        Mapa mapa = new Mapa(12,12);
-        Jugador jugador = new Jugador();
-
-        jugador.iniciar(mapa); // El jugador Comienza En La Posicion [0,0]
-        jugador.moverParaArriba();
-        jugador.moverParaArriba();
-
-        String identificador = mapa.obtenerCasillero(new Point(2,0)).identificador();
-        assertEquals("JUGADOR", identificador);
-    }
-
-    @Test
-    public void SeVerificaQueUnaVezElJugadorEsteElTopeDelTableroYaNoSePuedaMoverParaAbajo(){
-        Mapa mapa = new Mapa(12,12);
-        Jugador jugador = new Jugador();
-        jugador.iniciar(mapa);
-
-        //LLEGE AL BORDE DEL MAPA
-        jugador.moverParaAbajo(); //INTENTO MOVERME UNA VEZ MAS
         jugador.moverParaAbajo();
         jugador.moverParaAbajo();
-
-        String identificador = mapa.obtenerCasillero(new Point(0,0)).identificador();
-        assertEquals("JUGADOR",identificador);
-    }
-
-    @Test
-    public void SeVerificaQueElJugadorSePuedaMoverParaAbajoSiEsPosible(){
-        Mapa mapa = new Mapa(13,13);
-        Jugador jugador = new Jugador();
-        jugador.iniciar(mapa);
-
-        jugador.moverParaAbajo();
-        jugador.moverParaAbajo();
-        String identificador = mapa.obtenerCasillero(new Point(0,0)).identificador();
-        assertEquals("JUGADOR",identificador);
+        jugador.moverALaDerecha();
+        jugador.moverALaIzquierda();
+        assertTrue(mapa.obtenerCasillero(new Point(2,1)).estaOcupado());
     }
 
     @Test
@@ -139,8 +97,62 @@ public class JugadorTest {
         jugador.moverALaIzquierda();
         jugador.moverALaIzquierda();  //Me muevo 3 veces hacia la Izquierda
         jugador.moverALaIzquierda();
-        String identificador = mapa.obtenerCasillero(new Point(0,0)).identificador();
-        assertEquals("JUGADOR", identificador); //Volvi Donde comenze
+        ObjetoDelTablero objeto = mapa.obtenerCasillero(new Point(0,0)).getObjeto();
+        assertTrue(objeto.equals(new Jugador()));
     }
+
+    @Test
+    public void SeVerificaQueUnaVezElJugadorEsteEnElTopeDelTableroYaNoSePuedaMoverMasALaDerecha(){
+        int tope = 12;
+        Mapa mapa = new Mapa(tope,13);
+        Jugador jugador = new Jugador();
+
+        jugador.iniciar(mapa); // El jugador Comienza En La Posicion [0,0]
+
+        for (int i=0; i<=tope; i++){
+            jugador.moverALaDerecha();;
+        }
+        //LLEGE AL BORDE DEL MAPA
+        jugador.moverALaDerecha(); //INTENTO MOVERME UNA VEZ MAS
+        jugador.moverALaDerecha(); //INTENTO MOVERME UNA VEZ MAS
+
+
+        ObjetoDelTablero objetoDelTablero = mapa.obtenerCasillero(new Point(0,tope)).getObjeto();
+        assertTrue(objetoDelTablero.equals(new Jugador()));
+    }
+
+    @Test
+    public void SeVerficaQueElJugadorNoSePuedaMoverHaciaArriba(){
+        Mapa mapa = new Mapa(12,12);
+        Jugador jugador = new Jugador();
+
+        jugador.iniciar(mapa); // El jugador Comienza En La Posicion [0,0]
+        jugador.moverParaArriba();
+        jugador.moverParaArriba();
+
+        ObjetoDelTablero objetoDelCasillero = mapa.obtenerCasillero(new Point(0,0)).getObjeto();
+        assertTrue(objetoDelCasillero.equals(new Jugador()));
+    }
+
+    @Test
+    public void SeVerificaQueUnaVezElJugadorEsteElTopeDelTableroYaNoSePuedaMoverParaAbajo(){
+        Mapa mapa = new Mapa(12,12);
+        Jugador jugador = new Jugador();
+        jugador.iniciar(mapa);
+
+        for(int i = 0; i < 12; i++){
+            jugador.moverParaAbajo();
+        }
+        // ME ENCUENTRO EN EL BORDE DEL TABLERO
+        jugador.moverParaAbajo();
+        jugador.moverParaAbajo();
+
+        ObjetoDelTablero objetoDelCasillero = mapa.obtenerCasillero(new Point(11,0)).getObjeto();
+        assertTrue(objetoDelCasillero.equals(new Jugador()));
+    }
+
+
+
+
 
 }

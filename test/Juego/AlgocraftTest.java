@@ -1,20 +1,23 @@
 package Juego;
 
+import Jugador.Jugador;
+import Materiales.*;
 import org.junit.Test;
 
 import java.awt.*;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class AlgocraftTest {
     @Test
-    public void SeVerificaQueUnaVezIniciadoElJuegoElJugadorSeEncuentreEnLaPosicionInicial(){
-        Algocraft juego = new Algocraft();
-        juego.iniciar();
-        Mapa mapaDeMiJuego = juego.obtenerMapaDelJuego();
-        Point posicionInicial = new Point(0,0);
-        String identidicador = mapaDeMiJuego.obtenerCasillero(posicionInicial).identificador();
-        assertEquals("JUGADOR",identidicador);
+    public void SeVerificaQueUnaVezIniciadoElJuegoElJugadorSeEncuentreEnElPrimerCasillero(){
+        Algocraft miJuego = new Algocraft();
+        miJuego.iniciar();
+        Mapa mapaDeMiJuego = miJuego.obtenerMapaDelJuego();
+        Jugador jugador = miJuego.obtenerJugador();
+        ObjetoDelTablero objectoEnElPrimerCasillero  = mapaDeMiJuego.obtenerCasillero(new Point(0,0)).getObjeto();
+        assertEquals(jugador,objectoEnElPrimerCasillero);
     }
 
     @Test
@@ -23,11 +26,8 @@ public class AlgocraftTest {
         juego.iniciar();
         Mapa mapaDeMiJuego = juego.obtenerMapaDelJuego();
 
-        String identidicador = mapaDeMiJuego.obtenerCasillero(new Point(2,1)).identificador();
-        assertEquals("MET",identidicador);
-
-        identidicador = mapaDeMiJuego.obtenerCasillero(new Point(3,2)).identificador();
-        assertEquals("MET",identidicador);
+        ObjetoDelTablero objeto = mapaDeMiJuego.obtenerCasillero(new Point(2,1)).getObjeto();
+        assertEquals(objeto.equals(new MaterialMetal()),true);
     }
 
     @Test
@@ -36,11 +36,8 @@ public class AlgocraftTest {
         juego.iniciar();
         Mapa mapaDeMiJuego = juego.obtenerMapaDelJuego();
 
-        String identidicador = mapaDeMiJuego.obtenerCasillero(new Point(5,1)).identificador();
-        assertEquals("MA",identidicador);
-
-        identidicador = mapaDeMiJuego.obtenerCasillero(new Point(5,4)).identificador();
-        assertEquals("MA",identidicador);
+        ObjetoDelTablero objeto = mapaDeMiJuego.obtenerCasillero(new Point(5,1)).getObjeto();
+        assertTrue(objeto.equals(new MaterialMadera()));
     }
 
     @Test
@@ -49,11 +46,8 @@ public class AlgocraftTest {
         juego.iniciar();
         Mapa mapaDeMiJuego = juego.obtenerMapaDelJuego();
 
-        String identidicador = mapaDeMiJuego.obtenerCasillero(new Point(8,7)).identificador();
-        assertEquals("P",identidicador);
-
-        identidicador = mapaDeMiJuego.obtenerCasillero(new Point(8,8)).identificador();
-        assertEquals("P",identidicador);
+        ObjetoDelTablero objeto = mapaDeMiJuego.obtenerCasillero(new Point(8,7)).getObjeto();
+        assertTrue(objeto.equals(new MaterialPiedra()));
     }
 
     @Test
@@ -62,11 +56,8 @@ public class AlgocraftTest {
         juego.iniciar();
         Mapa mapaDeMiJuego = juego.obtenerMapaDelJuego();
 
-        String identidicador = mapaDeMiJuego.obtenerCasillero(new Point(2,5)).identificador();
-        assertEquals("D",identidicador);
-
-        identidicador = mapaDeMiJuego.obtenerCasillero(new Point(3,6)).identificador();
-        assertEquals("D",identidicador);
+        ObjetoDelTablero objeto = mapaDeMiJuego.obtenerCasillero(new Point(2,5)).getObjeto();
+        assertTrue(objeto.equals(new MaterialDiamante()));
     }
 
 

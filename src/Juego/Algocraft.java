@@ -18,4 +18,8 @@ public class Algocraft {
     public void iniciar() {
         jugador.iniciar(mapa);
     }
+
+    public Jugador obtenerJugador() {
+        return this.jugador;
+    }
 }

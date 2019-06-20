@@ -1,5 +1,7 @@
 package Juego;
 
+import java.util.Objects;
+
 public class Casillero{
     private ObjetoDelTablero objeto;
 
@@ -19,6 +21,19 @@ public class Casillero{
         return (this.objeto != null);
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Casillero casillero = (Casillero) o;
+        return Objects.equals(objeto, casillero.objeto);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(objeto);
+    }
+
     public boolean asignar(ObjetoDelTablero objetoAAgragar) {
         if (this.estaOcupado()){
             return false;
@@ -31,4 +46,7 @@ public class Casillero{
         this.objeto = null;
     }
 
+    public ObjetoDelTablero getObjeto() {
+        return this.objeto;
+    }
 }

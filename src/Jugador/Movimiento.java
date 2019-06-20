@@ -42,7 +42,7 @@ public class Movimiento {
         this.posicionHorizontal++;
     }
 
-    public void moverHaciaAbajo(Mapa mapa, Jugador jugador) {
+    public void moverHaciaArriba(Mapa mapa, Jugador jugador) {
         Point unicacionAMoverse = new Point(posicionVertical - 1, posicionHorizontal);
         if (!this.seCumplenLasCondicionesParaPoderMoverse(mapa,unicacionAMoverse)){
             return;
@@ -51,7 +51,7 @@ public class Movimiento {
         this.posicionVertical--;
     }
 
-    public void moverHaciaArriba(Mapa mapa, Jugador jugador) {
+    public void moverHaciaAbajo(Mapa mapa, Jugador jugador) {
         Point unicacionAMoverse = new Point(posicionVertical + 1, posicionHorizontal);
         if (!this.seCumplenLasCondicionesParaPoderMoverse(mapa,unicacionAMoverse)){
             return;

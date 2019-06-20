@@ -6,6 +6,7 @@ import org.junit.Test;
 import java.awt.*;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class MapaTest {
 
@@ -79,7 +80,6 @@ public class MapaTest {
 
         puedoAgregar = casillero.asignar(new Jugador());
         assertEquals(puedoAgregar,false);
-        assertEquals(casillero.identificador(),"JUGADOR");
     }
 
     @Test
@@ -93,14 +93,16 @@ public class MapaTest {
         assertEquals(agrege, true);
     }
     @Test
-    public void SeVerificaQueAlAgregarUnMaterialMaderaPuedoObtenerSusAtributos(){
+    public void SeVerificaQueAlAgregarUnMaterialMaderaElCasilleroContengaElMaterialExactoQueAgregamos(){
         Mapa mapa = new Mapa(10,10);
 
         Casillero casillero = mapa.obtenerCasillero(new Point(1,9));
         assertEquals(casillero.estaOcupado(),false);
 
         casillero.asignar(new MaterialMadera());
-        assertEquals(casillero.identificador(),"MA");
+        ObjetoDelTablero objetoDelCasillero = casillero.getObjeto();
+
+        assertTrue(objetoDelCasillero.equals(new MaterialMadera()));
     }
 
     @Test
@@ -114,14 +116,15 @@ public class MapaTest {
     }
 
     @Test
-    public void SeVerificaQueAlAgregarUnMaterialMetalPuedaObtenerSusAtributos(){
+    public void SeVerificaQueAlAgregarUnMaterialMetalElCasilleroContengaElMaterialExactoQueAgregamos(){
         Mapa mapa = new Mapa(10,10);
 
         Casillero casillero = mapa.obtenerCasillero(new Point(5,9));
         assertEquals(casillero.estaOcupado(),false);
 
         casillero.asignar(new MaterialMetal());
-        assertEquals(casillero.identificador(),"MET");
+        ObjetoDelTablero objetoDelCasillero = casillero.getObjeto();
+        assertTrue(objetoDelCasillero.equals(new MaterialMetal()));
     }
 
     @Test
@@ -135,14 +138,15 @@ public class MapaTest {
     }
 
     @Test
-    public void SeVerificaQueAlAgregarUnMaterialPiedraYPuedaObtenerSusAtributos(){
+    public void SeVerificaQueAlAgregarUnMaterialPiedraElCasilleroContengaElMaterialExactoQueAgregamos(){
         Mapa mapa = new Mapa(10,10);
 
         Casillero casillero = mapa.obtenerCasillero(new Point(1,9));
         assertEquals(casillero.estaOcupado(),false);
 
         casillero.asignar(new MaterialPiedra());
-        assertEquals(casillero.identificador(),"P");
+        ObjetoDelTablero objetoDelCasillero = casillero.getObjeto();
+        assertTrue(objetoDelCasillero.equals(new MaterialPiedra()));
     }
 
     @Test
@@ -157,14 +161,15 @@ public class MapaTest {
     }
 
     @Test
-    public void SeVerificaQueAlAgregarUnMaterialDediamantePuedaObtenerSusAtributos(){
+    public void SeVerificaQueAlAgregarUnMaterialDediamanteElCasilleroContengaElMaterialExactoQueAgregamos(){
         Mapa mapa = new Mapa(10,10);
 
         Casillero casillero = mapa.obtenerCasillero(new Point(1,9));
         assertEquals(casillero.estaOcupado(),false);
 
         casillero.asignar(new MaterialDiamante());
-        assertEquals(casillero.identificador(),"D");
+        ObjetoDelTablero objetoDelCasillero = casillero.getObjeto();
+        assertTrue(objetoDelCasillero.equals(new MaterialDiamante()));
     }
 
     @Test

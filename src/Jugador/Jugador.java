@@ -6,6 +6,8 @@ import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramien
 import Herramientas.TipoDeHerramienta.TipoDeHerramienta;
 import Juego.*;
 
+import java.util.Objects;
+
 public class Jugador implements ObjetoDelTablero {
     private TipoDeHerramienta herramientaEnMano;
     private Inventario inventario;
@@ -56,5 +58,18 @@ public class Jugador implements ObjetoDelTablero {
 
     public void moverALaIzquierda() {
         this.movimiento.moverHaciaLaIzquierda(this.mapa,this);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Jugador jugador = (Jugador) o;
+        return Objects.equals(identificador, jugador.identificador);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(herramientaEnMano, inventario, identificador, mapa, movimiento);
     }
 }
