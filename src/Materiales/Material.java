@@ -6,6 +6,8 @@ import Herramientas.TipoDeHerramienta.PicoFino;
 import Juego.ObjetoDelTablero;
 import Materiales.UnidadElemental.UnidadElemental;
 
+import java.util.Objects;
+
 public abstract class Material implements ObjetoDelTablero {
     protected int durabilidad;
     protected UnidadElemental unidadElemental;
@@ -42,4 +44,17 @@ public abstract class Material implements ObjetoDelTablero {
         return identificador;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Material material = (Material) o;
+        return durabilidad == material.durabilidad &&
+                Objects.equals(identificador, material.identificador);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(durabilidad, unidadElemental, identificador);
+    }
 }
