@@ -4,6 +4,7 @@ import javafx.scene.Scene;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 
+/* todo: esta clase tambien se podría borrar.
 public class Constantes {
     private static double heightPantalla = Screen.getPrimary().getVisualBounds().getHeight();
     private static double widthPantalla = Screen.getPrimary().getVisualBounds().getWidth();
@@ -17,3 +18,5 @@ public class Constantes {
         stage.setFullScreen(pantallaCompleta);
     }
 }
+
+ */

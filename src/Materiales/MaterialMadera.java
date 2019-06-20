@@ -8,7 +8,7 @@ public class MaterialMadera extends Material {
     public MaterialMadera(){
         durabilidad = 10;
         this.setUnidadElemental();
-        this.identificador = "MA";
+        this.identificador = "MADERA";
     }
 
     @Override

@@ -3,12 +3,13 @@ package Materiales;
 import Herramientas.TipoDeHerramienta.PicoFino;
 import Materiales.UnidadElemental.UnidadElementalDiamante;
 
-public class MaterialDiamante extends Material {
+public class MaterialDiamante extends Material
+{
 
     public MaterialDiamante(){
         durabilidad = 100;
         this.setUnidadElemental();
-        this.identificador = "D";
+        this.identificador = "DIAMANTE";
     }
 
     @Override
@@ -26,4 +27,5 @@ public class MaterialDiamante extends Material {
     public boolean desgastaPicoFino() {
         return true;
     }
+
 }

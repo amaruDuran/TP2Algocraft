@@ -11,7 +11,7 @@ public class Casillero{
 
     public String identificador(){
         if (!this.estaOcupado()){
-            return "";
+            return "VACIO";
         }
         String identificador = this.objeto.indentificador();
         return identificador;

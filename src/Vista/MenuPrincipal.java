@@ -1,12 +1,7 @@
 package Vista;
 
-import Vista.Imagenes.LibreriaDeImagenes;
-import Vista.Sonidos.LibreriaDeSonidos;
-import javafx.scene.image.Image;
-import javafx.scene.layout.*;
-import javafx.stage.Stage;
-
-public class MenuPrincipal extends StackPane {
+/* todo: esto se podría borrar, salvo que sirva paraa algo.
+public class MenuPrincipal extends BorderPane {
     private Stage stage;
     private LibreriaDeSonidos sonidos;
     private LibreriaDeImagenes imagenes;
@@ -33,3 +28,5 @@ public class MenuPrincipal extends StackPane {
         return submenu;
     }
 }
+
+ */

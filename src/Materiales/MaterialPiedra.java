@@ -8,7 +8,7 @@ public class MaterialPiedra extends Material {
     public MaterialPiedra(){
         durabilidad = 30;
         this.setUnidadElemental();
-        this.identificador = "P";
+        this.identificador = "PIEDRA";
     }
 
     @Override

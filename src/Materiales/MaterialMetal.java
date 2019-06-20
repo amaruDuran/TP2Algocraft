@@ -8,7 +8,7 @@ public class MaterialMetal extends Material {
     public MaterialMetal(){
         durabilidad = 50;
         this.setUnidadElemental();
-        this.identificador = "MET";
+        this.identificador = "METAL";
     }
 
     @Override
