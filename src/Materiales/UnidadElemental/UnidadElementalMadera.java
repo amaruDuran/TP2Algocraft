@@ -4,12 +4,11 @@ import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramien
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMadera;
 
 public class UnidadElementalMadera extends UnidadElemental {
+    public UnidadElementalMadera(){
+        this.nombreDeElemento = "MADERA";
+    }
     public MaterialDeHerramienta materialDeConstruccion(){
         MaterialDeHerramientaMadera madera = new MaterialDeHerramientaMadera();
         return madera;
-    }
-    @Override
-    public String nombreDeElemento() {
-        return "MADERA";
     }
 }

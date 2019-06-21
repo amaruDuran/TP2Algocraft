@@ -55,6 +55,6 @@ public abstract class Material implements ObjetoDelTablero {
 
     @Override
     public int hashCode() {
-        return Objects.hash(durabilidad, unidadElemental, identificador);
+        return Objects.hash(durabilidad, identificador);
     }
 }

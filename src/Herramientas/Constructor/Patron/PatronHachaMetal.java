@@ -5,14 +5,15 @@ import Herramientas.TipoDeHerramienta.Hacha;
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramienta;
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMetal;
 import Herramientas.TipoDeHerramienta.TipoDeHerramienta;
+import Materiales.UnidadElemental.UnidadElemental;
 
 import java.util.ArrayList;
 
 public class PatronHachaMetal extends PatronMaterialTipoHerramienta{
 
 
-    private ArrayList<String> cargarPatronHachaMetal(){
-        ArrayList<String> patronHachaMetal = new ArrayList<>();
+    private ArrayList<UnidadElemental> cargarPatronHachaMetal(){
+        ArrayList<UnidadElemental> patronHachaMetal = new ArrayList<>();
         patronHachaMetal.add(materialMetal);
         patronHachaMetal.add(materialMetal);
         patronHachaMetal.add(materialVacio);
@@ -33,9 +34,9 @@ public class PatronHachaMetal extends PatronMaterialTipoHerramienta{
 
     @Override
     public boolean esPatronValido(TableroDeConstruccion tablero) {
-        ArrayList<String> patronDeTablero = tablero.parsearPatron();
+        ArrayList<UnidadElemental> patronDeTablero = tablero.parsearPatron();
         for (int i = 0; i < patronConstructorActual.size(); i++) {
-            if (!(patronConstructorActual.get(i).equalsIgnoreCase(patronDeTablero.get(i)))) {
+            if (!(patronConstructorActual.get(i).equivalenteA(patronDeTablero.get(i)))) {
                 return false;
             }
         }

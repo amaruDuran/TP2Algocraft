@@ -3,7 +3,11 @@ package Materiales.UnidadElemental;
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.*;
 import Jugador.ObjeosDelInventario;
 
+import java.util.Objects;
+
 public abstract class UnidadElemental implements ObjeosDelInventario {
+    protected String nombreDeElemento;
+
     public MaterialDeHerramienta materialDeConstruccion(){
         return null;
     }
@@ -18,5 +22,15 @@ public abstract class UnidadElemental implements ObjeosDelInventario {
     }
     public MaterialDeHerramienta materialDeConstruccion(MaterialDeHerramientaMetalPiedra metalPiedra){
         return metalPiedra;
+    }
+
+
+    public String nombreDeElemento() {
+        return nombreDeElemento;
+    }
+
+    public boolean equivalenteA(UnidadElemental unidadElemental) {
+        if (this == unidadElemental) return true;
+        return Objects.equals(nombreDeElemento, unidadElemental.nombreDeElemento);
     }
 }

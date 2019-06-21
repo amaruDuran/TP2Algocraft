@@ -3,6 +3,9 @@ package Materiales.UnidadElemental;
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.*;
 
 public class UnidadElementalMetal extends UnidadElemental {
+    public UnidadElementalMetal(){
+        this.nombreDeElemento = "METAL";
+    }
     public MaterialDeHerramienta materialDeConstruccion(){
         MaterialDeHerramienta metal = new MaterialDeHerramientaMetal();
         return metal;
@@ -14,11 +17,5 @@ public class UnidadElementalMetal extends UnidadElemental {
     public MaterialDeHerramienta materialDeConstruccion(MaterialDeHerramientaMadera madera){
         MaterialDeHerramienta metal = new MaterialDeHerramientaMetal();
         return metal;
-    }
-
-
-    @Override
-    public String nombreDeElemento() {
-        return "METAL";
     }
 }

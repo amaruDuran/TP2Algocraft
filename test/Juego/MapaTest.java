@@ -65,7 +65,8 @@ public class MapaTest {
         boolean noEstaOcupado = casillero.estaOcupado();
 
         assertEquals(noEstaOcupado,false);
-        boolean estaOcupado = casillero.asignar(new Jugador());
+        casillero.asignar(new Jugador());
+        boolean estaOcupado = casillero.estaOcupado();
         assertEquals(estaOcupado,true);
     }
 

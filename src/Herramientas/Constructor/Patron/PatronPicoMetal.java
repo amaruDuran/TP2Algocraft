@@ -5,13 +5,14 @@ import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramien
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMetal;
 import Herramientas.TipoDeHerramienta.Pico;
 import Herramientas.TipoDeHerramienta.TipoDeHerramienta;
+import Materiales.UnidadElemental.UnidadElemental;
 
 import java.util.ArrayList;
 
 public class PatronPicoMetal extends PatronMaterialTipoHerramienta{
 
-    private ArrayList<String> cargarPatronPicoMetal(){
-        ArrayList<String> patronPicoMetal = new ArrayList<>();
+    private ArrayList<UnidadElemental> cargarPatronPicoMetal(){
+        ArrayList<UnidadElemental> patronPicoMetal = new ArrayList<>();
         patronPicoMetal.add(materialMetal);
         patronPicoMetal.add(materialMetal);
         patronPicoMetal.add(materialMetal);
@@ -32,9 +33,9 @@ public class PatronPicoMetal extends PatronMaterialTipoHerramienta{
 
     @Override
     public boolean esPatronValido(TableroDeConstruccion tablero) {
-        ArrayList<String> patronDeTablero = tablero.parsearPatron();
+        ArrayList<UnidadElemental> patronDeTablero = tablero.parsearPatron();
         for (int i = 0; i < patronConstructorActual.size(); i++) {
-            if (!(patronConstructorActual.get(i).equalsIgnoreCase(patronDeTablero.get(i)))) {
+            if (!(patronConstructorActual.get(i).equivalenteA(patronDeTablero.get(i)))) {
                 return false;
             }
         }

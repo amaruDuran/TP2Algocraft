@@ -41,8 +41,8 @@ public class TableroDeConstruccion {
     private void completarCeldasVacias(){
         for (int i = 0; i < celdas.size(); i++) {
             if ( (celdas.get(i).verElemento() == null) ){
-                UnidadElemental ue = new UnidadElementalVacia();
-                celdas.get(i).agregarElemento(ue);
+                UnidadElemental unidadElemental = new UnidadElementalVacia();
+                celdas.get(i).agregarElemento(unidadElemental);
             }
         }
     }
@@ -52,22 +52,21 @@ public class TableroDeConstruccion {
         for (int i = 1; i < cantidadDeColumnas + 1; i++) {
             for (int j = 1; j < cantidadDeFilas + 1; j++) {
                 CeldaDeConstruccion celda = new CeldaDeConstruccion();
-                UnidadElemental ue = this.obtenerElementoDe(i, j);
-                celda.agregarElemento(ue);
+                UnidadElemental unidadElemental = this.obtenerElementoDe(i, j);
+                celda.agregarElemento(unidadElemental);
                 celdasOrdenadas.add(celda);
             }
         }
         return celdasOrdenadas;
     }
 
-    public ArrayList<String> parsearPatron(){
-        ArrayList<String> patron = new ArrayList<>();
+    public ArrayList<UnidadElemental> parsearPatron(){
+        ArrayList<UnidadElemental> patron = new ArrayList<UnidadElemental>();
         this.completarCeldasVacias();
         ArrayList<CeldaDeConstruccion> patronOrdenado = this.reordenarCeldas();
         for (int i = 0; i < celdas.size(); i++) {
             CeldaDeConstruccion celdaAct = patronOrdenado.get(i);
-            String nombreUnidadElemental = celdaAct.verElemento().nombreDeElemento();
-            patron.add(nombreUnidadElemental);
+            patron.add(celdaAct.verElemento());
         }
         return patron;
     }
@@ -123,7 +122,6 @@ public class TableroDeConstruccion {
     public TipoDeHerramienta construir(){
         return patronesDisponibles.construir(this);
     }
-
 
     public void consumirElemento(int fila, int columna){
         CeldaDeConstruccion celdaAConsumir = this.verCelda(fila,columna);

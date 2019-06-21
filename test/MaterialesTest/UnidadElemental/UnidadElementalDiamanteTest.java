@@ -1,12 +1,10 @@
 package MaterialesTest.UnidadElemental;
 
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.*;
-import Materiales.UnidadElemental.UnidadElemental;
-import Materiales.UnidadElemental.UnidadElementalDiamante;
+import Materiales.UnidadElemental.*;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
+import static org.junit.Assert.*;
 
 public class UnidadElementalDiamanteTest {
 
@@ -45,5 +43,26 @@ public class UnidadElementalDiamanteTest {
         MaterialDeHerramientaMetalPiedra metalPiedra = new MaterialDeHerramientaMetalPiedra();
         MaterialDeHerramienta materialDeHerramienta = diamante.materialDeConstruccion(metalPiedra);
         assertNull(materialDeHerramienta);
+    }
+    @Test
+    public void elDiamanteEsEquivalenteAOtroDiferenteYViceversa(){
+        UnidadElemental unidadElemental = new UnidadElementalDiamante();
+        UnidadElemental otraUnidadElemental = new UnidadElementalDiamante();
+        assertNotEquals(unidadElemental,otraUnidadElemental);
+        assertTrue(unidadElemental.equivalenteA(otraUnidadElemental));
+        assertTrue(otraUnidadElemental.equivalenteA(unidadElemental));
+    }
+    @Test
+    public void elDiamanteNoEsEquivalenteAOtroMaterialQueNoSeaElMismoYVisceversa(){
+        UnidadElemental unidadElemental = new UnidadElementalDiamante();
+        UnidadElemental otraUnidadElemental1 = new UnidadElementalMetal();
+        UnidadElemental otraUnidadElemental2 = new UnidadElementalMadera();
+        UnidadElemental otraUnidadElemental3 = new UnidadElementalPiedra();
+        assertFalse(unidadElemental.equivalenteA(otraUnidadElemental1));
+        assertFalse(unidadElemental.equivalenteA(otraUnidadElemental2));
+        assertFalse(unidadElemental.equivalenteA(otraUnidadElemental3));
+        assertFalse(otraUnidadElemental1.equivalenteA(unidadElemental));
+        assertFalse(otraUnidadElemental2.equivalenteA(unidadElemental));
+        assertFalse(otraUnidadElemental3.equivalenteA(unidadElemental));
     }
 }

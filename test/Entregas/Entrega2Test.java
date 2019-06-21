@@ -1,7 +1,6 @@
 package Entregas;
 
 import Herramientas.Constructor.TableroDeConstruccion;
-import Herramientas.Herramienta;
 import Herramientas.TipoDeHerramienta.Hacha;
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMadera;
 import Herramientas.TipoDeHerramienta.TipoDeHerramienta;

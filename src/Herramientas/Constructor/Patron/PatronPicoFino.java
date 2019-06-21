@@ -5,15 +5,14 @@ import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramien
 import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMetalPiedra;
 import Herramientas.TipoDeHerramienta.PicoFino;
 import Herramientas.TipoDeHerramienta.TipoDeHerramienta;
+import Materiales.UnidadElemental.UnidadElemental;
 
 import java.util.ArrayList;
 
 public class PatronPicoFino extends PatronMaterialTipoHerramienta{
 
-    //Se podría Separar en sus clases Correspondientes de manera polimorfica (Ya Realizado)ó
-    // aplicando el patrón de diseño "Strategy" para la construccion.
-    private ArrayList<String> cargarPatronPicoFino(){
-        ArrayList<String> patronPicoFino = new ArrayList<>();
+    private ArrayList<UnidadElemental> cargarPatronPicoFino(){
+        ArrayList<UnidadElemental> patronPicoFino = new ArrayList<>();
         patronPicoFino.add(materialMetal);
         patronPicoFino.add(materialMetal);
         patronPicoFino.add(materialMetal);
@@ -33,9 +32,9 @@ public class PatronPicoFino extends PatronMaterialTipoHerramienta{
 
     @Override
     public boolean esPatronValido(TableroDeConstruccion tablero) {
-        ArrayList<String> patronDeTablero = tablero.parsearPatron();
+        ArrayList<UnidadElemental> patronDeTablero = tablero.parsearPatron();
         for (int i = 0; i < patronConstructorActual.size(); i++) {
-            if (!(patronConstructorActual.get(i).equalsIgnoreCase(patronDeTablero.get(i)))) {
+            if (!(patronConstructorActual.get(i).equivalenteA(patronDeTablero.get(i)))) {
                 return false;
             }
         }

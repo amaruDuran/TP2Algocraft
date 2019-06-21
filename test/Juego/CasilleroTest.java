@@ -18,7 +18,7 @@ public class CasilleroTest {
     @Test
     public void seCreaUnCasilleroYEstaVacio(){
         Casillero casillero = new Casillero();
-        assertEquals("",casillero.identificador());
+        assertEquals("VACIO",casillero.identificador());
     }
     @Test
     public void seAsignaUnObjetoAlCasilleroAlAsignarDanTrue(){
@@ -68,10 +68,10 @@ public class CasilleroTest {
         casilleroMaterialPiedra.asignar(new MaterialPiedra());
         casilleroMaterialDiamante.asignar(new MaterialDiamante());
 
-        assertEquals("JUGADOR",casilleroJugador.identificador());
-        assertEquals("MA",casilleroMaterialMadera.identificador());
-        assertEquals("MET",casilleroMaterialMetal.identificador());
-        assertEquals("P",casilleroMaterialPiedra.identificador());
-        assertEquals("D",casilleroMaterialDiamante.identificador());
+        assertEquals(new Jugador(),casilleroJugador.getObjeto());
+        assertEquals(new MaterialMadera(),casilleroMaterialMadera.getObjeto());
+        assertEquals(new MaterialMetal(),casilleroMaterialMetal.getObjeto());
+        assertEquals(new MaterialPiedra(),casilleroMaterialPiedra.getObjeto());
+        assertEquals(new MaterialDiamante(),casilleroMaterialDiamante.getObjeto());
     }
 }
