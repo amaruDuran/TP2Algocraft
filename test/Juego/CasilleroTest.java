@@ -1,10 +1,11 @@
 package Juego;
 
-import Jugador.Jugador;
-import Materiales.MaterialDiamante;
-import Materiales.MaterialMadera;
-import Materiales.MaterialMetal;
-import Materiales.MaterialPiedra;
+import Modelo.Jugador.Jugador;
+import Modelo.Materiales.MaterialDiamante;
+import Modelo.Materiales.MaterialMadera;
+import Modelo.Materiales.MaterialMetal;
+import Modelo.Materiales.MaterialPiedra;
+import Modelo.Juego.Casillero;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

@@ -1,14 +1,14 @@
 package MaterialesTest;
 
-import Herramientas.TipoDeHerramienta.Hacha;
-import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMadera;
-import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMetal;
-import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMetalPiedra;
-import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaPiedra;
-import Herramientas.TipoDeHerramienta.Pico;
-import Herramientas.TipoDeHerramienta.PicoFino;
-import Materiales.Material;
-import Materiales.MaterialPiedra;
+import Modelo.Herramientas.TipoDeHerramienta.Hacha;
+import Modelo.Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMadera;
+import Modelo.Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMetal;
+import Modelo.Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMetalPiedra;
+import Modelo.Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaPiedra;
+import Modelo.Herramientas.TipoDeHerramienta.Pico;
+import Modelo.Herramientas.TipoDeHerramienta.PicoFino;
+import Modelo.Materiales.Material;
+import Modelo.Materiales.MaterialPiedra;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

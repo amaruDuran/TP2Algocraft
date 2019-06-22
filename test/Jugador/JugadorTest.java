@@ -1,11 +1,11 @@
 package Jugador;
 
-import Herramientas.TipoDeHerramienta.Hacha;
-import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMadera;
-import Herramientas.TipoDeHerramienta.TipoDeHerramienta;
-import Juego.Casillero;
-import Juego.Mapa;
-import Juego.ObjetoDelTablero;
+import Modelo.Herramientas.TipoDeHerramienta.Hacha;
+import Modelo.Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMadera;
+import Modelo.Herramientas.TipoDeHerramienta.TipoDeHerramienta;
+import Modelo.Jugador.Jugador;
+import Modelo.Juego.Mapa;
+import Modelo.Juego.ObjetoDelTablero;
 import org.junit.Test;
 
 import java.awt.*;

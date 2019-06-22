@@ -1,8 +1,9 @@
 package Vista;
 
-import Juego.Casillero;
-import Juego.Mapa;
-import Jugador.Jugador;
+import Modelo.Juego.Algocraft;
+import Modelo.Juego.Casillero;
+import Modelo.Juego.Mapa;
+import Modelo.Jugador.Jugador;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -20,24 +21,20 @@ public class Aplicacion extends Application {
     public static double ancho;
     public static double alto;
 
-    /*todo: Aquí debería encapsularse como se dibuja el mapa (mapa.dibujar() o algo así)*/
-    //private static MapaVista mapa;
-
-    private static Mapa mapaModelo;
-
-    // todo: estas debrían ser las clases que utilisaremos para encapsular como modelaremos
+    // todo: estas debrían ser las clases que utilizaremos para encapsular como modelaremos
     //  la vista de jugador ante los posibles movimientos.
     //  o la vista del tablero de construccion, por ejemplo.
-    //public static jugadorVista jugador;
-    //public static Jugador jugadorModelo;
+    public JugadorVista jugador;
+    public Jugador jugadorModelo;
 
     //public static tableroDeConstruccionVista tableroDeConstruccion;
     //public static TableroDeConstruccion tableroDeConstruccionModelo;
 
     private Stage juego;
     private BorderPane panelesDeJuego;
+    private Algocraft algocraftModelo;
 
-    private GridPane mapa;
+    private MapaVista mapa;
     //private MenuPrincipal menuJuego;
     //private LibreriaDeSonidos sonidos;
     //private LibreriaDeImagenes imagenes;
@@ -50,33 +47,12 @@ public class Aplicacion extends Application {
         juego = ventanaAlgocraft;
         juego.setTitle("AlgoCraft");
 
-        //GridPane Objeto que sirve para construir tableros según fila y collumna.
-        mapa = new GridPane();
+        algocraftModelo = new Algocraft();
 
-        //Para que las imagenes estén separadas y no estén tan juntas.
-        mapa.setPadding(new Insets(10,10,10,10));
-
+        mapa = new MapaVista(algocraftModelo.obtenerMapaDelJuego());
+        mapa.dibujar();
 
 
-        /*Debería estar en Carpeta de Controlador o vista y encapsulado en una clase.*/
-        mapaModelo = new Mapa(10,10);
-        Casillero casillero = mapaModelo.obtenerCasillero(new Point(1,9));
-        casillero.asignar(new Jugador());
-
-        //Dimensiones del mapaVista.
-        mapa.setHgap(mapaModelo.cantidadDeColumnas());
-        mapa.setVgap(mapaModelo.cantidadDeFilas());
-
-        //todo: esto sería el mapa.dibujar().
-        for (int i = 0; i < mapa.getHgap(); i++) {
-            for (int j = 0; j < mapa.getVgap(); j++) {
-                String elementoMapaVista = mapaModelo.obtenerCasillero(new Point(i,j)).identificador();
-                Image imagenUnidadElemental= new Image("Vista/Imagenes/" + elementoMapaVista + ".png");
-                ImageView imagenUnidadElementalVista = new ImageView(imagenUnidadElemental);
-                mapa.setConstraints(imagenUnidadElementalVista, i, j);
-                mapa.getChildren().add(imagenUnidadElementalVista);
-            }
-        }
 
 
 
@@ -85,12 +61,12 @@ public class Aplicacion extends Application {
 
         setFondoDePantalla();
 
-        //todo Acá es donde tendrían que poner las distintas funcionalidades de el juego.
+        //todo Acá es donde tendrían que poner las distintas vistas de el juego.
         // en el casso del mapa lo puse en el centro, pueden poner las demás funcionalidades
         // en alguna otra de las partes.
         //
 
-        panelesDeJuego.setCenter(mapa);
+        panelesDeJuego.setCenter(mapa.getVista());
         panelesDeJuego.setLeft(new TextField("Nombre de jugador!, herramienta equipada,  datos de herramienta (durabilidad,fuerza, ect..)"));
         panelesDeJuego.setBottom(new TextField("Botones de inventario, ect.."));
 
@@ -112,4 +88,5 @@ public class Aplicacion extends Application {
         fondo.setFitWidth(ancho);
         panelesDeJuego.getChildren().add(fondo);
     }
+
 }

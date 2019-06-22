@@ -1,9 +1,9 @@
 package HerramientaTest.FormasDeDesgaste;
 
-import Herramientas.TipoDeHerramienta.FormaDeDesgaste.Desgaste;
-import Herramientas.TipoDeHerramienta.FormaDeDesgaste.DesgasteAbrupta;
-import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramienta;
-import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMetal;
+import Modelo.Herramientas.TipoDeHerramienta.FormaDeDesgaste.Desgaste;
+import Modelo.Herramientas.TipoDeHerramienta.FormaDeDesgaste.DesgasteAbrupta;
+import Modelo.Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramienta;
+import Modelo.Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMetal;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

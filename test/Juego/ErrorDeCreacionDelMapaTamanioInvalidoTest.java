@@ -1,5 +1,6 @@
 package Juego;
 
+import Modelo.Juego.ErrorDeCreacionDelMapaTamanioInvalido;
 import org.junit.Test;
 
 public class ErrorDeCreacionDelMapaTamanioInvalidoTest {

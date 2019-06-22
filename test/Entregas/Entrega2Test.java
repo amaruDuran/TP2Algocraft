@@ -1,19 +1,19 @@
 package Entregas;
 
-import Herramientas.Constructor.TableroDeConstruccion;
-import Herramientas.TipoDeHerramienta.Hacha;
-import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMadera;
-import Herramientas.TipoDeHerramienta.TipoDeHerramienta;
-import Juego.*;
-import Jugador.Jugador;
-import Materiales.MaterialDiamante;
-import Materiales.MaterialMadera;
-import Materiales.MaterialMetal;
-import Materiales.MaterialPiedra;
-import Materiales.UnidadElemental.UnidadElemental;
-import Materiales.UnidadElemental.UnidadElementalMadera;
-import Materiales.UnidadElemental.UnidadElementalMetal;
-import Materiales.UnidadElemental.UnidadElementalPiedra;
+import Modelo.Herramientas.Constructor.TableroDeConstruccion;
+import Modelo.Herramientas.TipoDeHerramienta.Hacha;
+import Modelo.Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMadera;
+import Modelo.Herramientas.TipoDeHerramienta.TipoDeHerramienta;
+import Modelo.Juego.*;
+import Modelo.Jugador.Jugador;
+import Modelo.Materiales.MaterialDiamante;
+import Modelo.Materiales.MaterialMadera;
+import Modelo.Materiales.MaterialMetal;
+import Modelo.Materiales.MaterialPiedra;
+import Modelo.Materiales.UnidadElemental.UnidadElemental;
+import Modelo.Materiales.UnidadElemental.UnidadElementalMadera;
+import Modelo.Materiales.UnidadElemental.UnidadElementalMetal;
+import Modelo.Materiales.UnidadElemental.UnidadElementalPiedra;
 import org.junit.Test;
 
 import java.awt.*;

@@ -1,15 +1,15 @@
 package Entregas;
 
-import Herramientas.TipoDeHerramienta.Hacha;
-import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.*;
-import Herramientas.TipoDeHerramienta.Pico;
-import Herramientas.TipoDeHerramienta.PicoFino;
-import Herramientas.TipoDeHerramienta.TipoDeHerramienta;
-import Jugador.Jugador;
-import Materiales.Material;
-import Materiales.MaterialMadera;
-import Materiales.MaterialMetal;
-import Materiales.MaterialPiedra;
+import Modelo.Herramientas.TipoDeHerramienta.Hacha;
+import Modelo.Herramientas.TipoDeHerramienta.MaterialDeHerramientas.*;
+import Modelo.Herramientas.TipoDeHerramienta.Pico;
+import Modelo.Herramientas.TipoDeHerramienta.PicoFino;
+import Modelo.Herramientas.TipoDeHerramienta.TipoDeHerramienta;
+import Modelo.Jugador.Jugador;
+import Modelo.Materiales.Material;
+import Modelo.Materiales.MaterialMadera;
+import Modelo.Materiales.MaterialMetal;
+import Modelo.Materiales.MaterialPiedra;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

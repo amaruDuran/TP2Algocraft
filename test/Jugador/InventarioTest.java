@@ -1,14 +1,16 @@
 package Jugador;
 
-import Herramientas.TipoDeHerramienta.Hacha;
-import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMadera;
-import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMetal;
-import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMetalPiedra;
-import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaPiedra;
-import Herramientas.TipoDeHerramienta.Pico;
-import Herramientas.TipoDeHerramienta.PicoFino;
-import Herramientas.TipoDeHerramienta.TipoDeHerramienta;
-import Materiales.UnidadElemental.*;
+import Modelo.Herramientas.TipoDeHerramienta.Hacha;
+import Modelo.Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMadera;
+import Modelo.Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMetal;
+import Modelo.Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMetalPiedra;
+import Modelo.Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaPiedra;
+import Modelo.Herramientas.TipoDeHerramienta.Pico;
+import Modelo.Herramientas.TipoDeHerramienta.PicoFino;
+import Modelo.Herramientas.TipoDeHerramienta.TipoDeHerramienta;
+import Modelo.Jugador.Inventario;
+import Modelo.Jugador.ObjeosDelInventario;
+import Modelo.Materiales.UnidadElemental.*;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

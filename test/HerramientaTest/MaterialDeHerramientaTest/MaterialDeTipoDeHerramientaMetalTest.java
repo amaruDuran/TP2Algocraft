@@ -1,7 +1,7 @@
 package HerramientaTest.MaterialDeHerramientaTest;
 
-import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramienta;
-import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMetal;
+import Modelo.Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramienta;
+import Modelo.Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMetal;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

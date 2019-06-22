@@ -1,9 +1,9 @@
 package HerramientaTest;
-import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramienta;
-import Herramientas.TipoDeHerramienta.TipoDeHerramienta;
-import Herramientas.TipoDeHerramienta.PicoFino;
-import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMetalPiedra;
-import Materiales.*;
+import Modelo.Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramienta;
+import Modelo.Herramientas.TipoDeHerramienta.TipoDeHerramienta;
+import Modelo.Herramientas.TipoDeHerramienta.PicoFino;
+import Modelo.Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMetalPiedra;
+import Modelo.Materiales.*;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

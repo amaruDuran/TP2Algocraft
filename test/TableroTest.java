@@ -1,12 +1,3 @@
-import Jugador.Jugador;
-import Materiales.MaterialDiamante;
-import Materiales.MaterialMadera;
-import Materiales.MaterialMetal;
-import Materiales.MaterialPiedra;
-import org.junit.Test;
-
-import static org.junit.Assert.*;
-
 /*public class TableroTest {
     @Test
     public void TablerRecienCreadoTiene144Celdas(){

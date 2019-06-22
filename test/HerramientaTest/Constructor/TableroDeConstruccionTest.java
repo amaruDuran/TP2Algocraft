@@ -1,8 +1,8 @@
 package HerramientaTest.Constructor;
 
-import Herramientas.Constructor.TableroDeConstruccion;
-import Jugador.Inventario;
-import Materiales.UnidadElemental.*;
+import Modelo.Herramientas.Constructor.TableroDeConstruccion;
+import Modelo.Jugador.Inventario;
+import Modelo.Materiales.UnidadElemental.*;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

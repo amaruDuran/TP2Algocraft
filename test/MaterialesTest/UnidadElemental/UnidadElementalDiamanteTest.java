@@ -1,7 +1,7 @@
 package MaterialesTest.UnidadElemental;
 
-import Herramientas.TipoDeHerramienta.MaterialDeHerramientas.*;
-import Materiales.UnidadElemental.*;
+import Modelo.Herramientas.TipoDeHerramienta.MaterialDeHerramientas.*;
+import Modelo.Materiales.UnidadElemental.*;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

@@ -1,9 +1,9 @@
 package HerramientaTest.Constructor;
 
-import Herramientas.Constructor.CeldaDeConstruccion;
-import Jugador.Inventario;
-import Materiales.UnidadElemental.UnidadElemental;
-import Materiales.UnidadElemental.UnidadElementalMadera;
+import Modelo.Herramientas.Constructor.CeldaDeConstruccion;
+import Modelo.Jugador.Inventario;
+import Modelo.Materiales.UnidadElemental.UnidadElemental;
+import Modelo.Materiales.UnidadElemental.UnidadElementalMadera;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

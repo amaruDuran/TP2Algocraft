@@ -1,7 +1,13 @@
 package Juego;
 
-import Jugador.Jugador;
-import Materiales.*;
+import Modelo.Jugador.Jugador;
+import Modelo.Juego.Algocraft;
+import Modelo.Juego.Mapa;
+import Modelo.Materiales.MaterialDiamante;
+import Modelo.Materiales.MaterialMadera;
+import Modelo.Materiales.MaterialMetal;
+import Modelo.Materiales.MaterialPiedra;
+import Modelo.Juego.ObjetoDelTablero;
 import org.junit.Test;
 
 import java.awt.*;
