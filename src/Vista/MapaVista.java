@@ -24,8 +24,8 @@ public class MapaVista implements Dibujable {
         mapa.setPadding(new Insets(10,10,10,10));
 
         /*Debería estar en Carpeta de Controlador o vista y encapsulado en una clase.*/
-        Casillero casillero = mapaModelo.obtenerCasillero(new Point(1,9));
-        casillero.asignar(new Jugador());
+        //Casillero casillero = mapaModelo.obtenerCasillero(new Point(1,9));
+        //casillero.asignar(new Jugador());
     }
 
 

@@ -239,7 +239,7 @@ public class Entrega2Test {
 
         jugador.moverParaAbajo();
         jugador.moverParaAbajo();
-        ObjetoDelTablero objetoDelCasillero = mapa.obtenerCasillero(new Point(2,0)).getObjeto();
+        ObjetoDelTablero objetoDelCasillero = mapa.obtenerCasillero(new Point(0,2)).getObjeto();
         assertTrue(objetoDelCasillero.equals(new Jugador()));
     }
 
@@ -252,7 +252,7 @@ public class Entrega2Test {
         jugador.moverALaDerecha();
         jugador.moverALaDerecha();
 
-        ObjetoDelTablero objetoEnCasillero = mapa.obtenerCasillero(new Point(0,2)).getObjeto();
+        ObjetoDelTablero objetoEnCasillero = mapa.obtenerCasillero(new Point(2,0)).getObjeto();
         assertTrue(objetoEnCasillero.equals(new Jugador()));
     }
 
@@ -295,7 +295,7 @@ public class Entrega2Test {
 
         jugador.iniciar(mapa); // El jugador Comienza En La Posicion [0,0]
 
-        for (int i=0; i<=tope; i++){
+        for (int i=0; i < tope; i++){
             jugador.moverALaDerecha();;
         }
         //LLEGE AL BORDE DEL MAPA
@@ -303,7 +303,7 @@ public class Entrega2Test {
         jugador.moverALaDerecha(); //INTENTO MOVERME UNA VEZ MAS
 
 
-        ObjetoDelTablero objetoDelTablero = mapa.obtenerCasillero(new Point(0,tope)).getObjeto();
+        ObjetoDelTablero objetoDelTablero = mapa.obtenerCasillero(new Point(tope - 1,0)).getObjeto();
         assertTrue(objetoDelTablero.equals(new Jugador()));
     }
 
@@ -333,7 +333,7 @@ public class Entrega2Test {
         jugador.moverParaAbajo();
         jugador.moverParaAbajo();
 
-        ObjetoDelTablero objetoDelCasillero = mapa.obtenerCasillero(new Point(11,0)).getObjeto();
+        ObjetoDelTablero objetoDelCasillero = mapa.obtenerCasillero(new Point(0,11)).getObjeto();
         assertTrue(objetoDelCasillero.equals(new Jugador()));
     }
 

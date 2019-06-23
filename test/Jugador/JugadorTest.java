@@ -53,7 +53,7 @@ public class JugadorTest {
 
         jugador.moverParaAbajo();
         jugador.moverParaAbajo();
-        ObjetoDelTablero objetoDelCasillero = mapa.obtenerCasillero(new Point(2,0)).getObjeto();
+        ObjetoDelTablero objetoDelCasillero = mapa.obtenerCasillero(new Point(0,2)).getObjeto();
         assertTrue(objetoDelCasillero.equals(new Jugador()));
     }
 
@@ -66,7 +66,7 @@ public class JugadorTest {
         jugador.moverALaDerecha();
         jugador.moverALaDerecha();
 
-        ObjetoDelTablero objetoEnCasillero = mapa.obtenerCasillero(new Point(0,2)).getObjeto();
+        ObjetoDelTablero objetoEnCasillero = mapa.obtenerCasillero(new Point(2,0)).getObjeto();
         assertTrue(objetoEnCasillero.equals(new Jugador()));
     }
 
@@ -103,21 +103,20 @@ public class JugadorTest {
 
     @Test
     public void SeVerificaQueUnaVezElJugadorEsteEnElTopeDelTableroYaNoSePuedaMoverMasALaDerecha(){
-        int tope = 12;
-        Mapa mapa = new Mapa(tope,13);
+        Mapa mapa = new Mapa(12,12);
         Jugador jugador = new Jugador();
 
         jugador.iniciar(mapa); // El jugador Comienza En La Posicion [0,0]
 
-        for (int i=0; i<=tope; i++){
-            jugador.moverALaDerecha();;
+        for (int i=0; i < 12; i++){
+            jugador.moverALaDerecha();
         }
         //LLEGE AL BORDE DEL MAPA
         jugador.moverALaDerecha(); //INTENTO MOVERME UNA VEZ MAS
         jugador.moverALaDerecha(); //INTENTO MOVERME UNA VEZ MAS
 
 
-        ObjetoDelTablero objetoDelTablero = mapa.obtenerCasillero(new Point(0,tope)).getObjeto();
+        ObjetoDelTablero objetoDelTablero = mapa.obtenerCasillero(new Point(11,0)).getObjeto();
         assertTrue(objetoDelTablero.equals(new Jugador()));
     }
 
@@ -147,7 +146,7 @@ public class JugadorTest {
         jugador.moverParaAbajo();
         jugador.moverParaAbajo();
 
-        ObjetoDelTablero objetoDelCasillero = mapa.obtenerCasillero(new Point(11,0)).getObjeto();
+        ObjetoDelTablero objetoDelCasillero = mapa.obtenerCasillero(new Point(0,11)).getObjeto();
         assertTrue(objetoDelCasillero.equals(new Jugador()));
     }
 

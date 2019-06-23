@@ -34,7 +34,7 @@ public class Movimiento {
     }
 
     public void moverHaciaLaDerecha(Mapa mapa, Jugador jugador) {
-        Point unicacionAMoverse = new Point(posicionVertical, posicionHorizontal + 1);
+        Point unicacionAMoverse = new Point(posicionHorizontal +1, posicionVertical);
         if (!this.seCumplenLasCondicionesParaPoderMoverse(mapa,unicacionAMoverse)){
             return;
         }
@@ -43,7 +43,7 @@ public class Movimiento {
     }
 
     public void moverHaciaArriba(Mapa mapa, Jugador jugador) {
-        Point unicacionAMoverse = new Point(posicionVertical - 1, posicionHorizontal);
+        Point unicacionAMoverse = new Point(posicionHorizontal, posicionVertical - 1);
         if (!this.seCumplenLasCondicionesParaPoderMoverse(mapa,unicacionAMoverse)){
             return;
         }
@@ -52,7 +52,7 @@ public class Movimiento {
     }
 
     public void moverHaciaAbajo(Mapa mapa, Jugador jugador) {
-        Point unicacionAMoverse = new Point(posicionVertical + 1, posicionHorizontal);
+        Point unicacionAMoverse = new Point(posicionHorizontal, posicionVertical + 1);
         if (!this.seCumplenLasCondicionesParaPoderMoverse(mapa,unicacionAMoverse)){
             return;
         }
@@ -61,7 +61,7 @@ public class Movimiento {
     }
 
     public void moverHaciaLaIzquierda(Mapa mapa, Jugador jugador) {
-        Point unicacionAMoverse = new Point(posicionVertical, posicionHorizontal - 1);
+        Point unicacionAMoverse = new Point(posicionHorizontal - 1, posicionVertical);
         if (!this.seCumplenLasCondicionesParaPoderMoverse(mapa,unicacionAMoverse)){
             return;
         }
