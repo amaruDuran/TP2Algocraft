@@ -4,6 +4,7 @@ import Modelo.Juego.Algocraft;
 import Modelo.Juego.Casillero;
 import Modelo.Juego.Mapa;
 import Modelo.Jugador.Jugador;
+import Modelo.Jugador.ObjeosDelInventario;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -16,6 +17,8 @@ import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Aplicacion extends Application {
     public static double ancho;
@@ -71,7 +74,10 @@ public class Aplicacion extends Application {
         panelesDeJuego.setBottom(new TextField("Botones de inventario, ect.."));
 
         // todo aquí tranquilamente podría ir el inventario con otro GridPane.
-        panelesDeJuego.setRight(new TextField("inventarioo, pegado al mapa para probar."));
+        //panelesDeJuego.setRight(new TextField("inventarioo, pegado al mapa para probar."));
+        List<ObjeosDelInventario> prueva = new ArrayList<>();
+        InventarioVista inventarioVista = new InventarioVista(prueva);//esto es una prueva
+        panelesDeJuego.setRight(inventarioVista.getVista());
 
         Scene escenaPrincipal = new Scene(panelesDeJuego);
 
