@@ -3,6 +3,7 @@ package Vista;
 import Modelo.Juego.Algocraft;
 import Modelo.Juego.Mapa;
 import Modelo.Jugador.Jugador;
+import Modelo.Jugador.ObjeosDelInventario;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -13,6 +14,10 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
+
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Aplicacion extends Application {
     public static double ancho;
@@ -71,6 +76,11 @@ public class Aplicacion extends Application {
 
         // todo aquí tranquilamente podría ir el inventario con otro GridPane.
         //panelesDeJuego.setRight(new TextField("inventarioo, pegado al mapa para probar."));
+
+        List<ObjeosDelInventario> prueva = new ArrayList<>();
+        InventarioVista inventarioVista = new InventarioVista(prueva);//esto es una prueva
+        panelesDeJuego.setRight(inventarioVista.getVista());
+
 
         Scene escenaPrincipal = new Scene(panelesDeJuego);
         ventanaAlgocraft.setScene(escenaPrincipal);
