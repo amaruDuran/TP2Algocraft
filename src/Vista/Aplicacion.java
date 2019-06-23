@@ -82,14 +82,17 @@ public class Aplicacion<ventanaAlgocraft> extends Application {
         // todo aquí tranquilamente podría ir el inventario con otro GridPane.
         //panelesDeJuego.setRight(new TextField("inventarioo, pegado al mapa para probar."));
 
-        List<ObjeosDelInventario> prueva = new ArrayList<>();
-        InventarioVista inventarioVista = new InventarioVista(prueva);//esto es una prueva
+        //List<ObjeosDelInventario> listaDelInventario = jugadorModelo.listadoDeInventario();
+        InventarioVista inventarioVista = new InventarioVista(jugadorModelo.listadoDeInventario(),jugadorModelo.obtenerHerramientaEnMano());
         panelesDeJuego.setRight(inventarioVista.getVista());
 
 
 
         Scene escenaPrincipal = new Scene(escenaBienvenida);
         ventanaAlgocraft.setScene(escenaPrincipal);
+
+        BarraDeHerramientas barraDeHerramientas = new BarraDeHerramientas(ventanaAlgocraft);
+        panelesDeJuego.setTop(barraDeHerramientas.getVista());
         /*
         escenaPrincipal.setOnKeyPressed(new EventHandler<KeyEvent>() {
             public void handle(KeyEvent event) {

@@ -1,5 +1,6 @@
 package Vista;
 
+import Modelo.Herramientas.TipoDeHerramienta.TipoDeHerramienta;
 import Modelo.Jugador.ObjeosDelInventario;
 import Modelo.Jugador.ObjetoDelInventarioVacio;
 import Vista.Botones.Boton;
@@ -21,29 +22,32 @@ public class InventarioVista implements Dibujable {
     //private final int tamanioDelInventario = (tamanioHorizontalDelInventario * tamanioVerticalDelInventario);
     private GridPane inventario;
     private VBox caja;
+    private final int tamanioDeBotonesDelInventario = 20;
+    private VBox herramienta;
+    private HerramientaEnMano herramientaEnMano;
 
-    public InventarioVista(List<ObjeosDelInventario> inventarioDeJugador){
+    public InventarioVista(List<ObjeosDelInventario> inventarioDeJugador, TipoDeHerramienta herramienta){
+        //inventario de objetos
         inventario = new GridPane();
         inventario.setPadding(new Insets(1,1,1,1));
         inventario.setHgap(tamanioHorizontalDelInventario);
         inventario.setVgap(tamanioVerticalDelInventario);
         caja = new VBox();//en la caja se pueden agregar mas cosas al inventario
-        this.actualizarInventario(inventarioDeJugador);
+        this.herramientaEnMano = new HerramientaEnMano(herramienta, tamanioHorizontalDelInventario * tamanioDeBotonesDelInventario, casilleroVacio.nombreDeElemento());
+        this.herramienta = herramientaEnMano.darCaja();
+        this.actualizarInventario(inventarioDeJugador, herramienta);
     }
 
     private void completar(){
         int tamanioDelInventario = (tamanioHorizontalDelInventario * tamanioVerticalDelInventario);
         int cantidadDeElementosFaltantes = tamanioDelInventario - elementosDelInventario.size();
-        /*if (cantidadDeElementosFaltantes > 0){
-            return;
-        }*/
         for (int i = 0; i < cantidadDeElementosFaltantes; i++){
             elementosDelInventario.add(casilleroVacio);
         }
     }
 
     private Boton convertirEnBotones(ObjeosDelInventario objeto){
-        Boton boton = new BotonDeInventario(objeto);
+        Boton boton = new BotonDeInventario(objeto,tamanioDeBotonesDelInventario);
         return boton;
     }
 
@@ -63,21 +67,20 @@ public class InventarioVista implements Dibujable {
             }
         }
     }
-    public void actualizarInventario(List<ObjeosDelInventario> inventarioDeJugador){
+    public void actualizarInventario(List<ObjeosDelInventario> inventarioDeJugador, TipoDeHerramienta herramienta){
+        caja.getChildren().remove(inventario);
+        caja.getChildren().remove(this.herramienta);
         elementosDelInventario = inventarioDeJugador;
         this.completar();
-        //this.pasarALaGrilla();
         this.dibujar();
+        herramientaEnMano.actualizar(herramienta);
+        this.herramienta = herramientaEnMano.darCaja();
         caja.getChildren().add(inventario);
+        caja.getChildren().add(this.herramienta);
     }
-
-    //public VBox visualizacionDelInventario(){
-    //    return caja;
-    //}
 
     @Override
     public Node getVista() {
-        //return inventario;
         return caja;
     }
 }

@@ -10,10 +10,10 @@ import javafx.scene.control.Button;
 public class BotonJugar extends Button {
     public BotonJugar(){
         super();
-        this.setText("JUGAR");;
+        this.setText("JUGAR");
         this.setTranslateX(600);
 
-        this.setMinHeight(500/10);
+        this.setMinHeight(40);
         this.setOnAction(new EventHandler<ActionEvent>() {
 
             @Override

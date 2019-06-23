@@ -8,22 +8,21 @@ import java.awt.*;
 
 public class BotonDeInventario extends Boton {
     private ObjeosDelInventario objeto;
-    private Point ubicacion;
-    private final int tamanioHorizontal = 20;
-    private final int tamanioVertical = 20;
+    //private final int tamanioHorizontal = 20;
+    //private final int tamanioVertical = 20;
 
-    public BotonDeInventario(ObjeosDelInventario objeto){
+    public BotonDeInventario(ObjeosDelInventario objeto, int tamanio){
         this.objeto = objeto;
-        this.ubicacion = ubicacion;
 
-        int anchoDelBoton = tamanioHorizontal - 1;
-        int largoDelBoton = tamanioVertical - 1;
+        //int anchoDelBoton = tamanioHorizontal - 1;
+        //int largoDelBoton = tamanioVertical - 1;
+        int anchoDelBoton = tamanio - 1;
+        int largoDelBoton = tamanio - 1;
         this.fondo = new Rectangle(anchoDelBoton,largoDelBoton);
 
         ImageView icono;
         String nombre = objeto.nombreDeElemento();
         String urlDelIcono = "Vista/Imagenes/Inventario/" + nombre + ".png";
-        //String urlDelIcono = "Vista/Imagenes/Inventario/VACIO.png";
         icono = new ImageView( urlDelIcono );
         icono.setFitHeight(anchoDelBoton);
         icono.setFitWidth(largoDelBoton);

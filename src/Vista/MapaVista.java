@@ -1,9 +1,6 @@
 package Vista;
 
-import Modelo.Juego.Algocraft;
-import Modelo.Juego.Casillero;
 import Modelo.Juego.Mapa;
-import Modelo.Jugador.Jugador;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.image.Image;

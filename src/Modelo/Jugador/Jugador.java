@@ -7,6 +7,7 @@ import Modelo.Herramientas.TipoDeHerramienta.TipoDeHerramienta;
 import Modelo.Juego.Mapa;
 import Modelo.Juego.ObjetoDelTablero;
 
+import java.util.List;
 import java.util.Objects;
 
 public class Jugador implements ObjetoDelTablero {
@@ -39,6 +40,9 @@ public class Jugador implements ObjetoDelTablero {
         return this.identificador;
     }
 
+    public List<ObjeosDelInventario> listadoDeInventario(){
+        return inventario.listadoDeInventario();
+    }
 
     public void iniciar(Mapa mapa) {
         this.mapa = mapa;

@@ -7,16 +7,13 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 
 public class BienvenidaVista {
-    public static double ancho;
-    public static double alto;
     private VBox bienvenida;
 
 
     public BienvenidaVista(){
         this.bienvenida = new VBox();
-        this.bienvenida.getChildren().add(new BotonJugar());
         this.setFondoDePantalla();
-
+        this.bienvenida.getChildren().add(new BotonJugar());
     }
 
     private void setFondoDePantalla() {
@@ -28,6 +25,4 @@ public class BienvenidaVista {
     public VBox getBienvenida() {
         return bienvenida;
     }
-
-
 }

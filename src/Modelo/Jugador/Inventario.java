@@ -6,12 +6,11 @@ import java.util.List;
 public class Inventario {
     private List<ObjeosDelInventario> objetosEnElInventario;
     private int totalActualDeElementos;
-    private int limiteDeElementos;
+    private final int limiteDeElementos = 30;
 
     public Inventario(){
         this.objetosEnElInventario = new ArrayList();
         this.totalActualDeElementos = 0;
-        this.limiteDeElementos = 30;//elegir el max
     }
 
     public int cantidadDeElementos() {
@@ -31,5 +30,9 @@ public class Inventario {
         ObjeosDelInventario elementoADevolver = objetosEnElInventario.remove(posicion);
         totalActualDeElementos = totalActualDeElementos - 1;
         return elementoADevolver;
+    }
+
+    public List<ObjeosDelInventario> listadoDeInventario(){
+        return objetosEnElInventario;
     }
 }
