@@ -12,6 +12,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 
@@ -19,7 +20,7 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Aplicacion extends Application {
+public class Aplicacion<ventanaAlgocraft> extends Application {
     public static double ancho;
     public static double alto;
 
@@ -27,23 +28,25 @@ public class Aplicacion extends Application {
     //  la vista de jugador ante los posibles movimientos.
     //  o la vista del tablero de construccion, por ejemplo.
     public JugadorVista jugador;
-    public Jugador jugadorModelo;
+    public static Jugador jugadorModelo;
 
     //public static tableroDeConstruccionVista tableroDeConstruccion;
     //public static TableroDeConstruccion tableroDeConstruccionModelo;
-    private BorderPane panelesDeJuego;
+    public static BorderPane panelesDeJuego;
     private Algocraft algocraftModelo;
     private Mapa mapaModelo;
+    public static Stage ventanaAlgocraft;
 
-    private MapaVista mapa;
+    private static MapaVista mapa;
     //private MenuPrincipal menuJuego;
     //private LibreriaDeSonidos sonidos;
     //private LibreriaDeImagenes imagenes;
 
     @Override
-    public void start(Stage ventanaAlgocraft) throws Exception {
+    public void start(Stage ventana) throws Exception {
         ancho = Screen.getPrimary().getVisualBounds().getWidth();
         alto = Screen.getPrimary().getVisualBounds().getHeight();
+        ventanaAlgocraft = ventana;
 
         ventanaAlgocraft.setTitle("AlgoCraft");
 
@@ -62,6 +65,8 @@ public class Aplicacion extends Application {
 
         // Border pane es la distribucion de las distintas partes del ventanaAlgocraft.
         panelesDeJuego = new BorderPane();
+        BienvenidaVista bienvenida = new BienvenidaVista();
+        VBox escenaBienvenida = bienvenida.getBienvenida();
 
         setFondoDePantalla();
 
@@ -82,9 +87,50 @@ public class Aplicacion extends Application {
         panelesDeJuego.setRight(inventarioVista.getVista());
 
 
-        Scene escenaPrincipal = new Scene(panelesDeJuego);
-        ventanaAlgocraft.setScene(escenaPrincipal);
 
+        Scene escenaPrincipal = new Scene(escenaBienvenida);
+        ventanaAlgocraft.setScene(escenaPrincipal);
+        /*
+        escenaPrincipal.setOnKeyPressed(new EventHandler<KeyEvent>() {
+            public void handle(KeyEvent event) {
+                if (event.getCode() == KeyCode.UP) {
+                    jugadorModelo.moverParaArriba();
+                    //System.out.println("Me moví para arriba");
+                    mapa.dibujar();
+                }
+                if (event.getCode() == KeyCode.DOWN) {
+                    jugadorModelo.moverParaAbajo();
+                    //System.out.println("Me moví para abajo");
+                    mapa.dibujar();
+                }
+                if (event.getCode() == KeyCode.RIGHT) {
+                    jugadorModelo.moverALaDerecha();
+                    //System.out.println("Me moví  a derecha");
+                    mapa.dibujar();
+                }
+                if (event.getCode() == KeyCode.LEFT) {
+                    jugadorModelo.moverALaIzquierda();
+                    //System.out.println("Me moví para Izquierda");
+                    mapa.dibujar();
+                }
+                event.consume();
+            }
+        });*/
+
+        //para dibujar la ventana con lo que tiene dentro.
+        ventanaAlgocraft.show();
+
+    }
+
+    private void setFondoDePantalla() {
+        ImageView fondo= new ImageView();
+        fondo.setImage(new Image("Vista/Imagenes/fondo.jpg"));
+        fondo.setFitHeight(alto);
+        fondo.setFitWidth(ancho);
+        panelesDeJuego.getChildren().add(fondo);
+    }
+
+    public static void movimientos(Scene escenaPrincipal){
         escenaPrincipal.setOnKeyPressed(new EventHandler<KeyEvent>() {
             public void handle(KeyEvent event) {
                 if (event.getCode() == KeyCode.UP) {
@@ -110,18 +156,6 @@ public class Aplicacion extends Application {
                 event.consume();
             }
         });
-
-        //para dibujar la ventana con lo que tiene dentro.
-        ventanaAlgocraft.show();
-
-    }
-
-    private void setFondoDePantalla() {
-        ImageView fondo= new ImageView();
-        fondo.setImage(new Image("Vista/Imagenes/fondo.jpg"));
-        fondo.setFitHeight(alto);
-        fondo.setFitWidth(ancho);
-        panelesDeJuego.getChildren().add(fondo);
     }
 
 }
