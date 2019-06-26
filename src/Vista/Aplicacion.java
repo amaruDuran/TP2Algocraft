@@ -130,7 +130,6 @@ public class Aplicacion<ventanaAlgocraft> extends Application {
     }
 
     public static void movimientos(Scene escenaPrincipal){
-
         escenaPrincipal.setOnKeyPressed(new EventHandler<KeyEvent>() {
             public void handle(KeyEvent event) {
                 if (event.getCode() == KeyCode.UP) {

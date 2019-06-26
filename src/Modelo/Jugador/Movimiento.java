@@ -79,8 +79,8 @@ public class Movimiento {
         if (material.durabilidadActualDelMaterial() == 0) {
             casilleroARomper.vaciarCasillero();
             jugador.agregarAlInventario(material);
-            Aplicacion.inventarioVista.dibujar();  //SACARLO URGENTE
         }
+        Aplicacion.inventarioVista.dibujar();//SACAR DE ACA
     }
 
 
