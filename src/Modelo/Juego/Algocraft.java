@@ -7,7 +7,7 @@ public class Algocraft {
     private  Jugador jugador;
 
     public Algocraft() {
-        this.mapa = new Mapa(13,13);
+        this.mapa = new Mapa(11,11);
         this.jugador = new Jugador();
     }
 

@@ -26,7 +26,7 @@ public class Jugador implements ObjetoDelTablero {
         this.inventario = new Inventario();
         MaterialDeHerramienta madera = new MaterialDeHerramientaMadera();
         this.herramientaEnMano = new Hacha(madera);
-        this.identificador = "JUGADOR";
+        this.identificador = "jugadorMirandoDerecha";
         this.movimiento = new Movimiento();
         //this.constructor = new TableroDeConstruccion();
     }
@@ -55,18 +55,22 @@ public class Jugador implements ObjetoDelTablero {
 
     public void moverALaDerecha() {
          this.movimiento.moverHaciaLaDerecha(this.mapa,this);
+         this.identificador = "jugadorMirandoDerecha";
     }
 
     public void moverParaAbajo(){
         this.movimiento.moverHaciaAbajo(this.mapa,this);
+        this.identificador = "jugadorMirandoAbajo";
     }
 
     public void moverParaArriba() {
         this.movimiento.moverHaciaArriba(this.mapa,this);
+        this.identificador = "jugadorMirandoArriba";
     }
 
     public void moverALaIzquierda() {
         this.movimiento.moverHaciaLaIzquierda(this.mapa,this);
+        this.identificador = "jugadorMirandoIzquierda";
     }
 
     @Override

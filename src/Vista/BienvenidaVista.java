@@ -18,7 +18,9 @@ public class BienvenidaVista {
 
     private void setFondoDePantalla() {
         ImageView fondo= new ImageView();
-        fondo.setImage(new Image("Vista/Imagenes/bienvenida.jpeg"));
+        fondo.setImage(new Image("Vista/Imagenes/bienvenida.jpg"));
+        fondo.setFitHeight(720);
+        fondo.setFitWidth(1400);
         bienvenida.getChildren().add(fondo);
     }
 

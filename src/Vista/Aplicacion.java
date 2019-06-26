@@ -3,8 +3,6 @@ package Vista;
 import Modelo.Juego.Algocraft;
 import Modelo.Juego.Mapa;
 import Modelo.Jugador.Jugador;
-import Modelo.Jugador.ObjeosDelInventario;
-import Vista.Botones.BotonRomperADerecha;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -16,10 +14,6 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
-
-import java.awt.*;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Aplicacion<ventanaAlgocraft> extends Application {
     public static double ancho;
@@ -78,7 +72,7 @@ public class Aplicacion<ventanaAlgocraft> extends Application {
         //
 
         panelesDeJuego.setCenter(mapa.getVista());
-        panelesDeJuego.setLeft(new BotonRomperADerecha());
+        //panelesDeJuego.setLeft();
         //panelesDeJuego.setBottom(new TextField("Botones de inventario, ect.."));
 
         // todo aquí tranquilamente podría ir el inventario con otro GridPane.

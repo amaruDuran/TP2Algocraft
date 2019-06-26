@@ -38,6 +38,8 @@ public class MapaVista implements Dibujable {
                 String elementoMapaVista = mapaModelo.obtenerCasillero(new Point(i,j)).identificador();
                 javafx.scene.image.Image imagenUnidadElemental= new Image("Vista/Imagenes/" + elementoMapaVista + ".png");
                 ImageView imagenUnidadElementalVista = new ImageView(imagenUnidadElemental);
+                imagenUnidadElementalVista.setFitWidth(50);
+                imagenUnidadElementalVista.setFitHeight(50);
                 mapa.setConstraints(imagenUnidadElementalVista, i, j);
                 mapa.getChildren().add(imagenUnidadElementalVista);
             }
