@@ -1,21 +1,22 @@
 package Vista;
 
 import Modelo.Herramientas.TipoDeHerramienta.TipoDeHerramienta;
+import Modelo.Jugador.Jugador;
 import Modelo.Jugador.ObjeosDelInventario;
 import Modelo.Jugador.ObjetoDelInventarioVacio;
 import Vista.Botones.Boton;
 import Vista.Botones.BotonDeInventario;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class InventarioVista implements Dibujable {
     private List<ObjeosDelInventario> elementosDelInventario;
+    private List<ObjeosDelInventario> inventarioDelJugador;
     private final ObjeosDelInventario casilleroVacio = new ObjetoDelInventarioVacio();
     private final int tamanioHorizontalDelInventario = 5;
     private final int tamanioVerticalDelInventario = 6;
@@ -23,18 +24,23 @@ public class InventarioVista implements Dibujable {
     private GridPane inventario;
     private VBox caja;
     private final int tamanioDeBotonesDelInventario = 20;
-    private VBox herramienta;
-    private HerramientaEnMano herramientaEnMano;
+    private VBox cajaHerramienta;
+    private HerramientaEnMano herramientaEnManoVista;
+    private TipoDeHerramienta herramienta;
+    private Jugador jugador;
 
-    public InventarioVista(List<ObjeosDelInventario> inventarioDeJugador, TipoDeHerramienta herramienta){
+    public InventarioVista(Jugador jugadorModelo){
+        jugador = jugadorModelo;
+        List inventarioDeJugador = jugadorModelo.listadoDeInventario();
+        herramienta = jugadorModelo.obtenerHerramientaEnMano();
         //inventario de objetos
         inventario = new GridPane();
         inventario.setPadding(new Insets(1,1,1,1));
         inventario.setHgap(tamanioHorizontalDelInventario);
         inventario.setVgap(tamanioVerticalDelInventario);
         caja = new VBox();//en la caja se pueden agregar mas cosas al inventario
-        this.herramientaEnMano = new HerramientaEnMano(herramienta, tamanioHorizontalDelInventario * tamanioDeBotonesDelInventario, casilleroVacio.nombreDeElemento());
-        this.herramienta = herramientaEnMano.darCaja();
+        this.herramientaEnManoVista = new HerramientaEnMano(herramienta, tamanioHorizontalDelInventario * tamanioDeBotonesDelInventario, casilleroVacio.nombreDeElemento());
+        this.cajaHerramienta = herramientaEnManoVista.darCaja();
         this.actualizarInventario(inventarioDeJugador, herramienta);
     }
 
@@ -58,6 +64,12 @@ public class InventarioVista implements Dibujable {
 
     @Override
     public void dibujar() {
+        herramienta = jugador.obtenerHerramientaEnMano();
+        inventarioDelJugador = jugador.listadoDeInventario();
+        this.actualizarInventario(inventarioDelJugador,this.herramienta);
+    }
+
+    private void dibujarGrilla() {
         for (int fila = 0; fila < tamanioVerticalDelInventario; fila++){
             for (int columna = 0; columna < tamanioHorizontalDelInventario; columna++){
                 int posicionDelObjetoEnInventario = this.posicionDelObjetoEnInventario(fila,columna);
@@ -69,14 +81,16 @@ public class InventarioVista implements Dibujable {
     }
     public void actualizarInventario(List<ObjeosDelInventario> inventarioDeJugador, TipoDeHerramienta herramienta){
         caja.getChildren().remove(inventario);
-        caja.getChildren().remove(this.herramienta);
-        elementosDelInventario = inventarioDeJugador;
+        caja.getChildren().remove(this.cajaHerramienta);
+        inventarioDelJugador = inventarioDeJugador;
+        elementosDelInventario = new ArrayList<ObjeosDelInventario>();
+        elementosDelInventario.addAll(inventarioDelJugador);
         this.completar();
-        this.dibujar();
-        herramientaEnMano.actualizar(herramienta);
-        this.herramienta = herramientaEnMano.darCaja();
+        this.dibujarGrilla();
+        herramientaEnManoVista.actualizar(herramienta);
+        this.cajaHerramienta = herramientaEnManoVista.darCaja();
         caja.getChildren().add(inventario);
-        caja.getChildren().add(this.herramienta);
+        caja.getChildren().add(this.cajaHerramienta);
     }
 
     @Override

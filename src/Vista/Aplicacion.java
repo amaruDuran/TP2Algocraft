@@ -4,6 +4,7 @@ import Modelo.Juego.Algocraft;
 import Modelo.Juego.Mapa;
 import Modelo.Jugador.Jugador;
 import Modelo.Jugador.ObjeosDelInventario;
+import Vista.Botones.BotonRomperADerecha;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -23,6 +24,7 @@ import java.util.List;
 public class Aplicacion<ventanaAlgocraft> extends Application {
     public static double ancho;
     public static double alto;
+    public static InventarioVista inventarioVista;
 
     // todo: estas debrían ser las clases que utilizaremos para encapsular como modelaremos
     //  la vista de jugador ante los posibles movimientos.
@@ -37,7 +39,7 @@ public class Aplicacion<ventanaAlgocraft> extends Application {
     private Mapa mapaModelo;
     public static Stage ventanaAlgocraft;
 
-    private static MapaVista mapa;
+    public static MapaVista mapa;
     //private MenuPrincipal menuJuego;
     //private LibreriaDeSonidos sonidos;
     //private LibreriaDeImagenes imagenes;
@@ -76,14 +78,14 @@ public class Aplicacion<ventanaAlgocraft> extends Application {
         //
 
         panelesDeJuego.setCenter(mapa.getVista());
-        //panelesDeJuego.setLeft(new TextField("Nombre de jugador!, herramienta equipada,  datos de herramienta (durabilidad,fuerza, ect..)"));
+        panelesDeJuego.setLeft(new BotonRomperADerecha());
         //panelesDeJuego.setBottom(new TextField("Botones de inventario, ect.."));
 
         // todo aquí tranquilamente podría ir el inventario con otro GridPane.
         //panelesDeJuego.setRight(new TextField("inventarioo, pegado al mapa para probar."));
 
         //List<ObjeosDelInventario> listaDelInventario = jugadorModelo.listadoDeInventario();
-        InventarioVista inventarioVista = new InventarioVista(jugadorModelo.listadoDeInventario(),jugadorModelo.obtenerHerramientaEnMano());
+        inventarioVista = new InventarioVista(jugadorModelo);
         panelesDeJuego.setRight(inventarioVista.getVista());
 
 
@@ -134,6 +136,7 @@ public class Aplicacion<ventanaAlgocraft> extends Application {
     }
 
     public static void movimientos(Scene escenaPrincipal){
+
         escenaPrincipal.setOnKeyPressed(new EventHandler<KeyEvent>() {
             public void handle(KeyEvent event) {
                 if (event.getCode() == KeyCode.UP) {

@@ -31,6 +31,7 @@ public class MapaVista implements Dibujable {
         mapa.setHgap(mapaModelo.cantidadDeColumnas());
         mapa.setVgap(mapaModelo.cantidadDeFilas());
 
+
         //todo: esto sería el mapa.dibujar().
         for (int i = 0; i < mapa.getHgap(); i++) {
             for (int j = 0; j < mapa.getVgap(); j++) {

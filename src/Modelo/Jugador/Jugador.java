@@ -4,9 +4,13 @@ import Modelo.Herramientas.TipoDeHerramienta.Hacha;
 import Modelo.Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramienta;
 import Modelo.Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMadera;
 import Modelo.Herramientas.TipoDeHerramienta.TipoDeHerramienta;
+import Modelo.Juego.Casillero;
 import Modelo.Juego.Mapa;
 import Modelo.Juego.ObjetoDelTablero;
+import Modelo.Materiales.Material;
+import Vista.Aplicacion;
 
+import java.awt.*;
 import java.util.List;
 import java.util.Objects;
 
@@ -76,5 +80,25 @@ public class Jugador implements ObjetoDelTablero {
     @Override
     public int hashCode() {
         return Objects.hash(herramientaEnMano, inventario, identificador, mapa, movimiento);
+    }
+
+    public void romperADerecha() {
+        int posX = this.movimiento.getPosicionHorizontal();
+        int posY = this.movimiento.getPosicionVertical();
+
+        Casillero casilleroARomper = this.mapa.obtenerCasillero(new Point(posX+1, posY));
+        if (casilleroARomper.estaOcupado()){
+            Material material = (Material) casilleroARomper.getObjeto();
+            this.herramientaEnMano.usarEn(material);
+            if (material.durabilidadActualDelMaterial() == 0){
+                casilleroARomper.vaciarCasillero();
+                this.inventario.agregarObjetosAlInventario(material.getUnidadElemental());
+            }
+
+        }
+    }
+
+    public void agregarAlInventario(Material material){
+        this.inventario.agregarObjetosAlInventario(material.getUnidadElemental());
     }
 }

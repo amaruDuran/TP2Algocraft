@@ -4,6 +4,7 @@ import Modelo.Herramientas.TipoDeHerramienta.Hacha;
 import Modelo.Herramientas.TipoDeHerramienta.Pico;
 import Modelo.Herramientas.TipoDeHerramienta.PicoFino;
 import Modelo.Juego.ObjetoDelTablero;
+import Modelo.Jugador.ObjeosDelInventario;
 import Modelo.Materiales.UnidadElemental.UnidadElemental;
 
 import java.util.Objects;
@@ -56,5 +57,9 @@ public abstract class Material implements ObjetoDelTablero {
     @Override
     public int hashCode() {
         return Objects.hash(durabilidad, identificador);
+    }
+
+    public UnidadElemental getUnidadElemental(){
+        return this.unidadElemental;
     }
 }
