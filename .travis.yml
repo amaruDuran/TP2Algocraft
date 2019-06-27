@@ -2,6 +2,7 @@ language: java
 before_install:
   - sudo apt-get install ant
   - sudo apt-get install ant-optional
+  - sudo apt install openjdk-8-jdk openjfx
   - export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/"
   - sudo apt-get install junit4
   - whereis ant
@@ -21,8 +22,5 @@ notifications:
   email:
     recipients:
       - amaruduran@gmail.com
-      - violetaperezandrade@hotmail.com
-      - romerogerard@hotmail.com
-      - gabigbell@hotmail.com
     on_failure: always
     on_success: never
