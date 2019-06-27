@@ -1,7 +1,6 @@
 # TP2Algocraft
 
 [![Build Status](https://travis-ci.org/amaruDuran/TP2Algocraft.svg?branch=master)](https://travis-ci.org/amaruDuran/TP2Algocraft)
-
 [![codecov](https://codecov.io/gh/amaruDuran/TP2Algocraft/branch/master/graph/badge.svg)](https://codecov.io/gh/amaruDuran/TP2Algocraft)
 
 ### Instalación previa
