@@ -1,6 +1,27 @@
 # TP2Algocraft
 
-tp2
+[![Build Status](https://travis-ci.org/amaruDuran/TP2Algocraft.svg?branch=master)](https://travis-ci.org/amaruDuran/TP2Algocraft)
+
+[![codecov](https://codecov.io/gh/amaruDuran/TP2Algocraft/branch/master/graph/badge.svg)](https://codecov.io/gh/amaruDuran/TP2Algocraft)
+
+### Instalación previa
+Las únicas herramientas necesarias para trabajar en el proyecto son el entorno de desarrollo de Java ([OpenJDK](https://openjdk.java.net/install/)), [Apache Ant](https://ant.apache.org/) para la construcción automatizada y Git para el control de versiones.
+```console
+$ sudo apt update
+$ sudo apt install openjdk-8-jdk ant git
+```
+Verificamos que se hayan instalado correctamente:
+
+```console
+$ javac -version
+javac 1.8.0_191
+$ ant -version
+Apache Ant(TM) version 1.9.6 compiled on July 20 2018
+$ git --version
+git version 2.7.4
+```
+
+Obs: Para el jdk se recomienda una versión 8 o superior.
 
 ## Casos de prueba para cada entrega
 
@@ -44,15 +65,6 @@ Interfaz gráfica inicial básica: comienzo del juego, disposición de materiale
 
 ### Entrega 4
 
-todo funcionando
+Trabajo Práctico completo funcionando, con interfaz gráfica final, sonidos e informe completo.
 
-## Lo que falta
 
-### Interfaz gráfica
-
-todo
-hay que mover los packcage a modelo vista controlador
-
-### Entrega 2
-
-sacar los if de construir
