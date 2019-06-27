@@ -25,7 +25,7 @@ public class InventarioVista implements Dibujable {
     private VBox caja;
     private final int tamanioDeBotonesDelInventario = 20;
     private VBox cajaHerramienta;
-    private HerramientaEnMano herramientaEnManoVista;
+    private VisualizacionDeHerramientaEnMano herramientaEnManoVista;
     private TipoDeHerramienta herramienta;
     private Jugador jugador;
 
@@ -39,7 +39,7 @@ public class InventarioVista implements Dibujable {
         inventario.setHgap(tamanioHorizontalDelInventario);
         inventario.setVgap(tamanioVerticalDelInventario);
         caja = new VBox();//en la caja se pueden agregar mas cosas al inventario
-        this.herramientaEnManoVista = new HerramientaEnMano(herramienta, tamanioHorizontalDelInventario * tamanioDeBotonesDelInventario, casilleroVacio.nombreDeElemento());
+        this.herramientaEnManoVista = new VisualizacionDeHerramientaEnMano(herramienta, tamanioHorizontalDelInventario * tamanioDeBotonesDelInventario, casilleroVacio.nombreDeElemento());
         this.cajaHerramienta = herramientaEnManoVista.darCaja();
         this.actualizarInventario(inventarioDeJugador, herramienta);
     }

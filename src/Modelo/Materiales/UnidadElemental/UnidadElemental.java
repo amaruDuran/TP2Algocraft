@@ -33,4 +33,8 @@ public abstract class UnidadElemental implements ObjeosDelInventario {
         if (this == unidadElemental) return true;
         return Objects.equals(nombreDeElemento, unidadElemental.nombreDeElemento);
     }
+    @Override
+    public boolean equipable(ObjeosDelInventario objeto) {
+        return false;
+    }
 }

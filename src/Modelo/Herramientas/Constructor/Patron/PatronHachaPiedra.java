@@ -25,6 +25,9 @@ public class PatronHachaPiedra extends PatronMaterialTipoHerramienta{
 
         return patronConstructorActual;
     }
+    public ArrayList<UnidadElemental> cargarPatron(){
+        return this.cargarPatronHachaPiedra();
+    }
 
     public PatronHachaPiedra(){
         this.patronConstructorActual = cargarPatronHachaPiedra();

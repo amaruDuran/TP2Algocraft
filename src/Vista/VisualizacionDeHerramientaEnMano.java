@@ -8,7 +8,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 
-public class HerramientaEnMano {
+public class VisualizacionDeHerramientaEnMano {
     private TipoDeHerramienta herramientaEnMano;
     private String sinHerramientaEnMano;//caso de que se rompa la herramienta
     private int tamanioDeLaHerramientaEnMano;
@@ -17,7 +17,7 @@ public class HerramientaEnMano {
     private final String durabilidad = "durabilidad: ";
     private final String fuerza = "fuerza: ";
 
-    public HerramientaEnMano(TipoDeHerramienta herramienta, int tamanioDeLaImagen, String vacio){
+    public VisualizacionDeHerramientaEnMano(TipoDeHerramienta herramienta, int tamanioDeLaImagen, String vacio){
         tamanioDeLaHerramientaEnMano = tamanioDeLaImagen;
         sinHerramientaEnMano = vacio;
         this.actualizar(herramienta);

@@ -1,10 +1,12 @@
 package Modelo.Herramientas.TipoDeHerramienta;
 
 import Modelo.Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramienta;
+import Modelo.Jugador.ObjeosDelInventario;
 import Modelo.Materiales.Material;
 
 public class Pico implements TipoDeHerramienta {
     private MaterialDeHerramienta materialDeHerramienta;
+    private final String nombreDeTipo = "PICO DE ";
 
     public Pico(MaterialDeHerramienta materialDeHerramienta) {
         this.materialDeHerramienta = materialDeHerramienta;
@@ -26,6 +28,11 @@ public class Pico implements TipoDeHerramienta {
 
     @Override
     public String nombreDeElemento() {
-        return "PICO DE " + materialDeHerramienta.nombreDeMaterialDeHerramienta();
+        return nombreDeTipo + materialDeHerramienta.nombreDeMaterialDeHerramienta();
+    }
+
+    @Override
+    public boolean equipable(ObjeosDelInventario objeto) {
+        return true;
     }
 }

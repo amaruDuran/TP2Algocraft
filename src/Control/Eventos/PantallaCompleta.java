@@ -1,4 +1,4 @@
-package Eventos;
+package Control.Eventos;
 
 import Vista.Botones.Boton;
 import javafx.stage.Stage;

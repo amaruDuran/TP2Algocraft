@@ -24,6 +24,9 @@ public class PatronHachaMadera extends PatronMaterialTipoHerramienta{
         patronHachaMadera.add(materialVacio);
         return patronHachaMadera;
     }
+    public ArrayList<UnidadElemental> cargarPatron(){
+        return this.completarPatron();
+    }
 
     public PatronHachaMadera(){
         this.patronConstructorActual = completarPatron();

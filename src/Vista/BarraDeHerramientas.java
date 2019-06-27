@@ -1,7 +1,7 @@
 package Vista;
 
-import Eventos.PantallaCompleta;
-import Eventos.SalirDelJuego;
+import Control.Eventos.PantallaCompleta;
+import Control.Eventos.SalirDelJuego;
 import Vista.Botones.Boton;
 import Vista.Botones.BotonParaToolBar;
 import javafx.scene.Node;

@@ -25,6 +25,9 @@ public class PatronPicoFino extends PatronMaterialTipoHerramienta{
 
         return patronPicoFino;
     }
+    public ArrayList<UnidadElemental> cargarPatron(){
+        return this.cargarPatronPicoFino();
+    }
 
     public PatronPicoFino(){
         patronConstructorActual = cargarPatronPicoFino();

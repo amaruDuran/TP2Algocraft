@@ -1,9 +1,13 @@
 package Modelo.Herramientas.TipoDeHerramienta;
 import Modelo.Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramienta;
+import Modelo.Jugador.ObjeosDelInventario;
 import Modelo.Materiales.Material;
+
+import java.util.Objects;
 
 public class PicoFino implements TipoDeHerramienta {
     private MaterialDeHerramienta materialDeHerramienta;
+    private final String nombreDeTipo = "PICOFINO";
 
 
     public PicoFino(MaterialDeHerramienta material) {
@@ -30,6 +34,11 @@ public class PicoFino implements TipoDeHerramienta {
 
     @Override
     public String nombreDeElemento() {
-        return "PICOFINO" + materialDeHerramienta.nombreDeMaterialDeHerramienta();
+        return nombreDeTipo + materialDeHerramienta.nombreDeMaterialDeHerramienta();
+    }
+
+    @Override
+    public boolean equipable(ObjeosDelInventario objeto) {
+        return true;
     }
 }

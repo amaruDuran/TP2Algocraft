@@ -25,6 +25,9 @@ public class PatronPicoPiedra extends PatronMaterialTipoHerramienta {
 
         return patronPicoPiedra;
     }
+    public ArrayList<UnidadElemental> cargarPatron(){
+        return this.cargarPatronPicoPiedra();
+    }
 
     public PatronPicoPiedra(){
         patronConstructorActual = cargarPatronPicoPiedra();

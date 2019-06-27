@@ -26,6 +26,9 @@ public class PatronHachaMetal extends PatronMaterialTipoHerramienta{
 
         return patronHachaMetal;
     }
+    public ArrayList<UnidadElemental> cargarPatron(){
+        return this.cargarPatronHachaMetal();
+    }
 
 
     public PatronHachaMetal(){

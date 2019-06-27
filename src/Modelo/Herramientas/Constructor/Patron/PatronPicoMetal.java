@@ -25,6 +25,9 @@ public class PatronPicoMetal extends PatronMaterialTipoHerramienta{
 
         return patronPicoMetal;
     }
+    public ArrayList<UnidadElemental> cargarPatron(){
+        return this.cargarPatronPicoMetal();
+    }
 
 
     public PatronPicoMetal(){

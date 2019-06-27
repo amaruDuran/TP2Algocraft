@@ -105,4 +105,8 @@ public class Jugador implements ObjetoDelTablero {
     public void agregarAlInventario(Material material){
         this.inventario.agregarObjetosAlInventario(material.getUnidadElemental());
     }
+
+    public Inventario getInventario() {
+        return inventario;
+    }
 }

@@ -40,6 +40,10 @@ public class Mapa {
         this.mapa.get(new Point(5,2)).asignar(new MaterialMadera());
         this.mapa.get(new Point(5,3)).asignar(new MaterialMadera());
         this.mapa.get(new Point(5,4)).asignar(new MaterialMadera());
+        this.mapa.get(new Point(6,1)).asignar(new MaterialMadera());
+        this.mapa.get(new Point(6,2)).asignar(new MaterialMadera());
+        this.mapa.get(new Point(6,3)).asignar(new MaterialMadera());
+        this.mapa.get(new Point(6,4)).asignar(new MaterialMadera());
 
         this.mapa.get(new Point(8,7)).asignar(new MaterialPiedra());
         this.mapa.get(new Point(8,8)).asignar(new MaterialPiedra());

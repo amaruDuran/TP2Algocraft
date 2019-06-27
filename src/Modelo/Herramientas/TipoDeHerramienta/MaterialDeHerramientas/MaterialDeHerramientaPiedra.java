@@ -5,6 +5,8 @@ import Modelo.Herramientas.TipoDeHerramienta.FormaDeDesgaste.DesgasteLienalConPe
 import Modelo.Herramientas.TipoDeHerramienta.FormaDeDesgaste.DesgasteLineal;
 import Modelo.Materiales.Material;
 
+import java.util.Objects;
+
 public class MaterialDeHerramientaPiedra implements MaterialDeHerramienta {
     private int durabilidad;
     private int fuerza;
@@ -51,5 +53,18 @@ public class MaterialDeHerramientaPiedra implements MaterialDeHerramienta {
     @Override
     public String nombreDeMaterialDeHerramienta() {
         return "DIAMANTE";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        MaterialDeHerramientaPiedra that = (MaterialDeHerramientaPiedra) o;
+        return durabilidad == that.durabilidad;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(durabilidad);
     }
 }

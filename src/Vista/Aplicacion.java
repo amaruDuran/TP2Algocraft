@@ -19,6 +19,7 @@ public class Aplicacion<ventanaAlgocraft> extends Application {
     public static double ancho;
     public static double alto;
     public static InventarioVista inventarioVista;
+    public static TableroDeConstruccionVista tableroDeConstruccionVista;
 
     // todo: estas debrían ser las clases que utilizaremos para encapsular como modelaremos
     //  la vista de jugador ante los posibles movimientos.
@@ -72,7 +73,9 @@ public class Aplicacion<ventanaAlgocraft> extends Application {
         //
 
         panelesDeJuego.setCenter(mapa.getVista());
-        //panelesDeJuego.setLeft();
+        TableroDeConstruccionVista constructor = new TableroDeConstruccionVista(jugadorModelo.getInventario());
+        constructor.dibujar();
+        panelesDeJuego.setLeft(constructor.getVista());
         //panelesDeJuego.setBottom(new TextField("Botones de inventario, ect.."));
 
         // todo aquí tranquilamente podría ir el inventario con otro GridPane.

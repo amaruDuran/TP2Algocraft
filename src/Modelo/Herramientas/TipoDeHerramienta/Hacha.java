@@ -1,9 +1,11 @@
 package Modelo.Herramientas.TipoDeHerramienta;
 import Modelo.Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramienta;
+import Modelo.Jugador.ObjeosDelInventario;
 import Modelo.Materiales.Material;
 
 public class Hacha implements TipoDeHerramienta {
     private MaterialDeHerramienta materialDeHerramienta;
+    private final String nombreDeTipo = "HACHA DE ";
 
     public Hacha(MaterialDeHerramienta materialDeHerramienta){
         this.materialDeHerramienta = materialDeHerramienta;
@@ -26,6 +28,11 @@ public class Hacha implements TipoDeHerramienta {
 
     @Override
     public String nombreDeElemento() {
-        return "HACHA DE " + materialDeHerramienta.nombreDeMaterialDeHerramienta();
+        return nombreDeTipo + materialDeHerramienta.nombreDeMaterialDeHerramienta();
+    }
+
+    @Override
+    public boolean equipable(ObjeosDelInventario objeto) {
+        return true;
     }
 }
