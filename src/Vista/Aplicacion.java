@@ -18,25 +18,24 @@ import javafx.stage.Stage;
 public class Aplicacion<ventanaAlgocraft> extends Application {
     public static double ancho;
     public static double alto;
-    public static InventarioVista inventarioVista;
 
-    // todo: estas debrían ser las clases que utilizaremos para encapsular como modelaremos
-    //  la vista de jugador ante los posibles movimientos.
-    //  o la vista del tablero de construccion, por ejemplo.
-    public JugadorVista jugador;
+    public static Stage ventanaAlgocraft;
+
+    public static InventarioVista inventarioVista;
+    public static MapaVista mapa;
+    //private MenuPrincipal menuJuego;
+    //private LibreriaDeSonidos sonidos;
+
+    private Algocraft algocraftModelo;
+    private Mapa mapaModelo;
     public static Jugador jugadorModelo;
 
     //public static tableroDeConstruccionVista tableroDeConstruccion;
     //public static TableroDeConstruccion tableroDeConstruccionModelo;
-    public static BorderPane panelesDeJuego;
-    private Algocraft algocraftModelo;
-    private Mapa mapaModelo;
-    public static Stage ventanaAlgocraft;
 
-    public static MapaVista mapa;
-    //private MenuPrincipal menuJuego;
-    //private LibreriaDeSonidos sonidos;
-    //private LibreriaDeImagenes imagenes;
+    //Podría existir una clase AlgocraftVista que encapsule los panelesDeJuego.
+    public static BorderPane panelesDeJuego;
+
 
     @Override
     public void start(Stage ventana) throws Exception {
@@ -56,8 +55,6 @@ public class Aplicacion<ventanaAlgocraft> extends Application {
         jugadorModelo.iniciar(algocraftModelo.obtenerMapaDelJuego());
 
         mapa.dibujar();
-        //jugador = new JugadorVista(algocraftModelo, mapa);
-
 
         // Border pane es la distribucion de las distintas partes del ventanaAlgocraft.
         panelesDeJuego = new BorderPane();
@@ -66,22 +63,16 @@ public class Aplicacion<ventanaAlgocraft> extends Application {
 
         setFondoDePantalla();
 
-        //todo Acá es donde tendrían que poner las distintas vistas de el ventanaAlgocraft.
-        // en el casso del mapa lo puse en el centro, pueden poner las demás funcionalidades
-        // en alguna otra de las partes.
-        //
 
         panelesDeJuego.setCenter(mapa.getVista());
-        //panelesDeJuego.setLeft();
-        //panelesDeJuego.setBottom(new TextField("Botones de inventario, ect.."));
 
-        // todo aquí tranquilamente podría ir el inventario con otro GridPane.
-        //panelesDeJuego.setRight(new TextField("inventarioo, pegado al mapa para probar."));
+        //todo: Podrían ir los patrones disponiblees para la creación de herramientas.
+        //panelesDeJuego.setLeft();
+
 
         //List<ObjeosDelInventario> listaDelInventario = jugadorModelo.listadoDeInventario();
         inventarioVista = new InventarioVista(jugadorModelo);
         panelesDeJuego.setRight(inventarioVista.getVista());
-
 
 
         Scene escenaPrincipal = new Scene(escenaBienvenida);
@@ -89,32 +80,6 @@ public class Aplicacion<ventanaAlgocraft> extends Application {
 
         BarraDeHerramientas barraDeHerramientas = new BarraDeHerramientas(ventanaAlgocraft);
         panelesDeJuego.setTop(barraDeHerramientas.getVista());
-        /*
-        escenaPrincipal.setOnKeyPressed(new EventHandler<KeyEvent>() {
-            public void handle(KeyEvent event) {
-                if (event.getCode() == KeyCode.UP) {
-                    jugadorModelo.moverParaArriba();
-                    //System.out.println("Me moví para arriba");
-                    mapa.dibujar();
-                }
-                if (event.getCode() == KeyCode.DOWN) {
-                    jugadorModelo.moverParaAbajo();
-                    //System.out.println("Me moví para abajo");
-                    mapa.dibujar();
-                }
-                if (event.getCode() == KeyCode.RIGHT) {
-                    jugadorModelo.moverALaDerecha();
-                    //System.out.println("Me moví  a derecha");
-                    mapa.dibujar();
-                }
-                if (event.getCode() == KeyCode.LEFT) {
-                    jugadorModelo.moverALaIzquierda();
-                    //System.out.println("Me moví para Izquierda");
-                    mapa.dibujar();
-                }
-                event.consume();
-            }
-        });*/
 
         //para dibujar la ventana con lo que tiene dentro.
         ventanaAlgocraft.show();

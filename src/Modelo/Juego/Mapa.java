@@ -49,8 +49,8 @@ public class Mapa {
         for (int fila = 0; fila < this.filas; fila++){
             for (int columna = 0; columna < this.columnas; columna++){
                 Casillero casillero = new Casillero();
-                Point ubicacion = new Point(fila,columna);
-                this.mapa.put(ubicacion,casillero);
+                Point ubicacion = new Point(fila, columna);
+                this.mapa.put(ubicacion, casillero);
             }
         }
 

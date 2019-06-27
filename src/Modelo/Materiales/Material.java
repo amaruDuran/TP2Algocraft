@@ -34,7 +34,7 @@ public abstract class Material implements ObjetoDelTablero {
         return false;
     }
 
-    //este metodo esta hardcodeada solo para pasar las pruevas hay que sacarla y poner algo que funcione
+    //este metodo esta hardcodeada solo para pasar las pruebas hay que sacarla y poner algo que funcione
     public boolean desgastaPicoFino() {
         return false;
     }

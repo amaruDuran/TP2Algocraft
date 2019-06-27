@@ -25,9 +25,9 @@ public class Movimiento {
         this.ubicacion.asignar(jugador);
     }
 
-    private void mover(Mapa mapa, Jugador jugador, Point unicacionAMoverse){
+    private void mover(Mapa mapa, Jugador jugador, Point ubicacionAmoverse){
         this.ubicacion.vaciarCasillero();
-        this.ubicacion = mapa.obtenerCasillero(unicacionAMoverse);
+        this.ubicacion = mapa.obtenerCasillero(ubicacionAmoverse);
         this.ubicacion.asignar(jugador);
     }
 
@@ -36,15 +36,18 @@ public class Movimiento {
     }
 
     public void moverHaciaLaDerecha(Mapa mapa, Jugador jugador) {
-        Point unicacionAMoverse = new Point(posicionHorizontal +1, posicionVertical);
-        if (!this.seCumplenLasCondicionesParaPoderMoverse(mapa,unicacionAMoverse)){
-            this.romperADerecha(mapa,jugador);
+        Point ubicacionAMoverse = new Point(posicionHorizontal +1, posicionVertical);
+        if (!this.seCumplenLasCondicionesParaPoderMoverse(mapa, ubicacionAMoverse)){
+            //this.romperADerecha(mapa, jugador);
             return;
         }
-        this.mover(mapa,jugador,unicacionAMoverse);
+        this.mover(mapa, jugador, ubicacionAMoverse);
         this.posicionHorizontal++;
     }
 
+    //La lógica de romper del juego según entiendo, la debe manejar una clase dentro de controlador.
+
+    /*
     private void romperADerecha(Mapa mapa,Jugador jugador) {
         Casillero casilleroARomper = mapa.obtenerCasillero(new Point(posicionHorizontal+1,posicionVertical));
         if(casilleroARomper.estaOcupado()) {
@@ -53,7 +56,7 @@ public class Movimiento {
     }
 
     private void romperAIzquierda(Mapa mapa,Jugador jugador) {
-        Casillero casilleroARomper = mapa.obtenerCasillero(new Point(posicionHorizontal-1,posicionVertical));
+        Casillero casilleroARomper = mapa.obtenerCasillero(new Point(posicionHorizontal - 1, posicionVertical));
         if(casilleroARomper.estaOcupado()) {
             actualizarCasillero(jugador,casilleroARomper);
         }
@@ -69,7 +72,7 @@ public class Movimiento {
     private void romperArriba(Mapa mapa,Jugador jugador) {
         Casillero casilleroARomper = mapa.obtenerCasillero(new Point(posicionHorizontal,posicionVertical-1));
         if(casilleroARomper.estaOcupado()) {
-            actualizarCasillero(jugador,casilleroARomper);
+            actualizarCasillero(jugador, casilleroARomper);
         }
     }
 
@@ -82,12 +85,13 @@ public class Movimiento {
         }
         Aplicacion.inventarioVista.dibujar();//SACAR DE ACA
     }
+     */
 
 
     public void moverHaciaArriba(Mapa mapa, Jugador jugador) {
         Point unicacionAMoverse = new Point(posicionHorizontal, posicionVertical - 1);
         if (!this.seCumplenLasCondicionesParaPoderMoverse(mapa,unicacionAMoverse)){
-            this.romperArriba(mapa,jugador);
+            //this.romperArriba(mapa,jugador);
             return;
         }
         this.mover(mapa,jugador,unicacionAMoverse);
@@ -97,7 +101,7 @@ public class Movimiento {
     public void moverHaciaAbajo(Mapa mapa, Jugador jugador) {
         Point unicacionAMoverse = new Point(posicionHorizontal, posicionVertical + 1);
         if (!this.seCumplenLasCondicionesParaPoderMoverse(mapa,unicacionAMoverse)){
-            this.romperAbajo(mapa,jugador);
+            //this.romperAbajo(mapa,jugador);
             return;
         }
         this.mover(mapa,jugador,unicacionAMoverse);
@@ -105,12 +109,12 @@ public class Movimiento {
     }
 
     public void moverHaciaLaIzquierda(Mapa mapa, Jugador jugador) {
-        Point unicacionAMoverse = new Point(posicionHorizontal - 1, posicionVertical);
-        if (!this.seCumplenLasCondicionesParaPoderMoverse(mapa,unicacionAMoverse)){
-            this.romperAIzquierda(mapa,jugador);
+        Point ubicacionAMoverse = new Point(posicionHorizontal - 1, posicionVertical);
+        if (!this.seCumplenLasCondicionesParaPoderMoverse(mapa, ubicacionAMoverse)){
+            //this.romperAIzquierda(mapa,jugador);
             return;
         }
-        this.mover(mapa,jugador,unicacionAMoverse);
+        this.mover(mapa, jugador, ubicacionAMoverse);
         this.posicionHorizontal--;
     }
 

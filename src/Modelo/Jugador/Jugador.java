@@ -86,6 +86,7 @@ public class Jugador implements ObjetoDelTablero {
         return Objects.hash(herramientaEnMano, inventario, identificador, mapa, movimiento);
     }
 
+    /*
     public void romperADerecha() {
         int posX = this.movimiento.getPosicionHorizontal();
         int posY = this.movimiento.getPosicionVertical();
@@ -102,7 +103,12 @@ public class Jugador implements ObjetoDelTablero {
         }
     }
 
+
+
     public void agregarAlInventario(Material material){
         this.inventario.agregarObjetosAlInventario(material.getUnidadElemental());
     }
+
+
+     */
 }

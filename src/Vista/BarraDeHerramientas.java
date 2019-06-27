@@ -33,14 +33,13 @@ public class BarraDeHerramientas implements Dibujable {
     private void generarBotones(Stage stage){
         //pantallacompleta
         pantallaCompleta = new BotonParaToolBar(textoPantallaCompleta);
-        new PantallaCompleta(pantallaCompleta,stage);
+        new PantallaCompleta(pantallaCompleta, stage);
         //salir del juego
         salir = new BotonParaToolBar(textoSalir);
-        new SalirDelJuego(salir,stage);
+        new SalirDelJuego(salir, stage);
     }
 
     private void ordenarToolBar(){
-        toolBar.getChildren().add(pantallaCompleta);
-        toolBar.getChildren().add(salir);
+        toolBar.getChildren().addAll(salir, pantallaCompleta);
     }
 }

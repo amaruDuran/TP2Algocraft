@@ -54,7 +54,7 @@ public class JugadorTest {
         jugador.moverParaAbajo();
         jugador.moverParaAbajo();
         ObjetoDelTablero objetoDelCasillero = mapa.obtenerCasillero(new Point(0,2)).getObjeto();
-        assertTrue(objetoDelCasillero.equals(new Jugador()));
+        assertEquals(jugador, objetoDelCasillero);
     }
 
     @Test
@@ -98,7 +98,7 @@ public class JugadorTest {
         jugador.moverALaIzquierda();  //Me muevo 3 veces hacia la Izquierda
         jugador.moverALaIzquierda();
         ObjetoDelTablero objeto = mapa.obtenerCasillero(new Point(0,0)).getObjeto();
-        assertTrue(objeto.equals(new Jugador()));
+        assertEquals(jugador, objeto);
     }
 
     @Test
@@ -130,7 +130,7 @@ public class JugadorTest {
         jugador.moverParaArriba();
 
         ObjetoDelTablero objetoDelCasillero = mapa.obtenerCasillero(new Point(0,0)).getObjeto();
-        assertTrue(objetoDelCasillero.equals(new Jugador()));
+        assertEquals(jugador, objetoDelCasillero);
     }
 
     @Test
@@ -147,7 +147,7 @@ public class JugadorTest {
         jugador.moverParaAbajo();
 
         ObjetoDelTablero objetoDelCasillero = mapa.obtenerCasillero(new Point(0,11)).getObjeto();
-        assertTrue(objetoDelCasillero.equals(new Jugador()));
+        assertEquals(jugador, objetoDelCasillero);
     }
 
 

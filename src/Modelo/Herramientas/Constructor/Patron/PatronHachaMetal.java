@@ -1,6 +1,5 @@
 package Modelo.Herramientas.Constructor.Patron;
 
-import Modelo.Herramientas.Constructor.TableroDeConstruccion;
 import Modelo.Herramientas.TipoDeHerramienta.Hacha;
 import Modelo.Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramienta;
 import Modelo.Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMetal;
@@ -32,16 +31,6 @@ public class PatronHachaMetal extends PatronMaterialTipoHerramienta{
         patronConstructorActual = cargarPatronHachaMetal();
     }
 
-    @Override
-    public boolean esPatronValido(TableroDeConstruccion tablero) {
-        ArrayList<UnidadElemental> patronDeTablero = tablero.parsearPatron();
-        for (int i = 0; i < patronConstructorActual.size(); i++) {
-            if (!(patronConstructorActual.get(i).equivalenteA(patronDeTablero.get(i)))) {
-                return false;
-            }
-        }
-        return true;
-    }
 
     @Override
     public TipoDeHerramienta construir() {

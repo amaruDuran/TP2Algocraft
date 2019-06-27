@@ -240,7 +240,7 @@ public class Entrega2Test {
         jugador.moverParaAbajo();
         jugador.moverParaAbajo();
         ObjetoDelTablero objetoDelCasillero = mapa.obtenerCasillero(new Point(0,2)).getObjeto();
-        assertTrue(objetoDelCasillero.equals(new Jugador()));
+        assertEquals(jugador, objetoDelCasillero);
     }
 
     @Test
@@ -284,27 +284,28 @@ public class Entrega2Test {
         jugador.moverALaIzquierda();  //Me muevo 3 veces hacia la Izquierda
         jugador.moverALaIzquierda();
         ObjetoDelTablero objeto = mapa.obtenerCasillero(new Point(0,0)).getObjeto();
-        assertTrue(objeto.equals(new Jugador()));
+        assertEquals(jugador, objeto);
     }
 
     @Test
     public void SeVerificaQueUnaVezElJugadorEsteEnElTopeDelTableroYaNoSePuedaMoverMasALaDerecha(){
         int tope = 12;
-        Mapa mapa = new Mapa(tope,13);
+        Mapa mapa = new Mapa(12, 12);
         Jugador jugador = new Jugador();
 
         jugador.iniciar(mapa); // El jugador Comienza En La Posicion [0,0]
 
-        for (int i=0; i < tope; i++){
-            jugador.moverALaDerecha();;
-        }
         //LLEGE AL BORDE DEL MAPA
+        for (int i = 0; i < tope; i++){
+            jugador.moverALaDerecha();
+        }
+
         jugador.moverALaDerecha(); //INTENTO MOVERME UNA VEZ MAS
         jugador.moverALaDerecha(); //INTENTO MOVERME UNA VEZ MAS
 
 
-        ObjetoDelTablero objetoDelTablero = mapa.obtenerCasillero(new Point(tope - 1,0)).getObjeto();
-        assertTrue(objetoDelTablero.equals(new Jugador()));
+        ObjetoDelTablero objetoDelTablero = mapa.obtenerCasillero(new Point(tope - 1, 0)).getObjeto();
+        assertEquals(jugador, objetoDelTablero);
     }
 
     @Test
@@ -317,7 +318,7 @@ public class Entrega2Test {
         jugador.moverParaArriba();
 
         ObjetoDelTablero objetoDelCasillero = mapa.obtenerCasillero(new Point(0,0)).getObjeto();
-        assertTrue(objetoDelCasillero.equals(new Jugador()));
+        assertEquals(jugador, objetoDelCasillero);
     }
 
     @Test
@@ -334,7 +335,7 @@ public class Entrega2Test {
         jugador.moverParaAbajo();
 
         ObjetoDelTablero objetoDelCasillero = mapa.obtenerCasillero(new Point(0,11)).getObjeto();
-        assertTrue(objetoDelCasillero.equals(new Jugador()));
+        assertEquals(jugador, objetoDelCasillero);
     }
 
     //Mapa:
