@@ -4,13 +4,10 @@ import Modelo.Herramientas.TipoDeHerramienta.Hacha;
 import Modelo.Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramienta;
 import Modelo.Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMadera;
 import Modelo.Herramientas.TipoDeHerramienta.TipoDeHerramienta;
-import Modelo.Juego.Casillero;
 import Modelo.Juego.Mapa;
 import Modelo.Juego.ObjetoDelTablero;
 import Modelo.Materiales.Material;
-import Vista.Aplicacion;
 
-import java.awt.*;
 import java.util.List;
 import java.util.Objects;
 
@@ -20,6 +17,7 @@ public class Jugador implements ObjetoDelTablero {
     private String identificador;
     private Mapa mapa;
     private Movimiento movimiento;
+    private Ruptura romper;
     //private TableroDeConstruccion constructor;
 
     public Jugador(){
@@ -28,6 +26,7 @@ public class Jugador implements ObjetoDelTablero {
         this.herramientaEnMano = new Hacha(madera);
         this.identificador = "jugadorMirandoDerecha";
         this.movimiento = new Movimiento();
+        //this.romper = new Ruptura(this.movimiento,this.mapa,this);
         //this.constructor = new TableroDeConstruccion();
     }
 
@@ -51,6 +50,7 @@ public class Jugador implements ObjetoDelTablero {
     public void iniciar(Mapa mapa) {
         this.mapa = mapa;
         this.movimiento.iniciar(mapa,this);
+        this.romper = new Ruptura(this.movimiento,this.mapa,this);
     }
 
     public void moverALaDerecha() {
@@ -86,29 +86,24 @@ public class Jugador implements ObjetoDelTablero {
         return Objects.hash(herramientaEnMano, inventario, identificador, mapa, movimiento);
     }
 
-    /*
-    public void romperADerecha() {
-        int posX = this.movimiento.getPosicionHorizontal();
-        int posY = this.movimiento.getPosicionVertical();
-
-        Casillero casilleroARomper = this.mapa.obtenerCasillero(new Point(posX+1, posY));
-        if (casilleroARomper.estaOcupado()){
-            Material material = (Material) casilleroARomper.getObjeto();
-            this.herramientaEnMano.usarEn(material);
-            if (material.durabilidadActualDelMaterial() == 0){
-                casilleroARomper.vaciarCasillero();
-                this.inventario.agregarObjetosAlInventario(material.getUnidadElemental());
-            }
-
-        }
-    }
-
-
 
     public void agregarAlInventario(Material material){
         this.inventario.agregarObjetosAlInventario(material.getUnidadElemental());
     }
 
+    public void intentarRomperADerecha(){
+        this.romper.aDerecha();
+    }
 
-     */
+    public void intentarRomerAIzquierda(){
+        this.romper.aIzquierda();
+    }
+
+    public void intentarRommperArriba(){
+        this.romper.Arriba();
+    }
+
+    public void intentarRomerAbajo(){
+        this.romper.Abajo();
+    }
 }

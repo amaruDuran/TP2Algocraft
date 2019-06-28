@@ -38,7 +38,7 @@ public class Movimiento {
     public void moverHaciaLaDerecha(Mapa mapa, Jugador jugador) {
         Point ubicacionAMoverse = new Point(posicionHorizontal +1, posicionVertical);
         if (!this.seCumplenLasCondicionesParaPoderMoverse(mapa, ubicacionAMoverse)){
-            //this.romperADerecha(mapa, jugador);
+            //this.intentarRomperADerecha(mapa, jugador);
             return;
         }
         this.mover(mapa, jugador, ubicacionAMoverse);
@@ -48,7 +48,7 @@ public class Movimiento {
     //La lógica de romper del juego según entiendo, la debe manejar una clase dentro de controlador.
 
     /*
-    private void romperADerecha(Mapa mapa,Jugador jugador) {
+    private void intentarRomperADerecha(Mapa mapa,Jugador jugador) {
         Casillero casilleroARomper = mapa.obtenerCasillero(new Point(posicionHorizontal+1,posicionVertical));
         if(casilleroARomper.estaOcupado()) {
             actualizarCasillero(jugador,casilleroARomper);

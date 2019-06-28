@@ -18,7 +18,7 @@ public class MapaVista implements Dibujable {
         mapaModelo = mapaJuego;
         mapa = new GridPane();
         //Para que las imagenes estén separadas y no estén tan juntas.
-        mapa.setPadding(new Insets(10,10,10,10));
+        mapa.setPadding(new Insets(10,10,10,200));
 
         /*Debería estar en Carpeta de Controlador o vista y encapsulado en una clase.*/
         //Casillero casillero = mapaModelo.obtenerCasillero(new Point(1,9));
@@ -28,13 +28,12 @@ public class MapaVista implements Dibujable {
 
     @Override
     public void dibujar() {
-        mapa.setHgap(mapaModelo.cantidadDeColumnas());
-        mapa.setVgap(mapaModelo.cantidadDeFilas());
-
+        mapa.setHgap(0);
+        mapa.setVgap(0);
 
         //todo: esto sería el mapa.dibujar().
-        for (int i = 0; i < mapa.getHgap(); i++) {
-            for (int j = 0; j < mapa.getVgap(); j++) {
+        for (int i = 0; i < mapaModelo.cantidadDeFilas();i++) {
+            for (int j = 0; j < mapaModelo.cantidadDeColumnas(); j++) {
                 String elementoMapaVista = mapaModelo.obtenerCasillero(new Point(i,j)).identificador();
                 javafx.scene.image.Image imagenUnidadElemental= new Image("Vista/Imagenes/" + elementoMapaVista + ".png");
                 ImageView imagenUnidadElementalVista = new ImageView(imagenUnidadElemental);

@@ -98,21 +98,25 @@ public class Aplicacion<ventanaAlgocraft> extends Application {
         escenaPrincipal.setOnKeyPressed(new EventHandler<KeyEvent>() {
             public void handle(KeyEvent event) {
                 if (event.getCode() == KeyCode.UP) {
+                    jugadorModelo.intentarRommperArriba();
                     jugadorModelo.moverParaArriba();
                     //System.out.println("Me moví para arriba");
                     mapa.dibujar();
                 }
                 if (event.getCode() == KeyCode.DOWN) {
+                    jugadorModelo.intentarRomerAbajo();
                     jugadorModelo.moverParaAbajo();
                     //System.out.println("Me moví para abajo");
                     mapa.dibujar();
                 }
                 if (event.getCode() == KeyCode.RIGHT) {
+                    jugadorModelo.intentarRomperADerecha();
                     jugadorModelo.moverALaDerecha();
                     //System.out.println("Me moví  a derecha");
                     mapa.dibujar();
                 }
                 if (event.getCode() == KeyCode.LEFT) {
+                    jugadorModelo.intentarRomerAIzquierda();
                     jugadorModelo.moverALaIzquierda();
                     //System.out.println("Me moví para Izquierda");
                     mapa.dibujar();

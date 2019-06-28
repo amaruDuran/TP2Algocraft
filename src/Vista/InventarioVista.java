@@ -6,6 +6,7 @@ import Modelo.Jugador.ObjeosDelInventario;
 import Modelo.Jugador.ObjetoDelInventarioVacio;
 import Vista.Botones.Boton;
 import Vista.Botones.BotonDeInventario;
+import Vista.Botones.BotonParaToolBar;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.layout.GridPane;
@@ -16,7 +17,7 @@ import java.util.List;
 
 public class InventarioVista implements Dibujable {
     private List<ObjeosDelInventario> elementosDelInventario;
-    private List<ObjeosDelInventario> inventarioDelJugador;
+    //private List<ObjeosDelInventario> inventarioDelJugador;
     private final ObjeosDelInventario casilleroVacio = new ObjetoDelInventarioVacio();
     private final int tamanioHorizontalDelInventario = 5;
     private final int tamanioVerticalDelInventario = 6;
@@ -38,10 +39,15 @@ public class InventarioVista implements Dibujable {
         inventario.setPadding(new Insets(1,1,1,1));
         inventario.setHgap(tamanioHorizontalDelInventario);
         inventario.setVgap(tamanioVerticalDelInventario);
+        //elementosDelInventario = new ArrayList<ObjeosDelInventario>();
+        //completar();
         caja = new VBox();//en la caja se pueden agregar mas cosas al inventario
+        this.botonAbrir();
+        this.botonACerrar();
         this.herramientaEnManoVista = new HerramientaEnMano(herramienta, tamanioHorizontalDelInventario * tamanioDeBotonesDelInventario, casilleroVacio.nombreDeElemento());
         this.cajaHerramienta = herramientaEnManoVista.darCaja();
         this.actualizarInventario(inventarioDeJugador, herramienta);
+        caja.getChildren().removeAll(this.inventario);//para iniciar sin inventario abierto
     }
 
     private void completar(){
@@ -65,7 +71,7 @@ public class InventarioVista implements Dibujable {
     @Override
     public void dibujar() {
         herramienta = jugador.obtenerHerramientaEnMano();
-        inventarioDelJugador = jugador.listadoDeInventario();
+        List<ObjeosDelInventario> inventarioDelJugador = jugador.listadoDeInventario();
         this.actualizarInventario(inventarioDelJugador,this.herramienta);
     }
 
@@ -82,19 +88,63 @@ public class InventarioVista implements Dibujable {
     public void actualizarInventario(List<ObjeosDelInventario> inventarioDeJugador, TipoDeHerramienta herramienta){
         caja.getChildren().remove(inventario);
         caja.getChildren().remove(this.cajaHerramienta);
-        inventarioDelJugador = inventarioDeJugador;
+        List<ObjeosDelInventario> inventarioDelJugador = jugador.listadoDeInventario();
+        //vaciarCopia();
         elementosDelInventario = new ArrayList<ObjeosDelInventario>();
         elementosDelInventario.addAll(inventarioDelJugador);
         this.completar();
-        this.dibujarGrilla();
+        //vaciarCopia();
         herramientaEnManoVista.actualizar(herramienta);
         this.cajaHerramienta = herramientaEnManoVista.darCaja();
-        caja.getChildren().add(inventario);
         caja.getChildren().add(this.cajaHerramienta);
+
+        if (caja.getChildren().contains(inventario)){
+            this.dibujarGrilla();
+            caja.getChildren().add(inventario);
+        }
+
     }
+
+    /*private void vaciarCopia(){
+        int total = tamanioHorizontalDelInventario * tamanioVerticalDelInventario;
+        for (int i =total; i > 0;i--){
+            elementosDelInventario.remove(i-1);
+        }
+    }*/
 
     @Override
     public Node getVista() {
         return caja;
+    }
+
+    private void botonActualizar(){
+        Boton boton = new BotonParaToolBar("actualizar");
+        boton.setOnMouseClicked(evento -> {
+            dibujar();
+        });
+        caja.getChildren().add(boton);
+    }
+    private void botonAbrir(){
+        Boton boton = new BotonParaToolBar("INVENTARIO");
+        boton.setOnMouseClicked(evento -> {
+            dibujar();
+            this.dibujarGrilla();
+            caja.getChildren().add(inventario);
+        });
+        caja.getChildren().add(boton);
+    }
+    private void botonACerrar(){
+        Boton boton = new BotonParaToolBar("OCULTAR");
+        boton.setOnMouseClicked(evento -> {
+            caja.getChildren().removeAll(this.inventario);
+        });
+        caja.getChildren().add(boton);
+    }
+    public void actualizarHerramienta(){
+        caja.getChildren().remove(cajaHerramienta);
+        cajaHerramienta.getChildren().remove(herramientaEnManoVista.darCaja());
+        herramientaEnManoVista.actualizar(jugador.obtenerHerramientaEnMano());
+        this.cajaHerramienta = herramientaEnManoVista.darCaja();
+        caja.getChildren().add(cajaHerramienta);
     }
 }
