@@ -26,7 +26,6 @@ public class Jugador implements ObjetoDelTablero {
         this.herramientaEnMano = new Hacha(madera);
         this.identificador = "jugadorMirandoDerecha";
         this.movimiento = new Movimiento();
-        //this.constructor = new TableroDeConstruccion();
     }
 
     public int cantidadDeElementosDelInventario() {
@@ -50,6 +49,7 @@ public class Jugador implements ObjetoDelTablero {
         this.romper = new Ruptura(movimiento,mapa,this);
         this.mapa = mapa;
         this.movimiento.iniciar(mapa,this);
+        this.romper = new Ruptura(this.movimiento,this.mapa,this);
     }
 
     public void moverALaDerecha() {
@@ -88,28 +88,25 @@ public class Jugador implements ObjetoDelTablero {
     public Point posicion() {
         int posx = this.movimiento.getPosicionHorizontal();
         int posy = this.movimiento.getPosicionVertical();
-        return new Point(posx,posy);
+        return new Point(posx, posy);
     }
-
-
 
     public void agregarAlInventario(Material material){
-        this.inventario.agregarObjetosAlInventario(material.getUnidadElemental());
-    }
+        this.inventario.agregarObjetosAlInventario(material.getUnidadElemental());}
 
     public void intentarRomperADerecha(){
         this.romper.aDerecha();
     }
 
-    public void intentarRomerAIzquierda(){
+    public void intentarRomperAIzquierda(){
         this.romper.aIzquierda();
     }
 
-    public void intentarRommperArriba(){
+    public void intentarRomperArriba(){
         this.romper.Arriba();
     }
 
-    public void intentarRomerAbajo(){
+    public void intentarRomperAbajo(){
         this.romper.Abajo();
     }
 }

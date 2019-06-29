@@ -30,17 +30,17 @@ public class ControladorDeJugador {
                 }
 
                 if(event.getCode() == KeyCode.A){
-                    jugadorModelo.intentarRomerAIzquierda();
+                    jugadorModelo.intentarRomperAIzquierda();
                     jugadorModelo.moverALaIzquierda();
                 }
 
                 if(event.getCode() == KeyCode.W){
-                    jugadorModelo.intentarRommperArriba();
+                    jugadorModelo.intentarRomperArriba();
                     jugadorModelo.moverParaArriba();
                 }
 
                 if(event.getCode() == KeyCode.S){
-                    jugadorModelo.intentarRomerAbajo();
+                    jugadorModelo.intentarRomperAbajo();
                     jugadorModelo.moverParaAbajo();
                 }
                 mapaVista.dibujarPosiciones(jugadorModelo.posicion(),posicion);

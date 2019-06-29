@@ -4,7 +4,6 @@ import Modelo.Herramientas.TipoDeHerramienta.Hacha;
 import Modelo.Herramientas.TipoDeHerramienta.Pico;
 import Modelo.Herramientas.TipoDeHerramienta.PicoFino;
 import Modelo.Juego.ObjetoDelTablero;
-import Modelo.Jugador.ObjeosDelInventario;
 import Modelo.Materiales.UnidadElemental.UnidadElemental;
 
 import java.util.Objects;

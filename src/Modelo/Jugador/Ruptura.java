@@ -32,6 +32,7 @@ public class Ruptura {
             verificar(casilleroARomper);
         }
         return;
+
     }
 
     private void verificar(Casillero casilleroARomper) {
@@ -41,7 +42,6 @@ public class Ruptura {
             casilleroARomper.vaciarCasillero();
             jugador.agregarAlInventario(material);
         }
-
     }
 
 
