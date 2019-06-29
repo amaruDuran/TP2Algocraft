@@ -7,6 +7,7 @@ import javafx.scene.shape.Rectangle;
 import java.awt.*;
 
 public class BotonDeInventario extends Boton {
+    /*
     private ObjeosDelInventario objeto;
     //private final int tamanioHorizontal = 20;
     //private final int tamanioVertical = 20;
@@ -32,5 +33,5 @@ public class BotonDeInventario extends Boton {
         /*this.setOnMouseClicked(evento -> {
             //evento
         });*/
-    }
+
 }

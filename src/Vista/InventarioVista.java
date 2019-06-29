@@ -15,7 +15,8 @@ import javafx.scene.layout.VBox;
 import java.util.ArrayList;
 import java.util.List;
 
-public class InventarioVista implements Dibujable {
+public class InventarioVista  {
+    /*
     private List<ObjeosDelInventario> elementosDelInventario;
     //private List<ObjeosDelInventario> inventarioDelJugador;
     private final ObjeosDelInventario casilleroVacio = new ObjetoDelInventarioVacio();
@@ -105,12 +106,12 @@ public class InventarioVista implements Dibujable {
 
     }
 
-    /*private void vaciarCopia(){
+    private void actualizo(){
         int total = tamanioHorizontalDelInventario * tamanioVerticalDelInventario;
         for (int i =total; i > 0;i--){
             elementosDelInventario.remove(i-1);
         }
-    }*/
+    }
 
     @Override
     public Node getVista() {
@@ -146,5 +147,5 @@ public class InventarioVista implements Dibujable {
         herramientaEnManoVista.actualizar(jugador.obtenerHerramientaEnMano());
         this.cajaHerramienta = herramientaEnManoVista.darCaja();
         caja.getChildren().add(cajaHerramienta);
-    }
+    }*/
 }

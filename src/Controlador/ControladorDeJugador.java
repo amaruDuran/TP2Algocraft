@@ -1,6 +1,7 @@
 package Controlador;
 
 import Modelo.Jugador.Jugador;
+import Vista.IVista;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
@@ -19,7 +20,7 @@ public class ControladorDeJugador {
         this.escenaPrincipal = escena;
     }
 
-    public void movimientos(){
+    public void movimientos(IVista  invetarioVista){
         escenaPrincipal.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent event) {
@@ -44,6 +45,8 @@ public class ControladorDeJugador {
                     jugadorModelo.moverParaAbajo();
                 }
                 mapaVista.dibujarPosiciones(jugadorModelo.posicion(),posicion);
+                invetarioVista.actualizarCasillero();
+
             }
         });
     }

@@ -5,6 +5,8 @@ import Controlador.ControladorDeMapa;
 import Modelo.Juego.Mapa;
 import Modelo.Jugador.Jugador;
 import Vista.BarraDeHerramientas;
+import Vista.IVista;
+import Vista.InventarioVista;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
@@ -23,6 +25,8 @@ public class MiJuego extends Application {
         setFondoDePantalla(miPanel);
         Stage miJuego = primaryStage;
         miJuego.setTitle("ALGOCRAFT TP2");
+
+        IVista inventarioVista = new IVista(jugador.listadoDeInventario());
         Scene escenaDeMapa = new Scene(this.miPanel);
         Mapa mapa = new Mapa(11,11);
         jugador.iniciar(mapa);
@@ -30,9 +34,9 @@ public class MiJuego extends Application {
         this.controladorDeMapa = new ControladorDeMapa(mapa);
         this.controladorDeMapa.iniciar();
         ControladorDeJugador jugadorControlado = new ControladorDeJugador(jugador,controladorDeMapa,escenaDeMapa);
-        jugadorControlado.movimientos();
+        jugadorControlado.movimientos(inventarioVista);
         this.miPanel.setCenter(this.controladorDeMapa.getVista());
-        BarraDeHerramientas barraDeHerramientas = new BarraDeHerramientas(primaryStage);
+        BarraDeHerramientas barraDeHerramientas = new BarraDeHerramientas(primaryStage,inventarioVista);
         this.miPanel.setTop(barraDeHerramientas.getVista());
         miJuego.setScene(escenaDeMapa);
         miJuego.show();
