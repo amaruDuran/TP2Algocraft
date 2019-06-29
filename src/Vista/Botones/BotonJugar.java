@@ -1,7 +1,6 @@
 package Vista.Botones;
 
 
-import Vista.Aplicacion;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -18,9 +17,9 @@ public class BotonJugar extends Button {
 
             @Override
             public void handle(ActionEvent event) {
-                Scene escenaPrincipal = new Scene(Aplicacion.panelesDeJuego);
-                Aplicacion.ventanaAlgocraft.setScene(escenaPrincipal);
-                Aplicacion.movimientos(escenaPrincipal);
+                //Scene escenaPrincipal = new Scene(Aplicacion.panelesDeJuego);
+                //Aplicacion.ventanaAlgocraft.setScene(escenaPrincipal);
+                //Aplicacion.movimientos(escenaPrincipal);
 
             }
 

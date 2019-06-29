@@ -3,8 +3,6 @@ package Modelo.Jugador;
 
 import Modelo.Juego.Casillero;
 import Modelo.Juego.Mapa;
-import Modelo.Materiales.Material;
-import Vista.Aplicacion;
 
 import java.awt.*;
 
@@ -38,60 +36,15 @@ public class Movimiento {
     public void moverHaciaLaDerecha(Mapa mapa, Jugador jugador) {
         Point ubicacionAMoverse = new Point(posicionHorizontal +1, posicionVertical);
         if (!this.seCumplenLasCondicionesParaPoderMoverse(mapa, ubicacionAMoverse)){
-            //this.romperADerecha(mapa, jugador);
             return;
         }
         this.mover(mapa, jugador, ubicacionAMoverse);
         this.posicionHorizontal++;
     }
 
-    //La lógica de romper del juego según entiendo, la debe manejar una clase dentro de controlador.
-
-    /*
-    private void romperADerecha(Mapa mapa,Jugador jugador) {
-        Casillero casilleroARomper = mapa.obtenerCasillero(new Point(posicionHorizontal+1,posicionVertical));
-        if(casilleroARomper.estaOcupado()) {
-            actualizarCasillero(jugador,casilleroARomper);
-        }
-    }
-
-    private void romperAIzquierda(Mapa mapa,Jugador jugador) {
-        Casillero casilleroARomper = mapa.obtenerCasillero(new Point(posicionHorizontal - 1, posicionVertical));
-        if(casilleroARomper.estaOcupado()) {
-            actualizarCasillero(jugador,casilleroARomper);
-        }
-    }
-
-    private void romperAbajo(Mapa mapa,Jugador jugador) {
-        Casillero casilleroARomper = mapa.obtenerCasillero(new Point(posicionHorizontal,posicionVertical+1));
-        if(casilleroARomper.estaOcupado()) {
-            actualizarCasillero(jugador,casilleroARomper);
-        }
-    }
-
-    private void romperArriba(Mapa mapa,Jugador jugador) {
-        Casillero casilleroARomper = mapa.obtenerCasillero(new Point(posicionHorizontal,posicionVertical-1));
-        if(casilleroARomper.estaOcupado()) {
-            actualizarCasillero(jugador, casilleroARomper);
-        }
-    }
-
-    private void actualizarCasillero(Jugador jugador,Casillero casilleroARomper){
-        Material material = (Material)casilleroARomper.getObjeto();
-        jugador.obtenerHerramientaEnMano().usarEn(material);//refactorizar el uso agregando metodo en jugador
-        if (material.durabilidadActualDelMaterial() == 0) {
-            casilleroARomper.vaciarCasillero();
-            jugador.agregarAlInventario(material);
-        }
-        Aplicacion.inventarioVista.dibujar();//SACAR DE ACA
-    }
-     */
-
-
     public void moverHaciaArriba(Mapa mapa, Jugador jugador) {
         Point unicacionAMoverse = new Point(posicionHorizontal, posicionVertical - 1);
         if (!this.seCumplenLasCondicionesParaPoderMoverse(mapa,unicacionAMoverse)){
-            //this.romperArriba(mapa,jugador);
             return;
         }
         this.mover(mapa,jugador,unicacionAMoverse);
@@ -101,7 +54,6 @@ public class Movimiento {
     public void moverHaciaAbajo(Mapa mapa, Jugador jugador) {
         Point unicacionAMoverse = new Point(posicionHorizontal, posicionVertical + 1);
         if (!this.seCumplenLasCondicionesParaPoderMoverse(mapa,unicacionAMoverse)){
-            //this.romperAbajo(mapa,jugador);
             return;
         }
         this.mover(mapa,jugador,unicacionAMoverse);

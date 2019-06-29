@@ -4,11 +4,9 @@ import Modelo.Herramientas.TipoDeHerramienta.Hacha;
 import Modelo.Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramienta;
 import Modelo.Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMadera;
 import Modelo.Herramientas.TipoDeHerramienta.TipoDeHerramienta;
-import Modelo.Juego.Casillero;
 import Modelo.Juego.Mapa;
 import Modelo.Juego.ObjetoDelTablero;
 import Modelo.Materiales.Material;
-import Vista.Aplicacion;
 
 import java.awt.*;
 import java.util.List;
@@ -20,7 +18,7 @@ public class Jugador implements ObjetoDelTablero {
     private String identificador;
     private Mapa mapa;
     private Movimiento movimiento;
-    //private TableroDeConstruccion constructor;
+    private Ruptura romper;
 
     public Jugador(){
         this.inventario = new Inventario();
@@ -49,6 +47,7 @@ public class Jugador implements ObjetoDelTablero {
     }
 
     public void iniciar(Mapa mapa) {
+        this.romper = new Ruptura(movimiento,mapa,this);
         this.mapa = mapa;
         this.movimiento.iniciar(mapa,this);
     }
@@ -86,21 +85,10 @@ public class Jugador implements ObjetoDelTablero {
         return Objects.hash(herramientaEnMano, inventario, identificador, mapa, movimiento);
     }
 
-    /*
-    public void romperADerecha() {
-        int posX = this.movimiento.getPosicionHorizontal();
-        int posY = this.movimiento.getPosicionVertical();
-
-        Casillero casilleroARomper = this.mapa.obtenerCasillero(new Point(posX+1, posY));
-        if (casilleroARomper.estaOcupado()){
-            Material material = (Material) casilleroARomper.getObjeto();
-            this.herramientaEnMano.usarEn(material);
-            if (material.durabilidadActualDelMaterial() == 0){
-                casilleroARomper.vaciarCasillero();
-                this.inventario.agregarObjetosAlInventario(material.getUnidadElemental());
-            }
-
-        }
+    public Point posicion() {
+        int posx = this.movimiento.getPosicionHorizontal();
+        int posy = this.movimiento.getPosicionVertical();
+        return new Point(posx,posy);
     }
 
 
@@ -109,6 +97,19 @@ public class Jugador implements ObjetoDelTablero {
         this.inventario.agregarObjetosAlInventario(material.getUnidadElemental());
     }
 
+    public void intentarRomperADerecha(){
+        this.romper.aDerecha();
+    }
 
-     */
+    public void intentarRomerAIzquierda(){
+        this.romper.aIzquierda();
+    }
+
+    public void intentarRommperArriba(){
+        this.romper.Arriba();
+    }
+
+    public void intentarRomerAbajo(){
+        this.romper.Abajo();
+    }
 }

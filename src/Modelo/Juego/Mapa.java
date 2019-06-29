@@ -1,8 +1,5 @@
 package Modelo.Juego;
-import Modelo.Materiales.MaterialDiamante;
-import Modelo.Materiales.MaterialMadera;
-import Modelo.Materiales.MaterialMetal;
-import Modelo.Materiales.MaterialPiedra;
+import Modelo.Materiales.*;
 
 import java.awt.*;
 import java.util.HashMap;
@@ -11,8 +8,8 @@ public class Mapa {
     private int filas;
     private int columnas;
     private HashMap<Point, Casillero> mapa;
-    private int limiteMinDeFilasDeTablero = 8;//por la inicializacion de materiales
-    private int limiteMinDeColumnasDeTablero = 8;
+    private int limiteMinDeFilasDeTablero = 10;//por la inicializacion de materiales
+    private int limiteMinDeColumnasDeTablero = 10;
 
     public Mapa(int filas , int columnas){
         if (filas < limiteMinDeFilasDeTablero || columnas < limiteMinDeColumnasDeTablero){
@@ -73,11 +70,22 @@ public class Mapa {
     }
 
     public Casillero obtenerCasillero(Point ubicacion) {
+
         if(!this.existeUbicacion(ubicacion)){
             return null;
         }
+        //verificoCasillero(this.mapa.get(ubicacion));
         Casillero casillero = this.mapa.get(ubicacion);
         return casillero;
+    }
+
+    private void verificoCasillero(Casillero casillero) {
+        if(casillero.estaOcupado()){
+            Material material = (Material)casillero.getObjeto();
+            if (material.durabilidadActualDelMaterial()< 0){
+                casillero.vaciarCasillero();
+            }
+        }
     }
 
     public boolean existeUbicacion(Point ubicacion){
