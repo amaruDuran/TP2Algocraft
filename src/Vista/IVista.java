@@ -1,17 +1,13 @@
 package Vista;
 
-import Modelo.Jugador.Inventario;
 import Modelo.Jugador.ObjeosDelInventario;
 import Modelo.Jugador.ObjetoDelInventarioVacio;
-import Vista.Botones.Boton;
-import Vista.Botones.BotonDeInventario;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.awt.*;
@@ -22,8 +18,8 @@ public class IVista extends Application {
     private List<ObjeosDelInventario> inventarioModelo;
     private List<ObjeosDelInventario> inventarioCompletado;
     private GridPane inventarioVista;
-    private final int tamanioHorizontal = 5;
-    private final int tamanioVertical = 6;
+    private final int ancho = 8;
+    private final int alto = 4;
     private final ObjeosDelInventario casilleroVacio = new ObjetoDelInventarioVacio();
     private final int tamanioDeBotones = 50;
     private Stage ventana = new Stage();
@@ -34,18 +30,18 @@ public class IVista extends Application {
     public IVista(List<ObjeosDelInventario> inventario){
         this.inventarioVista = new GridPane();
         inventarioVista.setPadding(new Insets(1,1,1,1));
-        inventarioVista.setHgap(tamanioHorizontal);
-        inventarioVista.setVgap(tamanioVertical);
+        inventarioVista.setHgap(ancho);
+        inventarioVista.setVgap(alto);
         this.inventarioModelo = inventario;
         this.anteriorTamanio = inventarioModelo.size();
-        this.inventarioCompletado = new ArrayList<ObjeosDelInventario>();
+        this.inventarioCompletado = new ArrayList<>();
         this.escenaDeInventario = new Scene(inventarioVista);
     }
 
     private void completarElInventario(){
         this.inventarioCompletado.clear();
         this.inventarioCompletado.addAll(inventarioModelo);
-        int tamanioDelInventario = (tamanioHorizontal * tamanioVertical);
+        int tamanioDelInventario = (ancho * alto);
         int cantidadDeElementosFaltantes = tamanioDelInventario - inventarioCompletado.size();
         for (int i = 0; i < cantidadDeElementosFaltantes; i++){
             inventarioCompletado.add(casilleroVacio);
@@ -57,11 +53,11 @@ public class IVista extends Application {
         inventarioVista.setHgap(0);
         inventarioVista.setVgap(0);
 
-        for(int columna=0; columna<tamanioHorizontal; columna++){
-            for(int fila=0; fila< tamanioVertical;fila++){
-                int posicionDelObjetoEnInventario = this.posicionDelObjetoEnInventario(fila,columna);
+        for(int fila = 0; fila < alto; fila++){
+            for(int columna = 0; columna < ancho; columna++){
+                int posicionDelObjetoEnInventario = this.posicionDelObjetoEnInventario(fila, columna);
                 ObjeosDelInventario objeto = inventarioCompletado.get(posicionDelObjetoEnInventario);
-                dibujarEnPosicion(objeto,columna,fila);
+                dibujarEnPosicion(objeto, columna, fila);
             }
         }
         //this.escenaDeInventario = new Scene(inventarioVista);
@@ -69,14 +65,13 @@ public class IVista extends Application {
 
 
     private int posicionDelObjetoEnInventario(int fila, int columna){
-        int posicionDelObjetoEnInventario = (fila * tamanioHorizontal) + columna;
+        int posicionDelObjetoEnInventario = (fila * ancho) + columna;
         return posicionDelObjetoEnInventario;
     }
     private Point posicionDelObjetoEnCuadrado(int posicion){
-        posicion--;
-        int x = posicion % tamanioVertical;
-        int y = (posicion) / (tamanioVertical );
-        Point posicionDelObjetoEnInventario = new Point(x,y);
+        int x = posicion % ancho;
+        int y = (posicion) / (ancho);
+        Point posicionDelObjetoEnInventario = new Point(x, y);
         return posicionDelObjetoEnInventario;
     }
 
@@ -101,9 +96,9 @@ public class IVista extends Application {
          this.completarElInventario();
          ObjeosDelInventario objeto = inventarioCompletado.get(posicion);
          inventarioCompletado.remove(posicion);
-         inventarioCompletado.add(posicion,objeto);
+         inventarioCompletado.add(posicion, objeto);
          Point pos = this.posicionDelObjetoEnCuadrado(posicion);
-         dibujarEnPosicion(objeto,pos.x,pos.y);
+         dibujarEnPosicion(objeto, pos.x, pos.y);
     }
 
     private void dibujarEnPosicion(ObjeosDelInventario objeto, int columna, int fila){

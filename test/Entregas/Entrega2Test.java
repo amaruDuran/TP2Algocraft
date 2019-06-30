@@ -395,7 +395,7 @@ public class Entrega2Test {
     @Test
     public void SeVerificaQueSePuedaOcuparUnLugarVacioEnElMapa(){
         Mapa mapa = new Mapa(10,10);
-        Casillero casillero = mapa.obtenerCasillero(new Point(4,9));
+        Casillero casillero = mapa.obtenerCasillero(new Point(5,9));
         boolean noEstaOcupado = casillero.estaOcupado();
 
         assertEquals(noEstaOcupado,false);
