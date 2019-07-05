@@ -150,8 +150,17 @@ public class JugadorTest {
         assertEquals(jugador, objetoDelCasillero);
     }
 
-
-
-
-
+    @Test
+    public void elJugadorIniciaConUnaHerramientaEnManoYSeLaDesEquipaQuedandoseSinHerramientaEnMano(){
+        Jugador jugador = new Jugador();
+        jugador.desequipar();
+        assertNull(jugador.obtenerHerramientaEnMano());
+    }
+    @Test
+    public void elJugadorIniciaConUnaHerramientaEnManoYSeLaDesEquipaColocandoseEnSuInventario(){
+        Jugador jugador = new Jugador();
+        TipoDeHerramienta herramienta = jugador.obtenerHerramientaEnMano();
+        jugador.desequipar();
+        assertEquals(herramienta,jugador.quitarObjetoDelInventario(0));
+    }
 }

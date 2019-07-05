@@ -36,6 +36,17 @@ public class Jugador implements ObjetoDelTablero {
         return this.herramientaEnMano;
     }
 
+    public void equipar(TipoDeHerramienta herramienta){
+        this.desequipar();
+        herramientaEnMano = herramienta;
+    }
+    public void desequipar(){
+        if (herramientaEnMano != null){
+            inventario.agregarObjetosAlInventario(herramientaEnMano);
+        }
+        herramientaEnMano = null;
+    }
+
     @Override
     public String indentificador() {
         return this.identificador;
@@ -92,7 +103,16 @@ public class Jugador implements ObjetoDelTablero {
     }
 
     public void agregarAlInventario(Material material){
-        this.inventario.agregarObjetosAlInventario(material.getUnidadElemental());}
+        this.inventario.agregarObjetosAlInventario(material.getUnidadElemental());
+    }
+
+    /*public void agregarAlInventario(ObjeosDelInventario objeto){
+        this.inventario.agregarObjetosAlInventario(objeto);
+    }*/
+
+    public ObjeosDelInventario quitarObjetoDelInventario(int posicion){
+        return this.inventario.quitarObjetoDelInventario(posicion);
+    }
 
     public void intentarRomperADerecha(){
         this.romper.aDerecha();

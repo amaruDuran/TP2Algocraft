@@ -30,7 +30,7 @@ public class BotonDeInventario extends Boton {
         this.getChildren().addAll(icono);
 
 
-        /*this.setOnMouseClicked(evento -> {
+        this.setOnMouseClicked(evento -> {
             //evento
         });*/
 

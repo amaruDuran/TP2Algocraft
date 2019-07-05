@@ -28,4 +28,8 @@ public class Hacha implements TipoDeHerramienta {
     public String nombreDeElemento() {
         return "HACHA DE " + materialDeHerramienta.nombreDeMaterialDeHerramienta();
     }
+    @Override
+    public Boolean equipable() {
+        return true;
+    }
 }

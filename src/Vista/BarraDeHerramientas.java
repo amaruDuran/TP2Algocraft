@@ -21,18 +21,22 @@ public class BarraDeHerramientas implements Dibujable {
     private final String textoPantallaCompleta = "Pantalla Completa";
     private final String textoSalir = "Salir Del Juego";
     private final String textoInventario = "Inventario";
+    private final String textoHerramientaEnMano = "Herramienta En Mano";
     private Boton pantallaCompleta;
     private Boton salir;
     private Boton inventario;
+    private Boton herramientaEnMano;
     private  List<ObjeosDelInventario> miInventario;
     private IVista miInventarioVista;
+    private VistaHerramientaEnMano vistaHerramientaEnMano;
 
-    public BarraDeHerramientas(Stage stage, IVista inventarioVista){
+    public BarraDeHerramientas(Stage stage, IVista inventarioVista, VistaHerramientaEnMano vistaHerramientaEnMano){
         toolBar = new HBox();
         toolBar.setSpacing(1);
         this.generarBotones(stage);
         this.ordenarToolBar();
         this.miInventarioVista = inventarioVista;
+        this.vistaHerramientaEnMano = vistaHerramientaEnMano;
     }
 
     @Override
@@ -56,22 +60,13 @@ public class BarraDeHerramientas implements Dibujable {
         inventario.setOnMouseClicked(evento -> {
             miInventarioVista.iniciar();
         });
-
-        /* En alguna otra clase se utilizará para poder Entrar
-        al Inventario con tecla Cercana a Tecla de Movimiento
-        inventario.setOnKeyPressed(new EventHandler<KeyEvent>() {
-            @Override
-            public void handle(KeyEvent event) {
-                if(event.getCode() == KeyCode.I){
-                    miInventarioVista.iniciar();
-                }
-            }
+        herramientaEnMano = new BotonParaToolBar(textoHerramientaEnMano);
+        herramientaEnMano.setOnMouseClicked(evento -> {
+            vistaHerramientaEnMano.iniciar();
         });
-
-         */
     }
 
     private void ordenarToolBar(){
-        toolBar.getChildren().addAll(salir, pantallaCompleta,inventario);
+        toolBar.getChildren().addAll(salir, pantallaCompleta,inventario,herramientaEnMano);
     }
 }

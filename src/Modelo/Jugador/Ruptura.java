@@ -1,5 +1,6 @@
 package Modelo.Jugador;
 
+import Modelo.Herramientas.TipoDeHerramienta.TipoDeHerramienta;
 import Modelo.Juego.Casillero;
 import Modelo.Juego.Mapa;
 import Modelo.Materiales.Material;
@@ -37,7 +38,11 @@ public class Ruptura {
 
     private void verificar(Casillero casilleroARomper) {
         Material material = (Material)casilleroARomper.getObjeto();
-        this.jugador.obtenerHerramientaEnMano().usarEn(material);
+        TipoDeHerramienta herramienta = this.jugador.obtenerHerramientaEnMano();
+        if (herramienta == null){
+            return;
+        }
+        herramienta.usarEn(material);
         if(material.durabilidadActualDelMaterial() <= 0){
             casilleroARomper.vaciarCasillero();
             jugador.agregarAlInventario(material);

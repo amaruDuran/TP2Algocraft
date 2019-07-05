@@ -18,8 +18,8 @@ public class IVista extends Application {
     private List<ObjeosDelInventario> inventarioModelo;
     private List<ObjeosDelInventario> inventarioCompletado;
     private GridPane inventarioVista;
-    private final int ancho = 8;
-    private final int alto = 4;
+    private final int ancho = 6;
+    private final int alto = 5;
     private final ObjeosDelInventario casilleroVacio = new ObjetoDelInventarioVacio();
     private final int tamanioDeBotones = 50;
     private Stage ventana = new Stage();
@@ -85,6 +85,7 @@ public class IVista extends Application {
         Stage miInventario = primaryStage;
         //Scene escenaDeInventario = new Scene(inventarioVista);
         miInventario.setScene(escenaDeInventario);
+        miInventario.setTitle("INVENTARIO");
         miInventario.show();
     }
 
@@ -118,7 +119,7 @@ public class IVista extends Application {
         try {
             start(ventana);
         }catch (Exception e){
-            System.out.println("entre");
+            System.out.println("falle IVista");
             return;
         }
     }

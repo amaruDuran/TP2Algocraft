@@ -32,4 +32,8 @@ public class PicoFino implements TipoDeHerramienta {
     public String nombreDeElemento() {
         return "PICOFINO" + materialDeHerramienta.nombreDeMaterialDeHerramienta();
     }
+    @Override
+    public Boolean equipable() {
+        return true;
+    }
 }

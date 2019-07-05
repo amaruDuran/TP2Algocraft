@@ -8,7 +8,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 
-public class HerramientaEnMano {
+public class HerramientaEnMano {/*
     private TipoDeHerramienta herramientaEnMano;
     private String sinHerramientaEnMano;//caso de que se rompa la herramienta
     private int tamanioDeLaHerramientaEnMano;
@@ -91,5 +91,5 @@ public class HerramientaEnMano {
 
     public VBox darCaja() {
         return cajaDeHerramienta;
-    }
+    }*/
 }

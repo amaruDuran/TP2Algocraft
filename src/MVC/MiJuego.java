@@ -1,5 +1,6 @@
 package MVC;
 
+import Controlador.ControladorDeHerramientasDelJugador;
 import Controlador.ControladorDeJugador;
 import Controlador.ControladorDeMapa;
 import Modelo.Juego.Mapa;
@@ -7,6 +8,7 @@ import Modelo.Jugador.Jugador;
 import Vista.BarraDeHerramientas;
 import Vista.IVista;
 import Vista.InventarioVista;
+import Vista.VistaHerramientaEnMano;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
@@ -31,12 +33,15 @@ public class MiJuego extends Application {
         Mapa mapa = new Mapa(11,11);
         jugador.iniciar(mapa);
 
+        ControladorDeHerramientasDelJugador controladorDeHerramientasDelJugador = new ControladorDeHerramientasDelJugador(jugador);
+        VistaHerramientaEnMano vistaHerramientaEnMano = new VistaHerramientaEnMano(controladorDeHerramientasDelJugador);
+
         this.controladorDeMapa = new ControladorDeMapa(mapa);
         this.controladorDeMapa.iniciar();
         ControladorDeJugador jugadorControlado = new ControladorDeJugador(jugador,controladorDeMapa,escenaDeMapa);
         jugadorControlado.movimientos(inventarioVista);
         this.miPanel.setCenter(this.controladorDeMapa.getVista());
-        BarraDeHerramientas barraDeHerramientas = new BarraDeHerramientas(primaryStage,inventarioVista);
+        BarraDeHerramientas barraDeHerramientas = new BarraDeHerramientas(primaryStage,inventarioVista,vistaHerramientaEnMano);
         this.miPanel.setTop(barraDeHerramientas.getVista());
         miJuego.setScene(escenaDeMapa);
         miJuego.show();

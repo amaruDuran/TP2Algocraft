@@ -28,4 +28,9 @@ public class Pico implements TipoDeHerramienta {
     public String nombreDeElemento() {
         return "PICO DE " + materialDeHerramienta.nombreDeMaterialDeHerramienta();
     }
+
+    @Override
+    public Boolean equipable() {
+        return true;
+    }
 }
