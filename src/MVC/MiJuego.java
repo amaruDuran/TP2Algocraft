@@ -3,6 +3,7 @@ package MVC;
 import Controlador.ControladorDeHerramientasDelJugador;
 import Controlador.ControladorDeJugador;
 import Controlador.ControladorDeMapa;
+import Controlador.ControladorInventario;
 import Modelo.Juego.Mapa;
 import Modelo.Jugador.Jugador;
 import Vista.BarraDeHerramientas;
@@ -28,7 +29,10 @@ public class MiJuego extends Application {
         Stage miJuego = primaryStage;
         miJuego.setTitle("ALGOCRAFT TP2");
 
-        IVista inventarioVista = new IVista(jugador.listadoDeInventario());
+        //IVista inventarioVista = new IVista(jugador.listadoDeInventario());
+        IVista inventarioVista = new IVista();
+        ControladorInventario controladorInventario = new ControladorInventario(jugador.listadoDeInventario(),inventarioVista);
+        inventarioVista.incorporarControl(controladorInventario);
         Scene escenaDeMapa = new Scene(this.miPanel);
         Mapa mapa = new Mapa(11,11);
         jugador.iniciar(mapa);
@@ -38,7 +42,7 @@ public class MiJuego extends Application {
 
         this.controladorDeMapa = new ControladorDeMapa(mapa);
         this.controladorDeMapa.iniciar();
-        ControladorDeJugador jugadorControlado = new ControladorDeJugador(jugador,controladorDeMapa,escenaDeMapa);
+        ControladorDeJugador jugadorControlado = new ControladorDeJugador(jugador,controladorDeMapa,escenaDeMapa,controladorDeHerramientasDelJugador);
         jugadorControlado.movimientos(inventarioVista);
         this.miPanel.setCenter(this.controladorDeMapa.getVista());
         BarraDeHerramientas barraDeHerramientas = new BarraDeHerramientas(primaryStage,inventarioVista,vistaHerramientaEnMano);

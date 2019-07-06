@@ -32,6 +32,7 @@ public class VistaHerramientaEnMano extends Application {
 
     public VistaHerramientaEnMano(ControladorDeHerramientasDelJugador control){
         controlador = control;
+        controlador.cargarActualizacionDeVista(this);
         vistaCompleta = new VBox();
 
         vistaHerramienta = new VBox();

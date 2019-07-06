@@ -1,5 +1,6 @@
 package Vista;
 
+import Controlador.ControladorInventario;
 import Modelo.Jugador.ObjeosDelInventario;
 import Modelo.Jugador.ObjetoDelInventarioVacio;
 import javafx.application.Application;
@@ -15,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class IVista extends Application {
-    private List<ObjeosDelInventario> inventarioModelo;
+    //private List<ObjeosDelInventario> inventarioModelo;
     private List<ObjeosDelInventario> inventarioCompletado;
     private GridPane inventarioVista;
     private final int ancho = 6;
@@ -25,27 +26,26 @@ public class IVista extends Application {
     private Stage ventana = new Stage();
     Scene escenaDeInventario;
     private int anteriorTamanio;
+    private ControladorInventario controladorInventario;
 
 
-    public IVista(List<ObjeosDelInventario> inventario){
+    public IVista(){
+        //controladorInventario = inventarioControl;
         this.inventarioVista = new GridPane();
         inventarioVista.setPadding(new Insets(1,1,1,1));
         inventarioVista.setHgap(ancho);
         inventarioVista.setVgap(alto);
-        this.inventarioModelo = inventario;
-        this.anteriorTamanio = inventarioModelo.size();
         this.inventarioCompletado = new ArrayList<>();
         this.escenaDeInventario = new Scene(inventarioVista);
     }
 
-    private void completarElInventario(){
-        this.inventarioCompletado.clear();
-        this.inventarioCompletado.addAll(inventarioModelo);
-        int tamanioDelInventario = (ancho * alto);
-        int cantidadDeElementosFaltantes = tamanioDelInventario - inventarioCompletado.size();
-        for (int i = 0; i < cantidadDeElementosFaltantes; i++){
-            inventarioCompletado.add(casilleroVacio);
-        }
+    public void incorporarControl(ControladorInventario inventarioControl){
+        controladorInventario = inventarioControl;
+        inventarioCompletado = controladorInventario.obtenerInventarioCompletado(inventarioCompletado);
+    }
+
+    public int tamanioDeInventario(){
+        return (alto * ancho);
     }
 
     private void dibujar() {
@@ -90,16 +90,16 @@ public class IVista extends Application {
     }
 
     public void actualizarCasillero(){
-         int posicion = inventarioModelo.size() - 1;
-         if (posicion < 0) {
-            return;
-         }
-         this.completarElInventario();
-         ObjeosDelInventario objeto = inventarioCompletado.get(posicion);
-         inventarioCompletado.remove(posicion);
-         inventarioCompletado.add(posicion, objeto);
-         Point pos = this.posicionDelObjetoEnCuadrado(posicion);
-         dibujarEnPosicion(objeto, pos.x, pos.y);
+        int posicion = controladorInventario.getInventarioModelo().size() - 1;
+        if (posicion < 0) {
+           return;
+        }
+        inventarioCompletado = controladorInventario.obtenerInventarioCompletado(inventarioCompletado);
+        ObjeosDelInventario objeto = inventarioCompletado.get(posicion);
+        inventarioCompletado.remove(posicion);
+        inventarioCompletado.add(posicion, objeto);
+        Point pos = this.posicionDelObjetoEnCuadrado(posicion);
+        dibujarEnPosicion(objeto, pos.x, pos.y);
     }
 
     private void dibujarEnPosicion(ObjeosDelInventario objeto, int columna, int fila){
@@ -114,7 +114,7 @@ public class IVista extends Application {
 
 
     public void iniciar(){
-        this.completarElInventario();
+        inventarioCompletado = controladorInventario.obtenerInventarioCompletado(inventarioCompletado);
         dibujar();
         try {
             start(ventana);
