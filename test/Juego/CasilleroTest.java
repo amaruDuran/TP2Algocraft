@@ -75,4 +75,29 @@ public class CasilleroTest {
         assertEquals(new MaterialPiedra(),casilleroMaterialPiedra.getObjeto());
         assertEquals(new MaterialDiamante(),casilleroMaterialDiamante.getObjeto());
     }
+    @Test
+    public void verificandoIdentificadorDeCasilleroVacio(){
+        Casillero casillero = new Casillero();
+        assertEquals("VACIO",casillero.identificador());
+    }
+    @Test
+    public void seAsignaUnObjetoAlCasilleroVerificandoSuIdentificador(){
+        Casillero casilleroJugador = new Casillero();
+        Casillero casilleroMaterialMadera = new Casillero();
+        Casillero casilleroMaterialMetal = new Casillero();
+        Casillero casilleroMaterialPiedra = new Casillero();
+        Casillero casilleroMaterialDiamante = new Casillero();
+
+        casilleroJugador.asignar(new Jugador());
+        casilleroMaterialMadera.asignar(new MaterialMadera());
+        casilleroMaterialMetal.asignar(new MaterialMetal());
+        casilleroMaterialPiedra.asignar(new MaterialPiedra());
+        casilleroMaterialDiamante.asignar(new MaterialDiamante());
+
+        assertEquals(new Jugador().indentificador(),casilleroJugador.identificador());
+        assertEquals(new MaterialMadera().indentificador(),casilleroMaterialMadera.identificador());
+        assertEquals(new MaterialMetal().indentificador(),casilleroMaterialMetal.identificador());
+        assertEquals(new MaterialPiedra().indentificador(),casilleroMaterialPiedra.identificador());
+        assertEquals(new MaterialDiamante().indentificador(),casilleroMaterialDiamante.identificador());
+    }
 }

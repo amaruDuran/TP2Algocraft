@@ -9,9 +9,11 @@ import Modelo.Herramientas.TipoDeHerramienta.Pico;
 import Modelo.Herramientas.TipoDeHerramienta.PicoFino;
 import Modelo.Materiales.Material;
 import Modelo.Materiales.MaterialDiamante;
+import Modelo.Materiales.UnidadElemental.UnidadElementalDiamante;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class MaterialDiamanteTest {
     @Test
@@ -67,5 +69,10 @@ public class MaterialDiamanteTest {
         }
 
         assertEquals(durabilidadQueDeberiaTenerElMaterial , diamante.durabilidadActualDelMaterial());
+    }
+    @Test
+    public void daSuUnidadElementalDeDiamante(){
+        Material diamante = new MaterialDiamante();
+        assertTrue(new UnidadElementalDiamante().equivalenteA(diamante.getUnidadElemental()));
     }
 }

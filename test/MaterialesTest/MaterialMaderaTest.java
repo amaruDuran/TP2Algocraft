@@ -9,9 +9,11 @@ import Modelo.Herramientas.TipoDeHerramienta.Pico;
 import Modelo.Herramientas.TipoDeHerramienta.PicoFino;
 import Modelo.Materiales.Material;
 import Modelo.Materiales.MaterialMadera;
+import Modelo.Materiales.UnidadElemental.UnidadElementalMadera;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class MaterialMaderaTest {
     @Test
@@ -113,5 +115,10 @@ public class MaterialMaderaTest {
         }
 
         assertEquals(durabilidadQueDeberiaTenerElMaterial, madera.durabilidadActualDelMaterial());
+    }
+    @Test
+    public void daSuUnidadElementalDeMadera(){
+        Material madera = new MaterialMadera();
+        assertTrue(new UnidadElementalMadera().equivalenteA(madera.getUnidadElemental()));
     }
 }

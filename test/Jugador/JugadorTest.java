@@ -2,6 +2,8 @@ package Jugador;
 
 import Modelo.Herramientas.TipoDeHerramienta.Hacha;
 import Modelo.Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMadera;
+import Modelo.Herramientas.TipoDeHerramienta.MaterialDeHerramientas.MaterialDeHerramientaMetalPiedra;
+import Modelo.Herramientas.TipoDeHerramienta.PicoFino;
 import Modelo.Herramientas.TipoDeHerramienta.TipoDeHerramienta;
 import Modelo.Jugador.Jugador;
 import Modelo.Juego.Mapa;
@@ -161,6 +163,24 @@ public class JugadorTest {
         Jugador jugador = new Jugador();
         TipoDeHerramienta herramienta = jugador.obtenerHerramientaEnMano();
         jugador.desequipar();
+        assertNull(jugador.obtenerHerramientaEnMano());
         assertEquals(herramienta,jugador.quitarObjetoDelInventario(0));
+    }
+    @Test
+    public void elJugadorDesequipaSuHerramientaYNoPuedeDesequiparOtraVez(){
+        Jugador jugador = new Jugador();
+        TipoDeHerramienta herramienta = jugador.obtenerHerramientaEnMano();
+        jugador.desequipar();
+        jugador.desequipar();
+        assertEquals(1,jugador.cantidadDeElementosDelInventario());
+        assertNull(jugador.obtenerHerramientaEnMano());
+    }
+    @Test
+    public void elJugadorIniciaConUnaHerramientaEnManoSeAgregaOtraAlInventarioYSeLaEquipaColocandolaEnsuManoYGuardandoLaAnterior(){
+        Jugador jugador = new Jugador();
+        TipoDeHerramienta pico = new PicoFino(new MaterialDeHerramientaMetalPiedra());
+        jugador.equipar(pico);
+        assertEquals(pico,jugador.obtenerHerramientaEnMano());
+        assertEquals(1,jugador.cantidadDeElementosDelInventario());
     }
 }

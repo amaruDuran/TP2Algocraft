@@ -106,9 +106,9 @@ public class Jugador implements ObjetoDelTablero {
         this.inventario.agregarObjetosAlInventario(material.getUnidadElemental());
     }
 
-    /*public void agregarAlInventario(ObjeosDelInventario objeto){
+    public void agregarAlInventario(ObjeosDelInventario objeto){
         this.inventario.agregarObjetosAlInventario(objeto);
-    }*/
+    }
 
     public ObjeosDelInventario quitarObjetoDelInventario(int posicion){
         return this.inventario.quitarObjetoDelInventario(posicion);

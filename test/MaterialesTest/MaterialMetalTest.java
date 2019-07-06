@@ -9,9 +9,11 @@ import Modelo.Herramientas.TipoDeHerramienta.Pico;
 import Modelo.Herramientas.TipoDeHerramienta.PicoFino;
 import Modelo.Materiales.Material;
 import Modelo.Materiales.MaterialMetal;
+import Modelo.Materiales.UnidadElemental.UnidadElementalMetal;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class MaterialMetalTest {
     @Test
@@ -98,5 +100,10 @@ public class MaterialMetalTest {
         }
 
         assertEquals(durabilidadQueDeberiaTenerElMaterial, metal.durabilidadActualDelMaterial());
+    }
+    @Test
+    public void daSuUnidadElementalDeMetal(){
+        Material metal = new MaterialMetal();
+        assertTrue(new UnidadElementalMetal().equivalenteA(metal.getUnidadElemental()));
     }
 }

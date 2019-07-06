@@ -8,11 +8,13 @@ import Modelo.Materiales.MaterialMadera;
 import Modelo.Materiales.MaterialMetal;
 import Modelo.Materiales.MaterialPiedra;
 import Modelo.Juego.ObjetoDelTablero;
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.awt.*;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 public class MapaTest {
@@ -204,6 +206,18 @@ public class MapaTest {
         assertEquals(true, mapa.existeUbicacion(new Point(9,5)));
         assertEquals(true, mapa.existeUbicacion(new Point(5,9)));
         assertEquals(true, mapa.existeUbicacion(new Point(9,9)));
+    }
+
+    @Test
+    public void siNoExisteUbicacionEsComoEstarOcupado(){
+        Mapa mapa = new Mapa(10,10);
+        Assert.assertTrue(mapa.estaOcupado(new Point(11,11)));
+    }
+
+    @Test
+    public void alIntentarObtenerCasilleroQueNoExisteDaNull(){
+        Mapa mapa = new Mapa(10,10);
+        assertNull(mapa.obtenerCasillero(new Point(11,11)));
     }
 }
 
