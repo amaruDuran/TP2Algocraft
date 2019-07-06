@@ -90,9 +90,20 @@ public class IVista extends Application {
     }
 
     public void actualizarCasillero(){
-        int posicion = controladorInventario.getInventarioModelo().size() - 1;
-        if (posicion < 0) {
-           return;
+        int ultimaPosicion = controladorInventario.getInventarioModelo().size() - 1;
+        actualizarCasillero(ultimaPosicion);
+    }
+
+    public void actualizarCasilleros(int desde){//sacar cosas desde la mitad del inventario
+        int hasta = controladorInventario.getInventarioModelo().size() + 1;//+1 por que tiene que figurar vacio el proximo elemento
+        for (int pos = desde; pos < hasta; pos++){
+            actualizarCasillero(pos);
+        }
+    }
+
+    public void actualizarCasillero(int posicion){
+        if (posicion < 0 || posicion > this.tamanioDeInventario()) {
+            return;
         }
         inventarioCompletado = controladorInventario.obtenerInventarioCompletado(inventarioCompletado);
         ObjeosDelInventario objeto = inventarioCompletado.get(posicion);
@@ -103,13 +114,13 @@ public class IVista extends Application {
     }
 
     private void dibujarEnPosicion(ObjeosDelInventario objeto, int columna, int fila){
-        String imagenElemental = objeto.nombreDeElemento();
-        Image imagen = new Image("Vista/Imagenes/Inventario/"+imagenElemental+".png");
-        ImageView imagenUnidadElementalVista = new ImageView(imagen);
-        imagenUnidadElementalVista.setFitWidth(40);
-        imagenUnidadElementalVista.setFitHeight(40);
-        inventarioVista.setConstraints(imagenUnidadElementalVista, columna, fila);
-        inventarioVista.getChildren().add(imagenUnidadElementalVista);
+        String urlDelObjetoDelInventario = objeto.nombreDeElemento();
+        Image imagen = new Image("Vista/Imagenes/Inventario/"+urlDelObjetoDelInventario+".png");
+        ImageView imagenObjetoDelInventarioVista = new ImageView(imagen);
+        imagenObjetoDelInventarioVista.setFitWidth(40);
+        imagenObjetoDelInventarioVista.setFitHeight(40);
+        inventarioVista.setConstraints(imagenObjetoDelInventarioVista, columna, fila);
+        inventarioVista.getChildren().add(imagenObjetoDelInventarioVista);
     }
 
 

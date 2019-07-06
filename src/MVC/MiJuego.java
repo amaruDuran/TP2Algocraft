@@ -8,7 +8,6 @@ import Modelo.Juego.Mapa;
 import Modelo.Jugador.Jugador;
 import Vista.BarraDeHerramientas;
 import Vista.IVista;
-import Vista.InventarioVista;
 import Vista.VistaHerramientaEnMano;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -19,8 +18,14 @@ import javafx.stage.Stage;
 
 public class MiJuego extends Application {
     private ControladorDeMapa controladorDeMapa;
+    private ControladorInventario controladorInventario;
+    private ControladorDeHerramientasDelJugador controladorDeHerramientasDelJugador;
+    private ControladorDeJugador jugadorControlado;
     private BorderPane miPanel;
     private Jugador jugador = new Jugador();
+    private Mapa mapa;
+    private IVista inventarioVista;
+    private VistaHerramientaEnMano vistaHerramientaEnMano;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -29,26 +34,45 @@ public class MiJuego extends Application {
         Stage miJuego = primaryStage;
         miJuego.setTitle("ALGOCRAFT TP2");
 
-        //IVista inventarioVista = new IVista(jugador.listadoDeInventario());
-        IVista inventarioVista = new IVista();
-        ControladorInventario controladorInventario = new ControladorInventario(jugador.listadoDeInventario(),inventarioVista);
-        inventarioVista.incorporarControl(controladorInventario);
         Scene escenaDeMapa = new Scene(this.miPanel);
-        Mapa mapa = new Mapa(11,11);
-        jugador.iniciar(mapa);
+        this.controlInventario();
+        this.controlMapa();
+        this.controlHerramientas();
+        this.controlJugador(escenaDeMapa);
+        this.anexionarControlesFaltantes();
 
-        ControladorDeHerramientasDelJugador controladorDeHerramientasDelJugador = new ControladorDeHerramientasDelJugador(jugador);
-        VistaHerramientaEnMano vistaHerramientaEnMano = new VistaHerramientaEnMano(controladorDeHerramientasDelJugador);
-
-        this.controladorDeMapa = new ControladorDeMapa(mapa);
-        this.controladorDeMapa.iniciar();
-        ControladorDeJugador jugadorControlado = new ControladorDeJugador(jugador,controladorDeMapa,escenaDeMapa,controladorDeHerramientasDelJugador);
-        jugadorControlado.movimientos(inventarioVista);
         this.miPanel.setCenter(this.controladorDeMapa.getVista());
         BarraDeHerramientas barraDeHerramientas = new BarraDeHerramientas(primaryStage,inventarioVista,vistaHerramientaEnMano);
         this.miPanel.setTop(barraDeHerramientas.getVista());
         miJuego.setScene(escenaDeMapa);
         miJuego.show();
+    }
+
+    private void anexionarControlesFaltantes(){
+        controladorDeHerramientasDelJugador.cargarVistaDeInventario(inventarioVista);
+    }
+
+    private void controlInventario(){
+        inventarioVista = new IVista();
+        controladorInventario = new ControladorInventario(jugador.listadoDeInventario(),inventarioVista);
+        inventarioVista.incorporarControl(controladorInventario);
+    }
+
+    private void controlMapa(){
+        mapa = new Mapa(11,11);
+        jugador.iniciar(mapa);
+        this.controladorDeMapa = new ControladorDeMapa(mapa);
+        this.controladorDeMapa.iniciar();
+    }
+
+    private void controlHerramientas(){
+        controladorDeHerramientasDelJugador = new ControladorDeHerramientasDelJugador(jugador);
+        vistaHerramientaEnMano = new VistaHerramientaEnMano(controladorDeHerramientasDelJugador);
+    }
+
+    private void controlJugador(Scene escenaDeMapa){
+        jugadorControlado = new ControladorDeJugador(jugador,controladorDeMapa,escenaDeMapa,controladorDeHerramientasDelJugador);
+        jugadorControlado.movimientos(inventarioVista);
     }
 
     private void setFondoDePantalla(BorderPane miPanel) {
