@@ -3,6 +3,7 @@ package Controlador;
 import Modelo.Jugador.Inventario;
 import Modelo.Jugador.ObjeosDelInventario;
 import Modelo.Jugador.ObjetoDelInventarioVacio;
+import Modelo.Materiales.UnidadElemental.UnidadElemental;
 import Vista.IVista;
 
 import java.util.List;
@@ -37,5 +38,24 @@ public class ControladorInventario {
 
     public List<ObjeosDelInventario> getInventarioModelo() {
         return inventarioModelo;
+    }
+
+    public Integer cantidadesDeLaUnidad(UnidadElemental unidad){
+        Integer cantidad = 0;
+        //ObjeosDelInventario vacio = new ObjetoDelInventarioVacio();
+        for (int i = 0; i < inventarioModelo.size(); i++){
+            if (inventarioModelo.get(i).equipable()){
+                continue;
+            }
+            //se supone que no hay objetos vacios
+            //if (inventarioModelo.get(i).nombreDeElemento() == vacio.nombreDeElemento()){
+            //    continue;
+            //}
+            if (!unidad.equivalenteA((UnidadElemental) inventarioModelo.get(i))){
+                continue;
+            }
+            cantidad++;
+        }
+        return cantidad;
     }
 }

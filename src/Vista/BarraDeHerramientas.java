@@ -22,21 +22,25 @@ public class BarraDeHerramientas implements Dibujable {
     private final String textoSalir = "Salir Del Juego";
     private final String textoInventario = "Inventario";
     private final String textoHerramientaEnMano = "Herramienta En Mano";
+    private final String textoConstructor = "Construccion De Herramientas";
     private Boton pantallaCompleta;
     private Boton salir;
     private Boton inventario;
     private Boton herramientaEnMano;
-    private  List<ObjeosDelInventario> miInventario;
+    private Boton constructor;
+    //private  List<ObjeosDelInventario> miInventario;
     private IVista miInventarioVista;
     private VistaHerramientaEnMano vistaHerramientaEnMano;
+    private VistaTableroDeConstruccion tableroDeConstruccion;
 
-    public BarraDeHerramientas(Stage stage, IVista inventarioVista, VistaHerramientaEnMano vistaHerramientaEnMano){
+    public BarraDeHerramientas(Stage stage, IVista inventarioVista, VistaHerramientaEnMano vistaHerramientaEnMano, VistaTableroDeConstruccion tableroDeConstruccion){
         toolBar = new HBox();
         toolBar.setSpacing(1);
         this.generarBotones(stage);
         this.ordenarToolBar();
         this.miInventarioVista = inventarioVista;
         this.vistaHerramientaEnMano = vistaHerramientaEnMano;
+        this.tableroDeConstruccion = tableroDeConstruccion;
     }
 
     @Override
@@ -51,22 +55,32 @@ public class BarraDeHerramientas implements Dibujable {
         //pantallacompleta
         pantallaCompleta = new BotonParaToolBar(textoPantallaCompleta);
         new PantallaCompleta(pantallaCompleta, stage);
-        //salir del juego
-        salir = new BotonParaToolBar(textoSalir);
-        new SalirDelJuego(salir, stage);
+
         //inventario
         inventario = new BotonParaToolBar(textoInventario);
 
         inventario.setOnMouseClicked(evento -> {
             miInventarioVista.iniciar();
         });
+
+        //herramienta en mano
         herramientaEnMano = new BotonParaToolBar(textoHerramientaEnMano);
         herramientaEnMano.setOnMouseClicked(evento -> {
             vistaHerramientaEnMano.iniciar();
         });
+
+        //constructor
+        constructor = new BotonParaToolBar(textoConstructor);
+        constructor.setOnMouseClicked(evento -> {
+            tableroDeConstruccion.iniciar();
+        });
+
+        //salir del juego
+        salir = new BotonParaToolBar(textoSalir);
+        new SalirDelJuego(salir, stage);
     }
 
     private void ordenarToolBar(){
-        toolBar.getChildren().addAll(salir, pantallaCompleta,inventario,herramientaEnMano);
+        toolBar.getChildren().addAll(pantallaCompleta,inventario,herramientaEnMano,constructor,salir);
     }
 }

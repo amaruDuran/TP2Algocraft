@@ -1,14 +1,12 @@
 package MVC;
 
-import Controlador.ControladorDeHerramientasDelJugador;
-import Controlador.ControladorDeJugador;
-import Controlador.ControladorDeMapa;
-import Controlador.ControladorInventario;
+import Controlador.*;
 import Modelo.Juego.Mapa;
 import Modelo.Jugador.Jugador;
 import Vista.BarraDeHerramientas;
 import Vista.IVista;
 import Vista.VistaHerramientaEnMano;
+import Vista.VistaTableroDeConstruccion;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
@@ -21,11 +19,13 @@ public class MiJuego extends Application {
     private ControladorInventario controladorInventario;
     private ControladorDeHerramientasDelJugador controladorDeHerramientasDelJugador;
     private ControladorDeJugador jugadorControlado;
+    private ControlDelTableroDeConstruccion controlDelTableroDeConstruccion;
     private BorderPane miPanel;
     private Jugador jugador = new Jugador();
     private Mapa mapa;
     private IVista inventarioVista;
     private VistaHerramientaEnMano vistaHerramientaEnMano;
+    private VistaTableroDeConstruccion tableroDeConstruccion;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -39,23 +39,30 @@ public class MiJuego extends Application {
         this.controlMapa();
         this.controlHerramientas();
         this.controlJugador(escenaDeMapa);
+        this.controlConstrutor();
         this.anexionarControlesFaltantes();
 
         this.miPanel.setCenter(this.controladorDeMapa.getVista());
-        BarraDeHerramientas barraDeHerramientas = new BarraDeHerramientas(primaryStage,inventarioVista,vistaHerramientaEnMano);
+        BarraDeHerramientas barraDeHerramientas = new BarraDeHerramientas(primaryStage,inventarioVista,vistaHerramientaEnMano,tableroDeConstruccion);
         this.miPanel.setTop(barraDeHerramientas.getVista());
         miJuego.setScene(escenaDeMapa);
         miJuego.show();
     }
 
+    private void controlConstrutor() {
+        controlDelTableroDeConstruccion = new ControlDelTableroDeConstruccion();
+        tableroDeConstruccion = new VistaTableroDeConstruccion(controlDelTableroDeConstruccion);
+    }
+
     private void anexionarControlesFaltantes(){
         controladorDeHerramientasDelJugador.cargarVistaDeInventario(inventarioVista);
+        inventarioVista.incorporarControl(controladorInventario);
+        controlDelTableroDeConstruccion.cargarControladorDelInventario(controladorInventario);
     }
 
     private void controlInventario(){
         inventarioVista = new IVista();
         controladorInventario = new ControladorInventario(jugador.listadoDeInventario(),inventarioVista);
-        inventarioVista.incorporarControl(controladorInventario);
     }
 
     private void controlMapa(){

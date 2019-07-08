@@ -101,8 +101,8 @@ public class IVista extends Application {
         }
     }
 
-    public void actualizarCasillero(int posicion){
-        if (posicion < 0 || posicion > this.tamanioDeInventario()) {
+    private void actualizarCasillero(int posicion){
+        if (posicion < 0 || posicion >= this.tamanioDeInventario()) {
             return;
         }
         inventarioCompletado = controladorInventario.obtenerInventarioCompletado(inventarioCompletado);
