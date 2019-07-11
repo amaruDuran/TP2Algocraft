@@ -1,21 +1,24 @@
 package Controlador;
 
+import Modelo.Herramientas.Constructor.TableroDeConstruccion;
 import Modelo.Materiales.UnidadElemental.*;
 import Vista.Botones.BotonDeSelector;
 import Vista.VistaTableroDeConstruccion;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 public class ControlDelTableroDeConstruccion {
-    private VistaTableroDeConstruccion vistaTableroDeConstruccion;
+    private VistaTableroDeConstruccion tableroDeConstruccionVista;
+    private TableroDeConstruccion tableroConstructorModelo;
+
     private List<Integer> cantidades;
     private List<UnidadElemental> elementos;
     private List<BotonDeSelector> botones;
     private ControladorInventario inventario;
 
     public ControlDelTableroDeConstruccion(){
+        this.tableroConstructorModelo = new TableroDeConstruccion();
         cantidades = new ArrayList<Integer>();
         elementos = new ArrayList<UnidadElemental>();
         botones = new ArrayList<BotonDeSelector>();
@@ -24,6 +27,10 @@ public class ControlDelTableroDeConstruccion {
     public void cargarControladorDelInventario(ControladorInventario controladorInventario){
         inventario = controladorInventario;
         completarCantidades();
+    }
+
+    public void eventoAgregarElementoEnTablero(UnidadElemental unidadElemental, int fila, int columna){
+        tableroDeConstruccionVista.dibujarEnPosicion(unidadElemental, fila, columna);
     }
 
     private void completarCantidades(){
@@ -45,7 +52,7 @@ public class ControlDelTableroDeConstruccion {
     }
 
     public void cargarVista(VistaTableroDeConstruccion vista){
-        vistaTableroDeConstruccion = vista;
+        tableroDeConstruccionVista = vista;
     }
 
     public int cantidad(UnidadElemental unidadElemental) {
@@ -72,7 +79,7 @@ public class ControlDelTableroDeConstruccion {
             if (!boton.contieneAUnidad(elementos.get(i))){
                 continue;
             }
-            botones.add(i,boton);
+            botones.add(i, boton);
             break;
         }
     }

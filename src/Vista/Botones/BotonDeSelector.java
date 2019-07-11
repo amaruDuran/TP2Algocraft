@@ -18,7 +18,7 @@ public class BotonDeSelector extends Boton {
 
     public BotonDeSelector(UnidadElemental unidadElemental, int tamanio, int cantidad) {
         this.objeto = unidadElemental;
-        seleccionado = false;
+        this.seleccionado = false;
         cantidadDeElementosDisponibles = cantidad;
         colorSecundarioDelBoton = Color.LIGHTBLUE;//cuando esta seleccionado cambia a este
         colorActualDelBoton = Color.DARKBLUE;
@@ -57,18 +57,12 @@ public class BotonDeSelector extends Boton {
     }
 
     public UnidadElemental seleccionar(){
-        /*if (seleccionado){
-            return objeto;
-        }*/
         seleccionado = true;
         cambioDeColorASeleccionado();
         return objeto;
     }
 
     public void deseleccionar(){
-        /*if (!seleccionado){
-            return;
-        }*/
         seleccionado = false;
         cambioDeColorANoSeleccionado();
     }
@@ -97,7 +91,7 @@ public class BotonDeSelector extends Boton {
     private void cambioDeColorANoSeleccionado(){
         Color colorNoSeleccionado = this.colorActualDelBoton;
         fondo.setFill(colorNoSeleccionado);
-        colorDeTexto = Color.LIGHTYELLOW;
+        colorDeTexto = Color.DARKBLUE;
         actualizarTextoCantidad();
     }
 

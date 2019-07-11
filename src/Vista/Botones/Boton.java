@@ -6,7 +6,7 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 
 public abstract class Boton extends StackPane {
-    protected Text texto;//tube que ponerlo public para acceder en los efectos
+    protected Text texto; //tuve que ponerlo public para acceder en los efectos
     protected Rectangle fondo;
     protected Color colorActualDelBoton;
     protected Color colorSecundarioDelBoton;

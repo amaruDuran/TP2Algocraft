@@ -5,13 +5,11 @@ import Modelo.Herramientas.TipoDeHerramienta.TipoDeHerramienta;
 import Vista.Botones.Boton;
 import Vista.Botones.BotonParaToolBar;
 import javafx.application.Application;
-import javafx.scene.Node;
+
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
+
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;

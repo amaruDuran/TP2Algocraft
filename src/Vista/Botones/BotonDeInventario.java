@@ -1,10 +1,6 @@
 package Vista.Botones;
 
 import Modelo.Jugador.ObjeosDelInventario;
-import javafx.scene.image.ImageView;
-import javafx.scene.shape.Rectangle;
-
-import java.awt.*;
 
 public class BotonDeInventario extends Boton {
     private ObjeosDelInventario objeto;

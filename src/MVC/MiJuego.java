@@ -52,6 +52,7 @@ public class MiJuego extends Application {
     private void controlConstrutor() {
         controlDelTableroDeConstruccion = new ControlDelTableroDeConstruccion();
         tableroDeConstruccion = new VistaTableroDeConstruccion(controlDelTableroDeConstruccion);
+        controlDelTableroDeConstruccion.cargarVista(tableroDeConstruccion);
     }
 
     private void anexionarControlesFaltantes(){

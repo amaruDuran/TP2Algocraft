@@ -2,19 +2,12 @@ package Vista;
 
 import Eventos.PantallaCompleta;
 import Eventos.SalirDelJuego;
-import Modelo.Jugador.Inventario;
-import Modelo.Jugador.ObjeosDelInventario;
+
 import Vista.Botones.Boton;
 import Vista.Botones.BotonParaToolBar;
-import javafx.event.EventHandler;
 import javafx.scene.Node;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
-
-import java.awt.*;
-import java.util.List;
 
 public class BarraDeHerramientas implements Dibujable {
     private HBox toolBar;

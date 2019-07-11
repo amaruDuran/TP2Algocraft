@@ -3,7 +3,6 @@ package Vista.Botones;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 
 public class BotonJugar extends Button {
