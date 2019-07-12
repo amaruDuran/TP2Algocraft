@@ -14,12 +14,18 @@ public class ControladorDeJugador {
     private final ControladorDeMapa mapaVista;
     private final Scene escenaPrincipal;
     private final ControladorDeHerramientasDelJugador controlDeHerramientas;
+    private ControlDelTableroDeConstruccion controlDelTableroDeConstruccion;
 
     public ControladorDeJugador(Jugador jugador,ControladorDeMapa mapaVista,Scene escena,ControladorDeHerramientasDelJugador controladorDeHerramientasDelJugador) {
         this.jugadorModelo = jugador;
         this.mapaVista = mapaVista;
         this.escenaPrincipal = escena;
         this.controlDeHerramientas = controladorDeHerramientasDelJugador;
+    }
+
+    public void cargarControlDelTableroDeConstrucion(ControlDelTableroDeConstruccion control){
+        controlDelTableroDeConstruccion = control;
+        controlDelTableroDeConstruccion.iniciacion();
     }
 
     public void movimientos(IVista  invetarioVista){
@@ -49,6 +55,7 @@ public class ControladorDeJugador {
                 mapaVista.dibujarPosiciones(jugadorModelo.posicion(),posicion);
                 invetarioVista.actualizarCasillero();
                 controlDeHerramientas.actualizacionPorDesgaste();
+                controlDelTableroDeConstruccion.actualizarCantidades();
             }
         });
     }

@@ -7,12 +7,14 @@ import Modelo.Materiales.UnidadElemental.UnidadElemental;
 import Modelo.Materiales.UnidadElemental.UnidadElementalVacia;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class TableroDeConstruccion {
     private ArrayList<CeldaDeConstruccion> celdas;
     private PatronTipoHerramienta patronesDisponibles;
     private int cantidadDeFilas;
     private int cantidadDeColumnas;
+    private final UnidadElemental vacia = new UnidadElementalVacia();
     //orden de celdas en cuadro
     // C1  C2  C3 Columnas
     //(11)(12)(13)Fila1
@@ -41,7 +43,8 @@ public class TableroDeConstruccion {
     private void completarCeldasVacias(){
         for (int i = 0; i < celdas.size(); i++) {
             if ( (celdas.get(i).verElemento() == null) ){
-                UnidadElemental unidadElemental = new UnidadElementalVacia();
+                //UnidadElemental unidadElemental = new UnidadElementalVacia();
+                UnidadElemental unidadElemental = vacia;
                 celdas.get(i).agregarElemento(unidadElemental);
             }
         }
@@ -115,13 +118,13 @@ public class TableroDeConstruccion {
     }
 
     //util para la interfaz de usuario.
-    public boolean quitarElementoEnCelda(int fila, int columna){
+   /* public boolean quitarElementoEnCelda(int fila, int columna){
         CeldaDeConstruccion celdaAQuitar = this.verCelda(fila,columna);
         if(celdaAQuitar.estaVacia()){
             return false;//la celda esta vacia no se puede quitar nada
         }
         return true;
-    }
+    }*/
     public void vaciarTodo(){
         for (int fila = 1 ; fila <= cantidadDeFilas; fila++){
             for (int columna = 1; columna <= cantidadDeColumnas; columna++){
@@ -138,5 +141,19 @@ public class TableroDeConstruccion {
     public void consumirElemento(int fila, int columna){
         CeldaDeConstruccion celdaAConsumir = this.verCelda(fila,columna);
         celdaAConsumir.agregarElemento(null);
+    }
+
+    public List<UnidadElemental> obtenerTodosLosElementos() {
+        List<UnidadElemental> listado = new ArrayList<UnidadElemental>();
+        for (int fila = 1 ; fila <= cantidadDeFilas; fila++){
+            for (int columna = 1; columna <= cantidadDeColumnas; columna++){
+                UnidadElemental unidadElemental = obtenerElementoDe(fila,columna);
+                if (unidadElemental.equivalenteA(vacia)){
+                    continue;
+                }
+                listado.add(unidadElemental);
+            }
+        }
+        return listado;
     }
 }

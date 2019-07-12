@@ -64,4 +64,27 @@ public class ControladorInventario {
         inventarioModelo.add(objeto);
         inventarioVista.actualizarCasillero();
     }
+
+    public void quitarUnidadesDelInventario(List<UnidadElemental> objetosAQuitar){
+        int cantidadARemover = objetosAQuitar.size();
+        for (int i = 0; i < cantidadARemover; i++){
+            removerObjetoDelInventario(objetosAQuitar.get(i));
+        }
+        inventarioVista.actualizarCasilleros(0,inventarioVista.tamanioDeInventario());
+    }
+
+    private void removerObjetoDelInventario(UnidadElemental objetoARemover){
+        for (int i = 0;i < inventarioModelo.size(); i++){
+            ObjeosDelInventario objeto = inventarioModelo.get(i);
+            if (objeto.equipable()){
+                continue;
+            }
+            UnidadElemental unidadElemental = (UnidadElemental)objeto;
+            if (!unidadElemental.equivalenteA(objetoARemover)){
+                continue;
+            }
+            inventarioModelo.remove(i);
+            break;
+        }
+    }
 }

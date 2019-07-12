@@ -51,6 +51,6 @@ public class MaterialDeHerramientaMetalPiedra implements MaterialDeHerramienta {
 
     @Override
     public String nombreDeMaterialDeHerramienta() {
-        return "PIEDRA";
+        return "";
     }
 }

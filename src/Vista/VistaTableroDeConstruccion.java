@@ -22,6 +22,7 @@ public class VistaTableroDeConstruccion extends Application {
     private UnidadElementalVacia unidadVaciaTablero = new UnidadElementalVacia();
     private ControlDelTableroDeConstruccion control;
     private UnidadElemental elementoConstructor = null;
+    private BotonDeSelector botonActivo = null;
     Scene escenaDeTablero;
     private VBox constructor;
     private GridPane tableroContructorVista;
@@ -39,13 +40,13 @@ public class VistaTableroDeConstruccion extends Application {
         constructor = new VBox();
 
         tableroContructorVista = new GridPane();
-        inicioDeTablero();
+        //inicioDeTablero();
 
         selector = new HBox();
-        inicioDelSelector();
+        //inicioDelSelector();
 
         botonesDeConstruccion = new HBox();
-        inicioDeBotoneraDeConstruccion();
+        //inicioDeBotoneraDeConstruccion();
         escenaDeTablero = new Scene(constructor);
     }
 
@@ -68,6 +69,7 @@ public class VistaTableroDeConstruccion extends Application {
     private void vaciarTablero() {
         setCasillasDelTableroVacias();
         control.vaciarTodo();
+        control.actualizarCantidades();
     }
 
     private void inicioDeTablero(){
@@ -108,8 +110,12 @@ public class VistaTableroDeConstruccion extends Application {
                 if (elementoConstructor != null){
                     int fila = tableroContructorVista.getRowIndex( imagenTablero);
                     int columna = tableroContructorVista.getColumnIndex( imagenTablero);
+                    if (control.estaEnLaPoscicion(elementoConstructor,fila,columna)) {
+                        return;
+                    }
                     control.eventoAgregarElementoEnTablero(elementoConstructor, fila, columna);
                     //dibujarEnPosicion(elementoConstructor, fila, columna);
+                    botonActivo.decrementarCantidad();
                 }
             });
     }
@@ -124,32 +130,43 @@ public class VistaTableroDeConstruccion extends Application {
         UnidadElemental diamante = new UnidadElementalDiamante();
         BotonDeSelector botonDiamante = crearBotonDeSeleccion(diamante);
 
-        control.agregarBoton(botonMadera);
+        /*control.agregarBoton(botonMadera);
         control.agregarBoton(botonPiedra);
-        control.agregarBoton(botonMetal);
+        botonMetal);
         control.agregarBoton(botonDiamante);
 
         eventoSeleccion(botonMadera);
         eventoSeleccion(botonPiedra);
         eventoSeleccion(botonMetal);
-        eventoSeleccion(botonDiamante);
+        eventoSeleccion(botonDiamante);*/
 
         selector.getChildren().addAll(botonMadera,botonPiedra,botonMetal,botonDiamante);
         constructor.getChildren().add(selector);
     }
 
+    private void reinicioDeActividad(){
+        elementoConstructor = null;
+        botonActivo = null;
+    }
+
     private void eventoSeleccion(BotonDeSelector boton){
         boton.setOnMouseClicked(evento -> {
             control.deseleccionarTodo();
-            elementoConstructor = boton.seleccionar();
+            reinicioDeActividad();
+            if (boton.tieneSuficientes()) {
+                elementoConstructor = boton.seleccionar();
+                botonActivo = boton;
+            }
         });
     }
 
     private BotonDeSelector crearBotonDeSeleccion(UnidadElemental unidadElemental){
-        int cantidad = control.cantidad(unidadElemental);
+        int cantidad = control.cantidad();
         BotonDeSelector boton = new BotonDeSelector(unidadElemental, tamanioDeBotones, cantidad);
         boton.deseleccionar();
         //evento de boton
+        control.agregarBoton(boton);
+        eventoSeleccion(boton);
         return boton;
     }
 
@@ -168,5 +185,11 @@ public class VistaTableroDeConstruccion extends Application {
             System.out.println("falle IVista");
             return;
         }
+    }
+
+    public void iniciacion() {
+        inicioDeTablero();
+        inicioDelSelector();
+        inicioDeBotoneraDeConstruccion();
     }
 }

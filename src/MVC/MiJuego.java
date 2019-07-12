@@ -49,16 +49,17 @@ public class MiJuego extends Application {
         miJuego.show();
     }
 
-    private void controlConstrutor() {
-        controlDelTableroDeConstruccion = new ControlDelTableroDeConstruccion();
-        tableroDeConstruccion = new VistaTableroDeConstruccion(controlDelTableroDeConstruccion);
-        controlDelTableroDeConstruccion.cargarVista(tableroDeConstruccion);
-    }
-
     private void anexionarControlesFaltantes(){
         controladorDeHerramientasDelJugador.cargarVistaDeInventario(inventarioVista);
         inventarioVista.incorporarControl(controladorInventario);
         controlDelTableroDeConstruccion.cargarControladorDelInventario(controladorInventario);
+        jugadorControlado.cargarControlDelTableroDeConstrucion(controlDelTableroDeConstruccion);
+    }
+
+    private void controlConstrutor() {
+        controlDelTableroDeConstruccion = new ControlDelTableroDeConstruccion();
+        tableroDeConstruccion = new VistaTableroDeConstruccion(controlDelTableroDeConstruccion);
+        controlDelTableroDeConstruccion.cargarVista(tableroDeConstruccion);
     }
 
     private void controlInventario(){

@@ -30,7 +30,7 @@ public class PicoFino implements TipoDeHerramienta {
 
     @Override
     public String nombreDeElemento() {
-        return "PICOFINO" + materialDeHerramienta.nombreDeMaterialDeHerramienta();
+        return "PICOFINO";
     }
     @Override
     public Boolean equipable() {

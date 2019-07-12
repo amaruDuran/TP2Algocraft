@@ -100,16 +100,26 @@ public class IVista extends Application {
             actualizarCasillero(pos);
         }
     }
+    public void actualizarCasilleros(int desde, int hasta){//sacar cosas desde la mitad del inventario
+        if (hasta < desde || hasta > tamanioDeInventario()){
+            return;
+        }
+        for (int pos = desde; pos < hasta; pos++){
+            actualizarCasillero(pos);
+        }
+    }
 
     private void actualizarCasillero(int posicion){
         if (posicion < 0 || posicion >= this.tamanioDeInventario()) {
             return;
         }
+        //controladorInventario.actualizarCantidades();
         inventarioCompletado = controladorInventario.obtenerInventarioCompletado(inventarioCompletado);
         ObjeosDelInventario objeto = inventarioCompletado.get(posicion);
         inventarioCompletado.remove(posicion);
         inventarioCompletado.add(posicion, objeto);
         Point pos = this.posicionDelObjetoEnCuadrado(posicion);
+        dibujarEnPosicion(casilleroVacio, pos.x, pos.y);
         dibujarEnPosicion(objeto, pos.x, pos.y);
     }
 

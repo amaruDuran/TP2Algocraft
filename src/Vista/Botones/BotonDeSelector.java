@@ -77,6 +77,11 @@ public class BotonDeSelector extends Boton {
         actualizarTextoCantidad();
     }
 
+    public void setCantidadDeElementosDisponibles(int catidad){
+        cantidadDeElementosDisponibles = catidad;
+        actualizarTextoCantidad();
+    }
+
     private void actualizarTextoCantidad(){
         this.getChildren().remove(texto);
         agregarTextoCantidad();
@@ -106,5 +111,9 @@ public class BotonDeSelector extends Boton {
 
     public boolean contieneAUnidad(UnidadElemental unidadElemental){
         return objeto.equivalenteA(unidadElemental);
+    }
+
+    public boolean tieneSuficientes(){
+        return (cantidadDeElementosDisponibles > 0);
     }
 }
