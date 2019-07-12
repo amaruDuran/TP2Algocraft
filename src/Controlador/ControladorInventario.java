@@ -1,5 +1,6 @@
 package Controlador;
 
+import Modelo.Herramientas.TipoDeHerramienta.TipoDeHerramienta;
 import Modelo.Jugador.Inventario;
 import Modelo.Jugador.ObjeosDelInventario;
 import Modelo.Jugador.ObjetoDelInventarioVacio;
@@ -57,5 +58,10 @@ public class ControladorInventario {
             cantidad++;
         }
         return cantidad;
+    }
+
+    public void agregar(ObjeosDelInventario objeto) {
+        inventarioModelo.add(objeto);
+        inventarioVista.actualizarCasillero();
     }
 }

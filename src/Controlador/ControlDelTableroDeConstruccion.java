@@ -1,6 +1,7 @@
 package Controlador;
 
 import Modelo.Herramientas.Constructor.TableroDeConstruccion;
+import Modelo.Herramientas.TipoDeHerramienta.TipoDeHerramienta;
 import Modelo.Materiales.UnidadElemental.*;
 import Vista.Botones.BotonDeSelector;
 import Vista.VistaTableroDeConstruccion;
@@ -11,14 +12,18 @@ import java.util.List;
 public class ControlDelTableroDeConstruccion {
     private VistaTableroDeConstruccion tableroDeConstruccionVista;
     private TableroDeConstruccion tableroConstructorModelo;
-
+    private final UnidadElemental unidadElementalVacia = new UnidadElementalVacia();
     private List<Integer> cantidades;
     private List<UnidadElemental> elementos;
     private List<BotonDeSelector> botones;
     private ControladorInventario inventario;
+    private int numeroDeFilas;
+    private int numeroDeColumnas;
 
     public ControlDelTableroDeConstruccion(){
         this.tableroConstructorModelo = new TableroDeConstruccion();
+        numeroDeFilas = tableroConstructorModelo.cantidadFilas();
+        numeroDeColumnas = tableroConstructorModelo.cantidadDeColumnas();
         cantidades = new ArrayList<Integer>();
         elementos = new ArrayList<UnidadElemental>();
         botones = new ArrayList<BotonDeSelector>();
@@ -30,7 +35,24 @@ public class ControlDelTableroDeConstruccion {
     }
 
     public void eventoAgregarElementoEnTablero(UnidadElemental unidadElemental, int fila, int columna){
+        /*UnidadElemental unidadElementalEnLaPosAnterior = tableroConstructorModelo.obtenerElementoDe(fila,columna);//esto falla por algun motivo
+        if (unidadElementalEnLaPosAnterior != null){
+            if (unidadElemental.equivalenteA(unidadElementalEnLaPosAnterior)){
+                return;
+            }
+        }*/
+        tableroDeConstruccionVista.dibujarEnPosicion(unidadElementalVacia, fila, columna);
         tableroDeConstruccionVista.dibujarEnPosicion(unidadElemental, fila, columna);
+        tableroConstructorModelo.agregarElementoEnCelda(fila,columna,unidadElemental);
+    }
+
+    public void vaciarTodo(){
+        /*for (int fila = 1 ; fila <= numeroDeFilas; fila++){
+            for (int columna = 1; columna <= numeroDeColumnas; columna++){
+                tableroConstructorModelo.quitarElementoEnCelda(fila,columna);
+            }
+        }*/
+        tableroConstructorModelo.vaciarTodo();
     }
 
     private void completarCantidades(){
@@ -82,5 +104,14 @@ public class ControlDelTableroDeConstruccion {
             botones.add(i, boton);
             break;
         }
+    }
+
+    public void construir() {
+        TipoDeHerramienta herramienta = tableroConstructorModelo.construir();
+        if (herramienta == null){
+            return;
+        }
+        inventario.agregar(herramienta);
+        vaciarTodo();
     }
 }

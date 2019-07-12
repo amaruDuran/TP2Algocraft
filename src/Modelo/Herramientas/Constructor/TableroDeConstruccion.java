@@ -71,8 +71,6 @@ public class TableroDeConstruccion {
         return patron;
     }
 
-    /* De Posible Utilidad en Interdfaaz de usuario.
-
     public int cantidadFilas(){
         return cantidadDeFilas;
     }
@@ -80,8 +78,6 @@ public class TableroDeConstruccion {
     public int cantidadDeColumnas(){
         return cantidadDeColumnas;
     }
-
-     */
 
     public UnidadElemental obtenerElementoDe(int fila, int columna){
         UnidadElemental unidadElem = this.verCelda(fila, columna).verElemento();
@@ -116,6 +112,22 @@ public class TableroDeConstruccion {
         }
         celdaAQuitar.quitarElemento(inventario);
         return true;
+    }
+
+    //util para la interfaz de usuario.
+    public boolean quitarElementoEnCelda(int fila, int columna){
+        CeldaDeConstruccion celdaAQuitar = this.verCelda(fila,columna);
+        if(celdaAQuitar.estaVacia()){
+            return false;//la celda esta vacia no se puede quitar nada
+        }
+        return true;
+    }
+    public void vaciarTodo(){
+        for (int fila = 1 ; fila <= cantidadDeFilas; fila++){
+            for (int columna = 1; columna <= cantidadDeColumnas; columna++){
+                consumirElemento(fila,columna);
+            }
+        }
     }
 
     //idem interfaz de usuario.

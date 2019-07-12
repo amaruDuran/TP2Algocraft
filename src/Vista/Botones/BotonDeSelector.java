@@ -82,13 +82,22 @@ public class BotonDeSelector extends Boton {
         agregarTextoCantidad();
     }
 
+    /*private void swapColores(){
+        Color aux = colorSecundarioDelBoton;
+        colorSecundarioDelBoton = colorActualDelBoton;
+        colorActualDelBoton = aux;
+    }*/
+
     private void cambioDeColorASeleccionado(){
+        //swapColores();
         Color colorSeleccionado = this.colorSecundarioDelBoton;
+        //Color colorSeleccionado = this.colorActualDelBoton;
         fondo.setFill(colorSeleccionado);
         colorDeTexto = Color.YELLOW;
         actualizarTextoCantidad();
     }
     private void cambioDeColorANoSeleccionado(){
+        //swapColores();
         Color colorNoSeleccionado = this.colorActualDelBoton;
         fondo.setFill(colorNoSeleccionado);
         colorDeTexto = Color.DARKBLUE;
