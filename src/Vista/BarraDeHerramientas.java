@@ -21,7 +21,6 @@ public class BarraDeHerramientas implements Dibujable {
     private Boton inventario;
     private Boton herramientaEnMano;
     private Boton constructor;
-    //private  List<ObjeosDelInventario> miInventario;
     private IVista miInventarioVista;
     private VistaHerramientaEnMano vistaHerramientaEnMano;
     private VistaTableroDeConstruccion tableroDeConstruccion;

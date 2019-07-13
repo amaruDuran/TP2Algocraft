@@ -75,11 +75,6 @@ public class IVista extends Application {
         return posicionDelObjetoEnInventario;
     }
 
-    /*
-    private Boton convertirEnBotones(ObjeosDelInventario objeto){
-        Boton boton = new BotonDeInventario(objeto,tamanioDeBotones);
-        return boton;
-    }*/
     @Override
     public void start(Stage primaryStage) throws Exception {
         Stage miInventario = primaryStage;

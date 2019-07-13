@@ -26,10 +26,13 @@ public class ControladorDeHerramientasDelJugador {
     }
 
     public void actualizacionPorDesgaste(){
-        if (jugador.obtenerHerramientaEnMano() == null){
+        TipoDeHerramienta herramienta = jugador.obtenerHerramientaEnMano();
+        if (herramienta == null){
             return;
         }
-        //colocar algo por si se desgasto
+        if (herramienta.durabilidad() <= 0){
+            destruirHerramienta();
+        }
         vistaHerramientaEnMano.actualizarCajaDeInformacion();
     }
 
@@ -68,6 +71,12 @@ public class ControladorDeHerramientasDelJugador {
 
     public void desequipar(){
         jugador.desequipar();
+        vistaDeInventario.actualizarCasillero();
+        vistaHerramientaEnMano.actualizarVista();
+    }
+
+    private void destruirHerramienta(){
+        jugador.destruirHerramienta();
         vistaDeInventario.actualizarCasillero();
         vistaHerramientaEnMano.actualizarVista();
     }

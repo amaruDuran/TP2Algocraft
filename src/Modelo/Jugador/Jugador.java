@@ -46,6 +46,12 @@ public class Jugador implements ObjetoDelTablero {
         }
         herramientaEnMano = null;
     }
+    public void destruirHerramienta(){
+        /*if (herramientaEnMano == null){
+            return;
+        }*/
+        herramientaEnMano = null;
+    }
 
     @Override
     public String indentificador() {
