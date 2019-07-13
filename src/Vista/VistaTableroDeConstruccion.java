@@ -104,19 +104,16 @@ public class VistaTableroDeConstruccion extends Application {
 
     private void agregarEventoDeObtencionPosicionDeLaImagenEnTablero(ImageView imagenTablero){
             imagenTablero.addEventFilter(MouseEvent.MOUSE_PRESSED, event ->{
-                    /*System.out.println( "Imagen Clickeada: " + imagenTablero + "en fila/columna : " +
-                            tableroContructorVista.getRowIndex( imagenTablero) + "/" +
-                            tableroContructorVista.getColumnIndex( imagenTablero));*/
-                if (elementoConstructor != null){
-                    int fila = tableroContructorVista.getRowIndex( imagenTablero);
-                    int columna = tableroContructorVista.getColumnIndex( imagenTablero);
-                    if (control.estaEnLaPoscicion(elementoConstructor,fila,columna)) {
-                        return;
-                    }
-                    control.eventoAgregarElementoEnTablero(elementoConstructor, fila, columna);
-                    //dibujarEnPosicion(elementoConstructor, fila, columna);
-                    botonActivo.decrementarCantidad();
+                if (elementoConstructor == null){
+                    return;
                 }
+                int fila = tableroContructorVista.getRowIndex( imagenTablero);
+                int columna = tableroContructorVista.getColumnIndex( imagenTablero);
+                if (control.estaEnLaPoscicion(elementoConstructor,fila,columna) || !botonActivo.tieneSuficientes()) {
+                    return;
+                }
+                control.eventoAgregarElementoEnTablero(elementoConstructor, fila, columna);
+                botonActivo.decrementarCantidad();
             });
     }
 
@@ -129,16 +126,6 @@ public class VistaTableroDeConstruccion extends Application {
         BotonDeSelector botonMetal = crearBotonDeSeleccion(metal);
         UnidadElemental diamante = new UnidadElementalDiamante();
         BotonDeSelector botonDiamante = crearBotonDeSeleccion(diamante);
-
-        /*control.agregarBoton(botonMadera);
-        control.agregarBoton(botonPiedra);
-        botonMetal);
-        control.agregarBoton(botonDiamante);
-
-        eventoSeleccion(botonMadera);
-        eventoSeleccion(botonPiedra);
-        eventoSeleccion(botonMetal);
-        eventoSeleccion(botonDiamante);*/
 
         selector.getChildren().addAll(botonMadera,botonPiedra,botonMetal,botonDiamante);
         constructor.getChildren().add(selector);
