@@ -27,6 +27,10 @@ public class Mapa {
         this.mapa.get(new Point(2,2)).asignar(new MaterialMetal());
         this.mapa.get(new Point(3,1)).asignar(new MaterialMetal());
         this.mapa.get(new Point(3,2)).asignar(new MaterialMetal());
+        this.mapa.get(new Point(4,1)).asignar(new MaterialMetal());
+        this.mapa.get(new Point(4,2)).asignar(new MaterialMetal());
+        this.mapa.get(new Point(4,3)).asignar(new MaterialMetal());
+        this.mapa.get(new Point(4,4)).asignar(new MaterialMetal());
 
         this.mapa.get(new Point(2,5)).asignar(new MaterialDiamante());
         this.mapa.get(new Point(2,6)).asignar(new MaterialDiamante());
@@ -50,6 +54,12 @@ public class Mapa {
 
         this.mapa.get(new Point(8,7)).asignar(new MaterialPiedra());
         this.mapa.get(new Point(8,8)).asignar(new MaterialPiedra());
+        this.mapa.get(new Point(8,9)).asignar(new MaterialPiedra());
+        this.mapa.get(new Point(8,10)).asignar(new MaterialPiedra());
+        this.mapa.get(new Point(9,7)).asignar(new MaterialPiedra());
+        this.mapa.get(new Point(9,8)).asignar(new MaterialPiedra());
+        this.mapa.get(new Point(9,9)).asignar(new MaterialPiedra());
+        this.mapa.get(new Point(9,10)).asignar(new MaterialPiedra());
     }
 
     private void inicializacionDeCasilleros() {
