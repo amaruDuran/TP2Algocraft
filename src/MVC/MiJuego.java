@@ -68,7 +68,7 @@ public class MiJuego extends Application {
     }
 
     private void controlMapa(){
-        mapa = new Mapa(11,11);
+        mapa = new Mapa(10,10);
         jugador.iniciar(mapa);
         this.controladorDeMapa = new ControladorDeMapa(mapa);
         this.controladorDeMapa.iniciar();
