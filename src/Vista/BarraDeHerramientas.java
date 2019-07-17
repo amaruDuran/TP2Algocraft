@@ -21,11 +21,11 @@ public class BarraDeHerramientas implements Dibujable {
     private Boton inventario;
     private Boton herramientaEnMano;
     private Boton constructor;
-    private IVista miInventarioVista;
+    private InventarioVista miInventarioVista;
     private VistaHerramientaEnMano vistaHerramientaEnMano;
     private VistaTableroDeConstruccion tableroDeConstruccion;
 
-    public BarraDeHerramientas(Stage stage, IVista inventarioVista, VistaHerramientaEnMano vistaHerramientaEnMano, VistaTableroDeConstruccion tableroDeConstruccion){
+    public BarraDeHerramientas(Stage stage, InventarioVista inventarioVista, VistaHerramientaEnMano vistaHerramientaEnMano, VistaTableroDeConstruccion tableroDeConstruccion){
         toolBar = new HBox();
         toolBar.setSpacing(1);
         this.generarBotones(stage);

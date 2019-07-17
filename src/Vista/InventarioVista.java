@@ -15,7 +15,7 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class IVista extends Application {
+public class InventarioVista extends Application {
     //private List<ObjeosDelInventario> inventarioModelo;
     private List<ObjeosDelInventario> inventarioCompletado;
     private GridPane inventarioVista;
@@ -29,7 +29,7 @@ public class IVista extends Application {
     private ControladorInventario controladorInventario;
 
 
-    public IVista(){
+    public InventarioVista(){
         //controladorInventario = inventarioControl;
         this.inventarioVista = new GridPane();
         inventarioVista.setPadding(new Insets(1,1,1,1));
@@ -135,7 +135,7 @@ public class IVista extends Application {
         try {
             start(ventana);
         }catch (Exception e){
-            System.out.println("falle IVista");
+            System.out.println("falle InventarioVista");
             return;
         }
     }

@@ -169,7 +169,7 @@ public class VistaTableroDeConstruccion extends Application {
         try {
             start(ventana);
         }catch (Exception e){
-            System.out.println("falle IVista");
+            System.out.println("falle InventarioVista");
             return;
         }
     }

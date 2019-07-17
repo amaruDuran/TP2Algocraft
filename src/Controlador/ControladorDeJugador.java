@@ -1,7 +1,7 @@
 package Controlador;
 
 import Modelo.Jugador.Jugador;
-import Vista.IVista;
+import Vista.InventarioVista;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
@@ -28,7 +28,7 @@ public class ControladorDeJugador {
         controlDelTableroDeConstruccion.iniciacion();
     }
 
-    public void movimientos(IVista  invetarioVista){
+    public void movimientos(InventarioVista invetarioVista){
         escenaPrincipal.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent event) {

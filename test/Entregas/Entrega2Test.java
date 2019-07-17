@@ -352,10 +352,10 @@ public class Entrega2Test {
     }
 
     @Test
-    public void TableroRecienCreadoDe20FilasY10ColumasTiene200Casilleros(){
-        Mapa mapa = new Mapa(20,10);
+    public void TableroRecienCreadoDe20FilasY12ColumasTiene240Casilleros(){
+        Mapa mapa = new Mapa(20,12);
         int numeroDeCasillero = mapa.cantidadDeColumnas() * mapa.cantidadDeFilas();
-        assertEquals(200 , numeroDeCasillero);
+        assertEquals(240 , numeroDeCasillero);
     }
 
     @Test
@@ -394,7 +394,7 @@ public class Entrega2Test {
 
     @Test
     public void SeVerificaQueSePuedaOcuparUnLugarVacioEnElMapa(){
-        Mapa mapa = new Mapa(10,10);
+        Mapa mapa = new Mapa(12,12);
         Casillero casillero = mapa.obtenerCasillero(new Point(5,9));
         boolean noEstaOcupado = casillero.estaOcupado();
 
@@ -406,7 +406,7 @@ public class Entrega2Test {
     @Test
     public void SeVerificaQueNoSePuedaAgregarUnCasilleroLleno(){
 
-        Mapa mapa = new Mapa(10,10);
+        Mapa mapa = new Mapa(12,12);
         Casillero casillero = mapa.obtenerCasillero(new Point(1,9));
 
         boolean puedoAgregar = casillero.asignar(new Jugador());
@@ -419,8 +419,8 @@ public class Entrega2Test {
     @Test
     public void SeVerificaQueSePuedaAgregarUnCasilleroPorUnMaterialDeMadera() {
 
-        Mapa mapa = new Mapa(10, 10);
-        Casillero casillero = mapa.obtenerCasillero(new Point(1,9));
+        Mapa mapa = new Mapa(12, 12);
+        Casillero casillero = mapa.obtenerCasillero(new Point(0,0));
         assertEquals(casillero.estaOcupado(), false);
 
         boolean agrege = casillero.asignar(new MaterialMadera());
@@ -428,7 +428,7 @@ public class Entrega2Test {
     }
     @Test
     public void SeVerificaQueAlAgregarUnMaterialMaderaElCasilleroContengaElMaterialExactoQueAgregamos(){
-        Mapa mapa = new Mapa(10,10);
+        Mapa mapa = new Mapa(12,12);
 
         Casillero casillero = mapa.obtenerCasillero(new Point(1,9));
         assertEquals(casillero.estaOcupado(),false);
@@ -441,7 +441,7 @@ public class Entrega2Test {
 
     @Test
     public void SeVerificaQueSePuedaAgregarCasilleroPorUnMaterialDeMetal(){
-        Mapa mapa = new Mapa(10,10);
+        Mapa mapa = new Mapa(12,12);
         Casillero casillero = mapa.obtenerCasillero(new Point(1,9));
         assertEquals(casillero.estaOcupado(),false);
 
@@ -451,7 +451,7 @@ public class Entrega2Test {
 
     @Test
     public void SeVerificaQueAlAgregarUnMaterialMetalElCasilleroContengaElMaterialExactoQueAgregamos(){
-        Mapa mapa = new Mapa(10,10);
+        Mapa mapa = new Mapa(12,12);
 
         Casillero casillero = mapa.obtenerCasillero(new Point(5,9));
         assertEquals(casillero.estaOcupado(),false);
@@ -463,7 +463,7 @@ public class Entrega2Test {
 
     @Test
     public void SeVerificaQueSePuedeAgregarUnCasilleroConUnMaterialDePiedra(){
-        Mapa mapa = new Mapa(10,10);
+        Mapa mapa = new Mapa(12,12);
         Casillero casillero = mapa.obtenerCasillero(new Point(1,9));
         assertEquals(casillero.estaOcupado(),false);
 
@@ -473,7 +473,7 @@ public class Entrega2Test {
 
     @Test
     public void SeVerificaQueAlAgregarUnMaterialPiedraElCasilleroContengaElMaterialExactoQueAgregamos(){
-        Mapa mapa = new Mapa(10,10);
+        Mapa mapa = new Mapa(12,12);
 
         Casillero casillero = mapa.obtenerCasillero(new Point(1,9));
         assertEquals(casillero.estaOcupado(),false);
@@ -485,7 +485,7 @@ public class Entrega2Test {
 
     @Test
     public void SeVerificaQueSePuedeAgregarUnCasilleroConUnMaterialDeDiamante(){
-        Mapa mapa = new Mapa(10,10);
+        Mapa mapa = new Mapa(12,12);
 
         Casillero casillero = mapa.obtenerCasillero(new Point(1,9));
         assertEquals(casillero.estaOcupado(),false);
@@ -496,7 +496,7 @@ public class Entrega2Test {
 
     @Test
     public void SeVerificaQueAlAgregarUnMaterialDediamanteElCasilleroContengaElMaterialExactoQueAgregamos(){
-        Mapa mapa = new Mapa(10,10);
+        Mapa mapa = new Mapa(12,12);
 
         Casillero casillero = mapa.obtenerCasillero(new Point(1,9));
         assertEquals(casillero.estaOcupado(),false);
@@ -521,7 +521,7 @@ public class Entrega2Test {
 
     @Test
     public void SeVerificaQueUnMapaDe10Por10PoseaCasillerosDentroDeEl(){
-        Mapa mapa = new Mapa(10,10);
+        Mapa mapa = new Mapa(12,12);
         assertEquals(true, mapa.existeUbicacion(new Point(0,5)));
         assertEquals(true, mapa.existeUbicacion(new Point(5,0)));
         assertEquals(true, mapa.existeUbicacion(new Point(0,0)));

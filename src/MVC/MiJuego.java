@@ -4,7 +4,7 @@ import Controlador.*;
 import Modelo.Juego.Mapa;
 import Modelo.Jugador.Jugador;
 import Vista.BarraDeHerramientas;
-import Vista.IVista;
+import Vista.InventarioVista;
 import Vista.VistaHerramientaEnMano;
 import Vista.VistaTableroDeConstruccion;
 import javafx.application.Application;
@@ -23,7 +23,7 @@ public class MiJuego extends Application {
     private BorderPane miPanel;
     private Jugador jugador = new Jugador();
     private Mapa mapa;
-    private IVista inventarioVista;
+    private InventarioVista inventarioVista;
     private VistaHerramientaEnMano vistaHerramientaEnMano;
     private VistaTableroDeConstruccion tableroDeConstruccion;
 
@@ -63,7 +63,7 @@ public class MiJuego extends Application {
     }
 
     private void controlInventario(){
-        inventarioVista = new IVista();
+        inventarioVista = new InventarioVista();
         controladorInventario = new ControladorInventario(jugador.listadoDeInventario(),inventarioVista);
     }
 

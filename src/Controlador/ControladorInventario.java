@@ -1,22 +1,20 @@
 package Controlador;
 
-import Modelo.Herramientas.TipoDeHerramienta.TipoDeHerramienta;
-import Modelo.Jugador.Inventario;
 import Modelo.Jugador.ObjeosDelInventario;
 import Modelo.Jugador.ObjetoDelInventarioVacio;
 import Modelo.Materiales.UnidadElemental.UnidadElemental;
-import Vista.IVista;
+import Vista.InventarioVista;
 
 import java.util.List;
 
 public class ControladorInventario {
-    private IVista inventarioVista;
+    private InventarioVista inventarioVista;
     private List<ObjeosDelInventario> inventarioModelo;
     private List<ObjeosDelInventario> inventarioCompletado;
     private final ObjeosDelInventario casilleroVacio = new ObjetoDelInventarioVacio();
     private final int tamanioTotal;
 
-    public ControladorInventario(List<ObjeosDelInventario> inventario , IVista vistaDelInventario){
+    public ControladorInventario(List<ObjeosDelInventario> inventario , InventarioVista vistaDelInventario){
         inventarioVista = vistaDelInventario;
         tamanioTotal = inventarioVista.tamanioDeInventario();
         inventarioModelo = inventario;

@@ -3,10 +3,9 @@ package Controlador;
 import Modelo.Herramientas.TipoDeHerramienta.TipoDeHerramienta;
 import Modelo.Jugador.Jugador;
 import Modelo.Jugador.ObjeosDelInventario;
-import Vista.IVista;
+import Vista.InventarioVista;
 import Vista.VistaHerramientaEnMano;
 
-import java.util.HashMap;
 import java.util.List;
 
 public class ControladorDeHerramientasDelJugador {
@@ -14,7 +13,7 @@ public class ControladorDeHerramientasDelJugador {
     private List<ObjeosDelInventario> inventario;
     private int proximaHerramientaEquipable = -1;
     private VistaHerramientaEnMano vistaHerramientaEnMano;
-    private IVista vistaDeInventario;
+    private InventarioVista vistaDeInventario;
 
     public ControladorDeHerramientasDelJugador(Jugador jugador){
         this.jugador = jugador;
@@ -36,7 +35,7 @@ public class ControladorDeHerramientasDelJugador {
         vistaHerramientaEnMano.actualizarCajaDeInformacion();
     }
 
-    public void cargarVistaDeInventario(IVista iVista){
+    public void cargarVistaDeInventario(InventarioVista iVista){
         vistaDeInventario = iVista;
     }
 
